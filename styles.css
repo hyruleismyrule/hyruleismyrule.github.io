@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+//font-family: 'Orelega One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Orelega+One&display=swap');
+//font-family: 'Dancing Script', cursive;
+//font-family: 'Orelega One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Orelega+One&display=swap');
+//font-family: 'Dancing Script', cursive;
+//font-family: 'Orelega One', cursive;
+
+
+
 h1 {
     background-color: blueviolet;
     color: white;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+    font-family: 'Orelega One', cursive;
 }
 
 footer {
@@ -16,17 +28,21 @@ footer {
 
 h2 {
     border-bottom: double;
+    font-family: 'Orelega One', cursive;
 }
 
 .profile-picture {
     width: 120px;
     box-shadow: 5px 5px 5px #999;
+    float: right;
+    border-radius: 5px;
 }
 
 .content {
     max-width: 960px;
     margin: 0 auto;
     background-color: white;
+    font-family: 'Dancing Script', cursive;
 }
 
 .footer-link {
