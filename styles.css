@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
-//font-family: 'Orelega One', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Orelega+One&display=swap');
-//font-family: 'Dancing Script', cursive;
-//font-family: 'Orelega One', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Orelega+One&display=swap');
+//font-family: 'Cormorant Garamond', serif;
 //font-family: 'Dancing Script', cursive;
 //font-family: 'Orelega One', cursive;
 
-
+.content {
+    background-color: white;
+    font-family: 'Cormorant Garamond', serif;
+}
 
 h1 {
     background-color: blueviolet;
@@ -15,6 +14,11 @@ h1 {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+    font-family: 'Orelega One', cursive;
+}
+
+h2 {
+    border-bottom: double;
     font-family: 'Orelega One', cursive;
 }
 
@@ -26,10 +30,13 @@ footer {
     text-align: center;
 }
 
-h2 {
-    border-bottom: double;
-    font-family: 'Orelega One', cursive;
+.content {
+    
+    max-width: 960px;
+    margin: 0 auto;
 }
+
+
 
 .profile-picture {
     width: 120px;
@@ -38,12 +45,7 @@ h2 {
     border-radius: 5px;
 }
 
-.content {
-    max-width: 960px;
-    margin: 0 auto;
-    background-color: white;
-    font-family: 'Dancing Script', cursive;
-}
+
 
 .footer-link {
     color: white;
