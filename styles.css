@@ -1,11 +1,19 @@
-.banner {
-   background-color: blueviolet; 
-}
-
 .h1 {
+    background-color: blueviolet;
     color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
 }
 
 .footer {
     background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    padding: 1px;
+    text-align: center;
+}
+
+.h2 {
+    border-bottom: double;
 }
