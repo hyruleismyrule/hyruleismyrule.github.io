@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Orelega+One&display=swap');
-//font-family: 'Cormorant Garamond', serif;
-//font-family: 'Dancing Script', cursive;
-//font-family: 'Orelega One', cursive;
+/*font-family: 'Cormorant Garamond', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Orelega One', cursive;*/
 
 .content {
     background-color: white;
@@ -22,7 +22,7 @@ h2 {
     font-family: 'Orelega One', cursive;
 }
 
-footer {
+.footer {
     background-color: blueviolet;
     color: white;
     border-radius: 10px;
