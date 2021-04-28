@@ -8,10 +8,15 @@ font-family: 'Orelega One', cursive;*/
     font-family: 'Cormorant Garamond', serif;
 }
 
+.header {
+    align-content: center;
+    background-color: blueviolet;
+}
+
 h1 {
     background-color: blueviolet;
     color: white;
-    border-radius: 10px;
+    
     padding: 10px;
     text-align: center;
     font-family: 'Orelega One', cursive;
@@ -25,32 +30,21 @@ h2 {
 .footer {
     background-color: blueviolet;
     color: white;
-    border-radius: 10px;
-    padding: 1px;
-    text-align: center;
-}
-
-.footer {
-    background-color: blueviolet;
-    color: white;
-    border-radius: 10px;
-    padding: 1px;
-    text-align: center;
-}
-
-.content {
     
-    max-width: 960px;
-    margin: 0 auto;
+    padding: 1px;
+    text-align: center;
+}
+
+.main {
+    padding: 5px;
 }
 
 .profile-picture {
+    padding-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 120px;
-    box-shadow: 5px 5px 5px #999;
-    float: right;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-right: 10px;
 }
 
 .footer-link {
