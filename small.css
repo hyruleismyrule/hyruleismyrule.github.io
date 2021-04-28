@@ -8,7 +8,7 @@ font-family: 'Orelega One', cursive;*/
     font-family: 'Cormorant Garamond', serif;
 }
 
-.header {
+header {
     align-content: center;
     background-color: blueviolet;
 }
@@ -27,7 +27,7 @@ h2 {
     font-family: 'Orelega One', cursive;
 }
 
-.footer {
+footer {
     background-color: blueviolet;
     color: white;
     
@@ -35,7 +35,7 @@ h2 {
     text-align: center;
 }
 
-.main {
+main {
     padding: 5px;
 }
 
