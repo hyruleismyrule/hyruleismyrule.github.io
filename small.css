@@ -14,12 +14,10 @@ header {
 }
 
 h1 {
-    background-color: blueviolet;
     color: white;
-    
-    padding: 10px;
     text-align: center;
     font-family: 'Orelega One', cursive;
+    padding-bottom: 5px;
 }
 
 h2 {
@@ -40,7 +38,6 @@ main {
 }
 
 .profile-picture {
-    padding-top: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;

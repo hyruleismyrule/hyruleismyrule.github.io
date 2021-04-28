@@ -6,10 +6,13 @@
     
     h1 {
         font-size: 3.5rem;
-        border-radius: 10px;
-        padding: 10px;
     }
     
+    header {
+        border-radius: 10px;
+        padding: 1px;
+    }
+
     .profile-picture {
         width: 170px;
         box-shadow: 5px 5px 5px #999;
@@ -17,6 +20,7 @@
         border-radius: 5px;
         margin-top: 10px;
         margin-right: 10px;
+        border-radius: 10px;
     }
     
     h2 {
@@ -25,13 +29,14 @@
     
     footer {
         border-radius: 10px;
-}
+    }
 
     .content {
     max-width: 960px;
     margin: 0 auto;
-}
     }
+
+}
 
     /*
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Orelega+One&display=swap');
