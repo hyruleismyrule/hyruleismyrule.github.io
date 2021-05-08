@@ -92,7 +92,9 @@ main {
 
 .profile-picture {
     width: 75px;
-   /* float: left;*/
+    border-radius: 100%;
+    float: left;
+    margin-right: 1rem;
 }
 
 .persona-description {

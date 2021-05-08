@@ -24,7 +24,11 @@
         display: flex;
     }
     
-    
+    .profile-picture {
+        width: auto;
+       /* float: left;*/
+    }
+
     /*----------- FOOTER --------------*/
         
     } /* end of media query */
