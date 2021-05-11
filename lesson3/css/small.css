@@ -15,32 +15,12 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 
-h1 {
+h1, h2 {
     color: #023859;
     font-family: 'Cormorant Garamond', serif;
 }
 
-h2 {
-    color: #023859;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-h3 {
-    color: #0378A6;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-h4 {
-    color: #0378A6;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-h5 {
-    color: #0378A6;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-h6 {
+h3, h4, h5, h6 {
     color: #0378A6;
     font-family: 'Cormorant Garamond', serif;
 }
@@ -50,15 +30,15 @@ h6 {
 header {
     padding: .5rem 2%;
     background-color: #62B7D9;
-    color: white;
+    color: black;
 }
 header img {float: left; margin-right: 10px; width: 50px;}
-header h1 {margin: 0; font-size: 1.5rem; color: white;}
-header h2 {margin: 0; font-weight: normal; font-size: 1.3rem; color: white;}
+header h1 {margin: 0; font-size: 1.5rem; color: black;}
+header h2 {margin: 0; font-weight: normal; font-size: 1.3rem; color: black;}
 
 /*----------- NAVIGATION --------------*/
 nav {
-    background-color: #0378A6;
+    background-color: #035E81;
 }
 nav ul {
     list-style-type: none;
@@ -68,7 +48,7 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #eee;
+    color: white;
     padding: .5rem 0;
     text-decoration: none;
     font-size: .9rem;
@@ -117,7 +97,7 @@ main {
 }
 
 .color2 {
-    background-color: #0378A6;
+    background-color: #035E81;
     color: white;
 }
 
@@ -139,7 +119,7 @@ footer {
     background-color: #62B7D9;
     padding: .5rem 2%;
     text-align: center;
-    color: white;
+    color: black;
 
 }
 
