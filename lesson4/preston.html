@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Cynthia Rawlings' Weather Site Project for BYUI.">
+    <meta name="author" content="Cynthia Rawlings">
+    <title>Preston: Wandering Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER HERE -->
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img src="images/logo.png" alt="sunshine logo" />
+            <h1>Wandering Weather</h1>
+            <h2>Where will the Weather take you?</h2>
+        </header>
+    </div>
+
+    <!-- NAVIGATION HERE -->
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776;</button>
+            <ul id="primaryNav" class="hide">
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="index.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="#">Storm Center</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- CONTENT HERE -->
+    <main>
+        <h1>Preston</h1>
+
+        <div>
+            <img alt="place holder">
+            <div>
+                <p>Weather Summary</p>
+                <p>High<span>xx</span></p>
+                <p>Low<span>xx</span></p>
+                <p>wind<span>xx</span></p>
+            </div>
+        </div>
+
+        <h2>Five Day Forecast</h2>
+        <section class="weather-forecast-table">
+            <div><h3>Day</h3><img alt="place holder"><span>High Temp</span></div>
+            <div><h3>Day</h3><img alt="place holder"><span>High Temp</span></div>
+            <div><h3>Day</h3><img alt="place holder"><span>High Temp</span></div>
+            <div><h3>Day</h3><img alt="place holder"><span>High Temp</span></div>
+            <div><h3>Day</h3><img alt="place holder"><span>High Temp</span></div>
+        </section>
+
+        <h2>Article Title</h2>
+        <p></p>
+        <img alt="place holder">
+        <h2>Contact Us</h2>
+        <h3>Address</h3>
+        <p></p>
+        <h3>Phone</h3>
+        <p></p>
+        <h3>Email</h3>
+        <p></p>
+        <img alt="place holder">
+    </main>
+
+    <!-- FOOTER HERE -->
+    <div id="footerWrapper">
+        <footer>
+            &copy; Cynthia Rawlings &bull; Last Updated <span id="lastUpdated"></span>
+        </footer>
+    </div>
+    <!-- javascript HERE -->
+    <script src="/lesson4/js/script.js"></script>
+</body>
+
+</html>
