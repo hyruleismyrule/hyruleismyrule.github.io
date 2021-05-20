@@ -1,0 +1,49 @@
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+
+    header, nav, main, footer {
+        max-width: 64rem;
+        margin:auto;
+    }
+
+/*----------- BODY --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+h1, h2, h3, h4, h3, h6, p, img, .contact-grid, .weather-forecast-table {
+    padding: 0;
+}
+
+/*----------- HEADER --------------*/
+
+header h1 {margin: 0; font-size: 3rem; color: black;}
+
+/*----------- NAVIGATION --------------*/
+
+
+
+/*----------- MAIN --------------*/
+
+/*----- Google Maps -----*/
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 200px;
+    width: 550px;
+}
+                       
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 200px;
+    width: 550px;
+}
+     
+
+/*----------- FOOTER --------------*/
+    
+} /* end of media query */
