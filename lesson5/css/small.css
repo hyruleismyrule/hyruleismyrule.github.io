@@ -35,6 +35,21 @@ h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
 }
 
+div#message {
+    background-color: #023859;
+    color: white;
+    padding: 1rem;
+    border: 1px solid;
+}
+
+div.showme {
+    display: block;
+}
+
+div.hideme {
+    display: none;
+}
+
 /*----------- HEADER --------------*/
 
 div#headerWrapper {
