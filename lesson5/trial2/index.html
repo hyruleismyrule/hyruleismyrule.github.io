@@ -8,10 +8,10 @@
     <title>Preston: Wandering Weather</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- STYLE SHEETS -->
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/small.css" rel="stylesheet">
-    <link href="css/medium.css" rel="stylesheet">
-    <link href="css/large.css" rel="stylesheet">
+    <link href="/lesson5/trial2/css/normalize.css" rel="stylesheet">
+    <link href="/lesson5/trial2/css/small2.css" rel="stylesheet">
+    <link href="/lesson5/trial2/css/medium2.css" rel="stylesheet">
+    <link href="/lesson5/trial2/css/large2.css" rel="stylesheet">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Varela+Round&display=swap"
@@ -30,7 +30,7 @@
     <!-- HEADER HERE -->
     <div id="headerWrapper">
         <header class="clearfix">
-            <img class="logo" src="images/logo.png" alt="sunshine logo" />
+            <img class="logo" src="/lesson5/images/logo.png" alt="sunshine logo" />
             <h1>Wandering Weather</h1>
             <h2>Where will the Weather take you?</h2>
         </header>
@@ -101,7 +101,7 @@
 
         <h2>Article Title</h2>
         <div class="article">
-            <img class="article-image top" src="/lesson5/images/related-article-image.jpg" alt="Pink Cloudy Sky">
+            <img class="article-image" src="/lesson5/images/related-article-image.jpg" alt="Pink Cloudy Sky">
             <p>On this day in history the first (you find something cool in history and
                 complete this paragraph. Ryiam velit odio ut et ac tristique, dictumst,
                 odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
@@ -123,11 +123,9 @@
                 ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
                 montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
             </p>
-            <img class="article-image bottom" src="/lesson5/images/related-article-image.jpg" alt="Pink Cloudy Sky">
         </div>
         <h2>Contact Us</h2>
         <div class="contact-grid">
-
             <div class="address-container">
                 <h3>Address</h3>
                 <p>The Weather Center<br>
@@ -140,23 +138,22 @@
                 <h3>Email</h3>
                 <p>contact@yoururl.com</p>
             </div>
-        </div>
-
-        <div class="google-maps-large">
             <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="200" class="gmap_canvas"
-                        src="https://maps.google.com/maps?q=preston%20idaho&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    </iframe>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="550" height="200" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=preston%20idaho&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://fmovies2.org">fmovies</a><br>
+                        <a href="https://www.embedgooglemap.net">google map for web</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- FOOTER HERE -->
-    <div id="footerWrapper" class="clearfix">
-        <footer class="clearfix">
+    <div id="footerWrapper">
+        <footer>
             &copy; Cynthia Rawlings &bull; Last Updated <span id="lastUpdated"></span>
         </footer>
     </div>

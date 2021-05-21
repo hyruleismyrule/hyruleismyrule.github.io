@@ -16,9 +16,15 @@ h1, h2, h3, h4, h3, h6, p, img, .contact-grid, .weather-forecast-table {
     padding: 0;
 }
 
+.small-grid {
+    padding: 0;
+}
+
 /*----------- HEADER --------------*/
 
 header h1 {margin: 0; font-size: 3rem; color: black;}
+
+
 
 /*----------- NAVIGATION --------------*/
 
@@ -26,22 +32,10 @@ header h1 {margin: 0; font-size: 3rem; color: black;}
 
 /*----------- MAIN --------------*/
 
+
 /*----- Google Maps -----*/
 
-.mapouter {
-    position: relative;
-    text-align: right;
-    height: 200px;
-    width: 550px;
-}
-                       
 
-.gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    height: 200px;
-    width: 550px;
-}
      
 
 /*----------- FOOTER --------------*/

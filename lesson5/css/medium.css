@@ -86,29 +86,40 @@
         width: 300px;
         float: right;
         margin-left: 1rem;
+        position: relative;
+        
+    }
+
+    .top {
+        display: block;
+    }
+
+    .bottom {
+        display: none;
     }
 
     .contact-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        float: left;
+        width: 45%;
+    }
+
+    .small-grid {
+        min-width: 27rem;
+        max-width: 42rem;
+    }
+
+    .small-grid {
+        padding: 0 2%;
+    }
+    /*----------- Google Maps    
+    --------------*/
+    .google-maps-large {
+        float: right;
+        width: 55%;
     }
     
-    /*----------- Google Maps --------------*/
-
-    .mapouter {
-        position: relative;
-        text-align: right;
-        height: 200px;
-        width: 300px;
-    }
-
-    .gmap_canvas {
-        overflow: hidden;
-        background: none !important;
-        height: 200px;
-        width: 300px;
-    }
-
     /*----------- FOOTER --------------*/
         
     } /* end of media query */
