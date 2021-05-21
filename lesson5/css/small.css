@@ -45,14 +45,13 @@ header {
     padding: .5rem 2%;
     background-color: #62B7D9;
     color: black;
+    
+
     /* FLEX ALIGN*/
     /*
 display: flex;
 align-items: center;
 justify-content: center;
-
-
-
 */
 }
 
@@ -91,6 +90,7 @@ nav button {
 
 nav {
     background-color: #035E81;
+    content: "";    
 }
 
 nav ul {
@@ -251,9 +251,14 @@ footer {
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 
-.clearfix {
+.clearfix:after {
     content: "";
     display: table;
+    clear: both;
+}
+
+.clearfix-footer {
+    content: "";
     clear: both;
 }
 
@@ -280,8 +285,7 @@ footer {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:
+    grid-template-columns: 1fr 1fr;    
 }
 
 .address-container {
@@ -293,3 +297,18 @@ footer {
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
+
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+    /*frameborder: 0;
+    scrolling: no;
+    marginheight: 0;
+    marginwidth: 0; */
+}
+
