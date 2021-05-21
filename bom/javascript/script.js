@@ -1,8 +1,17 @@
 
-const input = document.querySelector('input');
+let input = document.querySelector('input');
 input.focus();
 const addChapterButton = document.getElementById('addChapterButton');
 const list = document.getElementById('list');
+
+input = document.getElementById("chapter");
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("addChapterButton").click();
+        }
+    });
+
 addChapterButton.addEventListener('click', function () {
     if (input != null) {
         const listItem = document.createElement('li');
@@ -20,4 +29,4 @@ addChapterButton.addEventListener('click', function () {
         list.appendChild(listItem);
     }
 });
-// document.getElementById('chapter').Value
+    
