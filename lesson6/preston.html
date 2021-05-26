@@ -58,7 +58,12 @@
         <div class="hero">
             <p class="summary">Weather Summary<br>High <span>xx</span><br>Low <span>xx</span><br>Wind <span>xx</span>
             </p>
-            <img class="hero-image" src="/weather-site-images/hero-image.jpg" alt="Green grassey field at sunset.">
+            <picture class="hero-image">
+                <source media="(max-width: 400px)" srcset="images/herosub400.jpg">
+                <source media="(max-width: 800px)" srcset="images/herosub800.jpg">
+                <source media="(max-width: 971px)" srcset="images/herosub971.jpg">
+                <img src="images/herosub971.jpg" alt="Green grassey field at sunset.">
+            </picture>
         </div>
 
         <div class="fiveDayForecast">
@@ -159,7 +164,7 @@
         </footer>
     </div>
     <!-- javascript HERE -->
-    <script src="js/script.js"></script>
+    <script src="/lesson5/js/script.js"></script>
 </body>
 
 </html>
