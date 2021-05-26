@@ -53,11 +53,15 @@
 
     <!-- CONTENT HERE -->
     <main>
-        <div id="message">Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</div>
+        <div id="message">Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</div>
         <h1>Preston</h1>
         <div class="hero">
-            <p class="summary">Weather Summary<br>High <span>xx</span><br>Low <span>xx</span><br>Wind <span>xx</span>
+            <p class="summary">Weather Summary<br>
+                Temprature: <span id="temp">45</span>&deg;<br>
+                Wind Speed: <span id="speed">60</span> mph<br>
+                <span id="chill"></span>
             </p>
+
             <picture class="hero-image">
                 <source media="(max-width: 400px)" srcset="images/herosub400.jpg">
                 <source media="(max-width: 800px)" srcset="images/herosub800.jpg">
@@ -71,16 +75,14 @@
             <section class="weather-forecast-table">
                 <div class="tableItem tableItem1">
                     <h3>Day</h3>
-                    <div class="tableItemContent"><img class="weatherIcon"
-                            src="/weather-site-images/cloudy-icon.png"
+                    <div class="tableItemContent"><img class="weatherIcon" src="/weather-site-images/cloudy-icon.png"
                             alt="Partially Cloudy"><br>
                         <span>High Temp°</span></div>
                 </div>
                 <div class="tableItem tableItem2">
                     <h3>Day</h3>
                     <div class="tableItemContent"><img class="weatherIcon"
-                            src="/weather-site-images/flash-cloud-icon.png"
-                            alt="Thunder Storm"><br>
+                            src="/weather-site-images/flash-cloud-icon.png" alt="Thunder Storm"><br>
                         <span>High Temp°</span></div>
                 </div>
                 <div class="tableItem tableItem3">
@@ -91,14 +93,14 @@
                 </div>
                 <div class="tableItem tableItem4">
                     <h3>Day</h3>
-                    <div class="tableItemContent"><img class="weatherIcon"
-                            src="/weather-site-images/sun-icon.png" alt="Sunny"><br>
+                    <div class="tableItemContent"><img class="weatherIcon" src="/weather-site-images/sun-icon.png"
+                            alt="Sunny"><br>
                         <span>High Temp°</span></div>
                 </div>
                 <div class="tableItem tableItem5">
                     <h3>Day</h3>
-                    <div class="tableItemContent"><img class="weatherIcon"
-                            src="/weather-site-images/cloud-icon.png" alt="Cloudy"><br>
+                    <div class="tableItemContent"><img class="weatherIcon" src="/weather-site-images/cloud-icon.png"
+                            alt="Cloudy"><br>
                         <span>High Temp°</span></div>
                 </div>
             </section>
@@ -174,7 +176,16 @@
         </footer>
     </div>
     <!-- javascript HERE -->
-    <script src="/lesson5/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Cormorant Garamond, Varela Round']
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/windchill.js"></script>
 </body>
 
 </html>

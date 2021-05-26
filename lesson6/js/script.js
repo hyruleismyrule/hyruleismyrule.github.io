@@ -1,3 +1,4 @@
+
 function toggleMenu() {
     document.getElementById("primaryNav").classList.toggle("hide");
 }
@@ -18,10 +19,10 @@ document.getElementById('lastUpdated').innerHTML = dateString;
 
 
 const today = new Date();
-console.log(today);
+// console.log(today);
 
 const dayNumber = today.getDay();
-console.log(dayNumber);
+// console.log(dayNumber);
 
 const element = document.getElementById("message")
 
