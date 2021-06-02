@@ -53,10 +53,12 @@ const dayNumber = today.getDay();
 
 const element = document.getElementById("message")
 
+if (element) {
 if (dayNumber == 5 ) {
     element.classList.add("showme")
 } else {
     element.classList.add("hideme")
+}
 }
 
 /*
@@ -88,15 +90,17 @@ document.getElementById('lastUpdated').innerHTML = dateString;
 
 // Visited Days Ago
 let now = new Date();
-let lastVisit = storage.getItem("lastVisitTime");
-now = Date.now();
-let daysAgo = Math.ceil((parseInt(lastVisit) - now));
-if (lastVisit - now < 2) {
-  if (lastVisit - now == 1) {
+let lastVisit = new Date(localStorage.getItem("lastVisitTime"));
+const diffTime = now - lastVisit;
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+console.log(diffDays + " days");
+
+if (diffDays < 2) {
+  if (diffDays == 1) {
     document.getElementById('lastVisited').innerHTML = "1 Day Ago";
   }
 } else {
-  document.getElementById('lastVisited').innerHTML = daysAgo + " Days Ago";
+  document.getElementById('lastVisited').innerHTML = diffDays + " Days Ago";
 }
 
-storage.setItem("lastVisitTime", now);
+localStorage.setItem("lastVisitTime", now.toISOString());
