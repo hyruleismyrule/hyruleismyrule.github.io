@@ -325,3 +325,20 @@ iframe {
     marginwidth: 0; */
 }
 
+/* Lazy Loading Images */
+/*
+picture img {
+    border: 1px solid;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+picture img[data-src] {
+    filter: blur(0.2em);
+}
+
+picture img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+*/

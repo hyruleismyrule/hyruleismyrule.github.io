@@ -1,0 +1,6 @@
+[2021-6-2 13:22:46] layer "1200x800 foggy-city1200.jpg, 800x534 foggy-city800.jpg, 400x267 foggy-city400.jpg": Duplicate path: foggy-city1200.jpg
+[2021-6-2 13:22:46] layer "1200x800 foggy-city1200.jpg, 800x534 foggy-city800.jpg, 400x267 foggy-city400.jpg": Duplicate path: foggy-city800.jpg
+[2021-6-2 13:22:46] layer "1200x800 foggy-city1200.jpg, 800x534 foggy-city800.jpg, 400x267 foggy-city400.jpg": Duplicate path: foggy-city400.jpg
+[2021-6-2 13:22:46] layer "1200x800 foggy-city1200.jpg, 800x534 foggy-city800.jpg, 400x267 foggy-city400.jpg": Duplicate path: foggy-city1200.jpg
+[2021-6-2 13:22:46] layer "1200x800 foggy-city1200.jpg, 800x534 foggy-city800.jpg, 400x267 foggy-city400.jpg": Duplicate path: foggy-city800.jpg
+[2021-6-2 13:22:46] layer "1200x800 foggy-city1200.jpg, 800x534 foggy-city800.jpg, 400x267 foggy-city400.jpg": Duplicate path: foggy-city400.jpg
