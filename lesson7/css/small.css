@@ -326,19 +326,18 @@ iframe {
 }
 
 /* Lazy Loading Images */
-/*
-picture img {
+
+.gallery-image picture img {
     border: 1px solid;
     margin: 0 auto;
     padding: 1%;
 }
 
-picture img[data-src] {
+.gallery-image picture img[data-src] {
     filter: blur(0.2em);
 }
 
-picture img {
+.gallery-image picture img {
     filter: blur(0em);
     transition: filter 0.5s;
 }
-*/

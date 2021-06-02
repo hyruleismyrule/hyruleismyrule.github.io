@@ -1,3 +1,0 @@
-[2021-6-2 13:28:01] layer "1200x800 lightning1200.jpg, 800x534 lightning800.jpg, 400x267 lightning400.jpg": Duplicate path: lightning1200.jpg
-[2021-6-2 13:28:01] layer "1200x800 lightning1200.jpg, 800x534 lightning800.jpg, 400x267 lightning400.jpg": Duplicate path: lightning800.jpg
-[2021-6-2 13:28:01] layer "1200x800 lightning1200.jpg, 800x534 lightning800.jpg, 400x267 lightning400.jpg": Duplicate path: lightning400.jpg
