@@ -24,10 +24,12 @@ if ('IntersectionObserver' in window) {
   });
 }
 
+// Hamburger Munu
 function toggleMenu() {
     document.getElementById("primaryNav").classList.toggle("hide");
 }
 
+// Footer Last Edited
 let oLastModif = new Date(document.lastModified);
 
 let optionsMonth = { month: 'long', };
@@ -42,7 +44,7 @@ let dateString = day + ", " + date + " " + month + " " + year;
 
 document.getElementById('lastUpdated').innerHTML = dateString;
 
-
+// Display Message on Friday
 const today = new Date();
 // console.log(today);
 
@@ -57,10 +59,44 @@ if (dayNumber == 5 ) {
     element.classList.add("hideme")
 }
 
+/*
+// Visited Days Ago
+const lastVisit = getCookie('lastVisitTime');
+const now = Date.now();
+if (lastVisit) {
+   const hoursSinceLastTime = Math.ceil((parseInt(lastVisit) - now) / 3600);
+   alert(`It's been ${hoursSinceLastTime} hour(s) since you last visited us.`);
+}
+setCookie('lastVisitTime', now);
 
+lastVisited
 
-// let options = { year: '2-digit', month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-// var options = { year: '2-digit', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-// console.log(today.toLocaleDateString("en-US")); // 9/17/2016
-// console.log(today.toLocaleDateString("en-US", options)); // Saturday, September 17, 2016
-// document.getElementById("year").innerHTML = new Date().getFullYear();
+// Footer Last Edited
+
+let optionsMonth = { month: 'long', };
+let optionsDay = { weekday: 'long', };
+
+let day = oLastModif.toLocaleDateString("en-US", optionsDay);
+let date = oLastModif.getDate();
+let month = oLastModif.toLocaleDateString("en-US", optionsMonth);
+let year = oLastModif.getFullYear();
+
+let dateString = day + ", " + date + " " + month + " " + year;
+
+document.getElementById('lastUpdated').innerHTML = dateString;
+*/
+
+// Visited Days Ago
+let now = new Date();
+let lastVisit = storage.getItem("lastVisitTime");
+now = Date.now();
+let daysAgo = Math.ceil((parseInt(lastVisit) - now));
+if (lastVisit - now < 2) {
+  if (lastVisit - now == 1) {
+    document.getElementById('lastVisited').innerHTML = "1 Day Ago";
+  }
+} else {
+  document.getElementById('lastVisited').innerHTML = daysAgo + " Days Ago";
+}
+
+storage.setItem("lastVisitTime", now);

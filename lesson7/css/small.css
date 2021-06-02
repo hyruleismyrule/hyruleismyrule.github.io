@@ -60,8 +60,6 @@ header {
     padding: .5rem 2%;
     background-color: #62B7D9;
     color: black;
-    
-
     /* FLEX ALIGN*/
     /*
 display: flex;
@@ -105,7 +103,7 @@ nav button {
 
 nav {
     background-color: #035E81;
-    content: "";    
+    content: "";
 }
 
 nav ul {
@@ -242,7 +240,6 @@ h1, h2, h3, h4, h3, h6, p, img, .weather-forecast-table {
 
 .hero {
     max-width: 100%;
-
 }
 
 .broke {
@@ -298,7 +295,7 @@ footer {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;    
+    grid-template-columns: 1fr 1fr;
 }
 
 .address-container {
@@ -310,8 +307,6 @@ footer {
     grid-column-start: 2;
     grid-column-end: 3;
 }
-
-
 
 iframe {
     width: 100%;
@@ -327,16 +322,17 @@ iframe {
 
 /* Lazy Loading Images */
 
-picture img[data-src] {
+.gallery-image img[data-src] {
     filter: blur(0.2em);
 }
 
-picture img {
+.gallery-image img {
     filter: blur(0em);
     transition: filter 0.5s;
 }
 
 /* Lazy Loading Images */
+
 /*
 .gallery-image picture img {
     border: 1px solid;
@@ -353,3 +349,25 @@ picture img {
     transition: filter 0.5s;
 }
 */
+.gallery-image {
+    border: 1px solid;
+    display: block;
+    padding: 0;
+    margin-bottom: 1rem;
+    border-color: #E3E3E3;
+}
+
+.gallery-image img {
+    padding: 0;
+}
+
+.gallery-image p{
+    padding: 0 2%;
+    margin: 1%;
+    font-style: italic;
+}
+
+.gallery-image {
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 10px 5px 10px #E3E3E3;
+}
