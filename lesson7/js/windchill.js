@@ -1,7 +1,7 @@
 
 const tempNumber = parseFloat(document.getElementById("temp").textContent);
 // console.log(tempNumber);
-
+if (tempNumber) {
 const  speedNumber = parseFloat(document.getElementById("speed").textContent);
 // console.log(speedNumber);
 
@@ -13,4 +13,5 @@ if (tempNumber <= 50 && speedNumber >3) {
 
 } else {
     document.getElementById("chill").textContent = "No Wind Chill Today.";
+}
 }

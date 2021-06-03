@@ -349,25 +349,22 @@ iframe {
     transition: filter 0.5s;
 }
 */
-.gallery-image {
+.gallery-card {
     border: 1px solid;
     display: block;
     padding: 0;
     margin-bottom: 1rem;
     border-color: #E3E3E3;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 10px 5px 10px #E3E3E3;
 }
 
 .gallery-image img {
     padding: 0;
 }
 
-.gallery-image p{
+.gallery-card p{
     padding: 0 2%;
     margin: 1%;
     font-style: italic;
-}
-
-.gallery-image {
-    /* offset-x | offset-y | blur-radius | color */
-    box-shadow: 10px 5px 10px #E3E3E3;
 }

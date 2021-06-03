@@ -28,7 +28,7 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .gallery-image:hover {
+    .gallery-card:hover {
         /* offset-x | offset-y | blur-radius | color */
         box-shadow: 10px 5px 20px #333;
     }
