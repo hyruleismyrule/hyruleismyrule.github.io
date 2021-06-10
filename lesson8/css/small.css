@@ -331,18 +331,25 @@ iframe {
 main {
     padding: 0 2%;
     min-height: 20rem;
+    font-size: 1.5rem;
 }
 
 /*----------- MAIN --------------*/
 form fieldset {
     margin: 2rem 0;
-    border: 1px solid #445ba9;
-    border-radius: 10px;
-    padding: 0.5rem 2%;
+    border: 1px solid #023859;
+    padding: 0.5rem 2%; 
+    font-family: 'Cormorant Garamond';
+    background-color: #c1d4db;
+    border-radius: 30px;
+}
+
+legend {
+    font-size: 2rem;
 }
 
 form legend {
-    color: #445ba9;
+    color: #023859;
     margin: 0 1rem;
     padding: 0 0.5rem;
 }
@@ -350,32 +357,32 @@ form legend {
 form label.top, form div {
     display: block;
     padding-top: 1rem;
-    color: #9c2c13;
-    font-size: 0.8rem;
+    color: #023859;
+    
 }
 
 form label.top input, form label.top select {
     -webkit-appearance: none;
     display: block;
-    font-size: 1rem;
     border: solid 1px #999;
-    border-radius: 4px;
+    border-radius: 30px;
     padding: 0.75rem;
     color: #555;
     width: 100%;
     max-width: 20rem;
-    background-color: rgba(0,0,0,0.1);
+    background-color: white;
 }
 
 form label.sbs {
     display: block;
-    padding: 0.75rem 0;
-    color: #555;
+    padding: 0.1rem 0;
+    color: #023859;
+    
 }
 
 form input.submitBtn {
     border: none;
-    background-color: #9c2c13;
+    background-color: #023859;
     color: white;
     border-radius: 1rem;
     padding: 0.75rem 1.5rem;
@@ -390,4 +397,12 @@ form label.top input:required {
 
 form label.top input:required:valid {
     border-left: green solid 6px;
+}
+
+textarea {
+    border-radius: 30px;
+}
+
+.flexly {
+    color: #023859;
 }
