@@ -28,6 +28,7 @@ body {
 h1, h2 {
     color: #023859;
     font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
 }
 
 h3, h4, h5, h6 {
@@ -236,9 +237,7 @@ main {
     padding: 0 2%;
 }
 
-h1, h2, h3, h4, h3, h6, p, img, .weather-forecast-table {
-    padding: 0 2%;
-}
+
 
 .hero {
     max-width: 100%;
@@ -350,7 +349,7 @@ iframe {
 main {
     padding: 0 2%;
     min-height: 20rem;
-    font-size: 1.5rem;
+    
 }
 
 /*----------- MAIN --------------*/
