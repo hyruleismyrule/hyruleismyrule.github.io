@@ -50,8 +50,9 @@ fetch(requestURL)
         for (let i = 0; i < towns.length; i++) {
             if (i == 0 || i == 2 || i == 6) {
             let card = document.createElement('section');
+            let text = document.createElement('div');
             let name = document.createElement('h2');
-            let motto = document.createElement('p');
+            let motto = document.createElement('h3');
             let yearFounded = document.createElement('p');
             let currentPopulation = document.createElement('p');
             let averageRainfall = document.createElement('p');
@@ -59,28 +60,34 @@ fetch(requestURL)
 
             name.textContent = towns[i].name;
             motto.textContent = towns[i].motto;
-            yearFounded.textContent = towns[i].yearFounded;
-            currentPopulation.textContent = towns[i].currentPopulation;
-            averageRainfall.textContent = towns[i].currentPopulation;
+            yearFounded.textContent = 'Year Founded: ' + towns[i].yearFounded;
+            currentPopulation.textContent = 'Population: ' + towns[i].currentPopulation;
+            averageRainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
 
             photo.setAttribute('src', 'images/town/' + towns[i].photo);
             photo.setAttribute('alt', towns[i].name);
 
-            card.appendChild(name);
-            card.appendChild(motto);
-            card.appendChild(yearFounded);
-            card.appendChild(currentPopulation);
-            card.appendChild(averageRainfall);
+            // card.towns[2].setAttribute('id', "center");
+
+            card.appendChild(text);
+            text.appendChild(name);
+            text.appendChild(motto);
+            text.appendChild(yearFounded);
+            text.appendChild(currentPopulation);
+            text.appendChild(averageRainfall);
             card.appendChild(photo);
 
-            /*
-            if (name.textContent != "Soda Springs" || name.textContent != "Fish Haven" || name.textContent != "Preston") {
-                        card.classList.add("hideme")
-                    }
-            }
-            */
-
             document.querySelector('div.cards').appendChild(card);
+
+            if (i == 2 ) {
+                card.setAttribute('id', "center");
+                document.querySelector('div.cards').appendChild(card);
+            }
+
+            if (i == 0 ) {
+                card.setAttribute('id', "left");
+                document.querySelector('div.cards').appendChild(card);
+            }
         }
         }
     });

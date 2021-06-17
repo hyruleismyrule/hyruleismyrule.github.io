@@ -38,6 +38,98 @@
     }
     /*----- Google Maps -----*/
     /*----------- FOOTER --------------*/
+
+/*----------- Home Cards --------------*/
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* end of media query */
+.cards section div {
+    /*position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+   */
+
+    position: relative;
+    /* top: 100%; */
+    /* left: 50%; */
+    transform: translate(0%, 100%);
+    /*text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px white;*/
+
+   /* position: static;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    margin: 1rem;
+    text-shadow: none;*/
+}
+.cards section {
+    display: block;
+    position: relative;
+    /*position: relative;
+    text-align: center;*/
+
+    /*position: static;
+    background-color: #62B7D9;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;*/
+   
+}
+
+.cards h2 {
+    /*padding: 0;
+    margin: 0;*/
+}
+
+.cards h3 {
+    /*font-style: italic;
+    padding: 0.5rem;
+    margin: 0;*/
+
+    /*color: black;*/
+}
+
+.cards p {
+   /* padding: 0;*/
+}
+
+.cards img {
+    position: relative;
+    transform: translate(0%, -110%);
+    margin: 0;
+    /*width: 100%;*/
+
+    /*margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -1rem;*/
+}
+
+#center img {
+    margin: 0;
+    /*grid-column-start: 1;
+    grid-row-start: 1;
+    margin-left: 1rem;*/
+}
+
+#center div {
+   /* grid-column-start: 2;
+    grid-row-start: 1;*/
+}
+
+#left img {
+    transform: translate(0%, -120%);
+}
+
+#left div {
+    transform: translate(0%, 90%);
+
+}
+}/* end of media query */

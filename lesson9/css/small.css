@@ -61,8 +61,6 @@ header {
     padding: .5rem 2%;
     background-color: #62B7D9;
     color: black;
-    
-
     /* FLEX ALIGN*/
     /*
 display: flex;
@@ -106,7 +104,7 @@ nav button {
 
 nav {
     background-color: #035E81;
-    content: "";    
+    content: "";
 }
 
 nav ul {
@@ -237,11 +235,8 @@ main {
     padding: 0 2%;
 }
 
-
-
 .hero {
     max-width: 100%;
-
 }
 
 .broke {
@@ -266,13 +261,12 @@ footer {
 .wireframe {
     border: 2px solid #023859;
     margin: 2%;
-    
 }
 
 .wireframe h2 {
-text-align: center;
-padding: 0.2rem;
-margin: 0;
+    text-align: center;
+    padding: 0.2rem;
+    margin: 0;
 }
 
 .wireframe img {
@@ -316,7 +310,7 @@ margin: 0;
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;    
+    grid-template-columns: 1fr 1fr;
 }
 
 .address-container {
@@ -328,8 +322,6 @@ margin: 0;
     grid-column-start: 2;
     grid-column-end: 3;
 }
-
-
 
 iframe {
     width: 100%;
@@ -346,17 +338,18 @@ iframe {
 /* Form */
 
 /*----------- MAIN --------------*/
+
 main {
     padding: 0 2%;
     min-height: 20rem;
-    
 }
 
 /*----------- MAIN --------------*/
+
 form fieldset {
     margin: 2rem 0;
     border: 1px solid #023859;
-    padding: 0.5rem 2%; 
+    padding: 0.5rem 2%;
     font-family: 'Cormorant Garamond';
     background-color: #c1d4db;
     border-radius: 30px;
@@ -376,7 +369,6 @@ form label.top, form div {
     display: block;
     padding-top: 1rem;
     color: #023859;
-    
 }
 
 form label.top input, form label.top select {
@@ -395,7 +387,6 @@ form label.sbs {
     display: block;
     padding: 0.1rem 0;
     color: #023859;
-    
 }
 
 form input.submitBtn {
@@ -423,4 +414,39 @@ textarea {
 
 .flexly {
     color: #023859;
+}
+
+/*----------- Home Cards --------------*/
+
+.cards section div {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px white;
+}
+
+.cards section {
+    position: relative;
+    text-align: center;
+}
+
+.cards h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.cards h3 {
+    font-style: italic;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.cards p {
+    padding: 0;
+}
+
+.cards img {
+    width: 100%;
 }
