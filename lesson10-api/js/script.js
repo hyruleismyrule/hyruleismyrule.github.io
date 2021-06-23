@@ -36,7 +36,7 @@ if (element) {
 function adjustRating(rating) {
     document.getElementById("ratingvalue").innerHTML = rating;
 }
-
+/*
 // Cards from JSON
 const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
@@ -91,3 +91,4 @@ fetch(requestURL)
         }
         }
     });
+*/

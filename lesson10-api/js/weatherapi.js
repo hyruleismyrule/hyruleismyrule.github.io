@@ -1,46 +1,30 @@
-function toggleMenu() {
-    document.getElementById("primaryNav").classList.toggle("hide");
-}
-
-let oLastModif = new Date(document.lastModified);
-
-let optionsMonth = { month: 'long', };
-let optionsDay = { weekday: 'long', };
-
-let day = oLastModif.toLocaleDateString("en-US", optionsDay);
-let date = oLastModif.getDate();
-let month = oLastModif.toLocaleDateString("en-US", optionsMonth);
-let year = oLastModif.getFullYear();
-
-let dateString = day + ", " + date + " " + month + " " + year;
-
-document.getElementById('lastUpdated').innerHTML = dateString;
-
-
-const today = new Date();
-// console.log(today);
-
-const dayNumber = today.getDay();
-// console.log(dayNumber);
-
-const element = document.getElementById("message")
-
-if (element) {
-    if (dayNumber == 5) {
-        element.classList.add("showme")
-    } else {
-        element.classList.add("hideme")
+/*{
+    "id": 5604473,
+    "name": "Preston",
+    "state": "ID",
+    "country": "US",
+    "coord": {
+        "lon": -111.876617,
+        "lat": 42.09631
     }
-}
+},
+*/
 
-function adjustRating(rating) {
-    document.getElementById("ratingvalue").innerHTML = rating;
-}
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=28e498ae581a0633cfff6d7d29104fdb&units=imperial";
+fetch(apiURL)
+  .then((response) => response.json())
+  .then((jsObject) => {
+    console.log(jsObject);
+    document.getElementById('current-temp').textContent = jsObject.main.temp;
+    const imagesrc = 'images/day-and-night-icons/' + jsObject.weather[0].icon + '.png';  // note the concatenation
+    const desc = jsObject.weather[0].description;  // note how we reference the weather array
+    document.getElementById('imagesrc').textContent = imagesrc;  // informational specification only
+    document.getElementById('icon').setAttribute('src', imagesrc);  // focus on the setAttribute() method
+    document.getElementById('icon').setAttribute('alt', desc);
+  });
+  
 
-// Cards from JSON
-const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
-
-fetch(requestURL)
+/*
     .then(function (response) {
         return response.json();
     })
@@ -91,3 +75,4 @@ fetch(requestURL)
         }
         }
     });
+*/
