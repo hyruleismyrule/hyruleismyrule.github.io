@@ -23,7 +23,7 @@ fetch(forecastAPIurl)
             let time = forecastList[i].dt_txt;
             if (time.includes('21:00:00')) {
 
-                let theDayName = document.createElement('span');
+                let theDayName = document.createElement('h3');
                 theDayName.textContent = weekday[forecastDayNumber];
                 console.log('>' + weekday[forecastDayNumber]);
 
@@ -38,8 +38,8 @@ fetch(forecastAPIurl)
 
                 let theDay = document.createElement('div');
                 theDay.appendChild(theDayName);
-                theDay.appendChild(theTemp);
                 theDay.appendChild(theIcon);
+                theDay.appendChild(theTemp);
 
                 theDay.setAttribute('class', "forecast-box");
                 theDayName.setAttribute('class', "forecast-name");

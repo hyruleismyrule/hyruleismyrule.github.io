@@ -132,4 +132,10 @@
     transform: translate(0%, 90%);
 
 }
+
+#forecast {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
 }/* end of media query */

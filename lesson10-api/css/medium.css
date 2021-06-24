@@ -143,4 +143,10 @@
         grid-row-start: 1;
     }
 
+    #forecast {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2%;
+    }
+
 }/* end of media query */

@@ -451,7 +451,28 @@ textarea {
     width: 100%;
 }
 
-forecast-box
-forecast-name
-forecast-temp
-forecast-icon
+.forecast-box {
+    border: 1px solid #023859;
+    margin-bottom: 2%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.forecast-name {
+    background-color: #62B7D9;
+    padding: 0;
+    margin: 0;
+    color: black;
+    padding: 2%;
+    font-size: 1.5rem;
+}
+
+.forecast-icon {
+    margin: 2%;
+}
+
+.forecast-temp {
+    margin: 0;
+    padding: 2%;
+}
