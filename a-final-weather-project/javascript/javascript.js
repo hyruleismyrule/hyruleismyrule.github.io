@@ -24,12 +24,12 @@ document.getElementById('lastUpdated').innerHTML = dateString;
 // Weekend message
 const today = new Date();
 const dayNumber = today.getDay();
-const element = document.getElementById("message")
+const element = document.getElementById("message");
 if (element) {
     if (dayNumber == 5) {
-        element.classList.add("showme")
+        element.classList.add("showme");
     } else {
-        element.classList.add("hideme")
+        element.classList.add("hideme");
     }
 }
 
