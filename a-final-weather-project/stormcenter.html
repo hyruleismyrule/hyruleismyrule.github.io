@@ -11,7 +11,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/small.css" rel="stylesheet">
     <link href="css/medium.css" rel="stylesheet">
-    <link href="css/large.css" rel="stylesheet">
+    <link href="css/condensed-large.css" rel="stylesheet">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Varela+Round&display=swap"
@@ -26,7 +26,9 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
+
 <body>
+    
     <!-- HEADER HERE -->
     <div id="headerWrapper">
         <header class="clearfix">
@@ -56,7 +58,7 @@
         <div id="message">Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</div>
         <h1 id="page-name">Storm Center</h1>
 
-        <form method="get" action="/lesson8/thanks.html">
+        <form method="get" action="thanks.html">
             <fieldset>
                 <legend>Applicant Information</legend>
                 <label class="top">Full Name*<input type="text" name="fullname" pattern="[A-Za-z ]{5,}" required></label>
@@ -107,7 +109,7 @@
                 <label class="sbs"><input type="radio" name="danger" value="intermediate"> Maybe</label>
                 <label class="sbs"><input type="radio" name="danger" value="advanced"> No</label>
 
-                <label class="top">Additional Information <br> <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea></label>
+                <label class="top">Additional Information <br> <textarea name="additionalInformation"></textarea></label>
                
                 <input type="submit" value="Report Storm" class="submitBtn">
             </fieldset>
