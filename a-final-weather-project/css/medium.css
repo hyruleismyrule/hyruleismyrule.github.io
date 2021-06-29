@@ -96,14 +96,10 @@
     .small-grid {
         padding: 0 2%;
     }
-    /*----------- Google Maps    
-    --------------*/
     .google-maps-large {
         float: right;
         width: 55%;
     }
-    /*----------- FOOTER --------------*/
-    /*----------- Home Cards --------------*/
     .cards section div {
         position: static;
         top: 0%;
@@ -150,20 +146,24 @@
     header h2 {
         font-size: 2rem;
     }
-    /*----------- NAVIGATION --------------*/
-    nav ul {
-        margin-left: 2%;
-    }
-    nav ul li {
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         float: left;
+        width: 45%;
     }
-    nav ul li a {
-        padding: .5rem 1rem;
+
+    .small-grid {
+        min-width: 27rem;
+        max-width: 42rem;
     }
-    nav button {
-        display: none;
+
+    .small-grid {
+        padding: 0 2%;
     }
-    nav ul.hide {
-        display: block;
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem
     }
 }

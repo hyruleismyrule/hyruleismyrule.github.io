@@ -372,6 +372,36 @@ iframe {
     overflow: hidden;
 }
 
+/* Lazy Loading Images */
+
+.gallery-image img[data-src] {
+    filter: blur(0.2em);
+}
+
+.gallery-image img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+
+.gallery-card {
+    border: 1px solid;
+    display: block;
+    padding: 0;
+    margin-bottom: 1rem;
+    border-color: #E3E3E3;
+    box-shadow: 10px 5px 10px #E3E3E3;
+}
+
+.gallery-image img {
+    padding: 0;
+}
+
+.gallery-card p{
+    padding: 0 2%;
+    margin: 1%;
+    font-style: italic;
+}
+
 /*----------- FOOTER --------------*/
 
 div#footerWrapper {
