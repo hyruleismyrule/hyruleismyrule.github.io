@@ -90,7 +90,7 @@ if (openPage.textContent == "Preston") {
                     theDayName.textContent = weekday[forecastDayNumber];
                     console.log('>' + weekday[forecastDayNumber]);
                     let theTemp = document.createElement('p');
-                    theTemp.textContent = forecastList[i].main.temp + '\xB0';
+                    theTemp.textContent = Math.round(forecastList[i].main.temp) + '\xB0';
                     let iconcode = forecastList[i].weather[0].icon;
                     let iconPath = "images/day-and-night-icons/" + iconcode + ".png";
                     let theIcon = document.createElement('img');
