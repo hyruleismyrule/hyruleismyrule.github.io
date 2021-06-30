@@ -24,7 +24,6 @@ h1, h2 {
     color: #023859;
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
-    margin: 0.5rem;
 }
 
 h3, h4, h5, h6 {
@@ -366,6 +365,10 @@ iframe {
     border: none;
     margin: 0;
     overflow: hidden;
+}
+
+.bottom img {
+    margin-top: 1rem;
 }
 
 /* Lazy Loading Images */

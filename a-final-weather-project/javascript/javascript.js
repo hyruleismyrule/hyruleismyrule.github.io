@@ -92,7 +92,7 @@ if (openPage.textContent == "Preston") {
                     let theTemp = document.createElement('p');
                     theTemp.textContent = Math.round(forecastList[i].main.temp) + '\xB0';
                     let iconcode = forecastList[i].weather[0].icon;
-                    let iconPath = "images/day-and-night-icons/" + iconcode + ".png";
+                    let iconPath = "images/forecast-icons/" + iconcode + ".png";
                     let theIcon = document.createElement('img');
                     theIcon.src = iconPath;
                     let theDay = document.createElement('div');
@@ -155,7 +155,7 @@ fetch(requestURL)
                 yearFounded.textContent = 'Year Founded: ' + towns[i].yearFounded;
                 currentPopulation.textContent = 'Population: ' + towns[i].currentPopulation;
                 averageRainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
-                photo.setAttribute('src', 'images/town/' + towns[i].photo);
+                photo.setAttribute('src', 'images/home/' + towns[i].photo);
                 photo.setAttribute('alt', towns[i].name);
                 card.appendChild(text);
                 text.appendChild(name);
