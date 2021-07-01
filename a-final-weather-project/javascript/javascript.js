@@ -129,7 +129,30 @@ if (openPage.textContent == "Preston") {
                 document.getElementById("chill").textContent = "No Wind Chill Today.";
             }
         });
-}
+
+        // Events
+    const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+    fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const towns = jsonObject['towns'];
+            console.log(towns);
+            for (let i = 0; i < towns.length; i++) {
+                if (i == 6) {
+
+                    let events = document.createElement("ul");
+                    let eventItems = document.createElement("li");
+
+                    events.appendChild(eventItems);
+                    document.querySelector('div.event').appendChild(events);
+                    
+                }
+            }
+        });
+    }
+
 
 // Soda Springs's 5 Day forecast
 if (openPage.textContent == "Soda Springs") {
