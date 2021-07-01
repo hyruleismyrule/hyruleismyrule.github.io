@@ -30,7 +30,7 @@
     <!-- HEADER HERE -->
     <div id="headerWrapper">
         <header class="clearfix">
-            <img class="logo" src="images/logo.png" alt="sunshine logo" />
+            <a href="index.html"><img class="logo" src="images/logo.png" alt="storm logo" /></a>
             <h1>Wandering Weather</h1>
             <h2>Where will the Weather take you?</h2>
         </header>
@@ -41,20 +41,19 @@
         <nav class="clearfix">
             <button onclick="toggleMenu()">&#9776; MENU</button>
             <ul id="primaryNav" class="hide">
-                <li><a href="/lesson9/index.html">Home</a></li>
-                <li class="active"><a href="/lesson10/preston.html">Preston</a></li>
-                <li><a href="#">Soda Springs</a></li>
-                <li><a href="#">Fish Haven</a></li>
-                <li><a href="/lesson8/stormcenter.html">Storm Center</a></li>
-                <li><a href="/Lesson7/gallery.html">Gallery</a></li>
-            </ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="preston.html">Preston</a></li>
+                <li><a href="sodasprings.html">Soda Springs</a></li>
+                <li><a href="fishhaven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
         </nav>
     </div>
 
     <!-- CONTENT HERE -->
     <main>
         <div id="message">Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</div>
-        <h1>Preston</h1>
+        <h1 id="page-name">Preston</h1>
         <div class="hero">
             <p class="summary">Weather Summary<br>
                 Temprature: <span id="temp"></span>&deg; F<br>
@@ -63,10 +62,10 @@
             </p>
 
             <picture class="hero-image">
-                <source media="(max-width: 400px)" srcset="images/herosub400.jpg">
-                <source media="(max-width: 800px)" srcset="images/herosub800.jpg">
-                <source media="(max-width: 971px)" srcset="images/herosub971.jpg">
-                <img class="broke" src="images/herosub971.jpg" alt="Green grassey field at sunset.">
+                <source media="(max-width: 400px)" srcset="images/preston/preston-hero400.jpg">
+                <source media="(max-width: 800px)" srcset="images/preston/preston-hero800.jpg">
+                <source media="(max-width: 971px)" srcset="images/preston/preston-hero971.jpg">
+                <img class="broke" src="images/preston/preston-hero971.jpg" alt="Green grassey field at sunset.">
             </picture>
         </div>
 
@@ -74,41 +73,30 @@
         <h2>Five Day Forecast</h2>
         <div id="forecast"></div>
 
-        <h2>Article Title</h2>
+        <h2>Festival of Lights</h2>
         <div class="article">
             <picture class="article-image top">
-                <source media="(max-width: 400px)" srcset="images/related-article-image-assets/article400.jpeg">
-                <source media="(max-width: 800px)" srcset="images/related-article-image-assets/article500.jpeg">
-                <source media="(max-width: 971px)" srcset="images/related-article-image-assets/article800.jpeg">
-                <img class="broke" src="images/related-article-image-assets/article800.jpeg" alt="Pink Cloudy Sky">
+                <source media="(max-width: 400px)" srcset="images/preston/preston-event300.jpg">
+                <source media="(max-width: 520px)" srcset="images/preston/preston-event520.jpg">
+                <img class="broke" src="images/preston/preston-event520.jpg" alt="Lights">
             </picture>
-            <p>On this day in history the first (you find something cool in history and
-                complete this paragraph. Ryiam velit odio ut et ac tristique, dictumst,
-                odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
-                odio nunc. Odio nisi, parturient placerat cum in, nunc diam quis
-                ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
-                montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
-                quis. Elit lundium lectus nisi! Egestas velit nunc, mus! Dolor facilisis,
-                nec nascetur cum, dictumst montes nisi, magna diam porta elit nisi
-                ac, purus placerat, a ac purus rhoncus! Dolor etiam. Ridiculus et
-                dolor ac! Massa, mid mid ultrices, rhoncus massa! Odio et arcu porta duis augue a facilisis vel duis
-                natoque tortor ultricies odio rhoncus elementum et dictumst risus. Dapibus sit, sit ac. Adipiscing?
-                odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
-                odio nunc. Odio nisi, parturient placerat cum in, nunc diam quis
-                ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
-                montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
-                odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
-                odio nunc. Odio nisi, parturient placerat cum in, nunc diam quis
-                ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
-                montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
+            <p>"Each year Preston holds the "Idaho Festival of Lights", which starts the day after Thanksgiving and
+                goes until December 31. The festival was started by two local business men (Wayne Bell and Walter Ross)
+                along with many other community organizations to help celebrate Christmas within the community. The
+                festival consists of a lighted parade, fireworks, and displays in the city park. The merchants along the
+                main street of Preston have their store fronts decorated with Christmas lights during the festival."
             </p>
+            <a href="https://en.wikipedia.org/wiki/Preston,_Idaho" target="_blank">- Wikipedia</a>
             <picture class="article-image bottom">
-                <source media="(max-width: 400px)" srcset="images/related-article-image-assets/article400.jpeg">
-                <source media="(max-width: 800px)" srcset="images/related-article-image-assets/article500.jpeg">
-                <source media="(max-width: 971px)" srcset="images/related-article-image-assets/article800.jpeg">
-                <img class="broke" src="images/related-article-image-assets/article800.jpeg" alt="Pink Cloudy Sky">
+                <source media="(max-width: 400px)" srcset="images/preston/preston-event300.jpg">
+                <source media="(max-width: 520px)" srcset="images/preston/preston-event520.jpg">
+                <img class="broke" src="images/preston/preston-event520.jpg" alt="Lights">
             </picture>
         </div>
+
+        <h2>Upcoming Events</h2>
+        <div class="event"></div>
+        
         <h2>Contact Us</h2>
         <div class="contact-grid">
 
@@ -144,17 +132,8 @@
         </footer>
     </div>
     <!-- javascript HERE -->
-    <!-- FIX THIS
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-        WebFont.load({
-            google: {
-                families: ['Cormorant Garamond, Varela Round']
-            }
-        });
-    </script> -->
-    <script src="js/script.js"></script>
-    <script src="js/forecast.js"></script>
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>
