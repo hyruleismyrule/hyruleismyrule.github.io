@@ -141,41 +141,17 @@ if (openPage.textContent == "Preston") {
             console.log(towns);
             for (let i = 0; i < towns.length; i++) {
                 if (i == 6) {
-
                     let eventList = document.createElement("ul");
 
                     let events = towns[i].events;
                     console.log(events);
 
-                    for (let event in events) {
+                    for (let event of events) {
                         let eventItem = document.createElement("li");
                         eventItem.textContent = event;
                         eventList.appendChild(eventItem);
                     }
-
-                    // eventList.innerHTML = "<li>" + 
-
-                    /*
-                    eventItems.textContent = towns[i].events[0];
-                    eventList.appendChild(eventItems);
-                    eventItems.textContent = towns[i].events[1];
-                    eventList.appendChild(eventItems);
-                    eventItems.textContent = towns[i].events[2];
-                    eventList.appendChild(eventItems);
-                    */
-                    // eventItems.textContent = towns[i].events[0];
-
-                    /*towns[i].events.forEach(myFunction);
-
-                    function myFunction(item) {
-                        // eventItems.textContent = towns[i].events;
-                        eventItems.textContent = item;
-                        events.appendChild(eventItems);
-                    }*/
-
-                    eventList.appendChild(eventItems);
                     document.querySelector('div.event').appendChild(eventList);
-
                 }
             }
         });
@@ -246,6 +222,32 @@ if (openPage.textContent == "Soda Springs") {
                 document.getElementById("chill").textContent = "No Wind Chill Today.";
             }
         });
+
+    // Events
+    const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+    fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const towns = jsonObject['towns'];
+            console.log(towns);
+            for (let i = 0; i < towns.length; i++) {
+                if (i == 0) {
+                    let eventList = document.createElement("ul");
+
+                    let events = towns[i].events;
+                    console.log(events);
+
+                    for (let event of events) {
+                        let eventItem = document.createElement("li");
+                        eventItem.textContent = event;
+                        eventList.appendChild(eventItem);
+                    }
+                    document.querySelector('div.event').appendChild(eventList);
+                }
+            }
+        });
 }
 
 // Fish Haven's 5 Day forecast
@@ -310,6 +312,32 @@ if (openPage.textContent == "Fish Haven") {
                 document.getElementById("chill").textContent = "Wind Chill: " + windChill + "°";
             } else {
                 document.getElementById("chill").textContent = "No Wind Chill Today.";
+            }
+        });
+
+    // Events
+    const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+    fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const towns = jsonObject['towns'];
+            console.log(towns);
+            for (let i = 0; i < towns.length; i++) {
+                if (i == 2) {
+                    let eventList = document.createElement("ul");
+
+                    let events = towns[i].events;
+                    console.log(events);
+
+                    for (let event of events) {
+                        let eventItem = document.createElement("li");
+                        eventItem.textContent = event;
+                        eventList.appendChild(eventItem);
+                    }
+                    document.querySelector('div.event').appendChild(eventList);
+                }
             }
         });
 }
