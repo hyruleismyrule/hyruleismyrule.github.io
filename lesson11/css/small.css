@@ -402,6 +402,20 @@ iframe {
     font-size: 1.5rem;
 }
 
+.event-header {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #023859;
+}
+
+.event {
+    text-align: center;
+}
+
+.event li {
+    list-style: none;
+}
+
 /*----------- FOOTER --------------*/
 
 div#footerWrapper {
