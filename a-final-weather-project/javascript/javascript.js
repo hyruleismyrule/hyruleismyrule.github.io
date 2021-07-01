@@ -41,27 +41,27 @@ function adjustRating(rating) {
 // Progressive loading images
 const imagesToLoad = document.querySelectorAll('img[data-src]');
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
-  image.onload = () => {
-    image.removeAttribute('data-src');
-  };
+    image.setAttribute('src', image.getAttribute('data-src'));
+    image.onload = () => {
+        image.removeAttribute('data-src');
+    };
 };
 if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((items) => {
-    items.forEach((item) => {
-      if (item.isIntersecting) {
-        loadImages(item.target);
-        observer.unobserve(item.target);
-      }
+    const observer = new IntersectionObserver((items) => {
+        items.forEach((item) => {
+            if (item.isIntersecting) {
+                loadImages(item.target);
+                observer.unobserve(item.target);
+            }
+        });
     });
-  });
-  imagesToLoad.forEach((img) => {
-    observer.observe(img);
-  });
+    imagesToLoad.forEach((img) => {
+        observer.observe(img);
+    });
 } else {
-  imagesToLoad.forEach((img) => {
-    loadImages(img);
-  });
+    imagesToLoad.forEach((img) => {
+        loadImages(img);
+    });
 }
 
 let openPage = document.getElementById('page-name');
@@ -130,7 +130,7 @@ if (openPage.textContent == "Preston") {
             }
         });
 
-        // Events
+    // Events
     const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
     fetch(requestURL)
         .then(function (response) {
@@ -142,16 +142,44 @@ if (openPage.textContent == "Preston") {
             for (let i = 0; i < towns.length; i++) {
                 if (i == 6) {
 
-                    let events = document.createElement("ul");
-                    let eventItems = document.createElement("li");
+                    let eventList = document.createElement("ul");
 
-                    events.appendChild(eventItems);
-                    document.querySelector('div.event').appendChild(events);
-                    
+                    let events = towns[i].events;
+                    console.log(events);
+
+                    for (let event in events) {
+                        let eventItem = document.createElement("li");
+                        eventItem.textContent = event;
+                        eventList.appendChild(eventItem);
+                    }
+
+                    // eventList.innerHTML = "<li>" + 
+
+                    /*
+                    eventItems.textContent = towns[i].events[0];
+                    eventList.appendChild(eventItems);
+                    eventItems.textContent = towns[i].events[1];
+                    eventList.appendChild(eventItems);
+                    eventItems.textContent = towns[i].events[2];
+                    eventList.appendChild(eventItems);
+                    */
+                    // eventItems.textContent = towns[i].events[0];
+
+                    /*towns[i].events.forEach(myFunction);
+
+                    function myFunction(item) {
+                        // eventItems.textContent = towns[i].events;
+                        eventItems.textContent = item;
+                        events.appendChild(eventItems);
+                    }*/
+
+                    eventList.appendChild(eventItems);
+                    document.querySelector('div.event').appendChild(eventList);
+
                 }
             }
         });
-    }
+}
 
 
 // Soda Springs's 5 Day forecast
@@ -288,47 +316,47 @@ if (openPage.textContent == "Fish Haven") {
 
 // Home Page Cards
 if (openPage.textContent == "Home") {
-const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
-fetch(requestURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (jsonObject) {
-        const towns = jsonObject['towns'];
-        for (let i = 0; i < towns.length; i++) {
-            if (i == 0 || i == 2 || i == 6) {
-                let card = document.createElement('section');
-                let text = document.createElement('div');
-                let name = document.createElement('h2');
-                let motto = document.createElement('h3');
-                let yearFounded = document.createElement('p');
-                let currentPopulation = document.createElement('p');
-                let averageRainfall = document.createElement('p');
-                let photo = document.createElement('img');
-                name.textContent = towns[i].name;
-                motto.textContent = towns[i].motto;
-                yearFounded.textContent = 'Year Founded: ' + towns[i].yearFounded;
-                currentPopulation.textContent = 'Population: ' + towns[i].currentPopulation;
-                averageRainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
-                photo.setAttribute('src', 'images/home/' + towns[i].photo);
-                photo.setAttribute('alt', towns[i].name);
-                card.appendChild(text);
-                text.appendChild(name);
-                text.appendChild(motto);
-                text.appendChild(yearFounded);
-                text.appendChild(currentPopulation);
-                text.appendChild(averageRainfall);
-                card.appendChild(photo);
-                document.querySelector('div.cards').appendChild(card);
-                if (i == 2) {
-                    card.setAttribute('id', "center");
+    const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+    fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const towns = jsonObject['towns'];
+            for (let i = 0; i < towns.length; i++) {
+                if (i == 0 || i == 2 || i == 6) {
+                    let card = document.createElement('section');
+                    let text = document.createElement('div');
+                    let name = document.createElement('h2');
+                    let motto = document.createElement('h3');
+                    let yearFounded = document.createElement('p');
+                    let currentPopulation = document.createElement('p');
+                    let averageRainfall = document.createElement('p');
+                    let photo = document.createElement('img');
+                    name.textContent = towns[i].name;
+                    motto.textContent = towns[i].motto;
+                    yearFounded.textContent = 'Year Founded: ' + towns[i].yearFounded;
+                    currentPopulation.textContent = 'Population: ' + towns[i].currentPopulation;
+                    averageRainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
+                    photo.setAttribute('src', 'images/home/' + towns[i].photo);
+                    photo.setAttribute('alt', towns[i].name);
+                    card.appendChild(text);
+                    text.appendChild(name);
+                    text.appendChild(motto);
+                    text.appendChild(yearFounded);
+                    text.appendChild(currentPopulation);
+                    text.appendChild(averageRainfall);
+                    card.appendChild(photo);
                     document.querySelector('div.cards').appendChild(card);
-                }
-                if (i == 0) {
-                    card.setAttribute('id', "left");
-                    document.querySelector('div.cards').appendChild(card);
+                    if (i == 2) {
+                        card.setAttribute('id', "center");
+                        document.querySelector('div.cards').appendChild(card);
+                    }
+                    if (i == 0) {
+                        card.setAttribute('id', "left");
+                        document.querySelector('div.cards').appendChild(card);
+                    }
                 }
             }
-        }
-    });
+        });
 }
