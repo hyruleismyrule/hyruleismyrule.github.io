@@ -75,6 +75,7 @@ header button {
 /*----------- NAVIGATION --------------*/
 
 nav ul {
+    border-top: 4px solid white;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -114,18 +115,101 @@ main {
 
 /*----------- Home--------------*/
 
-.main-banner img {
-    width: 100%;
+.main-banner {
     position: relative;
 }
 
+.main-banner img {
+    width: 100%;
+}
+
 .main-banner h1 {
-    top: 50%;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    /*text-align: center;*/
-    font-size: 2rem;
+    color: #8CA665;
+}
+
+.card {
+    background-color: #C1D6D9;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.card h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mission {
+    background-color: #8CA665;
+}
+
+.contact {
+    background-color: #C1D6D9;
+}
+
+.space{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact p, .advertisement p {
+    line-height: 2rem;
+}
+
+.location {
+    margin-top: 0;
+}
+
+.submitBtn{
+    background-color: transparent;
+    border: 4px solid #4E9DA6;
+    padding: 0.5rem;
+    color: #4E9DA6;
+}
+
+legend {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+input, .text-box {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 2px solid #4E9DA6;
+    
+}
+
+.advertisement {
+    background-color: #63736E;
+    color: white;
+    padding: 0;
+    padding-bottom: 1rem;;
+}
+
+.advertisement a {
+    color: white;
+}
+
+.advertisement img {
+    width: 100%;
+}
+
+.text {
+    padding: 0 2%;
+    margin-bottom: 1rem;
 }
 
 /*----------- FOOTER --------------*/

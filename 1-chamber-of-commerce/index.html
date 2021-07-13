@@ -48,17 +48,17 @@
         </nav>
     </header>
 
-    <!-- Description/ Goals/ Purpose -->
+    <!-- image needs to be optamized -->
     <div class="main-banner">
-        <h1>Davenport Chamber of Commerce</h1>
-        <!-- image needs to be optamized -->
         <picture class="">
+            <h1>Davenport Chamber of Commerce</h1>
             <img class="default" src="images/home/commerce-banner.jpeg" alt="Davenport City">
         </picture>
     </div>
     <main>
         <div class="main-grid">
-            <div class="">
+            <!-- Description/ Goals/ Purpose -->
+            <div class="card mission">
                 <h2>Our Mission</h2>
                 <p>Promote small businesses and build the public’s trust and confidence by providing the best in
                     customer service, assured quality, and the efficient use of public funds, treating our customers
@@ -67,83 +67,99 @@
             </div>
 
             <!-- Contact Information -->
-            <div class="">
+            <div class="card contact">
                 <h2>Questions</h2>
-                <h3>Chamber Hours of Operation:</h3>
-                <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>
-                    Fridays: 10:00 AM - 3:00 PM<br>
-                    <i>Closed Weekends and Holidays</i>
-                </p>
-                <p><strong>Chamber Office: </strong>863-422-3751<br>
-                    <strong>Fax: </strong>863-422-4704<br>
-                    <strong>Member Tech Support: </strong>855-233-6362<br>
-                    <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
-                </p>
-                <h3>Location and Mailing</h3>
-                <p><strong>Davenport Chamber of Commerce</strong><br>
-                    35610 Hwy 27<br>
-                    PO Box 986<br>
-                    Davenport, FL 33845
-                </p>
-                <form method="get" action="thanks.html">
-                    <legend>Contact the Chamber</legend>
-                    <label class="">Name*<br>
-                        <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
-                    </label><br>
-                    <label class="">Email<br>
-                        <input type="email" name="email" placeholder="someone@gmail.com">
-                    </label><br>
-                    <label class="">Comment<br>
-                        <textarea name="comment"></textarea>
-                    </label><br>
-                    <input type="submit" value="Send my Comment" class="submitBtn">
-                </form>
+                <div class="space">
+                    <h3>Chamber Hours of Operation:</h3>
+                    <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>
+                        Fridays: 10:00 AM - 3:00 PM<br>
+                        <i>Closed Weekends and Holidays</i>
+                    </p>
+                    <p><strong>Chamber Office: </strong>863-422-3751<br>
+                        <strong>Fax: </strong>863-422-4704<br>
+                        <strong>Member Tech Support: </strong>855-233-6362<br>
+                        <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
+                    </p>
+                </div>
+
+                <div class="space">
+                    <h3>Location and Mailing</h3>
+                    <p class="location"><strong>Davenport Chamber of Commerce</strong><br>
+                        35610 Hwy 27<br>
+                        PO Box 986<br>
+                        Davenport, FL 33845
+                    </p>
+                </div>
+
+                <div class="space">
+                    <form method="get" action="thanks.html">
+                        <legend>
+                            <h3>Contact the Chamber</h3>
+                        </legend>
+                        <label class="">Name<br>
+                            <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
+                        </label><br>
+                        <label class="">Email<br>
+                            <input type="email" name="email" placeholder="someone@gmail.com" required>
+                        </label><br>
+                        <label class="">Comment<br>
+                            <textarea class="text-box" name="comment" required></textarea>
+                        </label><br>
+                        <input type="submit" value="Send my Comment" class="submitBtn">
+                    </form>
+                </div>
             </div>
 
             <!-- Advertisements -->
-            <div class="">
+            <div class="card advertisement">
                 <!-- image needs to be optamized -->
                 <picture class="">
                     <img class="default" src="images/home/1-advertisement.png" alt="Cemex Logo">
                 </picture>
-                <h2>Cemex</h2>
-                <h3>Building the Future</h3>
-                <p>Ready mix concrete supplier in Polk County, Florida<br>
-                    <strong>Address: </strong>1205 US-17, Davenport, FL 33837<br>
-                    <strong>Phone: </strong>(800) 992-3639<br>
-                    <a href="https://www.cemexusa.com/" target="_blank">cemexusa.com</a>
-                </p>
+                <div class="text">
+                    <h2>Cemex</h2>
+                    <h3>Building the Future</h3>
+                    <p>Ready mix concrete supplier in Polk County, Florida<br>
+                        <strong>Address: </strong>1205 US-17, Davenport, FL 33837<br>
+                        <strong>Phone: </strong>(800) 992-3639<br><br>
+                        <a href="https://www.cemexusa.com/" target="_blank">cemexusa.com</a>
+                    </p>
+                </div>
             </div>
 
-            <div class="">
+            <div class="card advertisement">
                 <!-- image needs to be optamized -->
                 <picture class="">
                     <img class="default" src="images/home/2-advertisement.png" alt="Gill Manufacturing logo">
                 </picture>
-                <h2>Gill Manufacturing</h2>
-                <h3>Fabricators with a reputation</h3>
-                <p><strong>Address: </strong>110 U.S. Hwy 17-92 N S, Davenport, FL 33837<br>
-                    <strong>Phone: </strong>(863) 422-5711<br>
-                    <a href="https://www.gillmfg.com/" target="_blank">gillmfg.com</a>
-                </p>
+                <div class="text">
+                    <h2>Gill Manufacturing</h2>
+                    <h3>Fabricators with a reputation</h3>
+                    <p><strong>Address: </strong>110 U.S. Hwy 17-92 N S, Davenport, FL 33837<br>
+                        <strong>Phone: </strong>(863) 422-5711<br><br>
+                        <a href="https://www.gillmfg.com/" target="_blank">gillmfg.com</a>
+                    </p>
+                </div>
             </div>
 
-            <div class="">
+            <div class="card advertisement">
                 <!-- image needs to be optamized -->
                 <picture class="">
                     <img class="default" src="images/home/3-advertisement.png" alt="Zion Tax & Insurance logo">
                 </picture>
-                <h2>Zion Tax & Insurance</h2>
-                <h3>Fill your taxes with experts</h3>
-                <p>Accounting firm in Polk County, Florida<br>
-                    <strong>Address: </strong> 40906 US-27, Davenport, FL 33837<br>
-                    <strong>Phone: </strong>(863) 307-8442<br>
-                    <a href="https://www.ziontaxandinsurance.com/" target="_blank">ziontaxandinsurance.com</a>
-                </p>
+                <div class="text">
+                    <h2>Zion Tax & Insurance</h2>
+                    <h3>Fill your taxes with experts</h3>
+                    <p>Accounting firm in Polk County, Florida<br>
+                        <strong>Address: </strong> 40906 US-27, Davenport, FL 33837<br>
+                        <strong>Phone: </strong>(863) 307-8442<br><br>
+                        <a href="https://www.ziontaxandinsurance.com/" target="_blank">ziontaxandinsurance.com</a>
+                    </p>
+                </div>
             </div>
 
             <!-- Call to Action/ Membership/ Join -->
-            <div clas="">
+            <div class="card">
                 <h2>Become a Member</h2>
                 <p>Picture the Chamber as the community's front door, both as a storefront and public relations office
                     for all its members and residents. Members benefit from referrals to the hundreds of monthly phone
@@ -155,7 +171,7 @@
             </div>
 
             <!-- Events -->
-            <div class="">
+            <div class="card">
                 <h2>Chamber Events</h2>
                 <ul>
                     <li>7/13/2021<br>
@@ -195,9 +211,9 @@
             <div class="weather-grid">
                 <h2>Davenport Weather</h2>
                 <!-- Current Weather -->
-                <div class="">
+                <div class="card">
                     <!-- image needs to be optamized -->
-                    <picture class="">
+                    <picture class="card">
                         <img class="default" src="images/home/current-weather-background.jpeg"
                             alt="Palm trees at sunset">
                     </picture>
@@ -208,13 +224,13 @@
                 </div>
 
                 <!-- Weather Alert -->
-                <div class="">
+                <div class="card">
                     <h2>Caution</h2>
                     <span id="weather-alert"></span>
                 </div>
 
                 <!-- Weather Forecast -->
-                <div class="" id="forecast"></div>
+                <div class="card" id="forecast"></div>
             </div>
         </div>
     </main>
