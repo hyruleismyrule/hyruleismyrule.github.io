@@ -1,25 +1,3 @@
-/* 
-FONTS
-HEADERS
-font-family: 'Catamaran', sans-serif;
-BODY
-font-family: 'EB Garamond', serif;
-*/
-
-/*
-COLORS
-BLUE
-#4E9DA6
-LIGHT BLUE
-#C1D6D9
-LIGHT GREY
-#EBF2F2
-DARK GREY
-#63736E
-GREEN
-#8CA665
-*/
-
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 
 html {
@@ -37,13 +15,185 @@ html {
 
 /*----------- BODY --------------*/
 
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 16pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Catamaran', sans-serif;
+}
+
+div.showme {
+    display: block;
+}
+
+div.hideme {
+    display: none;
+}
+
+/* Delete Later */
+
+img {
+    width: 100px;
+}
+
+/*
+COLORS
+BLUE
+#4E9DA6
+LIGHT BLUE
+#C1D6D9
+LIGHT GREY
+#EBF2F2
+DARK GREY
+#63736E
+GREEN
+#8CA665
+*/
+
 /*----------- HEADER --------------*/
+
+.main-header {
+    background-color: #4E9DA6;
+    display: flex;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    color: #fff;
+}
 
 /*----------- NAVIGATION --------------*/
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #4E9DA6;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #C1D6D9;
+    color: #4E9DA6;
+}
+
+nav ul li.active a {
+    background-color: #8CA665;
+    color: white;
+}
+
+nav ul.hide {
+    display: none;
+}
+
 /*----------- MAIN --------------*/
 
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+    font-size: 1.25rem;
+}
+
+/*----------- Home--------------*/
+
+.main-banner img {
+    width: 100%;
+    position: relative;
+}
+
+.main-banner h1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /*text-align: center;*/
+    font-size: 2rem;
+}
+
 /*----------- FOOTER --------------*/
+
+footer {
+    font-size: 1rem;
+}
+
+footer img {
+    width: 20px;
+    margin: 0.5rem;
+}
+
+/*----------- remove width after optamizing --------------*/
+
+footer img {
+    width: 20px;
+    margin: 0.5rem;
+}
+
+.footer-widgets {
+    background-color: #C1D6D9;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer-widgets button {
+    background-color: transparent;
+    border: 4px solid black;
+    padding: 0.5rem;
+    color: back;
+}
+
+.footer-widgets p, .footer-widgets li {
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+.footer-widgets h3 {
+    margin-bottom: 0.5rem;
+}
+
+.section {
+    margin: 1rem;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    color: black;
+    display: block;
+}
+
+.footer-bottom {
+    background-color: #4E9DA6;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-bottom p {
+    color: black;
+    margin: 0;
+    padding: 0.25rem;
+}
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 

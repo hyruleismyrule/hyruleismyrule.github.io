@@ -32,10 +32,12 @@
     <!-- Header and Navigation -->
     <header>
         <!-- image needs to be optamized -->
-        <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
-        <h1>Davenport Chamber of Commerce</h1>
+        <div class="main-header">
+            <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+            <h1>Davenport Chamber of Commerce</h1>
+            <button onclick="toggleMenu()">&#9776;</button>
+        </div>
         <nav class="clearfix">
-            <button onclick="toggleMenu()">&#9776; MENU</button>
             <ul id="primaryNav" class="hide">
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="davenport.html">Davenport</a></li>
@@ -46,15 +48,15 @@
         </nav>
     </header>
 
+    <!-- Description/ Goals/ Purpose -->
+    <div class="main-banner">
+        <h1>Davenport Chamber of Commerce</h1>
+        <!-- image needs to be optamized -->
+        <picture class="">
+            <img class="default" src="images/home/commerce-banner.jpeg" alt="Davenport City">
+        </picture>
+    </div>
     <main>
-        <!-- Description/ Goals/ Purpose -->
-        <div class="">
-            <h1>Davenport Chamber of Commerce</h1>
-            <!-- image needs to be optamized -->
-            <picture class="">
-                <img class="default" src="images/home/commerce-banner.jpeg" alt="Davenport City">
-            </picture>
-        </div>
         <div class="main-grid">
             <div class="">
                 <h2>Our Mission</h2>
@@ -219,7 +221,7 @@
 
     <footer>
         <div class="footer-widgets">
-            <div class="">
+            <div class="section">
                 <h3>Contact Us</h3>
                 <p><strong>Chamber Office: </strong>863-422-3751<br>
                     <strong>Fax: </strong>863-422-4704<br>
@@ -228,7 +230,7 @@
                 </p>
             </div>
 
-            <div class="">
+            <div class="section">
                 <h3>Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -236,10 +238,11 @@
                     <li><a href="membership.html">Join</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
                 </ul>
             </div>
 
-            <div class="">
+            <div class="section">
                 <!-- optamize -->
                 <a href="https://www.facebook.com/" target="_blank"><img class="" src="images/social-media/facebook.png"
                         alt="Facebook" /></a>
@@ -250,11 +253,16 @@
                 <a href="https://www.instagram.com/" target="_blank"><img class=""
                         src="images/social-media/instagram.png" alt="Instagram" /></a>
             </div>
+
+            <div class="section">
+                <h3>Become a Member</h3>
+                <button>Join Now</button>
+            </div>
         </div>
-        <div class="">
+
+        <div class="footer-bottom">
+            <p>Last Updated: <span id="lastUpdated"></span></p>
             <p>©<span id="year">Davenport Chamber of Commerce</span></p>
-            <p>Last Updated: <span id="last-updated"></span></p>
-            <a href="attributions.html">Attributions</a>
         </div>
     </footer>
 
