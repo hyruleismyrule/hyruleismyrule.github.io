@@ -29,18 +29,196 @@
 </head>
 
 <body>
+    <!-- Header and Navigation -->
     <header>
-
+        <!-- image needs to be optamized -->
+        <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+        <h1>Davenport Chamber of Commerce</h1>
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776; MENU</button>
+            <ul id="primaryNav" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="davenport.html">Davenport</a></li>
+                <li><a href="membership.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h1>Hello World.</h1>
+        <!-- Description/ Goals/ Purpose -->
+        <div class="">
+            <h1>Davenport Chamber of Commerce</h1>
+            <!-- image needs to be optamized -->
+            <picture class="">
+                <img class="default" src="images/home/city-photo.jpeg" alt="Davenport City">
+            </picture>
+        </div>
+        <div class="main-grid">
+            <div class="">
+                <h2>Our Mission</h2>
+                <p>Promote small businesses and build the public’s trust and confidence by providing the best in
+                    customer
+                    service, assured quality, and the efficient use of public funds, treating our customers with such
+                    professionalism and concern that we improve their perception of government.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="">
+                <h2>Questions</h2>
+                <h3>Chamber Hours of Operation:</h3>
+                <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>
+                    Fridays: 10:00 AM - 3:00 PM<br>
+                    <i>Closed Weekends and Holidays</i>
+                </p>
+                <p><strong>Chamber Office: </strong>863-422-3751<br>
+                    <strong>Fax: </strong>863-422-4704<br>
+                    <strong>Member Tech Support: </strong>855-233-6362<br>
+                    <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
+                </p>
+                <h3>Location and Mailing</h3>
+                <p><strong>Davenport Chamber of Commerce</strong><br>
+                    35610 Hwy 27<br>
+                    PO Box 986<br>
+                    Davenport, FL 33845
+                </p>
+                <form method="get" action="thanks.html">
+                    <legend>Contact the Chamber</legend>
+                    <label class="">Name*<br>
+                        <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
+                    </label><br>
+                    <label class="">Email<br>
+                        <input type="email" name="email" placeholder="someone@gmail.com">
+                    </label><br>
+                    <label class="">Comment<br>
+                        <textarea name="comment"></textarea>
+                    </label><br>
+                    <input type="submit" value="Send my Comment" class="submitBtn">
+                </form>
+            </div>
+
+            <!-- Advertisements -->
+            <div class="">
+                <!-- image needs to be optamized -->
+                <picture class="">
+                    <img class="default" src="images/home/1-advertisement.png" alt="Cemex Logo">
+                </picture>
+                <h2>Cemex</h2>
+                <h3>Building the Future</h3>
+                <p>Ready mix concrete supplier in Polk County, Florida<br>
+                    <strong>Address: </strong>1205 US-17, Davenport, FL 33837<br>
+                    <strong>Phone: </strong>(800) 992-3639<br>
+                    <a href="https://www.cemexusa.com/" target="_blank">cemexusa.com</a>
+                </p>
+            </div>
+
+            <div class="">
+                <!-- image needs to be optamized -->
+                <picture class="">
+                    <img class="default" src="images/home/2-advertisement.png" alt="Gill Manufacturing logo">
+                </picture>
+                <h2>Gill Manufacturing</h2>
+                <h3>Fabricators with a reputation</h3>
+                <p><strong>Address: </strong>110 U.S. Hwy 17-92 N S, Davenport, FL 33837<br>
+                    <strong>Phone: </strong>(863) 422-5711<br>
+                    <a href="https://www.gillmfg.com/" target="_blank">gillmfg.com</a>
+                </p>
+            </div>
+
+            <div class="">
+                <!-- image needs to be optamized -->
+                <picture class="">
+                    <img class="default" src="images/home/3-advertisement.png" alt="Zion Tax & Insurance logo">
+                </picture>
+                <h2>Zion Tax & Insurance</h2>
+                <h3>Fill your taxes with experts</h3>
+                <p>Accounting firm in Polk County, Florida<br>
+                    <strong>Address: </strong> 40906 US-27, Davenport, FL 33837<br>
+                    <strong>Phone: </strong>(863) 307-8442<br>
+                    <a href="https://www.ziontaxandinsurance.com/" target="_blank">ziontaxandinsurance.com</a>
+                </p>
+            </div>
+
+            <!-- Call to Action/ Membership/ Join -->
+            <div clas="">
+                <h2>Become a Member</h2>
+                <p>Picture the Chamber as the community's front door, both as a storefront and public relations office
+                    for all its members and residents. Members benefit from referrals to the hundreds of monthly phone
+                    calls, letters, and visitors looking for things to do, places to eat and shop, even homes to buy.
+                    Start today to put your marketing partner to work for you. For additional information, call
+                    863-422-3751.</p>
+            </div>
+
+            <div class="card card-right">
+                <h2>Chamber of Commerce Events</h2>
+                <!-- Information goes here -->
+                <ul>
+                    <li>Event</li>
+                    <li>Event</li>
+                    <li>Event</li>
+                    <li>Event</li>
+                </ul>
+            </div>
+
+            <div class="weather-container">
+                <h2>Davenport Weather</h2>
+                <div class="card card-left">
+                    <!-- add image and optamize -->
+                    <picture class="hero-image">
+                        <source media="(max-width: 400px)" srcset="images/home/home-hero400.jpg">
+                        <source media="(max-width: 800px)" srcset="images/home/home-hero800.jpg">
+                        <source media="(max-width: 971px)" srcset="images/home/home-hero971.jpg">
+                        <img class="default" src="images/home/city-photo.jpeg" alt="Davenport City">
+                    </picture>
+                    <h2>Current Weather</h2>
+                    <!-- Information goes here -->
+                    <p>Here is the weather</p>
+                </div>
+
+                <div class="card card-right">
+                    <!-- Information goes here -->
+                    <h2>Weather Alert</h2>
+                    <p>Weather alert details.</p>
+                </div>
+
+                <div class="card" id="forecast">Forecast</div>
+            </div>
+        </div>
     </main>
 
     <footer>
+        <div class="footer-widgets">
+            <div class="card">
+                <h3>Contact Us</h3>
+                <!-- Information goes here -->
+                <p>Contact information</p>
+            </div>
 
+            <div class="card">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="davenport.html">Davenport</a></li>
+                    <li><a href="membership.html">Join</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="social">
+                <!-- add image and optamize -->
+                <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+                <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+                <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+                <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <!-- Information goes here -->
+            Credits go here.
+        </div>
     </footer>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="javascript/javascript.js"></script>
