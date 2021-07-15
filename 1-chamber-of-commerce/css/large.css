@@ -2,8 +2,61 @@
 
 @media only screen and (min-width: 64rem) {
     /*----------- BODY --------------*/
+    header, nav, main, footer {
+        max-width: 100rem;
+        margin: auto;
+    }
+    .header-wrapper {
+        background-color: #4E9DA6;
+    }
+    .footer-bottom-wrapper {
+        background-color: #4E9DA6;
+    }
+    .footer-top-wrapper {
+        background-color: #C1D6D9;
+    }
     /*----------- HEADER --------------*/
     /*----------- NAVIGATION --------------*/
+    nav ul.hide {
+        display: block;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    #primaryNav ul {
+        margin-left: auto;
+    }
+    #primaryNav li {
+        float: right;
+        color: white;
+    }
+    nav ul {
+        border: none;
+    }
+    nav ul li a {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
+    nav ul li.active a {
+        border-radius: 10px;
+    }
+    .main-header h1 {
+        font-size: 2rem;
+        padding-top: 2rem;
+        /*padding-bottom: 2rem;*/
+    }
+    .main-header img {
+        width: 6rem;
+    }
+    header {
+        display: flex;
+        background-color: #4E9DA6;
+        width: 100%;
+    }
+    .main-header {
+        max-width: 100rem;
+        margin: auto;
+    }
     /*----------- MAIN --------------*/
     /*----------- FOOTER --------------*/
 }
