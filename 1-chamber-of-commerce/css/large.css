@@ -58,5 +58,24 @@
         margin: auto;
     }
     /*----------- MAIN --------------*/
+    .main-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mission {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .contact {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .events {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .membership {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
     /*----------- FOOTER --------------*/
 }

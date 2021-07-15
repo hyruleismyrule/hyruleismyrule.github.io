@@ -64,36 +64,45 @@
             <div class="main-grid">
                 <!-- Description/ Goals/ Purpose -->
                 <div class="card mission">
-                    <h2>Our Mission</h2>
-                    <p>Promote small businesses and build the public’s trust and confidence by providing the best in
-                        customer service, assured quality, and the efficient use of public funds, treating our customers
-                        with such professionalism and concern that we improve their perception of government.
-                    </p>
+                    <img src="images/home/smiling-lady.jpeg" alt="Smiling lady.">
+                    <div class="mission-text">
+                        <h2>Our Mission</h2>
+                        <p>Promote small businesses and build the public’s trust and confidence by providing the best in
+                            customer service, assured quality, and the efficient use of public funds, treating our
+                            customers
+                            with such professionalism and concern that we improve their perception of government.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Contact Information -->
                 <div class="card contact">
                     <h2>Questions</h2>
-                    <div class="space">
-                        <h3>Chamber Hours of Operation:</h3>
-                        <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>
-                            Fridays: 10:00 AM - 3:00 PM<br>
-                            <i>Closed Weekends and Holidays</i>
-                        </p>
-                        <p><strong>Chamber Office: </strong>863-422-3751<br>
-                            <strong>Fax: </strong>863-422-4704<br>
-                            <strong>Member Tech Support: </strong>855-233-6362<br>
-                            <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
-                        </p>
-                    </div>
+                    <div class="contact-flex">
+                        <div class="space">
+                            <h3>Chamber Hours of Operation:</h3>
+                            <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>
+                                Fridays: 10:00 AM - 3:00 PM<br>
+                                <i>Closed Weekends and Holidays</i>
+                            </p>
+                        </div>
+                        <div class="space">
+                            <h3>Phone Numbers:</h3>
+                            <p><strong>Chamber Office: </strong>863-422-3751<br>
+                                <strong>Fax: </strong>863-422-4704<br>
+                                <strong>Member Tech Support: </strong>855-233-6362<br>
+                                <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
+                            </p>
+                        </div>
 
-                    <div class="space">
-                        <h3>Location and Mailing</h3>
-                        <p class="location"><strong>Davenport Chamber of Commerce</strong><br>
-                            35610 Hwy 27<br>
-                            PO Box 986<br>
-                            Davenport, FL 33845
-                        </p>
+                        <div class="space">
+                            <h3>Location and Mailing</h3>
+                            <p class="location"><strong>Davenport Chamber of Commerce</strong><br>
+                                35610 Hwy 27<br>
+                                PO Box 986<br>
+                                Davenport, FL 33845
+                            </p>
+                        </div>
                     </div>
 
                     <div class="space">
@@ -101,13 +110,13 @@
                             <legend>
                                 <h3>Contact the Chamber</h3>
                             </legend>
-                            <label class="">Name<br>
+                            <label class="">Name*<br>
                                 <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
                             </label><br>
-                            <label class="">Email<br>
+                            <label class="">Email*<br>
                                 <input type="email" name="email" placeholder="someone@gmail.com" required>
                             </label><br>
-                            <label class="">Comment<br>
+                            <label class="">Comment*<br>
                                 <textarea class="text-box" name="comment" required></textarea>
                             </label><br>
                             <input type="submit" value="Send my Comment" class="submitBtn">
@@ -116,7 +125,8 @@
                 </div>
 
                 <!-- Advertisements -->
-                <div class="card advertisement">
+
+                <div class="card advertisement left-ad">
                     <!-- image needs to be optamized -->
                     <picture class="">
                         <img class="default" src="images/home/1-advertisement.png" alt="Cemex Logo">
@@ -132,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="card advertisement">
+                <div class="card advertisement center-ad">
                     <!-- image needs to be optamized -->
                     <picture class="">
                         <img class="default" src="images/home/2-advertisement.png" alt="Gill Manufacturing logo">
@@ -147,7 +157,7 @@
                     </div>
                 </div>
 
-                <div class="card advertisement">
+                <div class="card advertisement right-ad">
                     <!-- image needs to be optamized -->
                     <picture class="">
                         <img class="default" src="images/home/3-advertisement.png" alt="Zion Tax & Insurance logo">
@@ -161,21 +171,7 @@
                             <a href="https://www.ziontaxandinsurance.com/" target="_blank">ziontaxandinsurance.com</a>
                         </p>
                     </div>
-                </div>
 
-                <!-- Call to Action/ Membership/ Join -->
-                <div class="card membership">
-                    <h2>Become a Member</h2>
-                    <p>Picture the Chamber as the community's front door, both as a storefront and public relations
-                        office
-                        for all its members and residents. Members benefit from referrals to the hundreds of monthly
-                        phone
-                        calls, letters, and visitors looking for things to do, places to eat and shop, even homes to
-                        buy.
-                        Start today to put your marketing partner to work for you. For additional information, call
-                        863-422-3751.
-                    </p>
-                    <button>Join Now</button>
                 </div>
 
                 <!-- Events -->
@@ -214,36 +210,58 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- Call to Action/ Membership/ Join -->
+                <div class="card membership">
+                    <img src="images/home/membership.jpeg" alt="Hands together.">
+                    <div class="membership-text">
+                    <h2>Become a Member</h2>
+                    <p>Picture the Chamber as the community's front door, both as a storefront and public relations
+                        office
+                        for all its members and residents. Members benefit from referrals to the hundreds of monthly
+                        phone
+                        calls, letters, and visitors looking for things to do, places to eat and shop, even homes to
+                        buy.
+                        Start today to put your marketing partner to work for you. For additional information, call
+                        863-422-3751.
+                    </p>
+                    <button>Join Now</button>
+                </div>
         </main>
 
         <!-- Weather Section -->
-        <div class="weather-grid">
+        <div class="weather-container">
             <h2 class="title">Davenport Weather</h2>
             <!-- Current Weather -->
-            <div class="card current">
-                <!-- image needs to be optamized -->
-                <picture class="">
-                    <div class="text-on-image">
-                        <h2>Current Weather</h2>
-                        <div>Weather: <span id="current-weather"></span><br>
-                            Temperature: <span id="current-temperature"></span><br>
-                            Humidity: <span id="current-humidity"></span>
-                        </div>
+            <div class="weather-grid">
+                <div class="weather-top-row">
+                    <div class="card current">
+                        <!-- image needs to be optamized -->
+                        <picture class="">
+                            <div class="text-on-image">
+                                <h2>Current Weather</h2>
+                                <div>Weather: <span id="current-weather"></span><br>
+                                    Temperature: <span id="current-temperature"></span><br>
+                                    Humidity: <span id="current-humidity"></span>
+                                </div>
+                            </div>
+                            <img class="default" src="images/home/current-weather-background.jpeg"
+                                alt="Palm trees at sunset">
+                        </picture>
                     </div>
-                    <img class="default" src="images/home/current-weather-background.jpeg" alt="Palm trees at sunset">
-                </picture>
-            </div>
 
-            <!-- Weather Alert -->
-            <div class="card alert">
-                <h2>Caution</h2>
-                <span id="weather-alert"></span>
-            </div>
+                    <!-- Weather Alert -->
+                    <div class="card alert">
+                        <button id="weather-close">&#10006;</button>
+                        <h2>Caution</h2>
+                        <span id="weather-alert"></span>
+                    </div>
+                </div>
 
-            <!-- Weather Forecast -->
-            <div class="card" id="forecast"></div>
+                <!-- Weather Forecast -->
+                <div class="card" id="forecast"></div>
+            </div>
         </div>
-    </div>
     </div>
 
     <!-- Footer -->
@@ -252,10 +270,10 @@
             <div class="footer-widgets">
                 <div class="section">
                     <h3>Contact Us</h3>
-                    <p><strong>Chamber Office: </strong>863-422-3751<br>
-                        <strong>Fax: </strong>863-422-4704<br>
-                        <strong>Member Tech Support: </strong>855-233-6362<br>
-                        <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
+                    <p><strong>Chamber Office: </strong><br>863-422-3751<br>
+                        <strong>Fax: </strong><br>863-422-4704<br>
+                        <strong>Member Tech Support: </strong><br>855-233-6362<br>
+                        <strong>General Chamber Information: </strong><br>info@davenportchamber.com<br>
                     </p>
                 </div>
 

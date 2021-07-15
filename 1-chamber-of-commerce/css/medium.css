@@ -7,16 +7,60 @@
     header button {
         margin-left: auto;
     }
-
     header h1 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
     }
-
     /*----------- MAIN --------------*/
     .main-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
+    }
+    .mission {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .contact {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .events {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .membership {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main-banner h1 {
+        font-size: 3rem;
+    }
+    .contact-flex {
+        display: flex;
+    }
+    .space {
+        margin-left: 0.5rem;
+        margin-right: 0.5;
+    }
+    .contact h2 {
+        margin-left: 0.5rem;
+    }
+    .weather-grid .card {
+        background-color: transparent;
+    }
+    .weather-top-row {
+        display: flex;
+    }
+    .weather-grid {
+        /*
+        display: flex;*/
+        /*display: grid;
+        grid-template-columns: 1fr 1fr 1fr;*/
+    }
+    .weather-container .weather-grid .alert {
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     /*----------- FOOTER --------------*/
     .footer-widgets {
