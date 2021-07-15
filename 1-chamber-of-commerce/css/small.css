@@ -257,6 +257,12 @@ input, .text-box {
     color: black;
 }
 
+.membership a{
+    text-decoration: none;
+    color: black;
+}
+
+
 .events li {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -372,6 +378,11 @@ footer img {
     border: 4px solid black;
     padding: 0.5rem;
     color: back;
+}
+
+.footer-widgets button a {
+    text-decoration: none;
+    color: black;
 }
 
 .footer-widgets p, .footer-widgets li {

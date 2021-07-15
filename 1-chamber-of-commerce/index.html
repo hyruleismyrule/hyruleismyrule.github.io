@@ -52,6 +52,15 @@
 
     <div class="filler"></div>
 
+    <!-- Weather Alert -->
+    <div id="alert-top" class="card alert">
+        <div class="flex-end">
+            <button id="weather-close" onclick="closeAlertTop()">&#10006;</button>
+        </div>
+        <h2>Caution</h2>
+        <span id="weather-alert"></span>
+    </div>
+
     <!-- image needs to be optamized -->
     <div class="content">
         <div class="main-banner">
@@ -225,7 +234,7 @@
                             Start today to put your marketing partner to work for you. For additional information, call
                             863-422-3751.
                         </p>
-                        <button>Join Now</button>
+                        <button><a href="membership.html">Join Now</a></button>
                     </div>
         </main>
 
@@ -234,8 +243,8 @@
             <h2 class="title">Davenport Weather</h2>
             <!-- Current Weather -->
             <div class="weather-grid">
-                <div class="weather-top-row">
-                    <div class="card current">
+                <div id="weather-top-row" class="weather-top-row">
+                    <div id="current-weather-container" class="card current">
                         <!-- image needs to be optamized -->
                         <picture class="">
                             <div class="text-on-image">
@@ -308,7 +317,7 @@
 
                     <h3>Become a Member</h3>
                     <br>
-                    <button>Join Now</button>
+                    <button><a href="membership.html">Join Now</a></button>
                 </div>
             </div>
     </div>

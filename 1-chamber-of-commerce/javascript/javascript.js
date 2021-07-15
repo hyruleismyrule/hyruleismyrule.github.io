@@ -21,10 +21,16 @@ let year = oLastModif.getFullYear();
 let dateString = day + ", " + date + " " + month + " " + year;
 document.getElementById('lastUpdated').innerHTML = dateString;
 
-// Weather Alert Close Button
+// Weather Alert Close Button Top
+function closeAlertTop() {
+    document.getElementById("alert-top").setAttribute('class', "hide");
+}
+// Weather Alert Close Button Bottom
 function closeAlert() {
     document.getElementById("alert").setAttribute('class', "hide");
-    
+    // document.getElementById("weather-top-row").style.display = 'block';
+    document.getElementById('weather-top-row').style.display = 'block';
+    // document.getElementById("current-weather-container").setAttribute('class', "full-width-current");
 }
 
 
@@ -46,6 +52,8 @@ function closeAlert() {
 // api.openweathermap.org/data/2.5/weather?id=4152805&appid=28e498ae581a0633cfff6d7d29104fdb&units=imperial
 // API Address for 5 day forecast weather
 // api.openweathermap.org/data/2.5/forecast?id=4152805&appid=28e498ae581a0633cfff6d7d29104fdb&units=imperial
+
+// api.openweathermap.org/data/2.5/onecall?lat=28.1614&lon=-81.601738&appid=28e498ae581a0633cfff6d7d29104fdb&units=imperial
 
 const currentWeatherAPIurl = "//api.openweathermap.org/data/2.5/weather?id=4152805&appid=28e498ae581a0633cfff6d7d29104fdb&units=imperial";
 fetch(currentWeatherAPIurl)

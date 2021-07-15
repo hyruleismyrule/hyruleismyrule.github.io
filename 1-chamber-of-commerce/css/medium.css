@@ -60,10 +60,10 @@
         grid-column-start: 2;
         grid-column-end: 4;
     }
+
     #forecast {
         display: flex;
         justify-content: space-evenly;
-        
     }
 
     .forecast-box {
@@ -98,6 +98,11 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    /*
+    .full-width-current {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }*/
     /*----------- FOOTER --------------*/
     .footer-widgets {
         display: flex;
