@@ -77,7 +77,7 @@
 
                 <!-- Contact Information -->
                 <div class="card contact">
-                    <h2>Questions</h2>
+                    <h2>Contact Us</h2>
                     <div class="contact-flex">
                         <div class="space">
                             <h3>Chamber Hours of Operation:</h3>
@@ -108,7 +108,7 @@
                     <div class="space">
                         <form method="get" action="thanks.html">
                             <legend>
-                                <h3>Contact the Chamber</h3>
+                                <h3>Send a Message</h3>
                             </legend>
                             <label class="">Name*<br>
                                 <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
@@ -215,18 +215,18 @@
                 <div class="card membership">
                     <img src="images/home/membership.jpeg" alt="Hands together.">
                     <div class="membership-text">
-                    <h2>Become a Member</h2>
-                    <p>Picture the Chamber as the community's front door, both as a storefront and public relations
-                        office
-                        for all its members and residents. Members benefit from referrals to the hundreds of monthly
-                        phone
-                        calls, letters, and visitors looking for things to do, places to eat and shop, even homes to
-                        buy.
-                        Start today to put your marketing partner to work for you. For additional information, call
-                        863-422-3751.
-                    </p>
-                    <button>Join Now</button>
-                </div>
+                        <h2>Become a Member</h2>
+                        <p>Picture the Chamber as the community's front door, both as a storefront and public relations
+                            office
+                            for all its members and residents. Members benefit from referrals to the hundreds of monthly
+                            phone
+                            calls, letters, and visitors looking for things to do, places to eat and shop, even homes to
+                            buy.
+                            Start today to put your marketing partner to work for you. For additional information, call
+                            863-422-3751.
+                        </p>
+                        <button>Join Now</button>
+                    </div>
         </main>
 
         <!-- Weather Section -->
@@ -240,9 +240,10 @@
                         <picture class="">
                             <div class="text-on-image">
                                 <h2>Current Weather</h2>
-                                <div>Weather: <span id="current-weather"></span><br>
+                                <div class="current-weather">Weather: <span id="current-weather"></span><br>
                                     Temperature: <span id="current-temperature"></span><br>
-                                    Humidity: <span id="current-humidity"></span>
+                                    Humidity: <span id="current-humidity"></span><br>
+                                    Feels Like: <span id="current-feels-like"></span>
                                 </div>
                             </div>
                             <img class="default" src="images/home/current-weather-background.jpeg"
@@ -251,15 +252,20 @@
                     </div>
 
                     <!-- Weather Alert -->
-                    <div class="card alert">
-                        <button id="weather-close">&#10006;</button>
+                    <div id="alert" class="card alert">
+                        <div class="flex-end">
+                            <button id="weather-close" onclick="closeAlert()">&#10006;</button>
+                        </div>
                         <h2>Caution</h2>
                         <span id="weather-alert"></span>
                     </div>
                 </div>
 
                 <!-- Weather Forecast -->
-                <div class="card" id="forecast"></div>
+                <div class="forecast-container">
+                    <h3>Forecast</h3>
+                    <div class="card" id="forecast"></div>
+                </div>
             </div>
         </div>
     </div>

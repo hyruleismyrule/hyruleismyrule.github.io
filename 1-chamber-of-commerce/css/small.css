@@ -32,6 +32,10 @@ div.hideme {
     display: none;
 }
 
+.hide {
+    display: none;
+}
+
 /* Delete Later */
 
 img {
@@ -114,7 +118,7 @@ nav ul.hide {
 }
 
 .filler {
-    height: 5rem;
+    height: 10rem;
 }
 
 /*----------- MAIN --------------*/
@@ -163,6 +167,7 @@ main {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
 .mission {
     padding: 0;
     background-color: #8CA665;
@@ -177,6 +182,7 @@ main {
 .mission img {
     width: 100%;
 }
+
 .contact {
     background-color: #C1D6D9;
 }
@@ -264,6 +270,7 @@ input, .text-box {
 .weather-grid .current img {
     width: 100%;
 }
+
 .weather-container {
     margin-bottom: 1rem;
 }
@@ -272,13 +279,12 @@ input, .text-box {
     background-color: #8CA665;
 }
 
-#weather-close {
-    background: transparent;
-    border: none;
-}
-
 .weather-container .card {
     background-color: transparent;
+}
+
+.current-weather {
+    line-height: 2rem;
 }
 
 .current {
@@ -300,12 +306,42 @@ input, .text-box {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    width: 100%;
 }
 
 .alert {
     background-color: #8CA665;
-    padding: 0 2%;
 }
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#weather-close {
+    background: transparent;
+    border: none;
+}
+
+/*.alert h2 {
+    display: inline;
+}*/
+
+#forecast {}
+
+.forecast-box {
+    background-color: #EBF2F2;
+}
+
+.forecast-name {
+    padding-top: 1rem;
+}
+
+.forecast-temp {
+    padding-bottom: 1rem;
+}
+
+.forecast-icon {}
 
 /*----------- FOOTER --------------*/
 
@@ -329,7 +365,6 @@ footer img {
     background-color: #C1D6D9;
     text-align: center;
     padding: 0.5rem;
-rem;
 }
 
 .footer-widgets button {
