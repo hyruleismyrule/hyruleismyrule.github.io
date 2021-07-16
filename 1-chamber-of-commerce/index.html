@@ -34,7 +34,7 @@
         <header class="clearfix">
             <!-- image needs to be optamized -->
             <div class="main-header">
-                <a href="index.html"><img class="logo" src="images/chamber-logotype.png" alt="Chamber Logo" /></a>
+                <a href="index.html"><img class="logo" src="images/logo100.png" alt="Chamber Logo" /></a>
                 <h1>Davenport Chamber of Commerce</h1>
                 <button class="hamburger-menu" onclick="toggleMenu()">&#9776;</button>
             </div>
@@ -142,7 +142,6 @@
                 </div>
 
                 <!-- Advertisements -->
-
                 <div class="card advertisement left-ad">
                     <picture class="">
                         <source media="(max-width: 391px)" srcset="images/home/ad-cemex391.jpg">
@@ -236,7 +235,12 @@
 
                 <!-- Call to Action/ Membership/ Join -->
                 <div class="card membership">
-                    <img src="images/home/membership.jpeg" alt="Hands together.">
+                    <picture class="">
+                        <source media="(max-width: 391px)" srcset="images/home/membership391.jpg">
+                        <source media="(max-width: 522px)" srcset="images/home/membership522.jpg">
+                        <source media="(max-width: 968px)" srcset="images/home/membership968.jpg">
+                        <img class="default" src="images/home/membership968.jpg" alt="Hands together.">
+                    </picture>
                     <div class="membership-text">
                         <h2>Become a Member</h2>
                         <p>Picture the Chamber as the community's front door, both as a storefront and public relations
@@ -269,8 +273,10 @@
                                     Feels Like: <span id="current-feels-like"></span>
                                 </div>
                             </div>
-                            <img class="default" src="images/home/current-weather-background.jpeg"
-                                alt="Palm trees at sunset">
+                                <source media="(max-width: 544px)" srcset="images/home/weather-banner544.jpg">
+                                <source media="(max-width: 1008px)" srcset="images/home/weather-banner1008.jpg">
+                                <source media="(max-width: 1905px)" srcset="images/home/weather-banner1905.jpg">
+                                <img class="default" src="images/home/weather-banner1905.jpg" alt="Palm trees at sunset."> 
                         </picture>
                     </div>
 
@@ -318,13 +324,13 @@
                 <div class="section">
                     <!-- optamize -->
                     <a href="https://www.facebook.com/" target="_blank"><img class=""
-                            src="images/social-media/facebook.png" alt="Facebook" /></a>
-                    <a href="https://twitter.com/" target="_blank"><img class="" src="images/social-media/twitter.png"
+                            src="images/facebook.png" alt="Facebook" /></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="" src="images/twitter.png"
                             alt="Twitter" /></a>
-                    <a href="https://youtube.com/" target="_blank"><img class="" src="images/social-media/youtube.png"
+                    <a href="https://youtube.com/" target="_blank"><img class="" src="images/youtube.png"
                             alt="Youtube" /></a>
                     <a href="https://www.instagram.com/" target="_blank"><img class=""
-                            src="images/social-media/instagram.png" alt="Instagram" /></a>
+                            src="images/instagram.png" alt="Instagram" /></a>
 
                     <h3>Become a Member</h3>
                     <br>

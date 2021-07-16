@@ -36,12 +36,6 @@ div.hideme {
     display: none;
 }
 
-/* Delete Later */
-
-img {
-    width: 100px;
-}
-
 /*
 COLORS
 BLUE
@@ -82,6 +76,10 @@ header button {
     font-size: 3rem;
     color: #fff;
     align-self: end;
+}
+
+header img {
+    padding: 0.5rem;
 }
 
 /*----------- NAVIGATION --------------*/
@@ -333,12 +331,6 @@ input, .text-box {
     text-align: left;
 }
 
-/*.alert h2 {
-    display: inline;
-}*/
-
-#forecast {}
-
 .forecast-box {
     background-color: #EBF2F2;
 }
@@ -350,12 +342,6 @@ input, .text-box {
 .forecast-temp {
     padding-bottom: 1rem;
 }
-/*
-.current-weather-container img {
-    max-width: 500px;
-}*/
-
-.forecast-icon {}
 
 /*----------- FOOTER --------------*/
 
