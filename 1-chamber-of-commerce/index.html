@@ -57,23 +57,31 @@
         <div class="flex-end">
             <button id="weather-close" onclick="closeAlertTop()">&#10006;</button>
         </div>
-        <h2>Caution</h2>
-        <span id="weather-alert"></span>
+        <h2>Warning!</h2>
+        <span id="weather-alert-top"></span>
     </div>
 
-    <!-- image needs to be optamized -->
     <div class="content">
         <div class="main-banner">
             <picture class="">
                 <h1>Davenport Chamber of Commerce</h1>
-                <img class="default" src="images/home/commerce-banner.jpeg" alt="Davenport City">
+                <source media="(max-width: 544px)" srcset="images/home/main-banner544.jpg">
+                <source media="(max-width: 1008px)" srcset="images/home/main-banner1008.jpg">
+                <source media="(max-width: 1905px)" srcset="images/home/main-banner1905.jpg">
+                <img class="default" src="images/home/main-banner1905.jpg" alt="Davenport City">
             </picture>
         </div>
+
         <main>
             <div class="main-grid">
                 <!-- Description/ Goals/ Purpose -->
                 <div class="card mission">
-                    <img src="images/home/smiling-lady.jpeg" alt="Smiling lady.">
+                    <picture class="">
+                        <source media="(max-width: 391px)" srcset="images/home/mission391.jpg">
+                        <source media="(max-width: 522px)" srcset="images/home/mission522.jpg">
+                        <source media="(max-width: 968px)" srcset="images/home/mission968.jpg">
+                        <img class="default" src="images/home/mission968.jpg" alt="Smiling employee.">
+                    </picture>
                     <div class="mission-text">
                         <h2>Our Mission</h2>
                         <p>Promote small businesses and build the public’s trust and confidence by providing the best in
@@ -136,9 +144,11 @@
                 <!-- Advertisements -->
 
                 <div class="card advertisement left-ad">
-                    <!-- image needs to be optamized -->
                     <picture class="">
-                        <img class="default" src="images/home/1-advertisement.png" alt="Cemex Logo">
+                        <source media="(max-width: 391px)" srcset="images/home/ad-cemex391.jpg">
+                        <source media="(max-width: 476px)" srcset="images/home/ad-cemex476.jpg">
+                        <source media="(max-width: 522px)" srcset="images/home/ad-cemex522.jpg">
+                        <img class="default" src="images/home/ad-cemex522.jpg" alt="Cemex cement truck.">
                     </picture>
                     <div class="text">
                         <h2>Cemex</h2>
@@ -152,9 +162,11 @@
                 </div>
 
                 <div class="card advertisement center-ad">
-                    <!-- image needs to be optamized -->
                     <picture class="">
-                        <img class="default" src="images/home/2-advertisement.png" alt="Gill Manufacturing logo">
+                        <source media="(max-width: 391px)" srcset="images/home/ad-gill391.jpg">
+                        <source media="(max-width: 476px)" srcset="images/home/ad-gill476.jpg">
+                        <source media="(max-width: 522px)" srcset="images/home/ad-gill522.jpg">
+                        <img class="default" src="images/home/ad-gill522.jpg" alt="Welding.">
                     </picture>
                     <div class="text">
                         <h2>Gill Manufacturing</h2>
@@ -167,9 +179,11 @@
                 </div>
 
                 <div class="card advertisement right-ad">
-                    <!-- image needs to be optamized -->
                     <picture class="">
-                        <img class="default" src="images/home/3-advertisement.png" alt="Zion Tax & Insurance logo">
+                        <source media="(max-width: 391px)" srcset="images/home/ad-zion391.jpg">
+                        <source media="(max-width: 476px)" srcset="images/home/ad-zion476.jpg">
+                        <source media="(max-width: 522px)" srcset="images/home/ad-zion522.jpg">
+                        <img class="default" src="images/home/ad-zion522.jpg" alt="Handing over a document.">
                     </picture>
                     <div class="text">
                         <h2>Zion Tax & Insurance</h2>
@@ -262,11 +276,8 @@
 
                     <!-- Weather Alert -->
                     <div id="alert" class="card alert">
-                        <div class="flex-end">
-                            <button id="weather-close" onclick="closeAlert()">&#10006;</button>
-                        </div>
-                        <h2>Caution</h2>
-                        <span id="weather-alert"></span>
+                        <h2>Warning!</h2>
+                        <span id="weather-alert-bottom"></span>
                     </div>
                 </div>
 
@@ -323,7 +334,7 @@
     </div>
     <div class="footer-bottom-wrapper">
         <div class="footer-bottom">
-            <p>Last Updated: <span id="lastUpdated"></span> ©<span id="year">Davenport Chamber of Commerce</span></p>
+            <p>©<span id="year"></span> Davenport Chamber of Commerce; Last Updated: <span id="lastUpdated"></span> </p>
         </div>
         </footer>
     </div>

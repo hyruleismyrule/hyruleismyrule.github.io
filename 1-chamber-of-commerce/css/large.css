@@ -3,7 +3,7 @@
 @media only screen and (min-width: 64rem) {
     /*----------- BODY --------------*/
     header, nav, main, footer {
-        max-width: 100rem;
+        max-width: 80rem;
         margin: auto;
     }
     .header-wrapper {

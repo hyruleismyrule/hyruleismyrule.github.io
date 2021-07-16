@@ -118,7 +118,7 @@ nav ul.hide {
 }
 
 .filler {
-    height: 10rem;
+    height: 6rem;
 }
 
 /*----------- MAIN --------------*/
@@ -329,6 +329,10 @@ input, .text-box {
     border: none;
 }
 
+.alert {
+    text-align: left;
+}
+
 /*.alert h2 {
     display: inline;
 }*/
@@ -346,6 +350,10 @@ input, .text-box {
 .forecast-temp {
     padding-bottom: 1rem;
 }
+/*
+.current-weather-container img {
+    max-width: 500px;
+}*/
 
 .forecast-icon {}
 
