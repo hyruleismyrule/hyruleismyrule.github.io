@@ -65,7 +65,7 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
     padding: 0.5rem;
 }
@@ -79,6 +79,7 @@ header button {
 }
 
 header img {
+    width: 80px;
     padding: 0.5rem;
 }
 
@@ -116,7 +117,7 @@ nav ul.hide {
 }
 
 .filler {
-    height: 6rem;
+    height: 5rem;
 }
 
 /*----------- MAIN --------------*/
@@ -343,6 +344,12 @@ input, .text-box {
     padding-bottom: 1rem;
 }
 
+/*----------- Davenport --------------*/
+
+/*----------- delete later! affects home page --------------*/
+img {
+    max-width: 100px;
+}
 /*----------- FOOTER --------------*/
 
 footer {
