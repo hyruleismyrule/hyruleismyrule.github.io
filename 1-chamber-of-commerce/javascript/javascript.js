@@ -99,3 +99,24 @@ fetch(OneCallWeatherAPIurl)
             document.getElementById("weather-top-row").setAttribute('class', "full-width-current");
         }
     });
+
+// Davenport Piechart
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+    let data = google.visualization.arrayToDataTable([
+        ['Race', 'Percent of the Population'],
+        ['White', 3612],
+        ['Black or African American', 786],
+        ['Two or More Races', 135],
+        ['Other', 106],
+        ['Asian', 43]
+    ]);
+    let options = {
+        backgroundColor: "transparent",
+        fontName: "EB Garamond",
+        legend: {position: 'bottom'}
+    };
+    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+}

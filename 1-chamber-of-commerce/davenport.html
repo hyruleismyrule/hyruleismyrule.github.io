@@ -26,6 +26,9 @@
     <link rel="mask-icon" href="images/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
@@ -69,120 +72,168 @@
             <img src="images/davenport/palm-tree.jpeg" alt="Palm Tree.">
         </div>
         <div class="card history">
-            <h2>History</h2>
-            <p>This is where I will put the history of Davenport</p>
+            <h2>History of Davenport</h2>
+            <p>The settlement in the area now known as Davenport was established in 1838 when the U.S. military set up
+                Fort Davenport during the Second Seminole War, about 12 miles north of the present site of Davenport.
+                The fort was one of a number built at 20-mile intervals along a trail from Fort Brooke to Fort Mellon.
+                The fort only lasted a few years.
+            </p>
+            <p>The fort was named for Colonel William Davenport, who served as the local U.S. commander in the war.
+                There is no known documentary evidence to support an alternative claim that the city was named for a
+                railroad conductor. The modern city of Davenport had its start in the 1880s when the South Florida
+                Railroad was extended to that point.
+            </p>
         </div>
     </div>
 
     <div class=davenport-grid-2>
         <div class="card population-graph">
-            <h3>Population Graph Title</h3>
-            <p>Summary of population graph.</p>
+            <h2>Population by Race</h2>
+            <div id="piechart"></div>
         </div>
-        <div class="card gender-info">
-            <h3>Stastic Title</h3>
-            <p>Statistic info.</p>
-            <h3>Stastic Title</h3>
-            <p>Statistic info.</p>
-            <h3>Stastic Title</h3>
-            <p>Statistic info.</p>
+        <div class="card age-info">
+            <h2>Population by Age</h2>
+            <h3>Median Age by Gender</h3>
+            <p>Male: 36.1</p>
+            <p>Female: 34.3</p>
+            <p>Total: 35.4</p>
+            <h3>Age Dependency</h3>
+            <p>Age Dependency Ratio: 66.9</p>
+            <p>Old age: 66.9</p>
+            <p>Old Age Dependency Ratio: 21.7</p>
+            <p>Child Dependency Ratio: 45.2</p>
+            <h3>Gender Ratio</h3>
+            <p>Female: 2,512 51.52%</p>
+            <p>Male: 2,270 48.48%</p>
         </div>
-        <div class="card population-table">
+        <div class="card household-table">
             <table>
                 <thead>
                     <tr>
-                        <th colspan="3">Population Table</th>
+                        <th colspan="3">Household Types</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Info Here</th>
-                        <th>Info Here</th>
-                        <th>Info Here</th>
+                        <th>Type</th>
+                        <th>Owner</th>
+                        <th>Renter</th>
                     </tr>
                     <tr>
-                        <td>Info Here</td>
-                        <td>Info Here</td>
-                        <td>Info Here</td>
+                        <td>Married</td>
+                        <td>89.8%</td>
+                        <td>10.2%</td>
+                    </tr>
+                    <tr>
+                        <td>Female</td>
+                        <td>90.1%</td>
+                        <td>9.9%</td>
+                    </tr>
+                    <tr>
+                        <td>All</td>
+                        <td>90.2%</td>
+                        <td>9.8%</td>
+                    </tr>
+                    <tr>
+                        <td>Non Family</td>
+                        <td>90.6%</td>
+                        <td>9.4%</td>
+                    </tr>
+                    <tr>
+                        <td>Male</td>
+                        <td>100%</td>
+                        <td>0%</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3">Info Here</td>
+                        <td colspan="3">90.2% Rate of Home Ownership</td>
                     </tr>
                 </tfoot>
             </table>
         </div>
     </div>
 
-    <div>
-        <h2>Commitment</h2>
-        <p>Commitment Info Here</p>
+    <div class=davenport-grid-3>
+        <div>
+            <h2>Commitment</h2>
+            <p>We are working to build the public’s trust and confidence by providing the best in customer service,
+                assured
+                quality and the efficient use of public funds.
+            </p>
+            <p>Our mission is to treat our customers with such professionalism and concern that we improve their
+                perception
+                of government. Our shared values are integrity, innovation, compassion, and teamwork. Focus Points -
+                Accountability, Efficiency, Leadership Customer Service
+            </p>
+        </div>
+        <div class="card image-slider" id="image-slider">
+            <img src="images/davenport/palm-tree.jpeg" alt="Palm Tree.">
+        </div>
     </div>
 
     <h2>Upcoming Events</h2>
-    <div class="davenport-grid-3">
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+    <div class="davenport-grid-4">
+        <div class="card event">
+            <h3>Camp READY! Haines City</h3>
+            <p>6/30/2021 - 7/22/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=392857&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Rocky Railway VBS</h3>
+            <p>7/19/2021 - 7/21/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=395781&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Dining with Diabetes</h3>
+            <p>7/20/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396841&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Latin Nights at Balmoral Bar & Grill</h3>
+            <p>7/21/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=397150&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Christmas in July Online Charity Auction</h3>
+            <p>7/23/2021 - 7/25/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396102&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Balmoral Bar & Grill - Under the Sea with Mermaid Emily</h3>
+            <p>7/25/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396618&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Dining with Diabetes</h3>
+            <p>7/27/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396841&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Karaoke Night at Balmoral</h3>
+            <p>7/28/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396833&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Finally Friday</h3>
+            <p>7/30/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396386&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-        <div>
-            <img src="images/davenport/event-filler.jpeg">
-            <h3>Event Title</h3>
-            <p>Event desctiption.</p>
-            <a href="#" alt="_blank">Learn More &#x203A;</a>
+        <div class="card event">
+            <h3>Balmoral Bar & Grill - Latin Day, All Day! </h3>
+            <p>7/31/2021</p>
+            <a href="https://www.chamberorganizer.com/Calendar/moreinfo_responsive.php?eventid=396619&org_id=HAIN"
+                target="_blank">Learn More &#x203A;</a>
         </div>
-
     </div>
 
     <!-- Footer -->
@@ -234,8 +285,7 @@
             </p>
         </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <!-- JavaScript -->
     <script src="javascript/javascript.js"></script>
 </body>
 
