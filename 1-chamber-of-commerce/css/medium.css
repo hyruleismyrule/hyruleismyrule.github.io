@@ -40,7 +40,7 @@
     }
     .space {
         margin-left: 0.5rem;
-        margin-right: 0.5;
+        margin-right: 0.5rem;
     }
     .contact h2 {
         margin-left: 0.5rem;
@@ -76,20 +76,11 @@
         margin: 0;
         padding: 0;
     }
-
-    /*.forecast-container {
-        max-width: 100rem;
-    }*/
     
     .forecast-icon {
       
     }
-     /*.weather-grid {
-       
-        display: flex;*/
-        /*display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }*/
+
     .weather-container .weather-grid .alert {
         margin: 0;
         margin-left: 1rem;

@@ -63,13 +63,15 @@
 
     <div class="content">
         <div class="main-banner">
-            <picture class="">
+            <div>
                 <h1>Davenport Chamber of Commerce</h1>
-                <source media="(max-width: 544px)" srcset="images/home/main-banner544.jpg">
-                <source media="(max-width: 1008px)" srcset="images/home/main-banner1008.jpg">
-                <source media="(max-width: 1905px)" srcset="images/home/main-banner1905.jpg">
-                <img class="default" src="images/home/main-banner1905.jpg" alt="Davenport City">
-            </picture>
+                <picture class="">
+                    <source media="(max-width: 544px)" srcset="images/home/main-banner544.jpg">
+                    <source media="(max-width: 1008px)" srcset="images/home/main-banner1008.jpg">
+                    <source media="(max-width: 1905px)" srcset="images/home/main-banner1905.jpg">
+                    <img class="default" src="images/home/main-banner1905.jpg" alt="Davenport City">
+                </picture>
+            </div>
         </div>
 
         <main>
@@ -124,9 +126,7 @@
 
                     <div class="space">
                         <form method="get" action="thanks.html">
-                            <legend>
-                                <h3>Send a Message</h3>
-                            </legend>
+                            <h3>Send a Message</h3>
                             <label class="">Name*<br>
                                 <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
                             </label><br>
@@ -143,7 +143,7 @@
 
                 <!-- Advertisements -->
                 <div class="card advertisement left-ad">
-                    <picture class="">
+                    <picture>
                         <source media="(max-width: 391px)" srcset="images/home/ad-cemex391.jpg">
                         <source media="(max-width: 476px)" srcset="images/home/ad-cemex476.jpg">
                         <source media="(max-width: 522px)" srcset="images/home/ad-cemex522.jpg">
@@ -161,7 +161,7 @@
                 </div>
 
                 <div class="card advertisement center-ad">
-                    <picture class="">
+                    <picture>
                         <source media="(max-width: 391px)" srcset="images/home/ad-gill391.jpg">
                         <source media="(max-width: 476px)" srcset="images/home/ad-gill476.jpg">
                         <source media="(max-width: 522px)" srcset="images/home/ad-gill522.jpg">
@@ -178,7 +178,7 @@
                 </div>
 
                 <div class="card advertisement right-ad">
-                    <picture class="">
+                    <picture>
                         <source media="(max-width: 391px)" srcset="images/home/ad-zion391.jpg">
                         <source media="(max-width: 476px)" srcset="images/home/ad-zion476.jpg">
                         <source media="(max-width: 522px)" srcset="images/home/ad-zion522.jpg">
@@ -193,7 +193,6 @@
                             <a href="https://www.ziontaxandinsurance.com/" target="_blank">ziontaxandinsurance.com</a>
                         </p>
                     </div>
-
                 </div>
 
                 <!-- Events -->
@@ -235,7 +234,7 @@
 
                 <!-- Call to Action/ Membership/ Join -->
                 <div class="card membership">
-                    <picture class="">
+                    <picture>
                         <source media="(max-width: 391px)" srcset="images/home/membership391.jpg">
                         <source media="(max-width: 522px)" srcset="images/home/membership522.jpg">
                         <source media="(max-width: 968px)" srcset="images/home/membership968.jpg">
@@ -252,8 +251,10 @@
                             Start today to put your marketing partner to work for you. For additional information, call
                             863-422-3751.
                         </p>
-                        <button><a href="membership.html">Join Now</a></button>
+                        <button onclick="toThanks()">Join Now</button>
                     </div>
+                </div>
+            </div>
         </main>
 
         <!-- Weather Section -->
@@ -264,7 +265,7 @@
                 <div id="weather-top-row" class="weather-top-row">
                     <div id="current-weather-container" class="card current">
                         <!-- image needs to be optamized -->
-                        <picture class="">
+                        <div>
                             <div class="text-on-image">
                                 <h2>Current Weather</h2>
                                 <div class="current-weather">Weather: <span id="current-weather"></span><br>
@@ -273,11 +274,14 @@
                                     Feels Like: <span id="current-feels-like"></span>
                                 </div>
                             </div>
+                            <picture>
                                 <source media="(max-width: 544px)" srcset="images/home/weather-banner544.jpg">
                                 <source media="(max-width: 1008px)" srcset="images/home/weather-banner1008.jpg">
                                 <source media="(max-width: 1905px)" srcset="images/home/weather-banner1905.jpg">
-                                <img class="default" src="images/home/weather-banner1905.jpg" alt="Palm trees at sunset."> 
-                        </picture>
+                                <img class="default" src="images/home/weather-banner1905.jpg"
+                                    alt="Palm trees at sunset.">
+                            </picture>
+                        </div>
                     </div>
 
                     <!-- Weather Alert -->
@@ -323,26 +327,26 @@
 
                 <div class="section">
                     <!-- optamize -->
-                    <a href="https://www.facebook.com/" target="_blank"><img class=""
-                            src="images/facebook.png" alt="Facebook" /></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img class="" src="images/facebook.png"
+                            alt="Facebook" /></a>
                     <a href="https://twitter.com/" target="_blank"><img class="" src="images/twitter.png"
                             alt="Twitter" /></a>
                     <a href="https://youtube.com/" target="_blank"><img class="" src="images/youtube.png"
                             alt="Youtube" /></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img class=""
-                            src="images/instagram.png" alt="Instagram" /></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="" src="images/instagram.png"
+                            alt="Instagram" /></a>
 
                     <h3>Become a Member</h3>
                     <br>
-                    <button><a href="membership.html">Join Now</a></button>
+                    <button onClick="toMembership()">Join Now</button>
                 </div>
             </div>
+        </footer>
     </div>
     <div class="footer-bottom-wrapper">
         <div class="footer-bottom">
             <p>©<span id="year"></span> Davenport Chamber of Commerce; Last Updated: <span id="lastUpdated"></span> </p>
         </div>
-        </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
