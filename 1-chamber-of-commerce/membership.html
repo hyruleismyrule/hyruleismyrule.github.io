@@ -70,13 +70,180 @@
     </div>
 
     <main>
-        <!-- Page Content for Max-width -->
-        <div class="content">
+        <!-- Title -->
+        <h1>Become a Member</h1>
+        <!-- Benifits -->
+        <p>Did you know that adding the Chamber's tools to your tool box gives you more choices for less expense than
+            anything else in your advertising plan? To receive the greatest benefit from your investment, be sure to
+            take advantage of all the Chamber has to offer!
+        </p>
+        <p>
+            Successful business people recognize the need for reaching their audience. The act of calling public
+            attention to your business goes by many names including advertising, marketing and promotion. Your Chamber
+            has the perfect tools to help you accomplish visibility.
+        </p>
 
-        </div>
+        <!-- Form -->
+        <form method="get" action="thanks.html">
+            <!-- Member Info -->
+            <h2>Step 1</h2>
+            <fieldset>
+                <legend>Member Info</legend>
+                <label>First Name *<br>
+                    <input type="text" name="fname" pattern="[A-Za-z ]{3,}" required>
+                </label><br>
+                <label>Last Name *<br>
+                    <input type="text" name="lname" pattern="[A-Za-z ]{3,}" required>
+                </label><br>
+                <label>Title<br>
+                    <input type="text" name="title" pattern="[A-Za-z ]{3,}">
+                </label><br>
+                <label>Email *<br>
+                    <input type="email" name="email" placeholder="someone@gmail.com" required>
+                </label><br>
+                <label>Cell Phone<br>
+                    <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-444-5678">
+                </label>
+            </fieldset>
+
+            <!-- Business Info -->
+            <h2>Step 2</h2>
+            <fieldset>
+                <legend>Business Info</legend>
+                <label>Business Name *<br>
+                    <input type="text" name="company" placeholder="Company, Inc." required>
+                </label>
+                <label>Business Website<br>
+                    <input type="url" name="website" placeholder="www.example.com">
+                </label>
+                <label class="">Business Description<br>
+                    <textarea class="text-box" name="description"></textarea>
+                </label><br>
+            </fieldset>
+
+            <!-- Address -->
+            <fieldset>
+                <legend>Business Address</legend>
+                <label>Street<br>
+                    <input type="street" name="street">
+                </label>
+                <label>City<br>
+                    <input type="city" name="city">
+                </label>
+                <label>State<br>
+                    <input type="state" name="state">
+                </label>
+                <label>Zip<br>
+                    <input type="zip" name="zip">
+                </label>
+                <label>Country<br>
+                    <input type="country" name="country">
+                </label>
+            </fieldset>
+
+            <h2>Step 3</h2>
+            <fieldset>
+                <legend>Membership Level</legend>
+                <p>Details Below</p>
+                <label>
+                    <input type="radio" name="level" value="non-profit"> Non-profit <div class="price">$100</div>
+                </label>
+                <label>
+                    <input type="radio" name="level" value="bronze"> Bronze <div class="price">$200</div>
+                </label>
+                <label>
+                    <input type="radio" name="level" value="silver"> Silver <div class="price">$400</div>
+                </label>
+                <label>
+                    <input type="radio" name="level" value="gold"> Gold <div class="price">$1,000</div>
+                </label>
+            </fieldset>
+            <!-- Submit Button -->
+            <input type="submit" value="Send my Application" class="submitBtn">
+        </form> <!-- End Form -->
+
+        <div class="membership-options">
+            <h2>Membership Options</h2>
+            <div class="non-profit">
+                <h3>Non-profit: $100</h3>
+                <ul>
+                    <li>Identified as a member of the Davenport Chamber member with window decal</li>
+                    <li>A basic listing in the Davenport Chamber website business directory</li>
+                    <li>A basic listing in the Davenport Chamber Relocation Guide & Directory</li>
+                    <li>Use of Davenport Chamber logo in marketing and advertising materials</li>
+                    <li>Community visibility & credibility as a Chamber member</li>
+                    <li>Business development opportunities</li>
+                    <li>Access to Chamber communications, including the weekly e-newsletter</li>
+                    <li>Member 2 Member discounts</li>
+                    <li>Legislative Advocacy</li>
+                    <li>Access to advertising & promotional opportunities</li>
+                    <li>Invitation to annual Signature Events</li>
+                    <li>1 Ribbon Cutting Ceremony with free social media posting</li>
+                    <li>Access to US Chamber services & discounts</li>
+                    <li>Office Depot National Chamber Program discounts</li>
+                    <li>Referrals from the Chamber</li>
+                    <li>Invitation to New Member Orientation Luncheon</li>
+                    <li>Volunteer opportunities with committee participation</li>
+                </ul>
+            </div> <!-- End Non-profit -->
+            <div class="bronze">
+                <h3>Bronze: $200</h3>
+                <ul>
+                    <li>All Non-profit Benifits</li>
+                    <li>1 Anniversary Ribbon Cutting with free social media posting</li>
+                    <li>1 set of member mailing labels</li>
+                    <li>1 We Noticed Ceremony with free social media posting</li>
+                    <li>New member recognition on social media</li>
+                    <li>6 Tickets to the Monthly Chamber Breakfast</li>
+                    <li>Additional website directory listing</li>
+                    <li>Complimentary certificate of origin & notary services</li>
+                </ul>
+            </div> <!-- End Bronze -->
+            <div class="silver">
+                <h3>Silver: $400</h3>
+                <ul>
+                    <li>All Non-profit and Bronze Benifits</li>
+                    <li>12 Tickets to the Monthly Chamber Breakfast</li>
+                    <li>1 week of Business Beat advertising</li>
+                    <li>Complimentary member spotlight in the e-newsletter, once per year</li>
+                    <li>Enhanced listing in Davenport Chamber website business directory</li>
+                    <li>YouTube video posted to Chamber channel, video provided by the member</li>
+                    <li>2 Tickets to the Annual Taste of Davenport signature event</li>
+                </ul>
+            </div> <!-- End Silver -->
+            <div class="gold">
+                <h3>Gold: $1,000</h3>
+                <ul>
+                    <li>All Non-profit, Bronze, and Silver Benifits</li>
+                    <li>4 Complimentary member mailing labels with Excel spreadsheet</li>
+                    <li>Complimentary 4 weeks of Business Beat Advertising</li>
+                    <li>An enhanced listing with business logo in Davenport Chamber website directory</li>
+                    <li>Complimentary 2 weeks of Davenport Chamber website advertising</li>
+                    <li>24 Tickets to the Monthly Chamber Breakfast</li>
+                    <li>1 Promotion of an upcoming event on Chamber social media</li>
+                    <li>Complimentary tickets to each of the following Signature Events: Taste of Davenport, Davenport
+                        Business Awards</li>
+                    <li>Invitation to Annual Trustee Luncheon</li>
+                    <li>2 Promotions of upcoming events on Chamber social media</li>
+                    <li>Business name on Trustee banner at all Chamber events</li>
+                    <li>25% discount on website & newsletter advertising</li>
+                    <li>Recognition at Chamber Events, to include:
+                        <ul>
+                            <li>Business logo on Trustee banner displayed at all Chamber events</li>
+                            <li>Logo on event programs & invitations</li>
+                            <li>Recognition from the podium at each Monthly Chamber Breakfast</li>
+                            <li>Acknowledgment from emcee at each Signature Event</li>
+                        </ul>
+                    </li>
+                    <li>Complimentary display table set up at one Chamber Breakfast per year</li>
+                    <li>A featured story about your business, listed on the Chamber website and promoted twice on social
+                        media</li>
+                    <li>Logo on the home page of Davenport Chamber website</li>
+                </ul>
+            </div> <!-- End Gold -->
+        </div> <!-- End Membership Options -->
+
     </main>
-
-
 
     <!-- Top Footer -->
     <div class="footer-top-wrapper">
