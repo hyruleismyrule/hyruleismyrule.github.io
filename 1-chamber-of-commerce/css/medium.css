@@ -52,44 +52,59 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-
-    .alert{
+    .alert {
         grid-column-start: 2;
         grid-column-end: 4;
     }
-
     #forecast {
         display: flex;
         justify-content: space-evenly;
     }
-
     .forecast-box {
         padding: 1rem;
     }
-
     .forecast-name {
-       margin: 0;
-       padding: 0;
+        margin: 0;
+        padding: 0;
     }
-    
     .forecast-temp {
         margin: 0;
         padding: 0;
     }
-    
-    .forecast-icon {
-      
-    }
-
     .weather-container .weather-grid .alert {
         margin: 0;
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    
     .full-width-current {
         grid-column-start: 1;
         grid-column-end: 4;
+    }
+    /*----------- Davenport City --------------*/
+    .demographics-info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .pop-by-age-title {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .gender {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .dependancy {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .event-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     /*----------- FOOTER --------------*/
     .footer-widgets {

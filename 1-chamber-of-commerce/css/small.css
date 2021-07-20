@@ -105,6 +105,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #C1D6D9;
     color: #4E9DA6;
+    border-radius: 10px;
 }
 
 nav ul li.active a {
@@ -256,11 +257,10 @@ input, .text-box {
     color: black;
 }
 
-.membership a{
+.membership a {
     text-decoration: none;
     color: black;
 }
-
 
 .events li {
     margin-top: 1rem;
@@ -346,14 +346,188 @@ input, .text-box {
 
 /*----------- Davenport --------------*/
 
-/*----------- delete later! affects home page --------------*/
-img {
-    max-width: 100px;
+.page-title {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-#piechart {
-  
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.demographics {
+    background-color: #63736E;
+    color: white;
+}
+
+.demo-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.household-table {
+    padding: 0;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: black;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+}
+
+thead tr th {
+    background-color: #4E9DA6;
+    font-size: 2rem;
+    font-family: Catamaran, serif;
+}
+
+tfoot tr td {
+    background-color: #4E9DA6;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: Catamaran, serif;
+}
+
+tbody tr th {
+    background-color: #8CA665;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #C1D6D9;
+}
+
+tr:nth-child(odd) {
+    background-color: #EBF2F2;
+}
+
+#special {
+    background-color: #628ca6;
+    color: white;
+}
+
+.commitment {
+    background-color: #8CA665;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event {
+    margin: 1rem;
+}
+
+.event-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 /*----------- FOOTER --------------*/
 
 footer {
