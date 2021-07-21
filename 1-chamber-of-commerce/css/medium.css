@@ -106,6 +106,24 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    /* Membership */
+    .membership-grid {
+        display: grid;
+        padding: 1rem;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .membership-options {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
     /*----------- FOOTER --------------*/
     .footer-widgets {
         display: flex;
