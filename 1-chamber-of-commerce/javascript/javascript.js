@@ -72,7 +72,7 @@ if (document.getElementById('current-weather')) {
                 let theTemp = document.createElement('p');
                 theTemp.textContent = Math.round(forecastList[i].temp.day) + '\xB0';
                 let iconcode = forecastList[i].weather[0].icon;
-                let iconPath = "images/home/new-forecast-icons/" + iconcode + ".png";
+                let iconPath = "images/home/forecast-icons/" + iconcode + ".png";
                 let theIcon = document.createElement('img');
                 theIcon.src = iconPath;
                 let theDay = document.createElement('div');
