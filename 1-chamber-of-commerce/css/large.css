@@ -119,5 +119,14 @@
         grid-gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    .contact-bottom-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem;
+    }
+    .contact-contact {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
     /*----------- FOOTER --------------*/
 }

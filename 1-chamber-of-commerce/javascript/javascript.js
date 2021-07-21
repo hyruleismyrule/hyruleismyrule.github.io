@@ -12,7 +12,7 @@ function toggleMenu() {
 
 // Home Contact us
 function toThanks() {
-    window.location.href = "thanks.html";
+    window.location.href = "comment-thanks.html";
 }
 
 // Home Join Us
