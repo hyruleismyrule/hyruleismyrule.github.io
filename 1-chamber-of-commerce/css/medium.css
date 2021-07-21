@@ -102,6 +102,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .commitment {
+        margin: 0;
+    }
+    .history {
+        margin: 0;
+    }
     /* Membership */
     .membership-grid {
         display: grid;
