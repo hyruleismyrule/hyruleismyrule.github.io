@@ -118,6 +118,11 @@
         grid-column-end: 3;
     }
     /* Directory */
+    .directory-default {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     .directory-grid {
         display: grid;
         grid-gap: 1rem;
