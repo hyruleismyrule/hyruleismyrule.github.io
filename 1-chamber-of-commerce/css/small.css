@@ -602,26 +602,58 @@ section h4 {
     padding-bottom: 1rem;
 }
 /* Join */
-/* form label.sbs {
-    display: block;
-    padding: 0.1rem 0;
-    color: #023859;
-} */
-/* .sbs input {
-    float: left;
-} */
-/* .sbs label {
-    float: right;
-} */
 .sbs {
     display: grid;
     grid-template-columns: 2rem 1fr;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
 .sbs p {
     margin: 0;
     padding: 0;
+}
+
+.non-profit {
+    background-color: #EBF2F2;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bronze {
+    background-color: #C1D6D9;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.silver {
+    background-color: #4E9DA6;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.gold {
+    background-color: #8CA665;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    color: #4E9DA6;
+    background-color: #EBF2F2;
+    border: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+legend {
+    color: #4E9DA6;
+    border: none;
+    font-weight: bold;
 }
 /* Contact Google Maps */
 
