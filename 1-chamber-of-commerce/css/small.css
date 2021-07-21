@@ -601,7 +601,28 @@ section h4 {
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
-
+/* Join */
+/* form label.sbs {
+    display: block;
+    padding: 0.1rem 0;
+    color: #023859;
+} */
+/* .sbs input {
+    float: left;
+} */
+/* .sbs label {
+    float: right;
+} */
+.sbs {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.sbs p {
+    margin: 0;
+    padding: 0;
+}
 /* Contact Google Maps */
 
 /* .mapouter {
