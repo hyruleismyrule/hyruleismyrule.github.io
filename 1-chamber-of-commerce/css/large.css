@@ -125,6 +125,8 @@
         grid-gap: 1rem;
     }
     .contact-contact {
+        margin: 0;
+        margin-top: 1rem;
         grid-column-start: 1;
         grid-column-end: 2;
     }

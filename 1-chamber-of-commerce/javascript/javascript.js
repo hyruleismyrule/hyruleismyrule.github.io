@@ -212,7 +212,7 @@ if (document.getElementById('executive')) {
                 let position = document.createElement("h3");
                 let name = document.createElement('h2');
                 let company = document.createElement("h4");
-                profile.setAttribute('src', "images/contact/executive-board/" + executive[i]["first-name"] + "-" + executive[i]["last-name"] + ".jpeg");
+                profile.setAttribute('src', "images/contact/executive-board/" + executive[i]["first-name"] + "-" + executive[i]["last-name"] + ".jpg");
                 profile.setAttribute('alt', executive[i]["first-name"]);
                 position.textContent = executive[i].position;
                 name.textContent = executive[i]["first-name"] + " " + executive[i]["last-name"];
@@ -238,7 +238,7 @@ if (document.getElementById('executive')) {
                 let profile = document.createElement('img');
                 let name = document.createElement('h2');
                 let company = document.createElement("h4");
-                profile.setAttribute('src', "images/contact/board/" + board[i]["first-name"] + "-" + board[i]["last-name"] + ".jpeg");
+                profile.setAttribute('src', "images/contact/board/" + board[i]["first-name"] + "-" + board[i]["last-name"] + ".jpg");
                 profile.setAttribute('alt', board[i]["first-name"]);
                 name.textContent = board[i]["first-name"] + " " + board[i]["last-name"];
                 company.textContent = board[i].company;
@@ -263,7 +263,7 @@ if (document.getElementById('executive')) {
                 let position = document.createElement("h3");
                 let name = document.createElement('h2');
                 let company = document.createElement("h4");
-                profile.setAttribute('src', "images/contact/staff/" + staff[i]["first-name"] + "-" + staff[i]["last-name"] + ".jpeg");
+                profile.setAttribute('src', "images/contact/staff/" + staff[i]["first-name"] + "-" + staff[i]["last-name"] + ".jpg");
                 profile.setAttribute('alt', staff[i]["first-name"]);
                 position.textContent = staff[i].position;
                 name.textContent = staff[i]["first-name"] + " " + staff[i]["last-name"];
