@@ -51,7 +51,7 @@ weekday[4] = "Thursday";
 weekday[5] = "Friday";
 weekday[6] = "Saturday";
 
- // Weather
+// Weather
 if (document.getElementById('current-weather')) {
     const OneCallWeatherAPIurl = "//api.openweathermap.org/data/2.5/onecall?lat=28.1614&lon=-81.601738&appid=28e498ae581a0633cfff6d7d29104fdb&units=imperial";
     fetch(OneCallWeatherAPIurl)
@@ -104,43 +104,84 @@ if (document.getElementById('current-weather')) {
 }
 
 // Davenport Piechart
-google.charts.load('current', { 'packages': ['corechart'] });
-google.charts.setOnLoadCallback(drawChart);
-function drawChart() {
-    let data = google.visualization.arrayToDataTable([
-        ['Race', 'Percent of the Population'],
-        ['White', 3612],
-        ['Black or African American', 786],
-        ['Two or More Races', 135],
-        ['Other', 106],
-        ['Asian', 43]
-    ]);
-    let options = {
-        backgroundColor: "transparent",
-        fontName: "EB Garamond",
-        chartArea: {width: "100%"},
-        legend: {position: 'bottom'}
-    };
-    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
+if (document.getElementById("piechart")) {
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        let data = google.visualization.arrayToDataTable([
+            ['Race', 'Percent of the Population'],
+            ['White', 3612],
+            ['Black or African American', 786],
+            ['Two or More Races', 135],
+            ['Other', 106],
+            ['Asian', 43]
+        ]);
+        let options = {
+            backgroundColor: "transparent",
+            fontName: "EB Garamond",
+            chartArea: { width: "100%" },
+            legend: { position: 'bottom' }
+        };
+        let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+    }
 }
 
 // Davenport Slideshow
-let slideIndex = [1,1];
-let slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
-function showSlides(n, no) {
-  let i;
-  let x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex[no]-1].style.display = "block";
+if (document.getElementById('piechart')) {
+    let slideIndex = [1, 1];
+    let slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+    }
+    function showSlides(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) { slideIndex[no] = 1 }
+        if (n < 1) { slideIndex[no] = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex[no] - 1].style.display = "block";
+    }
 }
 
+// Directory Businesses
+if (document.getElementById('directory-container')) {
+    const directoryURL = 'davenport-directory.json';
+    fetch(directoryURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const business = jsonObject['business'];
+            console.table(jsonObject);
+            for (let i = 0; i < business.length; i++) {
+                let card = document.createElement('section');
+                let logo = document.createElement('img');
+                let name = document.createElement('h2');
+                let phone = document.createElement('p');
+                let street = document.createElement('p');
+                let address = document.createElement('p');
+                let website = document.createElement('p');
+                // This line is temporary for finding the correct image size
+                logo.setAttribute('src', "images/davenport/image-slider-1/beach.jpg");
+                // This is the line that will be in the final
+                // logo.setAttribute('src', business[i].logo);
+                logo.setAttribute('alt', business[i].name);
+                name.textContent = business[i].name;
+                phone.textContent = business[i].phone;
+                street.textContent = business[i].street;
+                address.textContent = business[i].city + ", " + business[i].state + " " + business[i].zip;
+                website.textContent = business[i].website;
+                card.appendChild(logo);
+                card.appendChild(name);
+                card.appendChild(street);
+                card.appendChild(address);
+                card.appendChild(website);
+                document.getElementById('directory-container').appendChild(card);
+            }
+        });
+}
