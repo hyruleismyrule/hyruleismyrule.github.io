@@ -20,7 +20,6 @@ function toMembership() {
     window.location.href = "membership.html";
 }
 
-
 // Last updeted
 let oLastModif = new Date(document.lastModified);
 let optionsMonth = { month: 'long', };
@@ -184,4 +183,29 @@ if (document.getElementById('directory-container')) {
                 document.getElementById('directory-container').appendChild(card);
             }
         });
+}
+
+// Directory Toggle Grid
+// function turnGridOn() {
+//     document.getElementById("directory-container").setAttribute('class', "directory-grid");
+//     document.getElementById("turn-grid-on").setAttribute('class', "hide");
+//     document.getElementById("turn-grid-off").setAttribute('class', "show");
+// }
+
+// function turnGridOff() {
+//     document.getElementById("directory-container").setAttribute('class', "directory-block");
+//     document.getElementById("turn-grid-off").setAttribute('class', "hide");
+//     document.getElementById("turn-grid-on").setAttribute('class', "show");
+// }
+
+// function toggleGrid() {
+//     document.getElementById("directory-container").classList.toggle("directory-grid");
+// }
+
+function turnGridOn() {
+    document.getElementById("directory-container").setAttribute('class', "directory-grid");
+}
+
+function turnGridOff() {
+    document.getElementById("directory-container").setAttribute('class', "directory-block");
 }

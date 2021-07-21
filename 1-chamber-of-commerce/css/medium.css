@@ -124,6 +124,22 @@
         grid-column-start: 2;
         grid-column-end: 3;
     }
+
+    /* Directory */
+    .directory-grid {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .directory-block {
+        display: block;
+    }
+
+    .button-box {
+        display: flex;
+        justify-content: flex-end;
+    }
     /*----------- FOOTER --------------*/
     .footer-widgets {
         display: flex;

@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package/favicon-32x32.png">
@@ -54,23 +55,31 @@
 
     <div class="filler"></div>
 
-        <div class="main-banner">
-            <div>
-                <picture>
-                    <source media="(max-width: 544px)" srcset="images/home/main-banner544.jpg">
-                    <source media="(max-width: 1008px)" srcset="images/home/main-banner1008.jpg">
-                    <source media="(max-width: 1905px)" srcset="images/home/main-banner1905.jpg">
-                    <img class="default" src="images/home/main-banner1905.jpg" alt="Davenport City">
-                </picture>
-            </div>
+    <div class="main-banner">
+        <div>
+            <picture>
+                <source media="(max-width: 544px)" srcset="images/home/main-banner544.jpg">
+                <source media="(max-width: 1008px)" srcset="images/home/main-banner1008.jpg">
+                <source media="(max-width: 1905px)" srcset="images/home/main-banner1905.jpg">
+                <img class="default" src="images/home/main-banner1905.jpg" alt="Davenport City">
+            </picture>
         </div>
+    </div>
 
-        <main>
-            <!-- Page Title -->
-            <h1>Davenport Direcotry</h1>
-            <!-- Businesses -->
-            <div class="directory-container" id="directory-container"></div>
-        </main>
+    <main>
+        <!-- Page Title -->
+        <h1>Davenport Directory</h1>
+        <div class="button-box">
+            <span id="turn-grid-on" onclick="turnGridOn()" class="material-icons">
+                grid_on
+            </span>
+            <span in="turn-grid-off" onclick="turnGridOff()" class="material-icons">
+                view_list
+            </span>
+        </div>
+        <!-- Businesses -->
+        <div class="directory-container" id="directory-container"></div>
+    </main>
 
     <!-- Footer -->
     <div class="footer-top-wrapper">
