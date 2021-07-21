@@ -165,10 +165,7 @@ if (document.getElementById('directory-container')) {
                 let street = document.createElement('p');
                 let address = document.createElement('p');
                 let website = document.createElement('p');
-                // This line is temporary for finding the correct image size
-                logo.setAttribute('src', "images/davenport/image-slider-1/beach.jpg");
-                // This is the line that will be in the final
-                // logo.setAttribute('src', business[i].logo);
+                logo.setAttribute('src', business[i].logo);
                 logo.setAttribute('alt', business[i].name);
                 name.textContent = business[i].name;
                 phone.textContent = business[i].phone;
