@@ -186,26 +186,93 @@ if (document.getElementById('directory-container')) {
 }
 
 // Directory Toggle Grid
-// function turnGridOn() {
-//     document.getElementById("directory-container").setAttribute('class', "directory-grid");
-//     document.getElementById("turn-grid-on").setAttribute('class', "hide");
-//     document.getElementById("turn-grid-off").setAttribute('class', "show");
-// }
-
-// function turnGridOff() {
-//     document.getElementById("directory-container").setAttribute('class', "directory-block");
-//     document.getElementById("turn-grid-off").setAttribute('class', "hide");
-//     document.getElementById("turn-grid-on").setAttribute('class', "show");
-// }
-
-// function toggleGrid() {
-//     document.getElementById("directory-container").classList.toggle("directory-grid");
-// }
-
-function turnGridOn() {
-    document.getElementById("directory-container").setAttribute('class', "directory-grid");
+if (document.getElementById("directory-container")) {
+    function turnGridOn() {
+        document.getElementById("directory-container").setAttribute('class', "directory-grid");
+    }
+    function turnGridOff() {
+        document.getElementById("directory-container").setAttribute('class', "directory-block");
+    }
 }
 
-function turnGridOff() {
-    document.getElementById("directory-container").setAttribute('class', "directory-block");
+// Contact Board Members
+// Executive
+if (document.getElementById('executive')) {
+    const executiveURL = 'executive.json';
+    fetch(executiveURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const executive = jsonObject['executive'];
+            console.table(jsonObject);
+            for (let i = 0; i < executive.length; i++) {
+                let card = document.createElement('section');
+                let profile = document.createElement('img');
+                let position = document.createElement("h3");
+                let name = document.createElement('h2');
+                let company = document.createElement("h4");
+                profile.setAttribute('src', "images/contact/executive-board/" + executive[i]["first-name"] + "-" + executive[i]["last-name"] + ".jpeg");
+                profile.setAttribute('alt', executive[i]["first-name"]);
+                position.textContent = executive[i].position;
+                name.textContent = executive[i]["first-name"] + " " + executive[i]["last-name"];
+                company.textContent = executive[i].company;
+                card.appendChild(profile);
+                card.appendChild(position);
+                card.appendChild(name);
+                card.appendChild(company);
+                document.getElementById('executive').appendChild(card);
+            }
+        });
+    // Board
+    const boardURL = 'board.json';
+    fetch(boardURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const board = jsonObject['board'];
+            console.table(jsonObject);
+            for (let i = 0; i < board.length; i++) {
+                let card = document.createElement('section');
+                let profile = document.createElement('img');
+                let name = document.createElement('h2');
+                let company = document.createElement("h4");
+                profile.setAttribute('src', "images/contact/board/" + board[i]["first-name"] + "-" + board[i]["last-name"] + ".jpeg");
+                profile.setAttribute('alt', board[i]["first-name"]);
+                name.textContent = board[i]["first-name"] + " " + board[i]["last-name"];
+                company.textContent = board[i].company;
+                card.appendChild(profile);
+                card.appendChild(name);
+                card.appendChild(company);
+                document.getElementById('board').appendChild(card);
+            }
+        });
+    // Staff
+    const staffURL = 'staff.json';
+    fetch(staffURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            const staff = jsonObject['staff'];
+            console.table(jsonObject);
+            for (let i = 0; i < staff.length; i++) {
+                let card = document.createElement('section');
+                let profile = document.createElement('img');
+                let position = document.createElement("h3");
+                let name = document.createElement('h2');
+                let company = document.createElement("h4");
+                profile.setAttribute('src', "images/contact/staff/" + staff[i]["first-name"] + "-" + staff[i]["last-name"] + ".jpeg");
+                profile.setAttribute('alt',staff[i]["first-name"]);
+                position.textContent = staff[i].position;
+                name.textContent = staff[i]["first-name"] + " " + staff[i]["last-name"];
+                company.textContent = staff[i].company;
+                card.appendChild(profile);
+                card.appendChild(position);
+                card.appendChild(name);
+                card.appendChild(company);
+                document.getElementById('staff').appendChild(card);
+            }
+        });
 }

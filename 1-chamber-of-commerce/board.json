@@ -1,30 +1,4 @@
 {
-    "executive": [
-        {
-            "position": "Chair",
-            "first-name": "Teresa",
-            "last-name": "Connell",
-            "company": "State Farm Insurance"
-        },
-        {
-            "position": "Past Chair/ Treasurer",
-            "first-name": "Stacy",
-            "last-name": "Stokes",
-            "company": "CenterState Bank"
-        },
-        {
-            "position": "Secretary",
-            "first-name": "Stacy",
-            "last-name": "Towns",
-            "company": "Stacey Towns Realty, LLC"
-        },
-        {
-            "position": "Chair Elect",
-            "first-name": "Steve",
-            "last-name": "Tiner",
-            "company": "Ameriprise Financial Advisors"
-        }
-    ],
     "board": [
         {
             "first-name": "Shemil",
@@ -62,7 +36,7 @@
             "company": "AdventHealth"
         },
         {
-            "first-name": "R. J.",
+            "first-name": "RJ",
             "last-name": "Webb",
             "company": "Webb's Realty/ Webb's Candies"
         },
@@ -87,7 +61,7 @@
             "company": "Reilly International Law, P.A."
         },
         {
-            "first-name": "H.B.",
+            "first-name": "HB",
             "last-name": "Robinson",
             "company": "City of Davenport"
         },
@@ -96,22 +70,5 @@
             "last-name": "West",
             "company": "City of Haines City"
         }
-    ],
-    "staff": [
-        {
-            "first-name": "Lana",
-            "last-name": "Stripling",
-            "position": "Executive Director"
-        },
-        {
-            "first-name": "Edee",
-            "last-name": "Feliciano",
-            "position": "Communications"
-        },
-        {
-            "first-name": "Olivia",
-            "last-name": "Moorehead",
-            "position": "Media & Community Relations Coordinator"
-        }   
     ]
 }
