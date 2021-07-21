@@ -76,7 +76,6 @@
         grid-column-start: 3;
         grid-column-end: 4;
     }
-
     /*----------- Davenport City --------------*/
     .demographics-grid {
         display: grid;
@@ -84,7 +83,6 @@
         grid-gap: 1rem;
         padding: 1rem;
     }
-
     .demographics-info-grid {
         font-size: 1rem;
     }
@@ -92,34 +90,34 @@
         grid-column-start: 3;
         grid-column-end: 4;
     }
-
     h4 {
         margin: 0;
         padding: 0;
     }
-
     .pop-by-age-title {
         margin: 0;
         padding: 0;
     }
-
     .slider-history-grid {
         padding: 1rem;
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: 1fr 2fr;
     }
-
     .commitment-grid {
         padding: 1rem;
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: 2fr 1fr;
     }
-
     .event-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
-
+    /* Contact */
+    .executive, .board, .staff {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
     /*----------- FOOTER --------------*/
 }

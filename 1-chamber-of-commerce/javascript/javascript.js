@@ -264,7 +264,7 @@ if (document.getElementById('executive')) {
                 let name = document.createElement('h2');
                 let company = document.createElement("h4");
                 profile.setAttribute('src', "images/contact/staff/" + staff[i]["first-name"] + "-" + staff[i]["last-name"] + ".jpeg");
-                profile.setAttribute('alt',staff[i]["first-name"]);
+                profile.setAttribute('alt', staff[i]["first-name"]);
                 position.textContent = staff[i].position;
                 name.textContent = staff[i]["first-name"] + " " + staff[i]["last-name"];
                 company.textContent = staff[i].company;

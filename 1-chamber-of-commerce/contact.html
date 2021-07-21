@@ -54,6 +54,7 @@
 
     <div class="filler"></div>
 
+    <!-- Banner -->
     <div class="main-banner">
         <div>
             <picture>
@@ -65,10 +66,98 @@
         </div>
     </div>
 
+    <!-- Board members from json -->
     <main>
-        <div class="executive" id="executive"></div>
-        <div class="board" id="board"></div>
-        <div class="staff" id="staff"></div>
+        <div class="board-members">
+             <!-- Executive -->
+            <div class="executive-group">
+                <h1 class="contact-title">Executive Board</h1>
+                <div class="executive" id="executive"></div>
+            </div>
+             <!-- Board -->
+            <div class="board-group">
+                <h1 class="contact-title">Board of Directors</h1>
+                <div class="board" id="board"></div>
+            </div>
+             <!-- Staff -->
+            <div class="staff-group">
+                <h1 class="contact-title">Chamber Staff</h1>
+                <div class="staff" id="staff"></div>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="map-conatiner">
+            <!-- Chamber Address -->
+            <div class="contact-address">
+                <h2>Davenport Chamber of Commerce</h2>
+                <p>35610 Hwy 27<br>
+                    PO Box 986<br>
+                    Davenport, FL 33845
+                </p>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="google-map">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=davenport&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> <!-- End Google Maps-->
+        </div> <!-- End Map Container -->
+
+        <!-- Bottom Row -->
+        <div class="contact-bottom-row">
+            <!-- Contact Info -->
+            <div class="card contact">
+                <h2>Contact Us</h2>
+                <div class="contact-flex">
+                    <div class="space">
+                        <h3>Chamber Hours of Operation:</h3>
+                        <p>Monday - Thursday: 9:00 AM - 4:00 PM<br>
+                            Fridays: 10:00 AM - 3:00 PM<br>
+                            <i>Closed Weekends and Holidays</i>
+                        </p>
+                    </div>
+                    <div class="space">
+                        <h3>Phone Numbers:</h3>
+                        <p><strong>Chamber Office: </strong>863-422-3751<br>
+                            <strong>Fax: </strong>863-422-4704<br>
+                            <strong>Member Tech Support: </strong>855-233-6362<br>
+                            <strong>General Chamber Information: </strong>info@davenportchamber.com<br>
+                        </p>
+                    </div>
+
+                    <div class="space">
+                        <h3>Location and Mailing</h3>
+                        <p class="location"><strong>Davenport Chamber of Commerce</strong><br>
+                            35610 Hwy 27<br>
+                            PO Box 986<br>
+                            Davenport, FL 33845
+                        </p>
+                    </div>
+                </div><!-- end contact info -->
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-contact-form">
+                <form method="get" action="thanks.html">
+                    <h3>Send a Message</h3>
+                    <label class="">Name*<br>
+                        <input type="text" name="name" pattern="[A-Za-z ]{3,}" required>
+                    </label><br>
+                    <label class="">Email*<br>
+                        <input type="email" name="email" placeholder="someone@gmail.com" required>
+                    </label><br>
+                    <label class="">Comment*<br>
+                        <textarea class="text-box" name="comment" required></textarea>
+                    </label><br>
+                    <input type="submit" value="Send my Comment" class="submitBtn">
+                </form>
+            </div> <!--  end Contact Form -->
+        </div> <!--  End Bottom Row -->
     </main>
 
     <!-- Footer -->

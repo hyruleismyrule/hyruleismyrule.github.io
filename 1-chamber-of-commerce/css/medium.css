@@ -86,27 +86,22 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
     }
-
     .pop-by-age-title {
         grid-column-start: 1;
         grid-column-end: 4;
     }
-
     .gender {
         grid-column-start: 1;
         grid-column-end: 2;
     }
-
     .dependancy {
         grid-column-start: 2;
         grid-column-end: 3;
     }
-
     .event-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-
     /* Membership */
     .membership-grid {
         display: grid;
@@ -114,31 +109,32 @@
         grid-gap: 1rem;
         grid-template-columns: 1fr 1fr;
     }
-
     .form {
         grid-column-start: 1;
         grid-column-end: 2;
     }
-
     .membership-options {
         grid-column-start: 2;
         grid-column-end: 3;
     }
-
     /* Directory */
     .directory-grid {
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr;
     }
-
     .directory-block {
         display: block;
     }
-
     .button-box {
         display: flex;
         justify-content: flex-end;
+    }
+    /* Contact */
+    .executive, .board, .staff {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
     }
     /*----------- FOOTER --------------*/
     .footer-widgets {
