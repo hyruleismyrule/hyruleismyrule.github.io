@@ -54,7 +54,6 @@
         </header>
     </div>
 
-
     <!-- Filler prevents Nav from overlapping the banner -->
     <div class="filler"></div>
 
@@ -129,19 +128,19 @@
                     <fieldset>
                         <legend>Business Address</legend>
                         <label>Street<br>
-                            <input type="street" name="street">
+                            <input type="text" name="street">
                         </label>
                         <label>City<br>
-                            <input type="city" name="city">
+                            <input type="text" name="city">
                         </label>
                         <label>State<br>
-                            <input type="state" name="state">
+                            <input type="text" name="state">
                         </label>
                         <label>Zip<br>
-                            <input type="zip" name="zip">
+                            <input type="number" name="zip">
                         </label>
                         <label>Country<br>
-                            <input type="country" name="country">
+                            <input type="text" name="country">
                         </label>
                     </fieldset>
 
@@ -150,16 +149,16 @@
                         <legend>Membership Level</legend>
                         <p>Details Below</p>
                         <label class="sbs">
-                            <input type="radio" name="level" value="non-profit"> <p>Non-profit <span class="price">$100</span></p>
+                            <input type="radio" name="level" value="non-profit"> Non-profit $100
                         </label>
                         <label class="sbs">
-                            <input type="radio" name="level" value="bronze"> <p>Bronze <span class="price">$200</span></p>
-                        </label class="sbs">
-                        <label class="sbs">
-                            <input type="radio" name="level" value="silver"> <p>Silver <span class="price">$400</span></p>
+                            <input type="radio" name="level" value="bronze"> Bronze $200
                         </label>
                         <label class="sbs">
-                            <input type="radio" name="level" value="gold"> <p>Gold <span class="price">$1,000</span></p>
+                            <input type="radio" name="level" value="silver"> Silver $400
+                        </label>
+                        <label class="sbs">
+                            <input type="radio" name="level" value="gold"> Gold $1,000
                         </label>
                     </fieldset>
                     <!-- Submit Button -->
