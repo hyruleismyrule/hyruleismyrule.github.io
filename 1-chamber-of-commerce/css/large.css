@@ -7,13 +7,13 @@
         margin: auto;
     }
     .header-wrapper {
-        background-color: #4E9DA6;
+        background-color: #50A3AB;
     }
     .footer-bottom-wrapper {
-        background-color: #4E9DA6;
+        background-color: #50A3AB;
     }
     .footer-top-wrapper {
-        background-color: #C1D6D9;
+        background-color: #599FC5;
     }
     /*----------- HEADER --------------*/
     /*----------- NAVIGATION --------------*/
@@ -49,7 +49,7 @@
     }
     header {
         display: flex;
-        background-color: #4E9DA6;
+        background-color: #50A3AB;
         width: 100%;
     }
     .main-header {

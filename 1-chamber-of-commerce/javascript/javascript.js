@@ -83,6 +83,7 @@ if (document.getElementById('current-weather')) {
                 theDayName.setAttribute('class', "forecast-name");
                 theTemp.setAttribute('class', "forecast-temp");
                 theIcon.setAttribute('class', "forecast-icon");
+                theIcon.setAttribute('alt', "forecast-icon");
                 document.getElementById('forecast').appendChild(theDay);
                 forcastCount++;
                 forecastDayNumber += 1;
@@ -129,7 +130,7 @@ if (document.getElementById("piechart")) {
 // Davenport Slideshow
 if (document.getElementById('piechart')) {
     let slideIndex = [1, 1];
-    let slideId = ["mySlides1", "mySlides2"]
+    let slideId = ["mySlides1", "mySlides2"];
     showSlides(1, 0);
     showSlides(1, 1);
     function plusSlides(n, no) {
@@ -259,16 +260,13 @@ if (document.getElementById('executive')) {
                 let profile = document.createElement('img');
                 let position = document.createElement("h3");
                 let name = document.createElement('h2');
-                let company = document.createElement("h4");
                 profile.setAttribute('src', "images/contact/staff/" + staff[i]["first-name"] + "-" + staff[i]["last-name"] + ".jpg");
                 profile.setAttribute('alt', staff[i]["first-name"]);
                 position.textContent = staff[i].position;
                 name.textContent = staff[i]["first-name"] + " " + staff[i]["last-name"];
-                company.textContent = staff[i].company;
                 card.appendChild(profile);
                 card.appendChild(position);
                 card.appendChild(name);
-                card.appendChild(company);
                 document.getElementById('staff').appendChild(card);
             }
         });

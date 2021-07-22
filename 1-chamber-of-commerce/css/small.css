@@ -43,15 +43,15 @@ div.hideme {
 /*
 COLORS
 BLUE
-#4E9DA6
-LIGHT BLUE
-#C1D6D9
-LIGHT GREY
-#EBF2F2
-DARK GREY
-#63736E
+#50A3AB
+Dark BLUE
+#37598B
+LIGHT Blue
+#599FC5
+Mint green
+#51C2AC
 GREEN
-#8CA665
+#4DB884
 */
 
 /*----------- HEADER --------------*/
@@ -64,7 +64,7 @@ header {
 }
 
 .main-header {
-    background-color: #4E9DA6;
+    background-color: #50A3AB;
     display: flex;
 }
 
@@ -94,12 +94,12 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #4E9DA6;
+    background-color: #50A3AB;
 }
 
 nav ul li a {
     display: block;
-    color: white;
+    color: black;
     padding: .5rem 0;
     text-decoration: none;
     font-size: .9rem;
@@ -107,14 +107,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #C1D6D9;
-    color: #4E9DA6;
+    background-color: #599FC5;
+    color: black;
     border-radius: 10px;
 }
 
 nav ul li.active a {
-    background-color: #8CA665;
-    color: white;
+    background-color: #4DB884;
+    color: black;
 }
 
 nav ul.hide {
@@ -151,12 +151,12 @@ main {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #8CA665;
+    color: #37598B;
     width: 100%;
 }
 
 .card {
-    background-color: #C1D6D9;
+    background-color: #599FC5;
     padding: 1rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
@@ -174,7 +174,7 @@ main {
 
 .mission {
     padding: 0;
-    background-color: #8CA665;
+    background-color: #4DB884;
 }
 
 .mission-text {
@@ -188,7 +188,7 @@ main {
 }
 
 .contact {
-    background-color: #C1D6D9;
+    background-color: #599FC5;
 }
 
 .contact p, .advertisement p {
@@ -201,9 +201,9 @@ main {
 
 .submitBtn {
     background-color: transparent;
-    border: 4px solid #4E9DA6;
+    border: 4px solid black;
     padding: 0.5rem;
-    color: #4E9DA6;
+    color: black;
 }
 
 legend {
@@ -215,15 +215,14 @@ input, .text-box {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     width: 100%;
-    border: 2px solid #4E9DA6;
+    border: 2px solid black;
 }
 
 .advertisement {
-    background-color: #63736E;
+    background-color: #37598B;
     color: white;
     padding: 0;
     padding-bottom: 1rem;
-    ;
 }
 
 .advertisement a {
@@ -240,7 +239,7 @@ input, .text-box {
 }
 
 .membership {
-    background-color: #8CA665;
+    background-color: #4DB884;
     padding: 0;
 }
 
@@ -272,8 +271,9 @@ input, .text-box {
 }
 
 .weather-container {
-    background-color: #63736E;
+    background-color: #37598B;
     text-align: center;
+    color: white;
 }
 
 .weather-grid .current img {
@@ -285,7 +285,7 @@ input, .text-box {
 }
 
 .weather-container .weather-grid .alert {
-    background-color: #8CA665;
+    background-color: #4DB884;
 }
 
 .weather-container .card {
@@ -319,7 +319,7 @@ input, .text-box {
 }
 
 .alert {
-    background-color: #8CA665;
+    background-color: #4DB884;
 }
 
 .flex-end {
@@ -334,10 +334,6 @@ input, .text-box {
 
 .alert {
     text-align: left;
-}
-
-.forecast-box {
-    background-color: #EBF2F2;
 }
 
 .forecast-name {
@@ -455,7 +451,7 @@ img {
 }
 
 .demographics {
-    background-color: #63736E;
+    background-color: #37598B;
     color: white;
 }
 
@@ -484,29 +480,30 @@ th, td {
 }
 
 thead tr th {
-    background-color: #4E9DA6;
+    background-color: #50A3AB;
     font-size: 2rem;
     font-family: Catamaran, serif;
 }
 
 tfoot tr td {
-    background-color: #4E9DA6;
+    background-color: #50A3AB;
     padding: 0.5rem;
     font-size: 1rem;
     font-family: Catamaran, serif;
 }
 
 tbody tr th {
-    background-color: #8CA665;
-    color: white;
+    background-color: #4DB884;
+    color: black;
 }
 
 tr:nth-child(even) {
-    background-color: #C1D6D9;
+    background-color: #599FC5;
+    color: black;
 }
 
 tr:nth-child(odd) {
-    background-color: #EBF2F2;
+    background-color: white;
 }
 
 #special {
@@ -515,7 +512,7 @@ tr:nth-child(odd) {
 }
 
 .commitment {
-    background-color: #8CA665;
+    background-color: #4DB884;
     text-align: center;
     padding: 1rem;
     margin-top: 1rem;
@@ -534,18 +531,14 @@ tr:nth-child(odd) {
 /*----------- Davenport --------------*/
 .event a {
     text-decoration: none;
-    color: #4E9DA6;
+    color: black;
    
 }
 
 /*----------- Directory --------------*/
 
-.directory-container {
-    /* padding: 1rem;  */
-}
-
 section {
-    background-color: #C1D6D9;
+    background-color: #599FC5;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -565,10 +558,11 @@ section p {
     padding: 1rem;
     padding-top: 0;
     overflow-wrap: anywhere;
+    
 }
 
 .material-icons {
-    color: #4E9DA6;
+    color: #37598B;
 }
 
 .button-box {
@@ -578,7 +572,7 @@ section p {
 section h3 {
     font-family: EB Garamond;
     font-style: italic;
-    color: #4E9DA6;
+    color: black;
     padding: 0;
     margin: 0;
     margin-top: 1rem;
@@ -598,7 +592,7 @@ section h2 {
 
 section h4 {
     font-style: italic;
-    color: #8CA665;
+    color: black;
     padding: 0;
     margin: 0;
     margin-top: 1rem;
@@ -621,43 +615,43 @@ section h4 {
 }
 
 .non-profit {
-    background-color: #EBF2F2;
+    background-color: white;
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .bronze {
-    background-color: #C1D6D9;
+    background-color: #599FC5;
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .silver {
-    background-color: #4E9DA6;
+    background-color: #50A3AB;
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .gold {
-    background-color: #8CA665;
+    background-color: #4DB884;
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 fieldset {
-    color: #4E9DA6;
-    background-color: #EBF2F2;
+    color: #37598B;
+    background-color: white;
     border: none;
     margin: 0;
     padding: 1rem;
 }
 
 legend {
-    color: #4E9DA6;
+    color: #37598B;
     border: none;
     font-weight: bold;
 }
@@ -710,10 +704,21 @@ iframe {
 }
 /* Contact */
 .contact-contact-form {
-    background-color: #63736E;
+    background-color: #37598B;
+    color: white;
     padding: 1rem;
     margin: 0;
     margin-top: 1rem;
+}
+
+.contact-contact-form .submitBtn {
+    color: white;
+    border-color: white;
+}
+
+.contact-contact-form input {
+    color: white;
+    border-color: white;
 }
 
 .contact-contact {
@@ -740,7 +745,7 @@ footer img {
 }
 
 .footer-widgets {
-    background-color: #C1D6D9;
+    background-color: #599FC5;
     text-align: center;
     padding: 0.5rem;
 }
@@ -782,7 +787,7 @@ footer ul li a {
 }
 
 .footer-bottom {
-    background-color: #4E9DA6;
+    background-color: #50A3AB;
     text-align: center;
     padding: 1rem;
 }
