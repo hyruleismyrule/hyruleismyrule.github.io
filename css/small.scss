@@ -1,0 +1,52 @@
+// Variables
+// Colors
+$color-1: #734F60;
+$color-2: #F2A7CA;
+$color-3: #F45FA5;
+$color-4: #732D4D;
+$color-5: #BF84A0;
+// Fonts
+$body-copy: 'Open Sans', sans-serif;
+$header: 'Oleo Script', cursive;
+$Chinese: 'Noto Serif SC', serif;
+
+// Mixins
+@mixin sm-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+body {
+    font-family: $body-copy;
+    font-size: 16px;
+    line-height: 2rem;
+    img {
+        width: 100%;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header;
+    @include sm-padding;
+}
+p {
+    @include sm-padding;
+}
+header, footer {
+    background-color: $color-3;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 10rem 4rem;
+    color: white;
+    img {
+        width: 10rem;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+    }
+    .fas {
+        line-height: 1.5;
+        font-size: 3rem;
+    }
+}
+
