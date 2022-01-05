@@ -4,7 +4,7 @@ body {
 }
 
 header, footer {
-  background-color: pink;
+  background-color: purple;
   color: white;
   padding: 1rem;
 }
@@ -16,6 +16,6 @@ header h1, footer h1 {
 
 h1 {
   margin: 1rem;
-  color: pink;
+  color: purple;
 }
 /*# sourceMappingURL=small.css.map */

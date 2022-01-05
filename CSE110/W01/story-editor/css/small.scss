@@ -1,6 +1,6 @@
 body {
   margin: 1rem;
-  background-color: pink;
+  background-color: purple;
   color: white;
   font-family: sans-serif;
   font-size: 16pt;
@@ -31,10 +31,8 @@ button {
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  &:hover {
+    color: purple;
+    background-color: white;
+  }
 }
-
-button:hover {
-  color: pink;
-  background-color: white;
-}
-/*# sourceMappingURL=small.css.map */

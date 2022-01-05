@@ -3,23 +3,23 @@ body {
     font-size: 14pt;
 }
 header, footer {
-    background-color: pink;
+    background-color: blue;
     color: white;
     padding: 1rem;
     h1 {
         margin: 0;
-        color: white;
-    }
-    h2 {
-        color: white;
     }
 }
-h1, h2, h3, h4, h5, h6 {
-    color: pink;
-}
-main {
-    margin: 1rem;
-    p {
-        line-height: 2rem;
+.card {
+    padding: 1rem;
+    a {
+        color: white;
+        text-decoration: none;
     }
+}
+.wdd330 {
+    background-color: pink;
+}
+.cse110 {
+    background-color: purple;
 }

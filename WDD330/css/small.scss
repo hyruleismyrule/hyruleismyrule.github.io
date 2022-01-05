@@ -1,0 +1,18 @@
+$class-color: pink;
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+}
+header, footer {
+    background-color: $class-color;
+    color: white;
+    padding: 1rem;
+    h1 {
+        margin: 0;
+        color: white;
+    }
+}
+h1 {
+    margin: 1rem;
+    color: $class-color;
+}

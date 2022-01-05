@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=medium.css.map */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+/*# sourceMappingURL=medium.css.map */
