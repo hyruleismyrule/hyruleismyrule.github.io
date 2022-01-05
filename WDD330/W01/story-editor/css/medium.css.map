@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "small.scss"
+        "medium.scss"
     ],
     "names": [],
-    "file": "small.css"
+    "file": "medium.css"
 }
