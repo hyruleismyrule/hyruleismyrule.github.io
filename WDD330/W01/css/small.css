@@ -5,21 +5,12 @@ body {
 
 header, footer {
   background-color: pink;
-  color: white;
+  color: black;
   padding: 1rem;
 }
 
 header h1, footer h1 {
   margin: 0;
-  color: white;
-}
-
-header h2, footer h2 {
-  color: white;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: pink;
 }
 
 main {

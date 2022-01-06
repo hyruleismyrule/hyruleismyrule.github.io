@@ -5,17 +5,16 @@ body {
 
 header, footer {
   background-color: pink;
-  color: white;
+  color: black;
   padding: 1rem;
 }
 
 header h1, footer h1 {
   margin: 0;
-  color: white;
+  color: black;
 }
 
 h1 {
   margin: 1rem;
-  color: pink;
 }
 /*# sourceMappingURL=small.css.map */

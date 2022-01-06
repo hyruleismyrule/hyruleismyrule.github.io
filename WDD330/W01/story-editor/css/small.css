@@ -1,7 +1,6 @@
 body {
   margin: 1rem;
   background-color: pink;
-  color: white;
   font-family: sans-serif;
   font-size: 16pt;
 }
@@ -23,7 +22,6 @@ input {
 }
 
 button {
-  color: white;
   background: transparent;
   border: 2px solid;
   border-radius: 2rem;
@@ -34,7 +32,7 @@ button {
 }
 
 button:hover {
-  color: pink;
+  color: black;
   background-color: white;
 }
 /*# sourceMappingURL=small.css.map */

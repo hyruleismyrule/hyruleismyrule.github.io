@@ -1,7 +1,6 @@
 body {
   margin: 1rem;
-  background-color: purple;
-  color: white;
+  background-color: pink;
   font-family: sans-serif;
   font-size: 16pt;
 }
@@ -23,7 +22,6 @@ input {
 }
 
 button {
-  color: white;
   background: transparent;
   border: 2px solid;
   border-radius: 2rem;
@@ -32,7 +30,7 @@ button {
   margin-right: 1rem;
   margin-bottom: 1rem;
   &:hover {
-    color: purple;
+    color: black;
     background-color: white;
   }
 }
