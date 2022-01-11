@@ -1,20 +1,13 @@
 const links = [
     {
-        label: "Week1 Notes",
+        label: "Week1 notes",
         url: "W01/index.html"
+    },
+    {
+        label: "Week2 notes",
+        url: "W02/index.html"
     }
 ]
-
-// const links = [
-//     {
-//         label: "Week1 notes",
-//         url: "week1/index.html"
-//     },
-//     {
-//         label: "Week2 notes",
-//         url: "week2/index.html"
-//     }
-// ]
 
 // Create Links
 for (let i = 0; i < links.length; i++) {
