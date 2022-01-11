@@ -17,4 +17,9 @@ header h1, footer h1 {
 h1 {
   margin: 1rem;
 }
+
+li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
 /*# sourceMappingURL=small.css.map */
