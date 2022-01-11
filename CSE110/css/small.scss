@@ -11,8 +11,18 @@ header, footer {
         margin: 0;
         color: white;
     }
+    h2 {
+        color: white;
+    }
 }
-h1 {
-    margin: 1rem;
+h1, h2, h3, h4, h5, h6 {
     color: $class-color;
+}
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
