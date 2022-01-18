@@ -1,0 +1,19 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+}
+header, footer {
+    background-color: pink;
+    color: black;
+    padding: 1rem;
+    h1 {
+        margin: 0;
+    }
+   
+}
+main {
+    margin: 1rem;
+    p {
+        line-height: 2rem;
+    }
+}
