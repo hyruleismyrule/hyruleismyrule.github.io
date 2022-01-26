@@ -8,17 +8,16 @@ tax = float(input("What is the sales tax rate? "))
 print()
 # Calculate the subtotal
 subtotal = (price_child * children) + (price_adult * adults)
-print(f"Subtotal: ${round(subtotal, 2)}")
+print(f"Subtotal: ${subtotal:.2f}")
 # Calculate sales tax
 total_tax = (tax / 100) * subtotal
-print(f"Sales Tax: ${round(total_tax, 2)}")
-# print(round(total_tax, 2))
+print(f"Sales Tax: ${total_tax:.2f}")
 # Calculate total
 total = ((tax / 100) * subtotal) + subtotal
-print(f"Total: ${round(total, 2)}")
+print(f"Total: ${total:.2f}")
 print()
 payment = float(input("What is the payment amount? "))
 # calculate change
 change = payment - total
-print(f"Change: ${round(change, 2)}")
+print(f"Change: ${change:.2f}")
 print()
