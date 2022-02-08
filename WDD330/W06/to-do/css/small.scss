@@ -3,35 +3,50 @@ $background-color: #F2D5E5;
 $mid-color: #D97398;
 $highlight-color: #D93D66;
 body {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    // margin-left: 2rem;
+    // margin-right: 2rem;
     background-color: $background-color;
     font-family: 'Open Sans', sans-serif;
     font-size: 14pt;
 }
 h1 {
     text-align: center;
-    color: $main-color;
+    color: $highlight-color;
 }
 // .list-container {
 //     margin: 0 auto;
 // }
 .list-container {
     border: 2px solid $mid-color;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
     button {
         margin-bottom: 1rem;
         margin-top: 1rem;
     }
 }
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 button {
-    background-color: transparent;
-    border: 2px solid $highlight-color;
-    color: $highlight-color;
+    background-color: $highlight-color;
+    border: 2px solid;
+    color: $background-color;
     padding: 1rem;
     border-radius: 50rem;
+    &:hover {
+        background-color: transparent;
+        color: $highlight-color;
+    }
+    &:active {
+        background-color: white;
+        color: $highlight-color;
+    }
 }
 .tasks-left {
     display: inline-block;
@@ -42,14 +57,51 @@ button {
     grid-gap: 1rem;
     width: 100%;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     // position: absolute;
     position: absolute;
     bottom: 0px;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 input {
     border: 2px solid $highlight-color;
     color: $highlight-color;
     padding: 1rem;
     border-radius: 50rem;
+}
+// #task-container div {
+//     display: inline;
+// }
+#task-container {
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    // margin: 0 auto;
+    // display: grid;
+    // grid-template-columns: 5rem 1fr 5rem;
+    // width: 100%;
+    input {
+        height: 2rem;
+        width: 2rem;
+        // grid-column-start: 1;
+        // margin-right: 1rem;
+        
+    }
+    div {
+        // display: inline;
+        font-size: 2rem;
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 2rem 1fr 2rem;
+        align-items: center;
+        div {
+            display: block;
+        }
+    }
+    i {
+        font-size: 3rem;
+        // grid-column-start: 3;
+    }
 }

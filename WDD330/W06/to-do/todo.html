@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/small.css" rel="stylesheet">
-  <link href="css/medium.css" rel="stylesheet">
-  <link href="css/large.css" rel="stylesheet">
+  <!-- <link href="css/medium.css" rel="stylesheet"> -->
+  <!-- <link href="css/large.css" rel="stylesheet"> -->
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,22 +23,25 @@
 <body>
   <h1>Todos</h1>
   <div class="list-container">
+    <div id="task-container"></div>
     <!-- List items will be added here -->
-    <div class="tasks-left">
-      <span id="tasksLeft"></span>
-      <p>tasks left</p>
+    <div class="button-container">
+      <div class="tasks-left">
+        <span id="tasksLeft"></span>
+        <p>tasks left</p>
+      </div>
+      <button>All</button>
+      <button>Active</button>
+      <button>Completed</button>
     </div>
-    <button>All</button>
-    <button>Active</button>
-    <button>Completed</button>
   </div>
   <div class="add-task">
-    <input>
-    <button><i class="fas fa-plus"></i></button>
+    <input id="add-task">
+    <button onclick="saveTask()"><i class="fas fa-plus"></i></button>
   </div>
- 
+
   <!-- Close Icon Code -->
-    <!-- <i class="fas fa-times"></i> -->
+  <!-- <i class="fas fa-times"></i> -->
   <!-- javaScript -->
   <script src="js/scripts.js"></script>
 </body>

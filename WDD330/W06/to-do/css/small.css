@@ -1,6 +1,4 @@
 body {
-  margin-left: 2rem;
-  margin-right: 2rem;
   background-color: #F2D5E5;
   font-family: 'Open Sans', sans-serif;
   font-size: 14pt;
@@ -8,11 +6,21 @@ body {
 
 h1 {
   text-align: center;
-  color: #A65362;
+  color: #D93D66;
 }
 
 .list-container {
   border: 2px solid #D97398;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.list-container button {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,17 +31,22 @@ h1 {
           align-items: center;
 }
 
-.list-container button {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
 button {
-  background-color: transparent;
-  border: 2px solid #D93D66;
-  color: #D93D66;
+  background-color: #D93D66;
+  border: 2px solid;
+  color: #F2D5E5;
   padding: 1rem;
   border-radius: 50rem;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #D93D66;
+}
+
+button:active {
+  background-color: white;
+  color: #D93D66;
 }
 
 .tasks-left {
@@ -48,9 +61,13 @@ button {
   grid-gap: 1rem;
   width: 100%;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   position: absolute;
   bottom: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 input {
@@ -58,5 +75,30 @@ input {
   color: #D93D66;
   padding: 1rem;
   border-radius: 50rem;
+}
+
+#task-container input {
+  height: 2rem;
+  width: 2rem;
+}
+
+#task-container div {
+  font-size: 2rem;
+  margin: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2rem 1fr 2rem;
+      grid-template-columns: 2rem 1fr 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#task-container div div {
+  display: block;
+}
+
+#task-container i {
+  font-size: 3rem;
 }
 /*# sourceMappingURL=small.css.map */
