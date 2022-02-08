@@ -1,0 +1,55 @@
+$main-color: #A65362;
+$background-color: #F2D5E5;
+$mid-color: #D97398;
+$highlight-color: #D93D66;
+body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: $background-color;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+}
+h1 {
+    text-align: center;
+    color: $main-color;
+}
+// .list-container {
+//     margin: 0 auto;
+// }
+.list-container {
+    border: 2px solid $mid-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+button {
+    background-color: transparent;
+    border: 2px solid $highlight-color;
+    color: $highlight-color;
+    padding: 1rem;
+    border-radius: 50rem;
+}
+.tasks-left {
+    display: inline-block;
+}
+.add-task {
+    display: grid;
+    grid-template-columns: 1fr 5rem;
+    grid-gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    // position: absolute;
+    position: absolute;
+    bottom: 0px;
+}
+input {
+    border: 2px solid $highlight-color;
+    color: $highlight-color;
+    padding: 1rem;
+    border-radius: 50rem;
+}

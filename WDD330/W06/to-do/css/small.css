@@ -1,0 +1,62 @@
+body {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #F2D5E5;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+}
+
+h1 {
+  text-align: center;
+  color: #A65362;
+}
+
+.list-container {
+  border: 2px solid #D97398;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-container button {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #D93D66;
+  color: #D93D66;
+  padding: 1rem;
+  border-radius: 50rem;
+}
+
+.tasks-left {
+  display: inline-block;
+}
+
+.add-task {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5rem;
+      grid-template-columns: 1fr 5rem;
+  grid-gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0px;
+}
+
+input {
+  border: 2px solid #D93D66;
+  color: #D93D66;
+  padding: 1rem;
+  border-radius: 50rem;
+}
+/*# sourceMappingURL=small.css.map */

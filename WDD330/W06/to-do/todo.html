@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="#">
   <meta name="author" content="Cynthia Rawlings">
-  <title>Template</title>
+  <title>To Do List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/small.css" rel="stylesheet">
@@ -21,7 +21,24 @@
 </head>
 
 <body>
-
+  <h1>Todos</h1>
+  <div class="list-container">
+    <!-- List items will be added here -->
+    <div class="tasks-left">
+      <span id="tasksLeft"></span>
+      <p>tasks left</p>
+    </div>
+    <button>All</button>
+    <button>Active</button>
+    <button>Completed</button>
+  </div>
+  <div class="add-task">
+    <input>
+    <button><i class="fas fa-plus"></i></button>
+  </div>
+ 
+  <!-- Close Icon Code -->
+    <!-- <i class="fas fa-times"></i> -->
   <!-- javaScript -->
   <script src="js/scripts.js"></script>
 </body>
