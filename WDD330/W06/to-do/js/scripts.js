@@ -28,14 +28,29 @@
 // }
 
 // Create Array
-let tasks = ["Assignment 1"];
+let activeTasks = ["Assignment 3", "Assignment 4"];
+let completeTasks = ["Assignment 1", "Assignment 2"];
+let tasks = activeTasks.concat(completeTasks);
 // Show what's in the array
 console.log(tasks);
+// Show what's in active tasks
+console.log(activeTasks);
+// Show what's in complete tasks
+console.log(completeTasks);
 // The Element where I want to put the array
 let taskContainer = document.getElementById("task-container");
-for (let i = 0; i < tasks.length; i++) {
+// Create a list item in the HTML with each element from the array
+for (let i = 0; i < activeTasks.length; i++) {
     let listItem = document.createElement("div");
-    listItem.innerHTML = "<input type='checkbox'><div>" + tasks[i] + "</div><i class='fas fa-times'>";
+    listItem.innerHTML = "<input type='checkbox'><div>" + activeTasks[i] + "</div><i class='fas fa-times'>";
     taskContainer.appendChild(listItem);
-    
 }
+for (let i = 0; i < completeTasks.length; i++) {
+    let listItem = document.createElement("div");
+    listItem.innerHTML = "<input type='checkbox' checked='true'><div class='complete'>" + completeTasks[i] + "</div><i class='fas fa-times'>";
+    taskContainer.appendChild(listItem);
+}
+// Show what's in active tasks
+console.log(activeTasks);
+// Show how many tasks are left to do
+document.getElementById("tasksLeft").innerText = activeTasks.length;

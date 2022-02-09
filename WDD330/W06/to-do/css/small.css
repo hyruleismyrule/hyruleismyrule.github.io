@@ -49,8 +49,8 @@ button:active {
   color: #D93D66;
 }
 
-.tasks-left {
-  display: inline-block;
+.tasks-left p {
+  display: inline;
 }
 
 .add-task {
@@ -100,5 +100,9 @@ input {
 
 #task-container i {
   font-size: 3rem;
+}
+
+.complete {
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=small.css.map */
