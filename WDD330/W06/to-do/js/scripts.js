@@ -1,30 +1,3 @@
-// // Create Array
-// let activeTasks = ["Assignment 3", "Assignment 4", "Assignment 5"];
-// let completeTasks = ["Assignment 1", "Assignment 2"];
-// let tasks = activeTasks.concat(completeTasks);
-// // Show what's in the array
-// console.log(tasks);
-// // Show what's in active tasks
-// console.log(activeTasks);
-// // Show what's in complete tasks
-// console.log(completeTasks);
-// // The Element where I want to put the array
-// let taskContainer = document.getElementById("task-container");
-// // Create a list item in the HTML with each element from the array
-// for (let i = 0; i < activeTasks.length; i++) {
-//     let listItem = document.createElement("div");
-//     listItem.innerHTML = "<input type='checkbox'><div>" + activeTasks[i] + "</div><i class='fas fa-times'>";
-//     taskContainer.appendChild(listItem);
-// }
-// for (let i = 0; i < completeTasks.length; i++) {
-//     let listItem = document.createElement("div");
-//     listItem.innerHTML = "<input type='checkbox' checked='true'><div class='complete'>" + completeTasks[i] + "</div><i class='fas fa-times'>";
-//     taskContainer.appendChild(listItem);
-// }
-// // Show what's in active tasks
-// console.log(activeTasks);
-// // Show how many tasks are left to do
-// document.getElementById("tasksLeft").innerText = activeTasks.length;
 // // Converting array to srting
 // localStorage.setItem("activeTasks", JSON.stringify(activeTasks));
 // localStorage.setItem("completeTasks", JSON.stringify(completeTasks));
@@ -58,20 +31,23 @@ function refreshList() {
     taskContainer.setAttribute("id", "task-container");
     listContainer.prepend(taskContainer);
     for (let i = 0; i < tasks.length; i++) {
+        let listItem = document.createElement("div");
         // Check for Complete
-        if (tasks[i][1] == true) {
-            let listItem = document.createElement("div");
-            listItem.innerHTML = "<input type='checkbox'><div>" + tasks[i][0] + "</div><i class='fas fa-times'>";
-            taskContainer.appendChild(listItem);
+        let description = tasks[i][0];
+        let completed = tasks[i][1];
+        if (completed) {
+            listItem.innerHTML = "<input onclick='toggleCheck()' type='checkbox'><div>" + description + "</div><i class='fas fa-times'>";
+        } else {
+            listItem.innerHTML = "<input onclick='toggleCheck()' type='checkbox' checked='true'><div class='complete'>" + description + "</div><i class='fas fa-times'>";
         }
-        if (tasks[i][1] == false) {
-            let listItem = document.createElement("div");
-            listItem.innerHTML = "<input type='checkbox' checked='true'><div class='complete'>" + tasks[i][0] + "</div><i class='fas fa-times'>";
-            taskContainer.appendChild(listItem);
-        }
+        taskContainer.appendChild(listItem);
     }
-    // Show how many tasks are left to do
-    document.getElementById("tasksLeft").innerText = countTasksLeft();
+    let tasksLeft = countTasksLeft();
+    // Show how many tasks are left, complete, and total
+    document.getElementById("tasksLeft").innerText = tasksLeft;
+    document.getElementById("tasksComplete").innerText = tasks.length - tasksLeft;
+    document.getElementById("tasksAll").innerText = tasks.length;
+    
 }
 // Count tasks left
 function countTasksLeft() {
@@ -82,4 +58,8 @@ function countTasksLeft() {
         }
     }
     return tasksCount;
+}
+// Check or unckeck
+function toggleCheck() {
+
 }
