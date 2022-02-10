@@ -60,6 +60,7 @@ button:active {
       grid-template-columns: 1fr 5rem;
   grid-gap: 1rem;
   width: 100%;
+  max-width: 600px;
   margin-top: 1rem;
   margin-bottom: 2rem;
   position: absolute;
@@ -80,15 +81,15 @@ input {
 #task-container input {
   height: 2rem;
   width: 2rem;
+  margin-left: 2rem;
 }
 
 #task-container div {
   font-size: 2rem;
-  margin: 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2rem 1fr 2rem;
-      grid-template-columns: 2rem 1fr 2rem;
+  -ms-grid-columns: 6rem 1fr 6rem;
+      grid-template-columns: 6rem 1fr 6rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -104,5 +105,28 @@ input {
 
 .complete {
   text-decoration: line-through;
+}
+
+.close-container {
+  color: #D93D66;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.close-container:hover {
+  color: #F2D5E5;
+  background-color: #D93D66;
+}
+
+.close-container:active {
+  color: #D93D66;
+  background-color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=small.css.map */

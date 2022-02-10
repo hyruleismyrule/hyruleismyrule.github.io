@@ -21,29 +21,22 @@
 </head>
 
 <body>
-  <h1>Todos</h1>
-  <div class="list-container" id="list-container">
-    <div id="task-container"></div>
-    <!-- List items will be added here -->
-    <div class="button-container">
-      <!-- <div class="tasks-left">
-        <p>tasks left:</p>
-        <span id="tasksLeft"></span>
-      </div> -->
-      <!-- <button>All</button> -->
-      <button>All (<span id="tasksAll"></span>)</button>
-      <button>Active (<span id="tasksLeft"></span>)</button>
-      <button>Completed (<span id="tasksComplete"></span>)</button>
-      <!-- <button>Completed</button> -->
+  <div class="wrapper">
+    <h1>Todos</h1>
+    <div class="list-container" id="list-container">
+      <div id="task-container"></div>
+      <!-- List items will be added here -->
+      <div class="button-container">
+        <button onclick="filter('all')">All (<span id="tasksAll"></span>)</button>
+        <button onclick="filter('active')">Active (<span id="tasksLeft"></span>)</button>
+        <button onclick="filter('completed')">Completed (<span id="tasksComplete"></span>)</button>
+      </div>
+    </div>
+    <div class="add-task">
+      <input id="add-task">
+      <button onclick="addTask()" id="enter-button"><i class="fas fa-plus"></i></button>
     </div>
   </div>
-  <div class="add-task">
-    <input id="add-task">
-    <button onclick="addTask()"><i class="fas fa-plus"></i></button>
-  </div>
-
-  <!-- Close Icon Code -->
-  <!-- <i class="fas fa-times"></i> -->
   <!-- javaScript -->
   <script src="js/scripts.js"></script>
 </body>

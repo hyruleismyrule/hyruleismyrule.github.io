@@ -3,8 +3,6 @@ $background-color: #F2D5E5;
 $mid-color: #D97398;
 $highlight-color: #D93D66;
 body {
-    // margin-left: 2rem;
-    // margin-right: 2rem;
     background-color: $background-color;
     font-family: 'Open Sans', sans-serif;
     font-size: 14pt;
@@ -13,14 +11,8 @@ h1 {
     text-align: center;
     color: $highlight-color;
 }
-// .list-container {
-//     margin: 0 auto;
-// }
 .list-container {
     border: 2px solid $mid-color;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
     margin-left: 2rem;
     margin-right: 2rem;
     button {
@@ -49,7 +41,6 @@ button {
     }
 }
 .tasks-left {
-    // display: inline;
     p {
         display: inline;
     }
@@ -59,9 +50,9 @@ button {
     grid-template-columns: 1fr 5rem;
     grid-gap: 1rem;
     width: 100%;
+    max-width: 600px;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    // position: absolute;
     position: absolute;
     bottom: 0px;
     box-sizing: border-box;
@@ -74,30 +65,16 @@ input {
     padding: 1rem;
     border-radius: 50rem;
 }
-// #task-container div {
-//     display: inline;
-// }
 #task-container {
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
-    // margin: 0 auto;
-    // display: grid;
-    // grid-template-columns: 5rem 1fr 5rem;
-    // width: 100%;
     input {
         height: 2rem;
         width: 2rem;
-        // grid-column-start: 1;
-        // margin-right: 1rem;
-        
+        margin-left: 2rem;
     }
     div {
-        // display: inline;
         font-size: 2rem;
-        margin: 1rem;
         display: grid;
-        grid-template-columns: 2rem 1fr 2rem;
+        grid-template-columns: 6rem 1fr 6rem;
         align-items: center;
         div {
             display: block;
@@ -105,9 +82,27 @@ input {
     }
     i {
         font-size: 3rem;
-        // grid-column-start: 3;
     }
 }
 .complete {
     text-decoration: line-through;
+}
+.close-container {
+    color: $highlight-color;
+    padding: 1rem;
+    border-radius: 50%;
+    &:hover {
+        color: $background-color;
+        background-color: $highlight-color;
+    }
+    &:active {
+        color: $highlight-color;
+        background-color: white;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }

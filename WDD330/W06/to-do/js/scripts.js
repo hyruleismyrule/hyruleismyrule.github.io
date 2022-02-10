@@ -1,44 +1,51 @@
-// // Converting array to srting
-// localStorage.setItem("activeTasks", JSON.stringify(activeTasks));
-// localStorage.setItem("completeTasks", JSON.stringify(completeTasks));
-// localStorage.setItem("tasks", JSON.stringify(tasks));
-// 
 // Task array, Task Name and Completed
-// Use splice for deletion
-let tasks = [
-    [ "Assignment 1", true],
-    [ "Assignment 2", true],
-    [ "Assignment 3", false],
-    [ "Assignment 4", false]
-];
+let tasksString = localStorage.getItem("tasks");
+let tasks = JSON.parse(tasksString);
+let filterType = "all";
 // Show what's in the array
-console.log(tasks);
+// console.log(tasks);
 // The Element where I want to put the array
 let taskContainer = document.getElementById("task-container");
 refreshList();
 // Add a task to the array
 function addTask() {
     let newTask = document.getElementById("add-task").value;
-    // tasks.push([newTask, false]);
     tasks.push([newTask, true]);
+    updateLocal();
     refreshList();
 }
-
+function filter(filterTypeParamater) {
+    filterType = filterTypeParamater;
+    refreshList();
+}
 function refreshList() {
     document.getElementById("task-container").remove();
     let listContainer = document.getElementById("list-container");
     taskContainer = document.createElement("div");
     taskContainer.setAttribute("id", "task-container");
     listContainer.prepend(taskContainer);
-    for (let i = 0; i < tasks.length; i++) {
+    let tasksToDisplay = [];
+    if (filterType == "active") {
+        tasksToDisplay = tasks.filter(element => element[1]);
+    }
+    else if (filterType == "completed") {
+        tasksToDisplay = tasks.filter(element => !element[1]);
+    }
+    else {
+        tasksToDisplay = tasks;
+    }
+    for (let i = 0; i < tasksToDisplay.length; i++) {
         let listItem = document.createElement("div");
         // Check for Complete
-        let description = tasks[i][0];
-        let completed = tasks[i][1];
+        let description = tasksToDisplay[i][0];
+        let completed = tasksToDisplay[i][1];
         if (completed) {
-            listItem.innerHTML = "<input onclick='toggleCheck()' type='checkbox'><div>" + description + "</div><i class='fas fa-times'>";
-        } else {
-            listItem.innerHTML = "<input onclick='toggleCheck()' type='checkbox' checked='true'><div class='complete'>" + description + "</div><i class='fas fa-times'>";
+            listItem.innerHTML = "<input onclick='toggleCheck(" + i + ")' type='checkbox'><div>" + description + "</div><div  class='close-container'><i onclick='deleteTask(" + i
+                + ")' class='fas fa-times'></div>";
+        } 
+        else {
+            listItem.innerHTML = "<input onclick='toggleCheck(" + i + ")' type='checkbox' checked='true'><div class='complete'>" + description
+                + "</div><div  class='close-container'><i onclick='deleteTask(" + i + ")' class='fas fa-times'></div>";
         }
         taskContainer.appendChild(listItem);
     }
@@ -47,7 +54,6 @@ function refreshList() {
     document.getElementById("tasksLeft").innerText = tasksLeft;
     document.getElementById("tasksComplete").innerText = tasks.length - tasksLeft;
     document.getElementById("tasksAll").innerText = tasks.length;
-    
 }
 // Count tasks left
 function countTasksLeft() {
@@ -60,6 +66,26 @@ function countTasksLeft() {
     return tasksCount;
 }
 // Check or unckeck
-function toggleCheck() {
-
+function toggleCheck(i) {
+    tasks[i][1] = !tasks[i][1];
+    updateLocal(); 
+    refreshList();
 }
+// Delete on click of X
+function deleteTask(i) {
+    tasks.splice(i, 1);
+    updateLocal(); 
+    refreshList();
+}
+function updateLocal() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+// Get the input field
+let input = document.getElementById("add-task");
+// When user hits enter on input add task
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("enter-button").click();
+  }
+});
