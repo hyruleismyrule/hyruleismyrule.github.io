@@ -1,6 +1,9 @@
 // Task array, Task Name and Completed
+let tasks = [];
 let tasksString = localStorage.getItem("tasks");
-let tasks = JSON.parse(tasksString);
+if (tasksString !== null) {
+    tasks = JSON.parse(tasksString);
+}
 let filterType = "all";
 // Show what's in the array
 // console.log(tasks);
