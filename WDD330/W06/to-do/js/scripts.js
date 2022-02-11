@@ -5,6 +5,8 @@ if (tasksString !== null) {
     tasks = JSON.parse(tasksString);
 }
 let filterType = "all";
+// Get the input field
+let input = document.getElementById("add-task");
 // Show what's in the array
 // console.log(tasks);
 // The Element where I want to put the array
@@ -16,6 +18,7 @@ function addTask() {
     tasks.push([newTask, true]);
     updateLocal();
     refreshList();
+    input.value = "";
 }
 function filter(filterTypeParamater) {
     filterType = filterTypeParamater;
@@ -83,8 +86,6 @@ function deleteTask(i) {
 function updateLocal() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-// Get the input field
-let input = document.getElementById("add-task");
 // When user hits enter on input add task
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
