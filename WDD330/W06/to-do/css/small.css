@@ -111,6 +111,9 @@ input {
   color: #D93D66;
   padding: 1rem;
   border-radius: 50%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-right: 2rem;
 }
 
 .close-container:hover {
