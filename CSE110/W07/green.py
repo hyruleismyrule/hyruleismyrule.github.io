@@ -32,10 +32,10 @@
 from PIL import Image
 print()
 # Get spaceshuttle green screen image
-green_location = "CSE110/W07/cse110_images/spaceshuttle.jpg"
+green_location = "CSE110/W07/cse110_images/harvester.jpg"
 image_green = Image.open(green_location)
 # Get background image
-background_location = "CSE110/W07/cse110_images/earth.jpg"
+background_location = "CSE110/W07/cse110_images/snowscape.jpg"
 image_background = Image.open(background_location)
 pixels_background = image_background.load()
 # Get the dimensions and pixels of the green image
