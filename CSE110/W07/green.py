@@ -1,9 +1,9 @@
 # Part 2 Week 8
+print()
+print()
+print()
 # Import pillow library
 from PIL import Image
-print()
-print()
-print()
 print()
 # Choose file foreground
 foreground_file_name = input(f"Please pick a image for the foreground: BOAT, CACTUS, CAT_SMALL, CAT, HARVESTER, HIKER, PENGUIN, SPACESHUTTLE: ")
