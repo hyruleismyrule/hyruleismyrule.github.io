@@ -1,41 +1,19 @@
-# Part 1 Week 7
-# print()
-# Import pillow library
-# from PIL import Image
-# Get beach image
-# image_original = Image.open("CSE110/W07/cse110_images/beach.jpg")
-# # Display beach image
-# image_original.show()
-# # get the width and height of the beach image
-# width, height = image_original.size
-# # Display width and height
-# print(f"Image Width: {width}, Height: {height}")
-# print()
-# # Get the pixels
-# pixels_original = image_original.load()
-# # Get specific pixels
-# r, g, b = pixels_original[100, 200]
-# print(f"The original pixel value was: {r, g, b}")
-# # Set the new color values
-# r, g, b = (0, 0, 0)
-# print(f"The new pixel value is: {r, g, b}")
-# # Set those pixels to something else
-# pixels_original[0, 0] = (r, g, b)
-# # Display the image again
-# image_original.show()
-# # Save as a new image
-# image_original.save("CSE110/W07/cse110_images/new_beach.jpg")
-# print()
-# # # # # # # # # # # # #
-# Part 2
+# Part 2 Week 8
 # Import pillow library
 from PIL import Image
 print()
-# Get spaceshuttle green screen image
-green_location = "CSE110/W07/cse110_images/harvester.jpg"
+print()
+print()
+print()
+# Choose file foreground
+foreground_file_name = input(f"Please pick a image for the foreground: BOAT, CACTUS, CAT_SMALL, CAT, HARVESTER, HIKER, PENGUIN, SPACESHUTTLE: ")
+# Get chosen green screen image
+green_location = "CSE110/W07/cse110_images/" + foreground_file_name.lower() + ".jpg"
 image_green = Image.open(green_location)
-# Get background image
-background_location = "CSE110/W07/cse110_images/snowscape.jpg"
+# Choose file background image
+background_file_name = input(f"Please pick a image for the background: BEACH, DESERT, EARTH, FIELD, FOREST, SNOWSCAPE, SUNSET: ")
+# Get chosen background image
+background_location = "CSE110/W07/cse110_images/" + background_file_name.lower() + ".jpg"
 image_background = Image.open(background_location)
 pixels_background = image_background.load()
 # Get the dimensions and pixels of the green image
@@ -56,7 +34,10 @@ for y in range(0, height):
 # Display Image
 image_combined.show()
 # # Save as a new image
-save_location = "CSE110/W07/cse110_images/combined.jpg"
+save_location = "CSE110/W07/cse110_images/" + foreground_file_name.lower() + "_" + background_file_name.lower() + ".jpg"
 image_combined.save(save_location)
-print(f"Done! The image is saved to {save_location}")
+print(f"Done! The image is saved to: {save_location}")
+print()
+print()
+print()
 print()
