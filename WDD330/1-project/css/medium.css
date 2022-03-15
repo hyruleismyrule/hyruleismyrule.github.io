@@ -25,6 +25,10 @@
   .header-wrapper h1, .footer-wrapper h1 {
     padding: 0;
   }
+  nav.open ul button {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   main {
     margin-left: 2rem;
     margin-right: 2rem;

@@ -25,6 +25,17 @@
         // display: inline;
       }
     }
+    // Nav
+    nav {
+      &.open {
+          ul {
+              button {
+                  margin-left: 2rem;
+                  margin-right: 2rem;
+              }
+          }
+      }
+  }
     main {
       margin-left: 2rem;
       margin-right: 2rem;
