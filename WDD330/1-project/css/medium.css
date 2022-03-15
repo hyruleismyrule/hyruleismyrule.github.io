@@ -1,0 +1,25 @@
+@media only screen and (min-width: 600px) {
+  .header-wrapper header, .footer-wrapper header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-wrapper .logotype, .footer-wrapper .logotype {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-wrapper img, .footer-wrapper img {
+    max-width: 10%;
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .header-wrapper h1, .footer-wrapper h1 {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=medium.css.map */
