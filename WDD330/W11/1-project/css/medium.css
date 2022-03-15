@@ -4,10 +4,6 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .header-wrapper footer, .footer-wrapper footer {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
   .header-wrapper .logotype, .footer-wrapper .logotype {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19,15 +15,11 @@
   .header-wrapper img, .footer-wrapper img {
     max-width: 10%;
     display: block;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .header-wrapper h1, .footer-wrapper h1 {
     padding: 0;
-  }
-  main {
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 }
 /*# sourceMappingURL=medium.css.map */

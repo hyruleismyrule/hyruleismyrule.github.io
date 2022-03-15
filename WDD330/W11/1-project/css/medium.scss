@@ -5,10 +5,6 @@
         // margin-left: 1rem;
         // padding: 1rem;
       }
-      footer {
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
       .logotype {
         display: flex;
         align-items: center;
@@ -17,16 +13,14 @@
         max-width: 10%;
         // display: inline;
         display: block;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
       }
       h1 {
         padding: 0;
         // display: inline;
+        
       }
     }
-    main {
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
+
   }
