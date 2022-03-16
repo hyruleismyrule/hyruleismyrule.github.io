@@ -42,8 +42,10 @@
     }
     .flash-card {
       h2 {
-        font-size: 25pt;
+        font-size: 50pt;
         // margin: 0;
       }
+      max-width: 30rem;
+      height: 30rem;
     }
   }

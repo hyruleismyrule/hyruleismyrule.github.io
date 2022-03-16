@@ -47,7 +47,7 @@ fetch(defaultPokemonAPIurl)
                     card.appendChild(nameElement);
                     card.appendChild(imageElement);
 
-                    document.getElementById("mysets").appendChild(card);
+                    // document.getElementById("mysets").appendChild(card);
                 });
         }
     });

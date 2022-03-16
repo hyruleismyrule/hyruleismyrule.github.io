@@ -105,9 +105,9 @@ main {
     }
 }
 .flash-card {
-    background-color: $color5;
-    border: 2px solid $color4;
-    border-radius: 10px;
+    // background-color: $color5;
+    // border: 2px solid $color4;
+    // border-radius: 10px;
     h2 {
         margin: 0;
         padding: 1rem;
@@ -115,5 +115,69 @@ main {
     // padding-top: 1rem;
     margin: 0 auto;
     margin-bottom: 1rem;
-    max-width: 30rem;
+    // max-width: 30rem;
+    img {
+        // height: 100%;
+        width: 100%;
+
+    }
 }
+// Card Flip
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flash-card {
+    background-color: transparent;
+    max-width: 20rem;
+    height: 20rem;
+    // border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    // margin-bottom: 1rem;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flash-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .card-front {
+    background-color: $color5;
+    border: 2px solid $color4;
+    border-radius: 10px;
+    // color: black;
+  }
+  
+  /* Style the back side */
+  .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color5;
+    h2 {
+        font-size: 30pt;
+    }
+    border: 2px solid $color4;
+    border-radius: 10px;
+    // padding: 70px 0;
+    // background-color: dodgerblue;
+    // color: white;
+    transform: rotateY(180deg);
+  }
