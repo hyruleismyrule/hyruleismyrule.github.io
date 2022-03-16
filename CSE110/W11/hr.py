@@ -2,7 +2,7 @@ print()
 with open("CSE110/W11/hr_system.txt") as hr_file:
     for line in hr_file:
         clean_line = line.strip()
-        parts = line.split()
+        parts = clean_line.split()
         name = parts[0]
         id_number = parts[1]
         title = parts[2]
