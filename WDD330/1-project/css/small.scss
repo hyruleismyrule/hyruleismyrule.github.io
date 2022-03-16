@@ -179,7 +179,7 @@ main {
   
   /* Style the front side (fallback if image is missing) */
   .card-front {
-    // background-color: $color5;
+    background-color: white;
     border: 2px solid $color4;
     border-radius: 10px;
     // color: black;
@@ -265,7 +265,7 @@ main {
 }
 #fighting {
     .card-front {
-        background-color: white;
+        // background-color: white;
         border: 2px solid $fighting;
     }
     .card-back {
