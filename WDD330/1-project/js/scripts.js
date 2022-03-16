@@ -55,17 +55,22 @@ async function defaultImages(defaultSet) {
     }
     // console.log(defaultImages);
     // console.log(defaultTypes);
+    let setName = "Big 3";
     displayNames = defaultSet;
     displayImages = defaultImages;
     displayTypes = defaultTypes;
     // console.log(displayImages[0]);
-    buildCards(displayNames, displayImages, displayTypes);
+    buildCards(displayNames, displayImages, displayTypes, setName);
 }
 
 // Build Set, will use whatever is in display
-function buildCards(displayNames, displayImages, displayTypes) {
+function buildCards(displayNames, displayImages, displayTypes, setName) {
     // console.log(displayImages);
     // console.log(displayImages[0]);
+    let title = document.createElement("h1");
+    title.textContent = setName;
+    document.getElementById("mysets").appendChild(title);
+
     for (let i = 0, len = displayNames.length; i < len; i++) {
         let name = displayNames[i];
         // Capitalize the first letter
