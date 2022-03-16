@@ -11,72 +11,96 @@ function openMenu() {
     }
 }
 
-// Default Flash Cards
-let defaultSet = []
-const defaultPokemonAPIurl = "//pokeapi.co/api/v2/pokemon?limit=10";
+// Call api
+const defaultPokemonAPIurl = "//pokeapi.co/api/v2/pokemon?limit=9";
 fetch(defaultPokemonAPIurl)
     .then((response) => response.json())
-    .then((pokemonInfo) => {
-        console.log(pokemonInfo);
-        for (let i = 0, len = pokemonInfo.results.length; i < len; i++) {
-            defaultSet.push(pokemonInfo.results[i].name);
-        }
-        console.log(defaultSet);
-        // Create Flash Cards for all 10 pokemon
-        const pokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
-        for (let i = 0, len = defaultSet.length; i < len; i++) {
-            let tempURL = pokemonAPIurlBase + defaultSet[i];
-            fetch(tempURL)
-                .then((response) => response.json())
-                .then((pokemonInfo) => {
-                    // console.log(pokemonInfo);
-                    let name = pokemonInfo.name;
-                    // Capitalize the first letter
-                    name = name.charAt().toUpperCase() + name.substring(1)
-                    let artURL = pokemonInfo.sprites.other["official-artwork"].front_default;
-                    let card = document.createElement("div");
-                    card.setAttribute('class', "flash-card");
-
-                    let nameElement = document.createElement("h2");
-                    let imageElement = document.createElement("img");
-
-                    nameElement.textContent = name;
-                    imageElement.setAttribute('src', artURL);
-                    imageElement.setAttribute('alt', name);
-
-                    card.appendChild(nameElement);
-                    card.appendChild(imageElement);
-
-                    // document.getElementById("mysets").appendChild(card);
-                });
-        }
+    .then((nameInfo) => {
+        console.log(nameInfo);
+        defaultSet(nameInfo);
     });
+// Initialize display arrays
+let displayNames = [];
+let displayImages = [];
+let displayTypes = [];
 
+// Create a Default Set
+// Get the names
+async function defaultSet(nameInfo) {
+    let defaultSet = [];
+    for (let i = 0, len = nameInfo.results.length; i < len; i++) {
+        defaultSet.push(nameInfo.results[i].name);
+    }
+    // console.log(defaultSet);
+    // return defaultSet;
+    await defaultImages(defaultSet);
+}
 
+// Get the Image URLS
+async function defaultImages(defaultSet) {
 
+    const pokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
+    let defaultImages = [];
+    let defaultTypes = [];
+    for (let i = 0, len = defaultSet.length; i < len; i++) {
+        let tempURL = pokemonAPIurlBase + defaultSet[i];
+        await fetch(tempURL)
+            .then((response) => response.json())
+            .then((imageInfo) => {
+                let artURL = imageInfo.sprites.other["official-artwork"].front_default;
+                let type = imageInfo.types[0].type.name;
+                defaultImages.push(artURL);
+                defaultTypes.push(type);
+            });
+    }
+    // console.log(defaultImages);
+    // console.log(defaultTypes);
+    displayNames = defaultSet;
+    displayImages = defaultImages;
+    displayTypes = defaultTypes;
+    // console.log(displayImages[0]);
+    buildCards(displayNames, displayImages, displayTypes);
+}
 
-// // const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charizard";
-// const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charizard";
-// fetch(pokemonAPIurl)
-//     .then((response) => response.json())
-//     .then((pokemonInfo) => {
-//         // console.log(pokemonInfo);
-//         let name = pokemonInfo.name;
-//         // Capitalize the first letter
-//         name = name.charAt().toUpperCase() + name.substring(1)
-//         let artURL = pokemonInfo.sprites.other["official-artwork"].front_default;
-//         let card = document.createElement("div");
-//         card.setAttribute('class', "flash-card");
+// Build Set, will use whatever is in display
+function buildCards(displayNames, displayImages, displayTypes) {
+    // console.log(displayImages);
+    // console.log(displayImages[0]);
+    for (let i = 0, len = displayNames.length; i < len; i++) {
+        let name = displayNames[i];
+        // Capitalize the first letter
+        name = name.charAt().toUpperCase() + name.substring(1)
 
-//         let nameElement = document.createElement("h2");
-//         let imageElement = document.createElement("img");
+        let artURL = displayImages[i];
 
-//         nameElement.textContent = name;
-//         imageElement.setAttribute('src', artURL);
-//         imageElement.setAttribute('alt', name);
+        let card = document.createElement("div");
+        card.setAttribute('class', "flash-card");
+        card.setAttribute('id', displayTypes[i]);
 
-//         card.appendChild(nameElement);
-//         card.appendChild(imageElement);
+        let inner = document.createElement("div");
+        inner.setAttribute('class', "card-inner");
 
-//         document.getElementById("mysets").appendChild(card);
-//     });
+        let front = document.createElement("div");
+        front.setAttribute('class', "card-front");
+
+        let back = document.createElement("div");
+        back.setAttribute('class', "card-back");
+
+        let nameElement = document.createElement("h2");
+        let imageElement = document.createElement("img");
+
+        nameElement.textContent = name;
+        imageElement.setAttribute('src', artURL);
+        imageElement.setAttribute('alt', name);
+
+        front.appendChild(imageElement);
+        back.appendChild(nameElement);
+
+        inner.appendChild(front);
+        inner.appendChild(back);
+
+        card.appendChild(inner);
+
+        document.getElementById("mysets").appendChild(card);
+    }
+}

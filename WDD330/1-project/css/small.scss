@@ -4,6 +4,26 @@ $color2: #021859;
 $color3: #F2B705;
 $color4: #F23005;
 $color5: #F2F2F2;
+//  Type Colors
+$normal: #9b9f6c;
+$fire: #e4732f;
+$water: #6b7def;
+$grass: #6fc840;
+$electric: #efce26;
+$ice: #94d4d2;
+$fighting: #b01f29;
+$poison: #942698;
+$ground: #d6bb5c;
+$flying: #a27bef;
+$psychic: #ee3f80;
+$bug: #9bb513;
+$rock: #aa992f;
+$ghost: #67478e;
+$dark: #624e3f;
+$dragon: #624e3f;
+$steel: #b1adca;
+$fairy: #e9aab5;
+
 $max-width: 60rem;
 // Mixins
 body {
@@ -170,9 +190,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $color5;
+    // background-color: $color4;
     h2 {
         font-size: 30pt;
+        color: white;
     }
     border: 2px solid $color4;
     border-radius: 10px;
@@ -181,3 +202,184 @@ main {
     // color: white;
     transform: rotateY(180deg);
   }
+
+#normal {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $normal;
+    }
+    .card-back {
+        background-color: $normal;
+        border: 2px solid $normal;
+    }
+}
+#fire {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $fire;
+    }
+    .card-back {
+        background-color: $fire;
+        border: 2px solid $fire;
+    }
+}
+#water {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $water;
+    }
+    .card-back {
+        background-color: $water;
+        border: 2px solid $water;
+    }
+}
+#grass {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $grass;
+    }
+    .card-back {
+        background-color: $grass;
+        border: 2px solid $grass;
+    }
+}
+#electric {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $electric;
+    }
+    .card-back {
+        background-color: $electric;
+        border: 2px solid $electric;
+    }
+}
+#ice {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $ice;
+    }
+    .card-back {
+        background-color: $ice;
+        border: 2px solid $ice;
+    }
+}
+#fighting {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $fighting;
+    }
+    .card-back {
+        background-color: $fighting;
+        border: 2px solid $fighting;
+    }
+}
+#poison {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $poison;
+    }
+    .card-back {
+        background-color: $poison;
+        border: 2px solid $poison;
+    }
+}
+#ground {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $ground;
+    }
+    .card-back {
+        background-color: $ground;
+        border: 2px solid $ground;
+    }
+}
+#flying {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $flying;
+    }
+    .card-back {
+        background-color: $flying;
+        border: 2px solid $flying;
+    }
+}
+#psychic {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $psychic;
+    }
+    .card-back {
+        background-color: $psychic;
+        border: 2px solid $psychic;
+    }
+}
+#bug {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $bug;
+    }
+    .card-back {
+        background-color: $bug;
+        border: 2px solid $bug;
+    }
+}
+#rock {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $rock;
+    }
+    .card-back {
+        background-color: $rock;
+        border: 2px solid $rock;
+    }
+}
+#ghost {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $ghost;
+    }
+    .card-back {
+        background-color: $ghost;
+        border: 2px solid $ghost;
+    }
+}
+#dark {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $dark;
+    }
+    .card-back {
+        background-color: $dark;
+        border: 2px solid $dark;
+    }
+}
+#dragon {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $dragon;
+    }
+    .card-back {
+        background-color: $dragon;
+        border: 2px solid $dragon;
+    }
+}
+#steel {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $steel;
+    }
+    .card-back {
+        background-color: $steel;
+        border: 2px solid $steel;
+    }
+}
+#fairy {
+    .card-front {
+        // background-color: $color5;
+        border: 2px solid $fairy;
+    }
+    .card-back {
+        background-color: $fairy;
+        border: 2px solid $fairy;
+    }
+}
