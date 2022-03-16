@@ -102,7 +102,25 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
   color: #F23005;
 }
 
-main img {
+#mysets {
+  text-align: center;
+}
+
+#mysets img {
   max-width: 100%;
+}
+
+.flash-card {
+  background-color: #F2F2F2;
+  border: 2px solid #F23005;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  max-width: 30rem;
+}
+
+.flash-card h2 {
+  margin: 0;
+  padding: 1rem;
 }
 /*# sourceMappingURL=small.css.map */

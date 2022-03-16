@@ -11,6 +11,7 @@ function openMenu() {
     }
 }
 
+// const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charizard";
 const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charizard";
 fetch(pokemonAPIurl)
     .then((response) => response.json())
@@ -29,8 +30,9 @@ fetch(pokemonAPIurl)
         // console.log(artURL);
         // console.log(firstGame);
         let card = document.createElement("div");
+        card.setAttribute('class', "flash-card");
 
-        let nameElement = document.createElement("h3");
+        let nameElement = document.createElement("h2");
         let imageElement = document.createElement("img");
 
         nameElement.textContent = name;
@@ -42,3 +44,16 @@ fetch(pokemonAPIurl)
 
         document.getElementById("mysets").appendChild(card);
     });
+
+// Default Flash Cards
+// const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charizard";
+const limitedPokemonAPIurl = "//pokeapi.co/api/v2/pokemon?limit=10";
+fetch(limitedPokemonAPIurl)
+    .then((response) => response.json())
+    .then((pokemonInfo) => {
+        console.log(pokemonInfo);
+        
+    });
+
+// What I want to do is call an api for each of the pokemon that was already callded here and get thier name and picture, 
+// because I can get thier name but not thier picture.
