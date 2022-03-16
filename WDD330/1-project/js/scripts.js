@@ -10,20 +10,35 @@ function openMenu() {
         primaryNav.classList.add("open");
     }
 }
-// Note: sometime in the future, I want the menu to slowly transition out instead of snapping
 
-// Pokemon Api
-// fetch("https://pokeapi.co/api/v2/pokemon/charmander")
-//     .then(res => res.json())
-//     .then(data => console.log(data));
-
-const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charmander";
+const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/charizard";
 fetch(pokemonAPIurl)
     .then((response) => response.json())
     .then((pokemonInfo) => {
-        console.log(pokemonInfo);
-        console.log(pokemonInfo.name);
-        let pokemonName = pokemonInfo.name;
-        // return pokemonInfo;
+        // console.log(pokemonInfo);
+        let name = pokemonInfo.name;
+        // Capitalize the first letter
+        name = name.charAt().toUpperCase() + name.substring(1)
+        // console.log(name.charAt().toUpperCase() + name.substring(1))
+        let artURL = pokemonInfo.sprites.other["official-artwork"].front_default;
+        // let type = pokemonInfo.types[0].type.name;
+        // let firstGame = pokemonInfo.game_indices[0].version.name;
+        // let typeElement = document.createElement("p");
+        // console.log(name);
+        // console.log(type);
+        // console.log(artURL);
+        // console.log(firstGame);
+        let card = document.createElement("div");
+
+        let nameElement = document.createElement("h3");
+        let imageElement = document.createElement("img");
+
+        nameElement.textContent = name;
+        imageElement.setAttribute('src', artURL);
+        imageElement.setAttribute('alt', name);
+
+        card.appendChild(nameElement);
+        card.appendChild(imageElement);
+
+        document.getElementById("mysets").appendChild(card);
     });
-console.log(pokemonName);
