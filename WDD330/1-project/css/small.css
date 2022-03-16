@@ -166,7 +166,7 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 
 /* Style the front side (fallback if image is missing) */
 .card-front {
-  background-color: #F2F2F2;
+  background-color: white;
   border: 2px solid #F23005;
   border-radius: 10px;
 }
