@@ -102,11 +102,11 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
   color: #F23005;
 }
 
-#mysets {
+#review {
   text-align: center;
 }
 
-#mysets img {
+#review img {
   max-width: 100%;
 }
 
@@ -353,5 +353,29 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 #fairy .card-back {
   background-color: #e9aab5;
   border: 2px solid #e9aab5;
+}
+
+.arrow {
+  width: 2rem;
+}
+
+.arrow svg {
+  fill: #F23005;
+}
+
+.bottom-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 /*# sourceMappingURL=small.css.map */

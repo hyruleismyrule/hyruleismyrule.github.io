@@ -118,7 +118,7 @@ main {
         color: $color4;
     }
 }
-#mysets {
+#review{
     text-align: center;
     img {
         max-width: 100%;
@@ -384,3 +384,25 @@ main {
         border: 2px solid $fairy;
     }
 }
+
+
+// Arrows
+.arrow {
+    width: 2rem;
+    svg {
+        fill: $color4;
+    }
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+  

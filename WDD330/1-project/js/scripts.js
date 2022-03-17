@@ -69,7 +69,7 @@ function buildCards(displayNames, displayImages, displayTypes, setName) {
     // console.log(displayImages[0]);
     let title = document.createElement("h1");
     title.textContent = setName;
-    document.getElementById("mysets").appendChild(title);
+    document.getElementById("review").appendChild(title);
 
     for (let i = 0, len = displayNames.length; i < len; i++) {
         let name = displayNames[i];
@@ -79,7 +79,8 @@ function buildCards(displayNames, displayImages, displayTypes, setName) {
         let artURL = displayImages[i];
 
         let card = document.createElement("div");
-        card.setAttribute('class', "flash-card");
+        // card.setAttribute('class', "mySlides");
+        card.setAttribute('class', "flash-card mySlides");
         card.setAttribute('id', displayTypes[i]);
 
         let inner = document.createElement("div");
@@ -106,6 +107,39 @@ function buildCards(displayNames, displayImages, displayTypes, setName) {
 
         card.appendChild(inner);
 
-        document.getElementById("mysets").appendChild(card);
+        document.getElementById("review").appendChild(card);
     }
+}
+
+
+// Making the slide show
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("flash-card");
+//   let dots = document.getElementsByClassName("demo");
+//   let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+  slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+//   captionText.innerHTML = dots[slideIndex-1].alt;
 }
