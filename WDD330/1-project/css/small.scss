@@ -443,3 +443,133 @@ footer {
         color: white;
     }
 }
+
+// View Set Thumbnails
+.thumbnail-container {
+    // border: 2px solid red;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    // background-color: $color5;
+    // background-color: rgb(218, 218, 218);
+    img {
+        width: 100%;
+        opacity: 0.2;
+    }
+    h3 {
+        font-size: 50pt;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // transform: translate(-50%, -50%);
+        transform: translate(-50%, -350%);
+        opacity: 1;
+    }
+}
+.thumbnail-container.normal {
+    border: 2px solid $normal;
+    h3 {
+        color: $normal;
+    }
+}
+.thumbnail-container.fire {
+    border: 2px solid $fire;
+    h3 {
+        color: $fire;
+    }
+}
+.thumbnail-container.water {
+    border: 2px solid $water;
+    h3 {
+        color: $water;
+    }
+}
+.thumbnail-container.grass {
+    border: 2px solid $grass;
+    h3 {
+        color: $grass;
+    }
+}
+.thumbnail-container.electric {
+    border: 2px solid $electric;
+    h3 {
+        color: $electric;
+    }
+}
+.thumbnail-container.ice {
+    border: 2px solid $ice;
+    h3 {
+        color: $ice;
+    }
+}
+.thumbnail-container.fighting {
+    border: 2px solid $fighting;
+    h3 {
+        color: $fighting;
+    }
+}
+.thumbnail-container.poison {
+    border: 2px solid $poison;
+    h3 {
+        color: $poison;
+    }
+}
+.thumbnail-container.ground {
+    border: 2px solid $ground;
+    h3 {
+        color: $ground;
+    }
+}
+.thumbnail-container.flying {
+    border: 2px solid $flying;
+    h3 {
+        color: $flying;
+    }
+}
+.thumbnail-container.psychic {
+    border: 2px solid $psychic;
+    h3 {
+        color: $psychic;
+    }
+}
+.thumbnail-container.bug {
+    border: 2px solid $bug;
+    h3 {
+        color: $bug;
+    }
+}
+.thumbnail-container.rock {
+    border: 2px solid $rock;
+    h3 {
+        color: $rock;
+    }
+}
+.thumbnail-container.ghost {
+    border: 2px solid $ghost;
+    h3 {
+        color: $ghost;
+    }
+}
+.thumbnail-container.dark {
+    border: 2px solid $dark;
+    h3 {
+        color: $dark;
+    }
+}
+.thumbnail-container.dragon {
+    border: 2px solid $dragon;
+    h3 {
+        color: $dragon;
+    }
+}
+.thumbnail-container.steel {
+    border: 2px solid $steel;
+    h3 {
+        color: $steel;
+    }
+}
+.thumbnail-container.fairy {
+    border: 2px solid $fairy;
+    h3 {
+        color: $fairy;
+    }
+}

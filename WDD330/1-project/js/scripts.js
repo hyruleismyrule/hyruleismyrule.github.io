@@ -145,3 +145,20 @@ function showSlides(n) {
 //   dots[slideIndex-1].className += " active";
 //   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+// Local Storage
+let setName = "Big 3"
+let setPokemon = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise"];
+localStorage.setItem(setName, setPokemon);
+
+console.log(localStorage);
+// localStorage.clear();
+
+if (document.getElementById("viewSets")) {
+    let container = document.getElementById("viewSets");
+    let thumbnail = document.createElement("div");
+    thumbnail.setAttribute("class", "thumbnail");
+    let thumbnailImage = document.createElement("img")
+    thumbnailImage.setAttribute('src', artURL);
+    // thumbnailImage.setAttribute('alt', name);
+}

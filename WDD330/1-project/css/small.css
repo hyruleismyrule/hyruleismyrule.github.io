@@ -418,4 +418,168 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 footer a {
   color: white;
 }
+
+.thumbnail-container {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  opacity: 0.2;
+}
+
+.thumbnail-container h3 {
+  font-size: 50pt;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -350%);
+          transform: translate(-50%, -350%);
+  opacity: 1;
+}
+
+.thumbnail-container.normal {
+  border: 2px solid #9b9f6c;
+}
+
+.thumbnail-container.normal h3 {
+  color: #9b9f6c;
+}
+
+.thumbnail-container.fire {
+  border: 2px solid #e4732f;
+}
+
+.thumbnail-container.fire h3 {
+  color: #e4732f;
+}
+
+.thumbnail-container.water {
+  border: 2px solid #6b7def;
+}
+
+.thumbnail-container.water h3 {
+  color: #6b7def;
+}
+
+.thumbnail-container.grass {
+  border: 2px solid #6fc840;
+}
+
+.thumbnail-container.grass h3 {
+  color: #6fc840;
+}
+
+.thumbnail-container.electric {
+  border: 2px solid #efce26;
+}
+
+.thumbnail-container.electric h3 {
+  color: #efce26;
+}
+
+.thumbnail-container.ice {
+  border: 2px solid #94d4d2;
+}
+
+.thumbnail-container.ice h3 {
+  color: #94d4d2;
+}
+
+.thumbnail-container.fighting {
+  border: 2px solid #b01f29;
+}
+
+.thumbnail-container.fighting h3 {
+  color: #b01f29;
+}
+
+.thumbnail-container.poison {
+  border: 2px solid #942698;
+}
+
+.thumbnail-container.poison h3 {
+  color: #942698;
+}
+
+.thumbnail-container.ground {
+  border: 2px solid #d6bb5c;
+}
+
+.thumbnail-container.ground h3 {
+  color: #d6bb5c;
+}
+
+.thumbnail-container.flying {
+  border: 2px solid #a27bef;
+}
+
+.thumbnail-container.flying h3 {
+  color: #a27bef;
+}
+
+.thumbnail-container.psychic {
+  border: 2px solid #ee3f80;
+}
+
+.thumbnail-container.psychic h3 {
+  color: #ee3f80;
+}
+
+.thumbnail-container.bug {
+  border: 2px solid #9bb513;
+}
+
+.thumbnail-container.bug h3 {
+  color: #9bb513;
+}
+
+.thumbnail-container.rock {
+  border: 2px solid #aa992f;
+}
+
+.thumbnail-container.rock h3 {
+  color: #aa992f;
+}
+
+.thumbnail-container.ghost {
+  border: 2px solid #67478e;
+}
+
+.thumbnail-container.ghost h3 {
+  color: #67478e;
+}
+
+.thumbnail-container.dark {
+  border: 2px solid #624e3f;
+}
+
+.thumbnail-container.dark h3 {
+  color: #624e3f;
+}
+
+.thumbnail-container.dragon {
+  border: 2px solid #624e3f;
+}
+
+.thumbnail-container.dragon h3 {
+  color: #624e3f;
+}
+
+.thumbnail-container.steel {
+  border: 2px solid #b1adca;
+}
+
+.thumbnail-container.steel h3 {
+  color: #b1adca;
+}
+
+.thumbnail-container.fairy {
+  border: 2px solid #e9aab5;
+}
+
+.thumbnail-container.fairy h3 {
+  color: #e9aab5;
+}
 /*# sourceMappingURL=small.css.map */
