@@ -52,6 +52,10 @@ nav {
   display: none;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 nav.open {
   display: block;
 }
@@ -74,14 +78,26 @@ nav.open ul button {
   margin-right: 1rem;
 }
 
+nav.open ul button a {
+  color: white;
+}
+
 nav.open ul button:hover {
   color: #F2B705;
   border-color: #F2B705;
 }
 
+nav.open ul button:hover a {
+  color: #F2B705;
+}
+
 nav.open ul button:active {
   color: #F23005;
   border-color: #F23005;
+}
+
+nav.open ul button:active a {
+  color: #F23005;
 }
 
 nav.open ul button.active {
@@ -91,6 +107,10 @@ nav.open ul button.active {
 
 nav.open ul button.active:hover {
   border-color: white;
+}
+
+nav.open ul button.active a {
+  color: #021859;
 }
 
 main {
