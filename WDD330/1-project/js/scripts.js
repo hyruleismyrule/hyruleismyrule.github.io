@@ -34,6 +34,7 @@ async function defaultSet(nameInfo) {
     // console.log(defaultSet);
     // return defaultSet;
     await defaultImages(defaultSet);
+    showSlides(slideIndex);
 }
 
 // Get the Image URLS
@@ -80,8 +81,8 @@ function buildCards(displayNames, displayImages, displayTypes, setName) {
 
         let card = document.createElement("div");
         // card.setAttribute('class', "mySlides");
-        card.setAttribute('class', "flash-card mySlides");
-        card.setAttribute('id', displayTypes[i]);
+        card.setAttribute('class', "flash-card mySlides" + " "+displayTypes[i]);
+        // card.setAttribute('class', displayTypes[i]);
 
         let inner = document.createElement("div");
         inner.setAttribute('class', "card-inner");
@@ -108,13 +109,14 @@ function buildCards(displayNames, displayImages, displayTypes, setName) {
         card.appendChild(inner);
 
         document.getElementById("review").appendChild(card);
+        // document.getElementById("bottom-nav").setAttribute('id', "show");
     }
 }
 
 
 // Making the slide show
 let slideIndex = 1;
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {

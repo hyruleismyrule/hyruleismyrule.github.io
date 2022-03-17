@@ -193,164 +193,164 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
   color: white;
 }
 
-#normal .card-front {
+.normal .card-front {
   border: 2px solid #9b9f6c;
 }
 
-#normal .card-back {
+.normal .card-back {
   background-color: #9b9f6c;
   border: 2px solid #9b9f6c;
 }
 
-#fire .card-front {
+.fire .card-front {
   border: 2px solid #e4732f;
 }
 
-#fire .card-back {
+.fire .card-back {
   background-color: #e4732f;
   border: 2px solid #e4732f;
 }
 
-#water .card-front {
+.water .card-front {
   border: 2px solid #6b7def;
 }
 
-#water .card-back {
+.water .card-back {
   background-color: #6b7def;
   border: 2px solid #6b7def;
 }
 
-#grass .card-front {
+.grass .card-front {
   border: 2px solid #6fc840;
 }
 
-#grass .card-back {
+.grass .card-back {
   background-color: #6fc840;
   border: 2px solid #6fc840;
 }
 
-#electric .card-front {
+.electric .card-front {
   border: 2px solid #efce26;
 }
 
-#electric .card-back {
+.electric .card-back {
   background-color: #efce26;
   border: 2px solid #efce26;
 }
 
-#ice .card-front {
+.ice .card-front {
   border: 2px solid #94d4d2;
 }
 
-#ice .card-back {
+.ice .card-back {
   background-color: #94d4d2;
   border: 2px solid #94d4d2;
 }
 
-#fighting .card-front {
+.fighting .card-front {
   border: 2px solid #b01f29;
 }
 
-#fighting .card-back {
+.fighting .card-back {
   background-color: #b01f29;
   border: 2px solid #b01f29;
 }
 
-#poison .card-front {
+.poison .card-front {
   border: 2px solid #942698;
 }
 
-#poison .card-back {
+.poison .card-back {
   background-color: #942698;
   border: 2px solid #942698;
 }
 
-#ground .card-front {
+.ground .card-front {
   border: 2px solid #d6bb5c;
 }
 
-#ground .card-back {
+.ground .card-back {
   background-color: #d6bb5c;
   border: 2px solid #d6bb5c;
 }
 
-#flying .card-front {
+.flying .card-front {
   border: 2px solid #a27bef;
 }
 
-#flying .card-back {
+.flying .card-back {
   background-color: #a27bef;
   border: 2px solid #a27bef;
 }
 
-#psychic .card-front {
+.psychic .card-front {
   border: 2px solid #ee3f80;
 }
 
-#psychic .card-back {
+.psychic .card-back {
   background-color: #ee3f80;
   border: 2px solid #ee3f80;
 }
 
-#bug .card-front {
+.bug .card-front {
   border: 2px solid #9bb513;
 }
 
-#bug .card-back {
+.bug .card-back {
   background-color: #9bb513;
   border: 2px solid #9bb513;
 }
 
-#rock .card-front {
+.rock .card-front {
   border: 2px solid #aa992f;
 }
 
-#rock .card-back {
+.rock .card-back {
   background-color: #aa992f;
   border: 2px solid #aa992f;
 }
 
-#ghost .card-front {
+.ghost .card-front {
   border: 2px solid #67478e;
 }
 
-#ghost .card-back {
+.ghost .card-back {
   background-color: #67478e;
   border: 2px solid #67478e;
 }
 
-#dark .card-front {
+.dark .card-front {
   border: 2px solid #624e3f;
 }
 
-#dark .card-back {
+.dark .card-back {
   background-color: #624e3f;
   border: 2px solid #624e3f;
 }
 
-#dragon .card-front {
+.dragon .card-front {
   border: 2px solid #624e3f;
 }
 
-#dragon .card-back {
+.dragon .card-back {
   background-color: #624e3f;
   border: 2px solid #624e3f;
 }
 
-#steel .card-front {
+.steel .card-front {
   border: 2px solid #b1adca;
 }
 
-#steel .card-back {
+.steel .card-back {
   background-color: #b1adca;
   border: 2px solid #b1adca;
 }
 
-#fairy .card-front {
+.fairy .card-front {
   border: 2px solid #e9aab5;
 }
 
-#fairy .card-back {
+.fairy .card-back {
   background-color: #e9aab5;
   border: 2px solid #e9aab5;
 }
@@ -367,6 +367,8 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 20rem;
+  margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

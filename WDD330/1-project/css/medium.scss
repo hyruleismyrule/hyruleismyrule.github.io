@@ -51,5 +51,24 @@
     #review h1 {
       font-size: 40pt;
     }
+    .bottom-nav {
+      max-width: 30rem;
+      
+      display: grid;
+      grid-template-columns: 3rem 1fr 3rem;
+      .next {
+        grid-column-start: 3;
+      }
+      // arrow {
+      //   width: 10rem;
+      // }
+      svg {
+        width: 3rem;
+      }
+      // .arrow .next::after {
+      //   margin-left: -10rem;
+      // }
+    }
+  
   }
   

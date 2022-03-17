@@ -204,7 +204,7 @@ main {
   }
 
 //   Types
-#normal {
+.normal {
     .card-front {
         // background-color: $color5;
         border: 2px solid $normal;
@@ -214,7 +214,7 @@ main {
         border: 2px solid $normal;
     }
 }
-#fire {
+.fire {
     .card-front {
         // background-color: $color5;
         border: 2px solid $fire;
@@ -224,7 +224,7 @@ main {
         border: 2px solid $fire;
     }
 }
-#water {
+.water {
     .card-front {
         // background-color: $color5;
         border: 2px solid $water;
@@ -234,7 +234,7 @@ main {
         border: 2px solid $water;
     }
 }
-#grass {
+.grass {
     .card-front {
         // background-color: $color5;
         border: 2px solid $grass;
@@ -244,7 +244,7 @@ main {
         border: 2px solid $grass;
     }
 }
-#electric {
+.electric {
     .card-front {
         // background-color: $color5;
         border: 2px solid $electric;
@@ -254,7 +254,7 @@ main {
         border: 2px solid $electric;
     }
 }
-#ice {
+.ice {
     .card-front {
         // background-color: $color5;
         border: 2px solid $ice;
@@ -264,7 +264,7 @@ main {
         border: 2px solid $ice;
     }
 }
-#fighting {
+.fighting {
     .card-front {
         // background-color: white;
         border: 2px solid $fighting;
@@ -274,7 +274,7 @@ main {
         border: 2px solid $fighting;
     }
 }
-#poison {
+.poison {
     .card-front {
         // background-color: $color5;
         border: 2px solid $poison;
@@ -284,7 +284,7 @@ main {
         border: 2px solid $poison;
     }
 }
-#ground {
+.ground {
     .card-front {
         // background-color: $color5;
         border: 2px solid $ground;
@@ -294,7 +294,7 @@ main {
         border: 2px solid $ground;
     }
 }
-#flying {
+.flying {
     .card-front {
         // background-color: $color5;
         border: 2px solid $flying;
@@ -304,7 +304,7 @@ main {
         border: 2px solid $flying;
     }
 }
-#psychic {
+.psychic {
     .card-front {
         // background-color: $color5;
         border: 2px solid $psychic;
@@ -314,7 +314,7 @@ main {
         border: 2px solid $psychic;
     }
 }
-#bug {
+.bug {
     .card-front {
         // background-color: $color5;
         border: 2px solid $bug;
@@ -324,7 +324,7 @@ main {
         border: 2px solid $bug;
     }
 }
-#rock {
+.rock {
     .card-front {
         // background-color: $color5;
         border: 2px solid $rock;
@@ -334,7 +334,7 @@ main {
         border: 2px solid $rock;
     }
 }
-#ghost {
+.ghost {
     .card-front {
         // background-color: $color5;
         border: 2px solid $ghost;
@@ -344,7 +344,7 @@ main {
         border: 2px solid $ghost;
     }
 }
-#dark {
+.dark {
     .card-front {
         // background-color: $color5;
         border: 2px solid $dark;
@@ -354,7 +354,7 @@ main {
         border: 2px solid $dark;
     }
 }
-#dragon {
+.dragon {
     .card-front {
         // background-color: $color5;
         border: 2px solid $dragon;
@@ -364,7 +364,7 @@ main {
         border: 2px solid $dragon;
     }
 }
-#steel {
+.steel {
     .card-front {
         // background-color: $color5;
         border: 2px solid $steel;
@@ -374,7 +374,7 @@ main {
         border: 2px solid $steel;
     }
 }
-#fairy {
+.fairy {
     .card-front {
         // background-color: $color5;
         border: 2px solid $fairy;
@@ -396,6 +396,8 @@ main {
 
 .bottom-nav {
     display: flex;
+    max-width: 20rem;
+    margin: 0 auto;
     justify-content: space-between;
     margin-bottom: 1rem;
     margin-top: 2rem;
@@ -404,5 +406,12 @@ main {
 /* Hide the images by default */
 .mySlides {
     display: none;
-  }
-  
+}
+
+// #bottom-nav {
+//     display: none;
+// }
+
+// show {
+//     display: block;
+// }
