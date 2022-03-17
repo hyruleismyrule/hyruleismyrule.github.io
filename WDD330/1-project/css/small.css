@@ -380,4 +380,22 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 .mySlides {
   display: none;
 }
+
+.arrow {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.arrow:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.arrow:active svg {
+  fill: #F2B705;
+}
+
+footer a {
+  color: white;
+}
 /*# sourceMappingURL=small.css.map */

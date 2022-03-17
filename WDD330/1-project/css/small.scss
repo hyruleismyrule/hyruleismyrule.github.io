@@ -408,10 +408,22 @@ main {
     display: none;
 }
 
-// #bottom-nav {
-//     display: none;
-// }
+// .grow { transition: all .2s ease-in-out; }
+// .grow:hover { transform: scale(1.1); }
+.arrow {
+    transition: all .2s ease-in-out; 
+}
+.arrow:hover {
+    transform: scale(1.5);
+}
+.arrow:active {
+    svg {
+        fill: $color3;
+    }
+}
 
-// show {
-//     display: block;
-// }
+footer {
+    a {
+        color: white;
+    }
+}
