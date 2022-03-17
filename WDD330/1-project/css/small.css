@@ -439,6 +439,27 @@ footer a {
   opacity: 1;
 }
 
+.thumbnail-container.new {
+  border: 2px dashed #021E73;
+  padding: 3.5rem;
+  fill: #021E73;
+}
+
+.thumbnail-container.new svg {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.thumbnail-container.new svg:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.thumbnail-container.new:active {
+  border-color: #F2B705;
+  fill: #F2B705;
+}
+
 .thumbnail-container.normal {
   border: 2px solid #9b9f6c;
 }

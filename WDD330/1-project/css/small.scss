@@ -465,6 +465,43 @@ footer {
         opacity: 1;
     }
 }
+// .grow { transition: all .2s ease-in-out; }
+// .grow:hover { transform: scale(1.1); }
+// .thumbnail-container.new {
+//     transition: all 1s ease-in-out; 
+//     border: 2px dashed $color1;
+//     padding: 4rem;
+//     fill: $color1;
+// }
+// .thumbnail-container.new:hover svg {
+//     transform: scale(1.5);
+// }
+// .arrow:active {
+//     svg {
+//         fill: $color3;
+//     }
+// }
+// New Set Thumbnails
+.thumbnail-container.new {
+    // transition: all 1s ease-in-out;
+    border: 2px dashed $color1;
+    padding: 3.5rem;
+    fill: $color1;
+    // transform: scale(1);
+    svg {
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            transform: scale(1.5);
+            // transition: all 1s ease-in-out;
+        }
+    }
+}
+.thumbnail-container.new {
+    &:active {
+        border-color: $color3;
+        fill: $color3;
+    }
+}
 .thumbnail-container.normal {
     border: 2px solid $normal;
     h3 {
