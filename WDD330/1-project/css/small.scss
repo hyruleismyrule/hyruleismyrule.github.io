@@ -509,22 +509,7 @@ footer {
         // opacity: 1;
     }
 }
-// .grow { transition: all .2s ease-in-out; }
-// .grow:hover { transform: scale(1.1); }
-// .thumbnail-container.new {
-//     transition: all 1s ease-in-out; 
-//     border: 2px dashed $color1;
-//     padding: 4rem;
-//     fill: $color1;
-// }
-// .thumbnail-container.new:hover svg {
-//     transform: scale(1.5);
-// }
-// .arrow:active {
-//     svg {
-//         fill: $color3;
-//     }
-// }
+
 // New Set Thumbnails
 .thumbnail-container.new {
     // max-width: 17rem;
@@ -542,14 +527,7 @@ footer {
     //     }
     // }
 }
-.thumbnail-container.new {
-    // max-width: 17rem;
-    // transition: all 0.1s ease-in-out;
-    &:active {
-        border-color: $color3;
-        fill: $color3;
-    }
-}
+
 .thumbnail-container.normal {
     border: 2px solid $normal;
     h3 {
@@ -847,6 +825,28 @@ footer {
         }
     }
 }
+// @media only screen and (min-width: 400px) {
+//     .thumbnail-container.new {
+//         .new-set-icon-container {
+//             svg {
+//                 &:hover {
+//                     transform: scale(-1%);
+//                 }
+//             }
+//             padding: 4rem;
+//         }
+//     }
+// }
+.thumbnail-container.new {
+    // max-width: 17rem;
+    // transition: all 0.1s ease-in-out;
+    &:active {
+        border-color: $color3;
+        fill: $color3;
+    }
+}
+
+
 @media only screen and (min-width: 420px) {
     .thumbnail-container {
         h3 {
@@ -875,6 +875,64 @@ footer {
         h3 {
         font-size: 30pt;
         // transform: translateY(250%);
+        }
+    }
+}
+
+// .grow { transition: all .2s ease-in-out; }
+// .grow:hover { transform: scale(1.1); }
+.thumbnail-container.new {
+    transition: all 1s ease-in-out; 
+    border: 2px dashed $color1;
+    
+    // padding: 4rem;
+    fill: $color1;
+    .new-set-icon-container {
+        // transition: all 1s ease-in-out; 
+        svg {
+            transition: all 0.5s ease-in-out; 
+            width: 100%;
+            // max-width: 400px;
+            &:hover {
+                transform: scale(150%);
+                // max-width: 400px;
+            }
+        }
+        margin: 0 auto;
+        // width: 100%;
+        padding: 4rem;
+    }
+}
+// .thumbnail-container.new:hover svg {
+//     transform: scale(150%);
+// }
+.arrow:active {
+    svg {
+        fill: $color3;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .thumbnail-container.new {
+        .new-set-icon-container {
+            svg {
+                &:hover {
+                    transform: scale(135%);
+                    // max-width: 400px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 540px) {
+    .thumbnail-container.new {
+        .new-set-icon-container {
+            svg {
+                &:hover {
+                    transform: scale(125%);
+                    // max-width: 400px;
+                }
+            }
         }
     }
 }

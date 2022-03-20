@@ -465,11 +465,6 @@ footer a {
   fill: #021E73;
 }
 
-.thumbnail-container.new:active {
-  border-color: #F2B705;
-  fill: #F2B705;
-}
-
 .thumbnail-container.normal {
   border: 2px solid #9b9f6c;
 }
@@ -854,6 +849,11 @@ footer a {
   }
 }
 
+.thumbnail-container.new:active {
+  border-color: #F2B705;
+  fill: #F2B705;
+}
+
 @media only screen and (min-width: 420px) {
   .thumbnail-container h3 {
     font-size: 40pt;
@@ -879,6 +879,47 @@ footer a {
   }
   .thumbnail-container h3 {
     font-size: 30pt;
+  }
+}
+
+.thumbnail-container.new {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  border: 2px dashed #021E73;
+  fill: #021E73;
+}
+
+.thumbnail-container.new .new-set-icon-container {
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+.thumbnail-container.new .new-set-icon-container svg {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.thumbnail-container.new .new-set-icon-container svg:hover {
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+}
+
+.arrow:active svg {
+  fill: #F2B705;
+}
+
+@media only screen and (min-width: 420px) {
+  .thumbnail-container.new .new-set-icon-container svg:hover {
+    -webkit-transform: scale(135%);
+            transform: scale(135%);
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .thumbnail-container.new .new-set-icon-container svg:hover {
+    -webkit-transform: scale(125%);
+            transform: scale(125%);
   }
 }
 /*# sourceMappingURL=small.css.map */

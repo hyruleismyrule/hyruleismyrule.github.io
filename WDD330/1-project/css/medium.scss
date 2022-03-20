@@ -102,6 +102,17 @@ $max-width: 60rem;
       //     grid-template-columns: 1fr 1fr 1fr;
       //     grid-gap: 1rem;
       // }
+
+      .thumbnail-container.new {
+        .new-set-icon-container {
+            svg {
+                &:hover {
+                    transform: scale(150%);
+                    // max-width: 400px;
+                }
+            }
+        }
+    }
   
   
   }
