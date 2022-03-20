@@ -446,6 +446,23 @@ footer {
 
 // View Set Thumbnails
 .thumbnail-container {
+    transition: all 0.3s ease-in-out;
+        &:hover {
+            img {
+                opacity: 1;
+            }
+            h3 {
+                opacity: 0;
+            }
+        }
+        // &:active {
+        //     img {
+        //         opacity: 0;
+        //     }
+        //     h3 {
+        //         opacity: 1;
+        //     }
+        // }
     // border: 2px solid red;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -456,11 +473,20 @@ footer {
     // background-color: $color5;
     // background-color: rgb(218, 218, 218);
     img {
+        transition: all 0.3s ease-in-out;
         width: 100%;
         opacity: 0.2;
+        // transition: all 0.5s ease-in-out;
+        // &:hover {
+        //     opacity: 1;
+        // }
         // border: 2px solid red;
     }
     h3 {
+        transition: all 0.3s ease-in-out;
+        // &:hover {
+        //     opacity: 0.2;
+        // }
         // padding: 0;
         // margin-top: 0;
         // margin-bottom: 0;
@@ -524,11 +550,31 @@ footer {
     h3 {
         color: $normal;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $normal;
+    }
 }
 .thumbnail-container.fire {
     border: 2px solid $fire;
     h3 {
         color: $fire;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $fire;
     }
 }
 .thumbnail-container.water {
@@ -536,11 +582,31 @@ footer {
     h3 {
         color: $water;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $water;
+    }
 }
 .thumbnail-container.grass {
     border: 2px solid $grass;
     h3 {
         color: $grass;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $grass;
     }
 }
 .thumbnail-container.electric {
@@ -548,11 +614,31 @@ footer {
     h3 {
         color: $electric;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $electric;
+    }
 }
 .thumbnail-container.ice {
     border: 2px solid $ice;
     h3 {
         color: $ice;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $ice;
     }
 }
 .thumbnail-container.fighting {
@@ -560,11 +646,31 @@ footer {
     h3 {
         color: $fighting;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $fighting;
+    }
 }
 .thumbnail-container.poison {
     border: 2px solid $poison;
     h3 {
         color: $poison;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $poison;
     }
 }
 .thumbnail-container.ground {
@@ -572,11 +678,31 @@ footer {
     h3 {
         color: $ground;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $ground;
+    }
 }
 .thumbnail-container.flying {
     border: 2px solid $flying;
     h3 {
         color: $flying;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $flying;
     }
 }
 .thumbnail-container.psychic {
@@ -584,11 +710,31 @@ footer {
     h3 {
         color: $psychic;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $psychic;
+    }
 }
 .thumbnail-container.bug {
     border: 2px solid $bug;
     h3 {
         color: $bug;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $bug;
     }
 }
 .thumbnail-container.rock {
@@ -596,11 +742,31 @@ footer {
     h3 {
         color: $rock;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $rock;
+    }
 }
 .thumbnail-container.ghost {
     border: 2px solid $ghost;
     h3 {
         color: $ghost;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $ghost;
     }
 }
 .thumbnail-container.dark {
@@ -608,11 +774,31 @@ footer {
     h3 {
         color: $dark;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $dark;
+    }
 }
 .thumbnail-container.dragon {
     border: 2px solid $dragon;
     h3 {
         color: $dragon;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $dragon;
     }
 }
 .thumbnail-container.steel {
@@ -620,10 +806,30 @@ footer {
     h3 {
         color: $steel;
     }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $steel;
+    }
 }
 .thumbnail-container.fairy {
     border: 2px solid $fairy;
     h3 {
         color: $fairy;
+    }
+    &:active {
+        img {
+            opacity: 0;
+        }
+        h3 {
+            opacity: 1;
+            color: white;
+        }
+        background-color: $fairy;
     }
 }

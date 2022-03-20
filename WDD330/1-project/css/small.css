@@ -420,6 +420,8 @@ footer a {
 }
 
 .thumbnail-container {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin-bottom: 1rem;
   margin-top: 1rem;
   display: -webkit-box;
@@ -430,12 +432,24 @@ footer a {
           justify-content: center;
 }
 
+.thumbnail-container:hover img {
+  opacity: 1;
+}
+
+.thumbnail-container:hover h3 {
+  opacity: 0;
+}
+
 .thumbnail-container img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 100%;
   opacity: 0.2;
 }
 
 .thumbnail-container h3 {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin: 0 auto;
   font-size: 30pt;
   text-align: center;
@@ -474,12 +488,38 @@ footer a {
   color: #9b9f6c;
 }
 
+.thumbnail-container.normal:active {
+  background-color: #9b9f6c;
+}
+
+.thumbnail-container.normal:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.normal:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.fire {
   border: 2px solid #e4732f;
 }
 
 .thumbnail-container.fire h3 {
   color: #e4732f;
+}
+
+.thumbnail-container.fire:active {
+  background-color: #e4732f;
+}
+
+.thumbnail-container.fire:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.fire:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.water {
@@ -490,12 +530,38 @@ footer a {
   color: #6b7def;
 }
 
+.thumbnail-container.water:active {
+  background-color: #6b7def;
+}
+
+.thumbnail-container.water:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.water:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.grass {
   border: 2px solid #6fc840;
 }
 
 .thumbnail-container.grass h3 {
   color: #6fc840;
+}
+
+.thumbnail-container.grass:active {
+  background-color: #6fc840;
+}
+
+.thumbnail-container.grass:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.grass:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.electric {
@@ -506,12 +572,38 @@ footer a {
   color: #efce26;
 }
 
+.thumbnail-container.electric:active {
+  background-color: #efce26;
+}
+
+.thumbnail-container.electric:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.electric:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.ice {
   border: 2px solid #94d4d2;
 }
 
 .thumbnail-container.ice h3 {
   color: #94d4d2;
+}
+
+.thumbnail-container.ice:active {
+  background-color: #94d4d2;
+}
+
+.thumbnail-container.ice:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.ice:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.fighting {
@@ -522,12 +614,38 @@ footer a {
   color: #b01f29;
 }
 
+.thumbnail-container.fighting:active {
+  background-color: #b01f29;
+}
+
+.thumbnail-container.fighting:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.fighting:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.poison {
   border: 2px solid #942698;
 }
 
 .thumbnail-container.poison h3 {
   color: #942698;
+}
+
+.thumbnail-container.poison:active {
+  background-color: #942698;
+}
+
+.thumbnail-container.poison:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.poison:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.ground {
@@ -538,12 +656,38 @@ footer a {
   color: #d6bb5c;
 }
 
+.thumbnail-container.ground:active {
+  background-color: #d6bb5c;
+}
+
+.thumbnail-container.ground:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.ground:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.flying {
   border: 2px solid #a27bef;
 }
 
 .thumbnail-container.flying h3 {
   color: #a27bef;
+}
+
+.thumbnail-container.flying:active {
+  background-color: #a27bef;
+}
+
+.thumbnail-container.flying:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.flying:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.psychic {
@@ -554,12 +698,38 @@ footer a {
   color: #ee3f80;
 }
 
+.thumbnail-container.psychic:active {
+  background-color: #ee3f80;
+}
+
+.thumbnail-container.psychic:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.psychic:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.bug {
   border: 2px solid #9bb513;
 }
 
 .thumbnail-container.bug h3 {
   color: #9bb513;
+}
+
+.thumbnail-container.bug:active {
+  background-color: #9bb513;
+}
+
+.thumbnail-container.bug:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.bug:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.rock {
@@ -570,12 +740,38 @@ footer a {
   color: #aa992f;
 }
 
+.thumbnail-container.rock:active {
+  background-color: #aa992f;
+}
+
+.thumbnail-container.rock:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.rock:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.ghost {
   border: 2px solid #67478e;
 }
 
 .thumbnail-container.ghost h3 {
   color: #67478e;
+}
+
+.thumbnail-container.ghost:active {
+  background-color: #67478e;
+}
+
+.thumbnail-container.ghost:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.ghost:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.dark {
@@ -586,12 +782,38 @@ footer a {
   color: #624e3f;
 }
 
+.thumbnail-container.dark:active {
+  background-color: #624e3f;
+}
+
+.thumbnail-container.dark:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.dark:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.dragon {
   border: 2px solid #624e3f;
 }
 
 .thumbnail-container.dragon h3 {
   color: #624e3f;
+}
+
+.thumbnail-container.dragon:active {
+  background-color: #624e3f;
+}
+
+.thumbnail-container.dragon:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.dragon:active h3 {
+  opacity: 1;
+  color: white;
 }
 
 .thumbnail-container.steel {
@@ -602,11 +824,37 @@ footer a {
   color: #b1adca;
 }
 
+.thumbnail-container.steel:active {
+  background-color: #b1adca;
+}
+
+.thumbnail-container.steel:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.steel:active h3 {
+  opacity: 1;
+  color: white;
+}
+
 .thumbnail-container.fairy {
   border: 2px solid #e9aab5;
 }
 
 .thumbnail-container.fairy h3 {
   color: #e9aab5;
+}
+
+.thumbnail-container.fairy:active {
+  background-color: #e9aab5;
+}
+
+.thumbnail-container.fairy:active img {
+  opacity: 0;
+}
+
+.thumbnail-container.fairy:active h3 {
+  opacity: 1;
+  color: white;
 }
 /*# sourceMappingURL=small.css.map */
