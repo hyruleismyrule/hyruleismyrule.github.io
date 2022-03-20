@@ -420,6 +420,7 @@ footer a {
 }
 
 .thumbnail-container {
+  margin: 0 auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin-bottom: 1rem;
@@ -461,18 +462,7 @@ footer a {
 .thumbnail-container.new {
   display: block;
   border: 2px dashed #021E73;
-  padding: 3.5rem;
   fill: #021E73;
-}
-
-.thumbnail-container.new svg {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.thumbnail-container.new svg:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 .thumbnail-container.new:active {
@@ -856,5 +846,39 @@ footer a {
 .thumbnail-container.fairy:active h3 {
   opacity: 1;
   color: white;
+}
+
+@media only screen and (min-width: 360px) {
+  .thumbnail-container h3 {
+    font-size: 35pt;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .thumbnail-container h3 {
+    font-size: 40pt;
+  }
+}
+
+@media only screen and (min-width: 470px) {
+  .thumbnail-container h3 {
+    font-size: 45pt;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  #viewSets {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .thumbnail-container {
+    width: 100%;
+  }
+  .thumbnail-container h3 {
+    font-size: 30pt;
+  }
 }
 /*# sourceMappingURL=small.css.map */

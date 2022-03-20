@@ -58,4 +58,26 @@
     width: 3rem;
   }
 }
+
+@media only screen and (min-width: 740px) {
+  .thumbnail-container h3 {
+    font-size: 40pt;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  #viewSets {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #viewSets .thumbnail-container h3 {
+    font-size: 30pt;
+  }
+}
+
+@media only screen and (min-width: 860px) and (min-width: 1000px) {
+  #viewSets .thumbnail-container h3 {
+    font-size: 40pt;
+  }
+}
 /*# sourceMappingURL=medium.css.map */

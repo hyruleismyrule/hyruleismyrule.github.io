@@ -446,6 +446,8 @@ footer {
 
 // View Set Thumbnails
 .thumbnail-container {
+    // max-width: 17rem;
+    margin: 0 auto;
     transition: all 0.3s ease-in-out;
         &:hover {
             img {
@@ -525,21 +527,24 @@ footer {
 // }
 // New Set Thumbnails
 .thumbnail-container.new {
+    // max-width: 17rem;
     // transition: all 1s ease-in-out;
     display: block;
     border: 2px dashed $color1;
-    padding: 3.5rem;
+    // padding: 3.5rem;
     fill: $color1;
     // transform: scale(1);
-    svg {
-        transition: all 0.5s ease-in-out;
-        &:hover {
-            transform: scale(1.5);
-            // transition: all 1s ease-in-out;
-        }
-    }
+    // svg {
+    //     transition: all 0.3s ease-in-out;
+    //     &:hover {
+    //         transform: scale(1.5);
+    //         // transition: all 1s ease-in-out;
+    //     }
+    // }
 }
 .thumbnail-container.new {
+    // max-width: 17rem;
+    // transition: all 0.1s ease-in-out;
     &:active {
         border-color: $color3;
         fill: $color3;
@@ -831,5 +836,45 @@ footer {
             color: white;
         }
         background-color: $fairy;
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .thumbnail-container {
+        h3 {
+        font-size: 35pt;
+        // transform: translateY(250%);
+        }
+    }
+}
+@media only screen and (min-width: 420px) {
+    .thumbnail-container {
+        h3 {
+        font-size: 40pt;
+        // transform: translateY(250%);
+        }
+    }
+}
+@media only screen and (min-width: 470px) {
+    .thumbnail-container {
+        h3 {
+        font-size: 45pt;
+        // transform: translateY(250%);
+        }
+    }
+}
+@media only screen and (min-width: 560px) {
+    #viewSets {
+        display: grid;
+        // margin-bottom: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .thumbnail-container {
+        width: 100%;
+        h3 {
+        font-size: 30pt;
+        // transform: translateY(250%);
+        }
     }
 }

@@ -1,4 +1,31 @@
 @media only screen and (min-width: 600px) {
+  // Variables
+$color1: #021E73;
+$color2: #021859;
+$color3: #F2B705;
+$color4: #F23005;
+$color5: #F2F2F2;
+//  Type Colors
+$normal: #9b9f6c;
+$fire: #e4732f;
+$water: #6b7def;
+$grass: #6fc840;
+$electric: #efce26;
+$ice: #94d4d2;
+$fighting: #b01f29;
+$poison: #942698;
+$ground: #d6bb5c;
+$flying: #a27bef;
+$psychic: #ee3f80;
+$bug: #9bb513;
+$rock: #aa992f;
+$ghost: #67478e;
+$dark: #624e3f;
+$dragon: #624e3f;
+$steel: #b1adca;
+$fairy: #e9aab5;
+
+$max-width: 60rem;
     .header-wrapper, .footer-wrapper {
       header {
          justify-content: space-between;
@@ -69,6 +96,42 @@
       //   margin-left: -10rem;
       // }
     }
+    
+      // #viewSets {
+      //     display: grid;
+      //     grid-template-columns: 1fr 1fr 1fr;
+      //     grid-gap: 1rem;
+      // }
+  
   
   }
+
+  @media only screen and (min-width: 740px) {
+    .thumbnail-container {
+      h3 {
+      font-size: 40pt;
+      }
+  }
+  
+}
+
+  @media only screen and (min-width: 860px) {
+    #viewSets {
+        grid-template-columns: 1fr 1fr 1fr;
+        .thumbnail-container {
+          h3 {
+          font-size: 30pt;
+          }
+        }
+    }
+    @media only screen and (min-width: 1000px) {
+      #viewSets {
+          .thumbnail-container {
+            h3 {
+            font-size: 40pt;
+            }
+          }
+        }
+      }
+}
   

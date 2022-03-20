@@ -30,5 +30,8 @@
     width: 60rem;
     margin: 0 auto;
   }
+  #viewSets .thumbnail-container h3 {
+    font-size: 35pt;
+  }
 }
 /*# sourceMappingURL=large.css.map */
