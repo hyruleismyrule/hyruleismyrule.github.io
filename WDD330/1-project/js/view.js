@@ -11,8 +11,8 @@ function openMenu() {
     }
 }
 
-let userSets = [];
 // Local Storage
+let userSets = [];
 function saveSet() {
     // these should be passed into the function as variables
     let setName = "Bulbasaur";
@@ -37,56 +37,34 @@ function saveSet() {
     userSets.push(setName);
     localStorage.setItem("setTitles", userSets);
 }
-saveSet()
 console.log(localStorage);
 // localStorage.clear();
 
-
-// function saveSet() {
-//     // let mySets = [];
-//     // let setName = "Big 3";
-//     // let setPokemon = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise"];
-//     let setName = "Fire";
-//     // let setName = "Water";
-//     let setPokemon = ["charmander", "charmeleon", "charizard"];
-//     // let setPokemon = ["squirtle", "wartortle", "blastoise"];
-//     // mySets.push(setName);
-
-//     localStorage.setItem(setName, setPokemon);
-//     // localStorage.setItem(mySets, setName);
-// }
-// Hard Coded Default Set
-// saveSet()
-
-// let setName = "";
-// let setPokemon = [];
-// The user created sets will be in another array
-
-
-
-// let set1 = localStorage.getItem("Big 3");
-// console.log(set1);
-// let allSetNames = localStorage.getItem(setName);
-// let allSetPokemons = localStorage.getItem(setPokemon);
-
-// console.log(allSetNames);
-// console.log(allSetPokemons);
-
-
-// getThumbnail(setName, setPokemon)
-
-async function getThumbnail(setName, setPokemon) {
+// async function getThumbnail(setName, setPokemon) {
+async function getThumbnail(localStorage) {
     const pokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
     // Note this will only work one time, so I will need to make it into a for loop so that it will make more than one thumbnail
-    let tempURL = pokemonAPIurlBase + setPokemon[0];
-    await fetch(tempURL)
-        .then((response) => response.json())
-        .then((imageInfo) => {
-            let artURL = imageInfo.sprites.other["official-artwork"].front_default;
-            let type = imageInfo.types[0].type.name;
-            buildThumbnails(setName, setPokemon, artURL, type);
-        });
+    let setTitles = localStorage.getItem("setTitles");
+    setTitles = setTitles.split(",");
+    for (let i = 0; i < setTitles.length; i++) {
+        // console.log(setTitles[i]);
+        let setName = setTitles[i];
+        // console.log(setName);
+        let setPokemon = localStorage.getItem(setTitles[i]);
+        setPokemon = setPokemon.split(",");
+        // console.log(setPokemon[0]);
+        let tempURL = pokemonAPIurlBase + setPokemon[0];
+        await fetch(tempURL)
+            .then((response) => response.json())
+            .then((imageInfo) => {
+                let artURL = imageInfo.sprites.other["official-artwork"].front_default;
+                let type = imageInfo.types[0].type.name;
+                buildThumbnails(setName, setPokemon, artURL, type);
+            });
+    }
+    newSetButton()
 }
+getThumbnail(localStorage);
 
 function buildThumbnails(setName, setPokemon, artURL, type) {
     let container = document.getElementById("viewSets");
@@ -104,6 +82,11 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
     thumbnail.appendChild(thumbnailImage);
     thumbnail.appendChild(setTitle);
 
+    container.appendChild(thumbnail);
+}
+
+function newSetButton() {
+    let container = document.getElementById("viewSets");
     let plusSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" /></svg>'
 
     let newSetIcon = document.createElement("div");
@@ -115,7 +98,5 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
     svgContainer.innerHTML = plusSvgHTML;
 
     newSetIcon.appendChild(svgContainer);
-
-    container.appendChild(thumbnail);
     container.appendChild(newSetIcon);
 }

@@ -429,16 +429,6 @@ footer a {
   opacity: 0.2;
 }
 
-.thumbnail-container h3 {
-  font-size: 50pt;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -350%);
-          transform: translate(-50%, -350%);
-  opacity: 1;
-}
-
 .thumbnail-container.new {
   border: 2px dashed #021E73;
   padding: 3.5rem;
