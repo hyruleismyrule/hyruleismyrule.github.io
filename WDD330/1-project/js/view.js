@@ -71,6 +71,7 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
 
     let thumbnail = document.createElement("div");
     thumbnail.setAttribute("class", "thumbnail-container" + " " + type);
+    thumbnail.setAttribute("onclick", "viewSet(setName)");
 
     let setTitle = document.createElement("h3");
     setTitle.textContent = setName;

@@ -422,6 +422,12 @@ footer a {
 .thumbnail-container {
   margin-bottom: 1rem;
   margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .thumbnail-container img {
@@ -429,7 +435,17 @@ footer a {
   opacity: 0.2;
 }
 
+.thumbnail-container h3 {
+  margin: 0 auto;
+  font-size: 30pt;
+  text-align: center;
+  position: absolute;
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
+}
+
 .thumbnail-container.new {
+  display: block;
   border: 2px dashed #021E73;
   padding: 3.5rem;
   fill: #021E73;
