@@ -1,0 +1,335 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+$logo-bgc: black;
+
+// Mixins
+@mixin action-button {
+  background-color: $byui-blue;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  padding: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@mixin arrow-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// Small
+// Header
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'BYUI Open Sans';
+  color: $body-font;
+}
+header {
+  .site-banner {
+    background-color: $byui-blue;
+  }
+  h1, form {
+    display: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  .site-banner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .site-banner__left {
+    padding: 1rem;
+    background-color: $logo-bgc;
+  }
+  .site-banner__right {
+    padding: 1rem;
+  }
+}
+
+.page-name {
+  text-align: center;
+  h2 {
+    margin: 0;
+    background-color: $light-gray;
+    padding: 1rem;
+    border-bottom: 1px solid $dark-gray;
+  }
+}
+
+// Body
+// Mixins applied
+.action-button {
+  @include action-button();
+}
+
+main {
+  margin: 1rem;
+}
+
+.info-block {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+// Covid Banner
+.covid-banner {
+  background-color: $logo-bgc;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+// Interest Boxes
+.interest-box {
+  border: 1px solid $med-gray; 
+}
+.interest-box__caption {
+  color: #056cb6;
+  @include arrow-right;
+  p {
+    margin: 0;
+    padding: 0.25rem;
+  }
+}
+
+.info-drop-down {
+  background-color: $light-gray;
+  color: $logo-bgc;
+  border: 1px solid $dark-gray;
+  border-radius: 5px;
+}
+
+.resources {
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border: 1px solid $dark-gray;
+      border-top: none;
+    }
+  }
+  h2 {
+    background-color: $dark-gray;
+    color: white;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    margin: 0;
+  }
+}
+
+.dates-box {
+  h2 {
+    background-color: $byui-blue;
+    color: white;
+    padding: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .dates-box__date {
+    color: black;
+    padding: 1rem;
+  }
+  .dates-box__description {
+    color: black;
+  }
+  .dash {
+    margin: 1rem;
+  }
+}
+
+.divder {
+  border-top: 1px solid $med-gray;
+}
+
+// News Room
+.news-room {
+  .news-room__date {
+    font-size: 0.75rem;
+  }
+  .news-room__title {
+    color: $byui-blue;
+    margin: 0;
+  }
+  img {
+    display: none;
+  }
+}
+
+.news-room__button {
+  float: right;
+}
+
+.featured-devotional {
+  margin-top: 7rem;
+  border: 1px solid $med-gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.featured-devotional__text {
+  padding: 1rem;
+  padding-top: 0;
+  font-size: 0.75rem;
+  h3 {
+    color: $byui-blue;
+    font-size: 1rem;
+  }
+  button {
+    font-size: 0.75rem;
+  }
+}
+
+.footer__links {
+  background-color: $byui-blue;
+  height: 4rem;
+}
+
+footer {
+  background-color: $logo-bgc;
+  height: 2rem;
+}
+
+// Medium Screens
+@media only screen and (min-width: 30rem) {
+  .interest-box {
+    max-width: 30rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .featured-devotional img, .devotional-banner img {
+    width: 100%;
+  }
+}
+
+// Large Screens
+@media only screen and (min-width: 75rem) {
+  header {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .content {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .page-name h2 {
+    max-width: 75rem;
+    margin: 0 auto;
+    border: none;
+    padding-left: 0;
+  }
+  .page-name {
+    background-color: $light-gray;
+    text-align: left;
+  }
+  .header-wrapper {
+    background-color: $byui-blue;
+    width: 100%;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 50rem 1fr;
+    grid-column-gap: 2rem;
+    margin: 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  div {
+    grid-column-start: 1;
+  }
+  .sidebar {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .featured-devotional {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-top: 0;
+    max-height: 25rem;
+  }
+  .interest-box__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .interest-box {
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .interest-box__1 {
+    margin-left: 0;
+  }
+  .interest-box__3 {
+    margin-right: 0;
+  }
+  .news-room {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-gap: 1rem;
+    img {
+      display: block;
+    }
+    div {
+      grid-column-start: 2;
+    }
+    .news-room__date {
+      margin-top: 0;
+    }
+  }
+  .divder {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .news-room__button {
+    margin-bottom: 2rem;
+  }
+  main {
+    margin: 0;
+  }
+  .covid-banner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

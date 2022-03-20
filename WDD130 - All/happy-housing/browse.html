@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Happy Housing • Browse</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <a class="logo" href="index.html"
+          ><img
+            class="logo"
+            src="assets/housing-logo.jpg"
+            alt="Logo"
+        /></a>
+
+        <h1 class="head-header">Happy Housing</h1>
+
+        <div class="sign-up-popup" id="sign-up-form">
+          <form action="/action_page.php" class="sign-up-container">
+            <h1>Sign Up</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <label for="psw"><b>Confirm Password</b></label>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="btn">Create Account</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">
+              &times;
+            </button>
+          </form>
+        </div>
+
+        <script>
+          function openForm() {
+            document.getElementById("sign-up-form").style.display = "block";
+          }
+
+          function closeForm() {
+            document.getElementById("sign-up-form").style.display = "none";
+          }
+        </script>
+
+        <button class="open-button" onclick="openForm()">Sign up</button>
+
+        <!-- Trigger/Open The Modal -->
+        <button class="open-button" id="myBtn">Log in</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <button class="close cancel">&times;</button>
+
+            <form action="/action_page.php" class="log-in-container">
+              <h1>Log in</h1>
+
+              <label for="email"><b>Email</b></label>
+              <input
+                type="text"
+                placeholder="Enter Email"
+                name="email"
+                required
+              />
+
+              <label for="psw"><b>Password</b></label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="psw"
+                required
+              />
+
+              <button type="submit" class="btn">Log in</button>
+            </form>
+          </div>
+        </div>
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks on the button, open the modal
+          btn.onclick = function() {
+            modal.style.display = "block";
+          };
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          };
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
+
+        <div>
+          <img
+            class="profile-picture"
+            src="assets/profile-picture.png"
+            alt="Profile Picture"
+          />
+        </div>
+      </header>
+
+      <main>
+        <div class="banner-box">
+          <img
+            class="banner"
+            src="assets/house-banner.jpg"
+            alt="Landscape Banner"
+          />
+          <div class="banner-text">
+            <h2 class="banner-header">Find the Happiest Home</h2>
+            <nav>
+              <ul>
+                <li><a href="browse.html">Buy</a></li>
+                <li><a href="browse.html">Rent</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="index.html">Home</a></li>
+              </ul>
+            </nav>
+            <input
+              class="banner-search"
+              type="text"
+              placeholder="City, State..."
+            />
+          </div>
+        </div>
+
+        <div class="browse-grid">
+          <h1 class="browse-heading-1">Browse</h1>
+          <p class="browse-paragraph-1">
+            Finding the perfect house has never been easier! Here you can search
+            through thousands of listings below by size, cost, area, and
+            features. If you create an account, you can even save any house you
+            like to a list to easily find it again. Our agents will also send
+            you notifications about any changing information or similar
+            listings. With one click of a button you can easily make an offer or
+            schedule a visit to the property in person. We have excellent and
+            capable agents here to help you and answer any questions that you
+            may have. They are here for you any time of day and every day of the
+            week.They have expert knowledge and plenty of experience with the
+            housing market and predicting trends. They know the opportune time
+            to sell and know how to get the best deals. If you are an agent and
+            want to join our team, please contact us and we will get back to you
+            quickly.
+          </p>
+
+          <div class="filter">
+            <input
+              class="filter-search"
+              type="text"
+              placeholder="Location..."
+            />
+
+            <button class="filter-button">Price</button>
+            <button class="filter-button">Beds</button>
+            <button class="filter-button">Baths</button>
+            <button class="filter-button">Property Type</button>
+          </div>
+
+          <div class="card card-1">
+            <img
+              class="browse-img browse-img1"
+              src="assets/house-3.jpeg"
+              alt="House 1"
+            />
+            <ul>
+              <li class="card-info price">$280,000</li>
+              <li class="card-info">4bed 2bath 1,820sqft</li>
+              <li class="card-info">2104 Maplegrove Dr</li>
+            </ul>
+            <img
+              class="heart"
+              src="assets/heart.png"
+              alt="save"
+            />
+          </div>
+
+          <div class="card card-2">
+            <img
+              class="browse-img browse-img2"
+              src="assets/house-4.jpeg"
+              alt="House 2"
+            />
+            <ul>
+              <li class="card-info price">$369,000</li>
+              <li class="card-info">3bed 2bath 1,850sqft</li>
+              <li class="card-info">11557 Mae St</li>
+            </ul>
+            <img
+              class="heart"
+              src="assets/heart.png"
+              alt="save"
+            />
+          </div>
+
+          <div class="card card-3">
+            <img
+              class="browse-img browse-img3"
+              src="assets/house-5.jpeg"
+              alt="House 3"
+            />
+            <ul>
+              <li class="card-info price">$403,055</li>
+              <li class="card-info">4bed 3bath 2,139sqft</li>
+              <li class="card-info">2104 Sumerset St</li>
+            </ul>
+            <img
+              class="heart"
+              src="assets/heart.png"
+              alt="save"
+            />
+          </div>
+
+          <div class="card card-4">
+            <img
+              class="browse-img browse-img4"
+              src="assets/house-6.jpg"
+              alt="House 4"
+            />
+            <ul>
+              <li class="card-info price">$275,000</li>
+              <li class="card-info">3bed 2bath 1,610sqft</li>
+              <li class="card-info">5313 Satire St</li>
+            </ul>
+            <img
+              class="heart"
+              src="assets/heart.png"
+              alt="save"
+            />
+          </div>
+
+          <div class="card card-5">
+            <img
+              class="browse-img browse-img5"
+              src="assets/house-1.jpeg"
+              alt="House 5"
+            />
+            <ul>
+              <li class="card-info price">$350,000</li>
+              <li class="card-info">3bed 2bath 1,240sqft</li>
+              <li class="card-info">2201 Goldenwood Dr</li>
+            </ul>
+            <img
+              class="heart"
+              src="assets/heart.png"
+              alt="save"
+            />
+          </div>
+
+          <div class="card card-6">
+            <img
+              class="browse-img browse-img6"
+              src="assets/house-2.jpg"
+              alt="House 6"
+            />
+            <ul>
+              <li class="card-info price">$324,900</li>
+              <li class="card-info">4bed 2bath 2,131sqft</li>
+              <li class="card-info">5624 Delaney Ave</li>
+            </ul>
+            <img
+              class="heart"
+              src="assets/heart.png"
+              alt="save"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p id="info">&copy; Happy Housing • Cynthia Rawlings • WDD130-09</p>
+
+        <a id="info1" href="site-plan.html">Site Plan</a>
+
+        <div class="social">
+          <a class="socialmedia" target="_blank" href="https://www.facebook.com"
+            ><img
+              class="icon"
+              src="assets/facebook.png"
+              alt="Facebook"
+          /></a>
+
+          <a class="socialmedia" target="_blank" href="http://www.youtube.com"
+            ><img
+              class="icon"
+              src="assets/youtube.png"
+              alt="Youtube"
+          /></a>
+
+          <a class="socialmedia" target="_blank" href="http://www.instagram.com"
+            ><img
+              class="icon"
+              src="assets/instagram.png"
+              alt="Instagram"
+          /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

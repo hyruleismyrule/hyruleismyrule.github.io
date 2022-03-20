@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Epic Water Rafting • Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+    
+      .textoverimage {
+        position: relative;
+        width: 250px;
+        height: 320px;
+        float: left;
+        margin: 10px;
+        background-size:100%;
+        background-position: center;
+        transition: 0.5s;
+      }
+      
+      .textoverimage:hover {
+        background-size:110%;
+        transition: 0.5s;
+      }
+      
+      .textoverimage:after {
+        content:attr(data-text);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <div class="logo-box">
+          <a class="logo" href="index.html"
+            ><img
+              class="logo"
+              src="https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2Fwhite-water-logo-resized.jpg?v=1602005876211"
+              alt="Logo"
+          /></a>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rivers.html">Rivers</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="site-plan.html">Site Plan</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+          <div class="banner-box">
+            <img
+              class="banner"
+              src="https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2Fheader-image-resized.jpg?v=1602005853704"
+              alt="River"/>
+          </div>
+        
+        <div class="textoverimage"
+             style="background-image:url(https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2F1faq.jpg?v=1605042828643)"
+             data-text="Is this a good trip for kids? What are the age ranges you allow?">
+          
+        </div>
+        
+          <div class="textoverimage"
+             style="background-image:url(https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2F2faq.jpg?v=1605042835674)"
+              data-text="Is whitewater rafting safe? I don't even know how to swim! Can I still come?">
+          
+        </div>
+        
+      </main>
+      
+      <footer>
+        <p id="info">
+          &copy; 2020 Epic Water Rafting - Cynthia Rawlings - WDD130-9
+        </p>
+
+        <div class="social">
+          <a class="socialmedia" target="_blank" href="https://www.facebook.com"
+            ><img
+              class="icon"
+              src="https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2Ffacebook-icon.png?v=1602102303547"
+              alt="Facebook"
+          /></a>
+
+          <a class="socialmedia" target="_blank" href="http://www.youtube.com"
+            ><img
+              class="icon"
+              src="https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2Fyoutube-icon.png?v=1602102289994"
+              alt="Youtube"
+          /></a>
+
+          <a class="socialmedia" target="_blank" href="http://www.instagram.com"
+            ><img
+              class="icon"
+              src="https://cdn.glitch.com/91076eca-a77f-4f69-8aad-ac421eb370cf%2Finstagram-icon.png?v=1602102299044"
+              alt="Instagram"
+          /></a>
+        </div>
+      </footer>
+  </body>
+</html>

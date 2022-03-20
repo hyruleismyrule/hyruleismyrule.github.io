@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Powers</title>
+    <script>
+        /* Input: button click to start th loop
+         * Processing: 5 * 1 5 * 2 until 5 * 12
+         * Output: displays the equations calculated and the result in text
+         */
+        function startFunction() {
+            
+            let outputString = "";
+
+            for (let i = 0; i <= 31; i ++) {
+                
+                let answer = Math.pow(2, i);
+                outputString = outputString + answer + "<br>";
+                
+            }
+
+            document.getElementById('output').innerHTML = outputString;
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="startFunction()">Powers</button>
+    <div id="output"></div>
+</body>
+
+</html>

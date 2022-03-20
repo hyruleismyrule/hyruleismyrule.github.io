@@ -1,0 +1,23 @@
+{
+  "name": "hyruleismyrule.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.26.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyruleismyrule/hyruleismyrule.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyruleismyrule/hyruleismyrule.github.io/issues"
+  },
+  "homepage": "https://github.com/hyruleismyrule/hyruleismyrule.github.io#readme"
+}

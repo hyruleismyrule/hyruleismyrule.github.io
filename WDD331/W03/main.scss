@@ -1,0 +1,209 @@
+// Variables
+$body-font-family: Helvetica, Arial, sans-serif;
+$heading-font-family: 'Lora', serif;
+$sidebar-color: #6495ED;
+$background-color: #FAEBD7;
+$active-link-color: #DEB887;
+$article-link-color: black;
+$nav-hover-color: white;
+$post-date-color: grey;
+$padding-size: 1rem;
+$small-padding-size: 0.5rem;
+$large-padding-size: 2rem;
+$margin-size: 1rem;
+$large-margin-size: 2rem;
+$ex-large-margin-size: 4rem;
+$shadow-color: rgb(177, 177, 177);
+$sidebar-width: 15rem;
+
+// Mixins
+@mixin normalize() {
+    margin: 0;
+    padding: 0;
+}
+@mixin hover-decoration() {
+    text-decoration: underline;
+}
+@mixin visited-decoration() {
+    text-decoration: none;
+}
+@mixin full-padding() {
+    padding: $padding-size;
+}
+@mixin top-padding() {
+    padding-top: 1$padding-size;
+}
+@mixin left-right-padding() {
+    padding-left: $padding-size;
+    padding-right: $padding-size;
+}
+@mixin top-bottom-padding() {
+    padding-top: $padding-size;
+    padding-bottom: $padding-size;
+}
+@mixin small-top-bottom-padding() {
+    padding-top: $small-padding-size;
+    padding-bottom: $small-padding-size;
+}
+@mixin large-full-padding() {
+    padding: $large-padding-size;
+}
+@mixin left-right-margin() {
+    margin-left: $margin-size;
+    margin-right: $margin-size;
+}
+@mixin top-bottom-margin() {
+    margin-top: $margin-size;
+    margin-bottom: $margin-size;
+}
+@mixin large-top-bottom-margin() {
+    margin-top: $large-margin-size;
+}
+@mixin ex-large-left-right-margin() {
+    margin-left: $ex-large-margin-size;
+    margin-right: $ex-large-margin-size;
+}
+
+// Converted
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    font-family: $body-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, figure, img, a, ul, li {
+    @include normalize;
+}
+
+/* Normal Links */
+a {
+    &:link, &:visited {
+        color: $sidebar-color;
+        @include visited-decoration;
+    }
+    &:hover {
+        @include hover-decoration;
+    }
+    &:active {
+        color: $active-link-color;
+    }
+}
+
+/* Page Title */
+header h1 a {
+    &:link, &:visited {
+        color: $background-color;
+    }
+    &:hover {
+        @include hover-decoration;
+    }
+    &:active {
+        color: $active-link-color;
+    }
+}
+
+/* Artile Title Links */
+article h2 a {
+    &:link, &:visited {
+        color: $article-link-color;
+    }
+    &:hover {
+        color: $sidebar-color;
+        @include hover-decoration;
+    }
+    &:active {
+        color: $active-link-color;
+    }
+}
+
+/* Navigation Links */
+nav a {
+    &:link, &:visited {
+        color: $background-color;
+        @include visited-decoration;
+    }
+    &:hover {
+        color: $nav-hover-color;
+        @include hover-decoration;
+    }
+    &:active {
+        color: $active-link-color;
+    }
+}
+
+/* Elements */
+header {
+    background-color: $sidebar-color;
+    padding-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.post-date {
+    color: $post-date-color;
+}
+
+main {
+    background-color: $background-color;
+    @include left-right-padding;
+}
+
+header h1, header nav {
+    text-align: right;
+    @include full-padding;
+}
+
+nav ul li {
+    @include small-top-bottom-padding;
+}
+
+hr {
+    padding: 0;
+    @include left-right-margin;
+}
+
+article {
+    background-color: $nav-hover-color;
+    box-shadow: 10px 5px 5px $shadow-color;
+    @include top-bottom-margin;
+    @include full-padding;
+}
+
+.post-content h2, .post-content p {
+    @include top-bottom-padding;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Large Screens */
+
+/* 64em is also 1028px (if basefont is 16px) */
+
+@media only screen and (min-width: 64rem) {
+    body div {
+        display: grid;
+        grid-template-columns: $sidebar-width 1fr;
+    }
+    header h1, header nav {
+        @include large-full-padding;
+    }
+    article {
+        @include ex-large-left-right-margin;
+        @include large-top-bottom-margin;
+        @include large-full-padding;
+    }
+}
