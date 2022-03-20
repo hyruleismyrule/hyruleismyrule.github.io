@@ -11,16 +11,69 @@ function openMenu() {
     }
 }
 
+let userSets = [];
 // Local Storage
-// Hard Coded Default Set
-let setName = "Big 3"
-let setPokemon = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise"];
-// The user created sets will be in another array
-localStorage.setItem(setName, setPokemon);
+function saveSet() {
+    // these should be passed into the function as variables
+    let setName = "Bulbasaur";
+    let setPokemon = ["bulbasaur", "ivysaur", "venusaur"];
+
+    // For efficiance this needs to become some kind of loop
+    localStorage.setItem(setName, setPokemon);
+    userSets.push(setName);
+    localStorage.setItem("setTitles", userSets);
+
+    setName = "Charmander";
+    setPokemon = ["charmander", "charmeleon", "charizard"];
+
+    localStorage.setItem(setName, setPokemon);
+    userSets.push(setName);
+    localStorage.setItem("setTitles", userSets);
+
+    setName = "Squirtle";
+    setPokemon = ["squirtle", "wartortle", "blastoise"];
+
+    localStorage.setItem(setName, setPokemon);
+    userSets.push(setName);
+    localStorage.setItem("setTitles", userSets);
+}
+saveSet()
 console.log(localStorage);
 // localStorage.clear();
 
-getThumbnail(setName, setPokemon)
+
+// function saveSet() {
+//     // let mySets = [];
+//     // let setName = "Big 3";
+//     // let setPokemon = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise"];
+//     let setName = "Fire";
+//     // let setName = "Water";
+//     let setPokemon = ["charmander", "charmeleon", "charizard"];
+//     // let setPokemon = ["squirtle", "wartortle", "blastoise"];
+//     // mySets.push(setName);
+
+//     localStorage.setItem(setName, setPokemon);
+//     // localStorage.setItem(mySets, setName);
+// }
+// Hard Coded Default Set
+// saveSet()
+
+// let setName = "";
+// let setPokemon = [];
+// The user created sets will be in another array
+
+
+
+// let set1 = localStorage.getItem("Big 3");
+// console.log(set1);
+// let allSetNames = localStorage.getItem(setName);
+// let allSetPokemons = localStorage.getItem(setPokemon);
+
+// console.log(allSetNames);
+// console.log(allSetPokemons);
+
+
+// getThumbnail(setName, setPokemon)
 
 async function getThumbnail(setName, setPokemon) {
     const pokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
@@ -48,7 +101,6 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
     thumbnailImage.setAttribute('src', artURL);
     thumbnailImage.setAttribute('alt', setPokemon[0]);
 
-
     thumbnail.appendChild(thumbnailImage);
     thumbnail.appendChild(setTitle);
 
@@ -67,16 +119,3 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
     container.appendChild(thumbnail);
     container.appendChild(newSetIcon);
 }
-
-
-
-
-// if (document.getElementById("viewSets")) {
-//     let container = document.getElementById("viewSets");
-//     let thumbnail = document.createElement("div");
-//     thumbnail.setAttribute("class", "thumbnail");
-//     let thumbnailImage = document.createElement("img")
-
-//     // thumbnailImage.setAttribute('src', artURL);
-//     // thumbnailImage.setAttribute('alt', name);
-// }
