@@ -1,0 +1,154 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, figure, img, a, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Normal Links */
+a:link, a:visited {
+  color: #6495ED;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #DEB887;
+}
+
+/* Page Title */
+header h1 a:link, header h1 a:visited {
+  color: #FAEBD7;
+}
+
+header h1 a:hover {
+  text-decoration: underline;
+}
+
+header h1 a:active {
+  color: #DEB887;
+}
+
+/* Artile Title Links */
+article h2 a:link, article h2 a:visited {
+  color: black;
+}
+
+article h2 a:hover {
+  color: #6495ED;
+  text-decoration: underline;
+}
+
+article h2 a:active {
+  color: #DEB887;
+}
+
+/* Navigation Links */
+nav a:link, nav a:visited {
+  color: #FAEBD7;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #DEB887;
+}
+
+/* Elements */
+header {
+  background-color: #6495ED;
+  padding-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.post-date {
+  color: grey;
+}
+
+main {
+  background-color: #FAEBD7;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header h1, header nav {
+  text-align: right;
+  padding: 1rem;
+}
+
+nav ul li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+hr {
+  padding: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+article {
+  background-color: white;
+  -webkit-box-shadow: 10px 5px 5px #b1b1b1;
+          box-shadow: 10px 5px 5px #b1b1b1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.post-content h2, .post-content p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Large Screens */
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+  body div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15rem 1fr;
+        grid-template-columns: 15rem 1fr;
+  }
+  header h1, header nav {
+    padding: 2rem;
+  }
+  article {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
