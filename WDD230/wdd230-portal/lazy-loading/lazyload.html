@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lazy Load</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Cynthia Rawlings">
+    <meta name="description" content="Lazy Load Assignment">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Progressive Loading (Images)</h1>
+        <div class="images">
+            <picture>
+                <img src='images/placeholder.jpg' data-src='images/cat-basket.jpg' alt="A Cat in a basket."></picture>
+            <br>
+            <picture>
+                <img src='images/placeholder.jpg' data-src="images/cat-lights.jpg" alt="A Cat wrapped in lights.">
+            </picture>
+            <br>
+            <picture>
+                <img src='images/placeholder.jpg' data-src="images/cat-orange-eyes.jpg" alt="A Cat with orange eyes.">
+            </picture>
+            <br>
+            <picture>
+                <img src='images/placeholder.jpg' data-src="images/hidden-cat.jpg" alt="A Cat hiding behind a wall.">
+            </picture>
+            <br>
+            <picture>
+                <img src='images/placeholder.jpg' data-src="images/king cat.jpg" alt="A Cat with a crown."></picture>
+            <br>
+            <picture>
+                <img src='images/placeholder.jpg' data-src="images/white-cat.jpg" alt="A white cat."></picture>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Cormorant Garamond, Varela Round']
+            }
+        });
+    </script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

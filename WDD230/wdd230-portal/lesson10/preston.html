@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Cynthia Rawlings' Weather Site Project for BYUI.">
+    <meta name="author" content="Cynthia Rawlings">
+    <title>Preston: Wandering Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!-- HEADER HERE -->
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img class="logo" src="images/logo.png" alt="sunshine logo" />
+            <h1>Wandering Weather</h1>
+            <h2>Where will the Weather take you?</h2>
+        </header>
+    </div>
+
+    <!-- NAVIGATION HERE -->
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776; MENU</button>
+            <ul id="primaryNav" class="hide">
+                <li><a href="/WDD230/wdd230-portal/lesson9/index.html">Home</a></li>
+                <li class="active"><a href="/WDD230/wdd230-portal/lesson10/preston.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="/WDD230/wdd230-portal/lesson8/stormcenter.html">Storm Center</a></li>
+                <li><a href="/WDD230/wdd230-portal/Lesson7/gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- CONTENT HERE -->
+    <main>
+        <div id="message">Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</div>
+        <h1>Preston</h1>
+        <div class="hero">
+            <p class="summary">Weather Summary<br>
+                Temprature: <span id="temp"></span>&deg; F<br>
+                Wind Speed: <span id="speed"></span> mph<br>
+                <span id="chill"></span>
+            </p>
+
+            <picture class="hero-image">
+                <source media="(max-width: 400px)" srcset="images/herosub400.jpg">
+                <source media="(max-width: 800px)" srcset="images/herosub800.jpg">
+                <source media="(max-width: 971px)" srcset="images/herosub971.jpg">
+                <img class="broke" src="images/herosub971.jpg" alt="Green grassey field at sunset.">
+            </picture>
+        </div>
+
+        <!-- Five Day Forecast -->
+        <h2>Five Day Forecast</h2>
+        <div id="forecast"></div>
+
+        <h2>Article Title</h2>
+        <div class="article">
+            <picture class="article-image top">
+                <source media="(max-width: 400px)" srcset="images/related-article-image-assets/article400.jpeg">
+                <source media="(max-width: 800px)" srcset="images/related-article-image-assets/article500.jpeg">
+                <source media="(max-width: 971px)" srcset="images/related-article-image-assets/article800.jpeg">
+                <img class="broke" src="images/related-article-image-assets/article800.jpeg" alt="Pink Cloudy Sky">
+            </picture>
+            <p>On this day in history the first (you find something cool in history and
+                complete this paragraph. Ryiam velit odio ut et ac tristique, dictumst,
+                odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
+                odio nunc. Odio nisi, parturient placerat cum in, nunc diam quis
+                ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
+                montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
+                quis. Elit lundium lectus nisi! Egestas velit nunc, mus! Dolor facilisis,
+                nec nascetur cum, dictumst montes nisi, magna diam porta elit nisi
+                ac, purus placerat, a ac purus rhoncus! Dolor etiam. Ridiculus et
+                dolor ac! Massa, mid mid ultrices, rhoncus massa! Odio et arcu porta duis augue a facilisis vel duis
+                natoque tortor ultricies odio rhoncus elementum et dictumst risus. Dapibus sit, sit ac. Adipiscing?
+                odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
+                odio nunc. Odio nisi, parturient placerat cum in, nunc diam quis
+                ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
+                montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
+                odio. Velit a ac, integer sociis placerat rhoncus nec purus augue a
+                odio nunc. Odio nisi, parturient placerat cum in, nunc diam quis
+                ridiculus risus a porttitor massa. Augue penatibus. Proin cum? Risus
+                montes, turpis porta nunc tempor adipiscing adipiscing. Pulvinar
+            </p>
+            <picture class="article-image bottom">
+                <source media="(max-width: 400px)" srcset="images/related-article-image-assets/article400.jpeg">
+                <source media="(max-width: 800px)" srcset="images/related-article-image-assets/article500.jpeg">
+                <source media="(max-width: 971px)" srcset="images/related-article-image-assets/article800.jpeg">
+                <img class="broke" src="images/related-article-image-assets/article800.jpeg" alt="Pink Cloudy Sky">
+            </picture>
+        </div>
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+
+            <div class="address-container">
+                <h3>Address</h3>
+                <p>The Weather Center<br>
+                    123 Main Street.<br>
+                    Franklin, MI 87654</p>
+            </div>
+            <div class="phone-container">
+                <h3>Phone</h3>
+                <p>(801) 555-1234</p>
+                <h3>Email</h3>
+                <p>contact@yoururl.com</p>
+            </div>
+        </div>
+
+        <div class="google-maps-large">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe class="gmap_canvas"
+                        src="https://maps.google.com/maps?q=preston%20idaho&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER HERE -->
+    <div id="footerWrapper" class="clearfix-footer">
+        <footer>
+            &copy; Cynthia Rawlings &bull; Last Updated <span id="lastUpdated"></span>
+        </footer>
+    </div>
+    <!-- javascript HERE -->
+    <!-- FIX THIS
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Cormorant Garamond, Varela Round']
+            }
+        });
+    </script> -->
+    <script src="js/script.js"></script>
+    <script src="js/forecast.js"></script>
+</body>
+
+</html>
