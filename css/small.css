@@ -13,8 +13,18 @@ header h1, footer h1 {
   margin: 0;
 }
 
+h1 {
+  margin: 1rem;
+}
+
+.blank {
+  display: none;
+}
+
 .card {
   padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
 }
 
 .card a {
@@ -34,7 +44,47 @@ header h1, footer h1 {
   background-color: purple;
 }
 
-.project {
+.project, .pokemon {
   background-color: #F23005;
+}
+
+.wdd331 {
+  background-color: blueviolet;
+}
+
+.wdd230 {
+  background-color: teal;
+}
+
+.cit160 {
+  background-color: green;
+}
+
+.wdd130 {
+  background-color: orange;
+}
+
+.blank {
+  background-color: transparent;
+}
+
+.zen {
+  background-color: brown;
+}
+
+.water {
+  background-color: #12a795;
+}
+
+.house {
+  background-color: #d62b62;
+}
+
+.weather {
+  background-color: #62b7d9;
+}
+
+.commerce {
+  background-color: #50a3aa;
 }
 /*# sourceMappingURL=small.css.map */
