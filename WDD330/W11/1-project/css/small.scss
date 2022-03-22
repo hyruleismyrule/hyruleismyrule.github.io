@@ -1,0 +1,100 @@
+// Variables
+$color1: #021E73;
+$color2: #021859;
+$color3: #F2B705;
+$color4: #F23005;
+$color5: #F2F2F2;
+$max-width: 60rem;
+// Mixins
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+// Header and Footers
+.header-wrapper, .footer-wrapper {
+    background-color: $color1;
+    // display: grid;
+    // grid-template-columns: 5rem 1fr 2rem;
+    color: white;
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // margin-left: 1rem;
+        // padding: 1rem;
+    }
+    img {
+        // max-width: 2rem;
+        display: none;
+        // display: inline;
+    }
+    button {
+        border: none;
+        background: transparent;
+    }
+    i {
+        color: white;
+        // color: red;
+        border: none;
+        font-size: 2rem;
+        padding: 1rem;
+        // display: inline;
+    }
+    h1 {
+        padding-left: 1rem;
+    }
+    footer {
+        padding: 1rem;
+    }
+}
+// Nav
+.nav-wrapper {
+    background-color: $color2;
+}
+nav {
+    display: none;
+    &.open {
+        display: block;
+        // transition: opacity 5s ease-in;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            button {
+                background: transparent;
+                border: none;
+                color: white;
+                padding: 1rem;
+                border: 1px solid white;
+                // border-radius: 10px;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                &:hover {
+                    color: $color3;
+                    border-color: $color3;
+                }
+                &:active {
+                    color: $color4;
+                    border-color: $color4;
+                }
+                &.active {
+                    background-color: white;
+                    color: $color2;
+                    &:hover {
+                        border-color: white;
+                    } 
+                }
+            }
+        }
+    }
+}
+// Main
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    h1, h2, h3, h4, h5, h6 {
+        color: $color4;
+    }
+}

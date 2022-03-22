@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="#">
+  <meta name="author" content="Cynthia Rawlings">
+  <title>To Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/small.css" rel="stylesheet">
+  <!-- <link href="css/medium.css" rel="stylesheet"> -->
+  <!-- <link href="css/large.css" rel="stylesheet"> -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Fontawesome Icons -->
+  <script src="https://kit.fontawesome.com/7d69b1e6ff.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Todos</h1>
+    <div class="list-container" id="list-container">
+      <div id="task-container"></div>
+      <!-- List items will be added here -->
+      <div class="button-container">
+        <button onclick="filter('all')">All (<span id="tasksAll"></span>)</button>
+        <button onclick="filter('active')">Active (<span id="tasksLeft"></span>)</button>
+        <button onclick="filter('completed')">Completed (<span id="tasksComplete"></span>)</button>
+      </div>
+    </div>
+    <div class="add-task">
+      <input id="add-task" autofocus>
+      <button onclick="addTask()" id="enter-button"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+  <!-- javaScript -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

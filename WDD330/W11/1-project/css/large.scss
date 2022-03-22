@@ -1,0 +1,44 @@
+@media only screen and (min-width: 1200px) {
+    .header-wrapper, .footer-wrapper {
+        header {
+        //    justify-content: flex-start;
+           width: $max-width;
+           margin: 0 auto; 
+          // margin-left: 1rem;
+          // padding: 1rem;
+        }
+        footer {
+            width: $max-width;
+            margin: 0 auto; 
+        }
+        img {
+        //   max-width: 3rem;
+        //   display: block;
+          margin-left: 0rem;
+        //   margin-right: 1rem;
+        }
+        // If I want, later I can make the menu wide on large screens
+      }
+    //   Nav
+    nav {
+        width: 64rem;
+        margin: 0 auto; 
+        &.open {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    // padding: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+      main {
+        // margin-left: 0rem;
+        // margin-right: 0rem;
+        width: $max-width;
+        margin: 0 auto; 
+      }
+  }

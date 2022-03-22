@@ -1,0 +1,104 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.header-wrapper, .footer-wrapper {
+  background-color: #021E73;
+  color: white;
+}
+
+.header-wrapper header, .footer-wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-wrapper img, .footer-wrapper img {
+  display: none;
+}
+
+.header-wrapper button, .footer-wrapper button {
+  border: none;
+  background: transparent;
+}
+
+.header-wrapper i, .footer-wrapper i {
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.header-wrapper h1, .footer-wrapper h1 {
+  padding-left: 1rem;
+}
+
+.header-wrapper footer, .footer-wrapper footer {
+  padding: 1rem;
+}
+
+.nav-wrapper {
+  background-color: #021859;
+}
+
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+}
+
+nav.open ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.open ul button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border: 1px solid white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+nav.open ul button:hover {
+  color: #F2B705;
+  border-color: #F2B705;
+}
+
+nav.open ul button:active {
+  color: #F23005;
+  border-color: #F23005;
+}
+
+nav.open ul button.active {
+  background-color: white;
+  color: #021859;
+}
+
+nav.open ul button.active:hover {
+  border-color: white;
+}
+
+main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #F23005;
+}
+/*# sourceMappingURL=small.css.map */
