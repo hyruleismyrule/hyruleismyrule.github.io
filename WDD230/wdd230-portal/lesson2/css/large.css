@@ -1,0 +1,39 @@
+@media only screen and (min-width: 1028px) {
+
+header, footer, nav, main {
+    max-width: 75rem; /* left alignment */
+    margin: auto;
+}
+ 
+main {
+    grid-template-columns: auto auto auto;
+}
+    
+.law1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+    
+.law2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.law3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+footer {
+    font-size: 16px;
+    padding: 0;
+    
+}
+
+footer p {
+    font-size: 16px;
+    padding: 1%;
+  
+}
+
+ } /* end of media query */
