@@ -1,2 +1,0 @@
-styles.css
- 3:21  ✖  Expected "#dddddd" to be "#ddd"   color-hex-length
