@@ -1,0 +1,92 @@
+@media only screen and (min-width: 32.5em) {
+
+    .content {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    header {
+        border-radius: 10px;
+        padding: 1px;
+    }
+
+    .profile-picture {
+        width: 170px;
+        box-shadow: 5px 5px 5px #999;
+        float: right;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    footer {
+        border-radius: 10px;
+    }
+
+    .content {
+    max-width: 960px;
+    margin: 0 auto;
+    }
+
+}
+
+    /*
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Orelega+One&display=swap');
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Orelega One', cursive;
+
+.content {
+    background-color: white;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h1 {
+    background-color: blueviolet;
+    color: white;
+    
+    text-align: center;
+    font-family: 'Orelega One', cursive;
+}
+
+h2 {
+    border-bottom: double;
+    font-family: 'Orelega One', cursive;
+}
+
+.footer {
+    background-color: blueviolet;
+    color: white;
+    
+    padding: 1px;
+    text-align: center;
+}
+
+
+.content {
+    
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.profile-picture {
+    width: 120px;
+    box-shadow: 5px 5px 5px #999;
+    float: right;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.footer-link {
+    color: white;
+  }
+  */
