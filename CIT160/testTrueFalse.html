@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>True False</title>
+<script>
+/* Input: Text field 1 and text field 2
+ * Processing: if #1 and #2 are both greater then 5 or if thier sum is greater than 20
+ * Output: then write true else false
+ */
+	
+	
+	function startFunction() {
+     	let numberOneInput = parseInt(document.getElementById('one').value);
+		let numberOne = parseFloat(numberOneInput);
+		
+		let numberTwoInput = parseInt(document.getElementById('two').value);
+		let numberTwo = parseFloat(numberTwoInput);
+		
+		if ((numberOne > 5 && numberTwo > 5) || numberOne + numberTwo > 20) {
+			document.getElementById('output').innerHTML = "true";
+		}
+		else {
+			document.getElementById('output').innerHTML = "false";
+		}
+    }
+        
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="startFunction()">Click</button>
+<div id="output"></div>
+</body>
+</html>

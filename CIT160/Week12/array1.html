@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Array1</title>
+    <script>
+		
+ /* Defining Table
+ * Input: no user input
+ * Processing: Test the addEnds and getMiddle functions by calling them.
+ * Output: The values returned from the addEnds and getMiddle functions.
+ */
+function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+    // Test the addEnds function by calling it two times.
+    let sum1 = addEnds(list1);
+    let sum2 = addEnds(list2);
+
+    // Test the getMiddle function by calling it two times.
+    let mid1 = getMiddle(list1);
+    let mid2 = getMiddle(list2);
+
+    // Build a string to display to the user.
+    let output =
+            "Sum of 1 = " + sum1 + '<br>' +
+            "Sum of 2 = " + sum2 + '<br>' +
+            "Middle of 1 = " + mid1 + '<br>' +
+            "Middle of 2 = " + mid2;
+
+    // Display the output string for the user to see.
+    document.getElementById('output').innerHTML = output;
+}
+
+	
+function addEnds(list1) { // works!
+    let s = list1; 
+    let f=s[0]; 
+    let l=s[s.length-1]; 
+    let sum = l + f;
+    return sum;
+}
+
+function addEnds(list2) { // Works!
+let s = list2;
+let f=s[0]; 
+let l=s[s.length-1]; 
+let sum = l + f;
+return sum;
+}
+		
+function getMiddle(list1) { // Works!
+    let s = list1;
+	let m = s.length / 2;
+	if (m % 2 == 0) {
+		let bigN = m;
+		let smallN = m - 1;
+        let listB = s[bigN];
+        let listS = s[smallN];
+        let sum = listB + listS;
+		return sum / 2;
+	}
+	else {
+        let n = m - 0.5;
+        return s[n];
+	}	
+}	
+
+function getMiddle(list2) { // Works!
+    let s = list2;
+	let m = s.length / 2;
+	if (m % 2 == 0) {
+		let bigN = m;
+		let smallN = m - 1;
+        let listB = s[bigN];
+        let listS = s[smallN];
+        let sum = listB + listS;
+		return sum / 2;
+	}
+	else {
+        let n = m - 0.5;
+        return s[n];
+	}	
+}	
+	
+    </script>
+</head>
+
+<body>
+    <h3>Find the sum of the first and last numbers of both lists and their middle values.</h3>
+    <h4>List 1</h4>
+    <p>[ 17, 8, 9, 5, 20 ]</p>
+    <h4>List 2</h4>
+    <p>[ 12, 4, 8, 15, 17, 5, 20, 11 ]</p>
+    <button type="button" onclick="test()">Find</button>
+    <br>
+    <div id="output"></div>
+</body>
+
+</html>
