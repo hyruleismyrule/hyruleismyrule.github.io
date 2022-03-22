@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Applied Scripture</title>
+<script>
+/* Defining Table
+ * Input: A person's name
+ * Processing: Create a verse of scripture for that person
+ * Output: The scripture
+ */
+function applyScripture() {
+    // Get the user's name from the text field that has the id
+    // of "nameInputBox" and store it in a variable named name.
+    let name = document.getElementById('nameInputBox').value;
+
+    // Use string concatenation to create a verse
+    // of scripture personalized for the user.
+    let scripture = "And it came to pass that " + name + ", was appointed to be the" +
+        " first chief judge, he being also the high priest, his father having conferred the office upon him, and having" +
+        " given him the charge concerning all the affairs of the church.";
+
+    // Display the scripture in the div that has the id "outputDiv".
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+
+<body>                             
+Please enter your name: <input type="text" id="nameInputBox">    
+<button type="button" onclick="applyScripture()">Verse</button>
+<div id="outputDiv"></div>
+</body>       
+</html>

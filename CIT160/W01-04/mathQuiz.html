@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Math Quiz</title>
+    <script>
+        function checkMath() {
+
+            let number1InputBox = parseFloat(document.getElementById('number1InputBox').value);
+            let operationInputBox = document.getElementById('operationInputBox').value;
+            let number2InputBox = parseFloat(document.getElementById('number2InputBox').value);
+            let answerInputBox = parseFloat(document.getElementById('answerInputBox').value);
+
+            let number1 = parseFloat(number1InputBox);
+            let operation = operationInputBox;
+            //let operation = parseFloat(operationInputBox);
+            let number2 = parseFloat(number2InputBox);
+            let answer = parseFloat(answerInputBox);
+
+            if (operation == "+") {
+                let correctAnswer = number1 + number2;
+                if (correctAnswer == answer) {
+                    document.getElementById('output').innerHTML = "Correct! Good job!";
+                }
+                else {
+                    document.getElementById('output').innerHTML = "Incorrect! Try again!";
+                }
+            }
+            else if (operation == "-") {
+                let correctAnswer = number1 - number2;
+                if (correctAnswer == answer) {
+                    document.getElementById('output').innerHTML = "Correct! Good job!";
+                }
+                else {
+                    document.getElementById('output').innerHTML = "Incorrect! Try again!";
+                }
+            }
+            else if (operation == "*") {
+                let correctAnswer = number1 * number2;
+                if (correctAnswer == answer) {
+                    document.getElementById('output').innerHTML = "Correct! Good job!";
+                }
+                else {
+                    document.getElementById('output').innerHTML = "Incorrect! Try again!";
+                }
+            }
+            else {
+                let correctAnswer = number1 / number2;
+                if (correctAnswer == answer) {
+                    document.getElementById('output').innerHTML = "Correct! Good job!";
+                }
+                else {
+                    document.getElementById('output').innerHTML = "Incorrect! Try again!";
+                }
+            }
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Test Your Math Skills!</h1>
+    <input id="number1InputBox" type="text">
+    <div></div>
+    <input id="operationInputBox" type="text">
+    <div></div>
+    <input id="number2InputBox" type="text">
+    <p>=</p>
+    <input id="answerInputBox" type="text">
+    <div></div>
+    <button type="button" onclick="checkMath()">Check</button>
+    <h2 id="output"></h2>
+
+</body>
+
+</html>
