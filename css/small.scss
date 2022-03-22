@@ -1,0 +1,69 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+}
+header, footer {
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+    h1 {
+        margin: 0;
+    }
+}
+h1 {
+    margin: 1rem;
+}
+.blank {
+    display: none;
+}
+.card {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.wdd330 {
+    background-color: pink;
+    h2 {
+        color: black;
+    }
+}
+.cse110 {
+    background-color: purple;
+}
+.project, .pokemon {
+    background-color: #F23005;
+}
+.wdd331 {
+    background-color: blueviolet;
+}
+.wdd230 {
+    background-color: teal;
+}
+.cit160 {
+    background-color: green;
+}
+.wdd130 {
+    background-color: orange;
+}
+.blank {
+    background-color: transparent;
+}
+.zen {
+    background-color: brown;
+}
+.water {
+    background-color: #12a795;
+}
+.house {
+    background-color: #d62b62;
+}
+.weather {
+    background-color: #62b7d9;
+}
+.commerce {
+    background-color: #50a3aa;
+}
