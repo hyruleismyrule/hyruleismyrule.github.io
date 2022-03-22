@@ -1,0 +1,36 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+}
+
+header, footer {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+}
+
+header h1, footer h1 {
+  margin: 0;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+}
+
+.chamber {
+  background-color: #519aa0;
+}
+
+.portal {
+  background-color: blueviolet;
+}
+
+.weather {
+  background-color: #65aed3;
+}
+/*# sourceMappingURL=small.css.map */
