@@ -59,7 +59,6 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
     let thumbnail = document.createElement("div");
     thumbnail.setAttribute("class", "thumbnail-container" + " " + type);
     thumbnail.setAttribute("onclick", "viewSet()");
-    // thumbnail.setAttribute("onclick", "viewSet(setName)");
 
     let setTitle = document.createElement("h3");
     setTitle.textContent = setName;
@@ -94,15 +93,22 @@ function newSetButton() {
 
 // Linking thumbnails to sets
 function viewSet() {
-    // console.log(event.target);
     setCode = event.target.dataset.code;
-    // console.log(setCode);
-    // Removes and Creates new title
 
+    // Removes and Creates new title
     let changeTitle = document.getElementById("essentialTitle");
     changeTitle.removeChild(changeTitle.firstElementChild);
+    changeTitle.setAttribute("class", "back-container");
+
+    let backArrowContainer = document.createElement("div");
+    backArrowContainer.setAttribute("class", "arrow");
+    backArrowContainer.setAttribute("onclick", "displayThumbnails()");
+    let backSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM384 288H205.3l49.38 49.38c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0L105.4 278.6C97.4 270.7 96 260.9 96 256c0-4.883 1.391-14.66 9.398-22.65l103.1-103.1c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L205.3 224H384c17.69 0 32 14.33 32 32S401.7 288 384 288z" /></svg>'
+    backArrowContainer.innerHTML = backSvgHTML;
+    changeTitle.appendChild( backArrowContainer);
+
     let newTitle = document.createElement("h1")
-    newTitle.textContent = "Review";
+    newTitle.textContent = "Back";
     newTitle.setAttribute("id", "review-title");
     changeTitle.appendChild(newTitle);
 
@@ -140,19 +146,13 @@ async function setDetails(setCode) {
                 displayTypes.push(type);
             });
     }
-    // console.log(displayNames);
-    // console.log(displayImages);
-    // console.log(displayTypes);
-    // console.log(displayTitle);
     await buildCards(displayNames, displayImages, displayTypes, displayTitle);
-    // await defaultImages(defaultSet);
     showSlides(slideIndex);
 }
 
 // Build Set, will use whatever is in display
 function buildCards(displayNames, displayImages, displayTypes, displayTitle) {
-    // console.log(displayImages);
-    // console.log(displayImages[0]);
+
     let title = document.createElement("h1");
     title.textContent = displayTitle;
     document.getElementById("review").appendChild(title);
@@ -165,9 +165,8 @@ function buildCards(displayNames, displayImages, displayTypes, displayTitle) {
         let artURL = displayImages[i];
 
         let card = document.createElement("div");
-        // card.setAttribute('class', "mySlides");
+
         card.setAttribute('class', "flash-card mySlides" + " " + displayTypes[i]);
-        // card.setAttribute('class', displayTypes[i]);
 
         let inner = document.createElement("div");
         inner.setAttribute('class', "card-inner");
@@ -194,7 +193,6 @@ function buildCards(displayNames, displayImages, displayTypes, displayTitle) {
         card.appendChild(inner);
 
         document.getElementById("review").appendChild(card);
-        // document.getElementById("bottom-nav").setAttribute('id', "show");
     }
 
     let bottomNav = document.createElement("div");
@@ -236,17 +234,41 @@ function currentSlide(n) {
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("flash-card");
-    //   let dots = document.getElementsByClassName("demo");
-    //   let captionText = document.getElementById("caption");
+
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    //   for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    //   }
+
     slides[slideIndex - 1].style.display = "block";
-    //   dots[slideIndex-1].className += " active";
-    //   captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// Back Button to set back up thumbnail page
+function displayThumbnails() {
+    // Removes and Creates new title
+    let changeTitle = document.getElementById("essentialTitle");
+    changeTitle.removeChild(changeTitle.firstElementChild);
+    changeTitle.removeChild(changeTitle.firstElementChild);
+    changeTitle.removeAttribute("class", "back-container");
+
+    let newTitle = document.createElement("h1")
+    newTitle.textContent = "My Sets";
+    newTitle.setAttribute("id", "view-sets-title");
+    changeTitle.appendChild(newTitle);
+
+    // Removes and creates new essential div
+    let changeDiv = document.getElementById("essentialDivContainer");
+    changeDiv.removeChild(changeDiv.firstElementChild);
+    let newDiv = document.createElement("div")
+    newDiv.setAttribute("id", "viewSets");
+    changeDiv.appendChild(newDiv);
+
+    // Reinitialize display arrays
+    displayTitle = "";
+    displayNames = [];
+    displayImages = [];
+    displayTypes = [];
+
+    getThumbnail(localStorage);
 }
