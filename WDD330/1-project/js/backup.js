@@ -124,3 +124,51 @@ function viewSet() {
     newDiv.setAttribute("id", "review");
     changeDiv.appendChild(newDiv);
 }
+
+// Build Set, will use whatever is in display
+function buildCards(displayNames, displayImages, displayTypes, displayTitle) {
+    let title = document.createElement("h1");
+    title.textContent = displayTitle;
+    document.getElementById("review").appendChild(title);
+
+    for (let i = 0, len = displayNames.length; i < len; i++) {
+        let name = displayNames[i];
+        // Capitalize the first letter
+        name = name.charAt().toUpperCase() + name.substring(1)
+
+        let artURL = displayImages[i];
+
+        let card = document.createElement("div");
+        // card.setAttribute('class', "mySlides");
+        card.setAttribute('class', "flash-card mySlides" + " "+displayTypes[i]);
+        // card.setAttribute('class', displayTypes[i]);
+
+        let inner = document.createElement("div");
+        inner.setAttribute('class', "card-inner");
+
+        let front = document.createElement("div");
+        front.setAttribute('class', "card-front");
+
+        let back = document.createElement("div");
+        back.setAttribute('class', "card-back");
+
+        let nameElement = document.createElement("h2");
+        let imageElement = document.createElement("img");
+
+        nameElement.textContent = name;
+        imageElement.setAttribute('src', artURL);
+        imageElement.setAttribute('alt', name);
+
+        front.appendChild(imageElement);
+        back.appendChild(nameElement);
+
+        inner.appendChild(front);
+        inner.appendChild(back);
+
+        card.appendChild(inner);
+
+        document.getElementById("review").appendChild(card);
+        // document.getElementById("bottom-nav").setAttribute('id', "show");
+    }
+
+}
