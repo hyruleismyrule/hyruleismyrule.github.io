@@ -936,3 +936,10 @@ footer {
         }
     }
 }
+.back-container {
+    display: flex;
+    align-items: center;
+    .arrow {
+        margin-right: 2rem;
+    }
+}

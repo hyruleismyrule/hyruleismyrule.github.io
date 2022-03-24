@@ -922,4 +922,17 @@ footer a {
             transform: scale(125%);
   }
 }
+
+.back-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back-container .arrow {
+  margin-right: 2rem;
+}
 /*# sourceMappingURL=small.css.map */
