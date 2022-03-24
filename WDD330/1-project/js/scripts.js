@@ -59,7 +59,6 @@ function buildThumbnails(setName, setPokemon, artURL, type) {
     let thumbnail = document.createElement("div");
     thumbnail.setAttribute("class", "thumbnail-container" + " " + type);
     thumbnail.setAttribute("onclick", "viewSet()");
-    // thumbnail.setAttribute("onclick", "viewSet(setName)");
 
     let setTitle = document.createElement("h3");
     setTitle.textContent = setName;
@@ -94,11 +93,9 @@ function newSetButton() {
 
 // Linking thumbnails to sets
 function viewSet() {
-    // console.log(event.target);
     setCode = event.target.dataset.code;
-    // console.log(setCode);
-    // Removes and Creates new title
 
+    // Removes and Creates new title
     let changeTitle = document.getElementById("essentialTitle");
     changeTitle.removeChild(changeTitle.firstElementChild);
     changeTitle.setAttribute("class", "back-container");
@@ -111,7 +108,7 @@ function viewSet() {
     changeTitle.appendChild( backArrowContainer);
 
     let newTitle = document.createElement("h1")
-    newTitle.textContent = "Review";
+    newTitle.textContent = "Back";
     newTitle.setAttribute("id", "review-title");
     changeTitle.appendChild(newTitle);
 
@@ -245,4 +242,33 @@ function showSlides(n) {
     }
 
     slides[slideIndex - 1].style.display = "block";
+}
+
+// Back Button to set back up thumbnail page
+function displayThumbnails() {
+    // Removes and Creates new title
+    let changeTitle = document.getElementById("essentialTitle");
+    changeTitle.removeChild(changeTitle.firstElementChild);
+    changeTitle.removeChild(changeTitle.firstElementChild);
+    changeTitle.removeAttribute("class", "back-container");
+
+    let newTitle = document.createElement("h1")
+    newTitle.textContent = "My Sets";
+    newTitle.setAttribute("id", "view-sets-title");
+    changeTitle.appendChild(newTitle);
+
+    // Removes and creates new essential div
+    let changeDiv = document.getElementById("essentialDivContainer");
+    changeDiv.removeChild(changeDiv.firstElementChild);
+    let newDiv = document.createElement("div")
+    newDiv.setAttribute("id", "viewSets");
+    changeDiv.appendChild(newDiv);
+
+    // Reinitialize display arrays
+    displayTitle = "";
+    displayNames = [];
+    displayImages = [];
+    displayTypes = [];
+
+    getThumbnail(localStorage);
 }
