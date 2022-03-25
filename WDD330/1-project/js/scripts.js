@@ -1,6 +1,6 @@
 // Local Storage
 let userSets = [];
-function saveSet() {
+function saveDefaultSets() {
     // these should be passed into the function as variables
     let setName = "Bulbasaur";
     let setPokemon = ["bulbasaur", "ivysaur", "venusaur"];
@@ -24,8 +24,19 @@ function saveSet() {
     userSets.push(setName);
     localStorage.setItem("setTitles", userSets);
 }
+// saveDefaultSets();
 console.log(localStorage);
 // localStorage.clear();
+
+checkDefaults(localStorage);
+
+function checkDefaults(localStorage) {
+    let setTitles = localStorage.getItem("setTitles");
+    if (!setTitles.includes("Bulbasaur") && !setTitles.includes("Charmander") && !setTitles.includes("Squirtle")) {
+        saveDefaultSets();
+    }
+}
+
 
 // async function getThumbnail(setName, setPokemon) {
 async function getThumbnail(localStorage) {
