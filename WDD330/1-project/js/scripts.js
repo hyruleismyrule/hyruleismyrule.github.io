@@ -32,9 +32,12 @@ checkDefaults(localStorage);
 
 function checkDefaults(localStorage) {
     let setTitles = localStorage.getItem("setTitles");
-    if (!setTitles.includes("Bulbasaur") && !setTitles.includes("Charmander") && !setTitles.includes("Squirtle")) {
+    if (!setTitles) {
         saveDefaultSets();
     }
+    // if (setTitles && !setTitles.includes("Bulbasaur") && !setTitles.includes("Charmander") && !setTitles.includes("Squirtle")) {
+    //     saveDefaultSets();
+    // }
 }
 
 
