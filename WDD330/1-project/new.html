@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="#">
+    <meta name="author" content="Cynthia Rawlings">
+    <title>Pokemon Flash Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/7d69b1e6ff.js" crossorigin="anonymous"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon_package_v0.16/safari-pinned-tab.svg" color="#f23005">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header>
+            <div class="logotype">
+                <img src="images/pokeballfavicon.png" alt="pokeball">
+                <h1>Pokemon Flash Cards</h1>
+            </div>
+            <!-- I want when the menu is open, the dots transition to vertical -->
+            <button id="primary-menu-toggle"><i class="fas fa-ellipsis-h"></i></button>
+            <!-- <button id="primary-menu"><i class="fas fa-ellipsis-h-alt"></i></button> -->
+        </header>
+    </div>
+    <div class="nav-wrapper">
+        <nav id="primary-nav">
+            <ul>
+                <li><button class="active"><a href="index.html">View Sets</a></button></li>
+                <li><button><a href="review.html">Review</a></button></li>
+                <li><button><a href="#">Create New Set</a></button></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div id="essentialTitle">
+            <h1 id="new-title">Back</h1>
+        </div>
+        <div id="essentialDivContainer">
+            <div id="newSet">
+
+                <form action="">
+                    <input id="new-set-name" type="text" placeholder="Set Name" required>
+
+                    <!-- Pokemon Part of the List -->
+                    <input type="checkbox" name="" id="pokemon1">
+                    <label for="pokemon1">
+                        <div class="new-set-pokemon-container">
+                            <div class="new-set-pokemon">
+                                <h3>Pokemon 1</h3>
+                                <img src="#" alt="Pokemon1">
+                            </div>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="" id="pokemon2">
+                    <label for="pokemon2">
+                        <div class="new-set-pokemon-container">
+                            <div class="new-set-pokemon">
+                                <h3>Pokemon 2</h3>
+                                <img src="#" alt="Pokemon1">
+                            </div>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="" id="pokemon3">
+                    <label for="pokemon3">
+                        <div class="new-set-pokemon-container">
+                            <div class="new-set-pokemon">
+                                <h3>Pokemon 3</h3>
+                                <img src="#" alt="Pokemon3">
+                            </div>
+                        </div>
+                    </label>
+
+                    <button type="submit">Save Set</button>
+                </form>
+
+                <!-- Searh bar -->
+                <div class="search-bar">
+                    <form action="">
+                        <input type="text" placeholder="Search by Name">
+                        <label for="game">Search by Game</label>
+                        <select id="game" name="game">
+                            <option value="game1">game1</option>
+                            <option value="game2">game2</option>
+                            <option value="game3">game3</option>
+                        </select>
+                        <label for="game">Search by Type</label>
+                        <select id="type" name="type">
+                            <option value="type1">type1</option>
+                            <option value="type2">type2</option>
+                            <option value="type3">type3</option>
+                        </select>
+                        <button type="submit">Search</button>
+                        <button>Random</button>
+                    </form>
+                </div>
+                <!--  -->
+                <div id="resultsNavigator">
+                    <div class="arrow">Super  Left Arrow</div>
+                    <button>Next</button>
+                    <div class="arrow">Super Right Arrow</div>
+                    <div id="resultsNumber">10 total</div>
+                </div>
+                <!-- Search Results -->
+                <div id="searchResults">
+                    <div class="serch-results-pokemon">
+                        <h3>Pokemon 1</h3>
+                        <img src="#" alt="Pokemon1">
+                        <p>Game</p>
+                        <p>Type</p>
+                    </div>
+                    <div class="serch-results-pokemon">
+                        <h3>Pokemon 2</h3>
+                        <img src="#" alt="Pokemon2">
+                        <p>Game</p>
+                        <p>Type</p>
+                    </div>
+                    <div class="serch-results-pokemon">
+                        <h3>Pokemon 3</h3>
+                        <img src="#" alt="Pokemon3">
+                        <p>Game</p>
+                        <p>Type</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <div class="footer-wrapper">
+        <footer>
+            <p>Cynthia Rawlings - WDD 330 Web Frontend Development II • <a href="https://pokeapi.co/">Pokemon Api</a>
+                • <a href="https://fontawesome.com/">Fontawesome Icons</a></p>
+        </footer>
+    </div>
+
+    <!-- javaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
