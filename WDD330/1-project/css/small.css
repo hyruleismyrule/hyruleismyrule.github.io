@@ -935,4 +935,18 @@ footer a {
 .back-container .arrow {
   margin-right: 2rem;
 }
+
+.new-set-pokemon h3 {
+  text-align: center;
+}
+
+.new-set-pokemon img {
+  width: 100%;
+}
+
+.in-set-checkbox {
+  width: 3rem;
+  height: 3rem;
+  color: red;
+}
 /*# sourceMappingURL=small.css.map */

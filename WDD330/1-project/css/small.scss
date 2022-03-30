@@ -943,3 +943,21 @@ footer {
         margin-right: 2rem;
     }
 }
+
+// New Set
+.new-set-pokemon {
+    h3 {
+        text-align: center;
+        // font-size: 2rem;
+    }
+    img {
+        width: 100%;
+    }
+    
+}
+.in-set-checkbox {
+    width: 3rem;
+    height: 3rem;
+    color: red;
+    // background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png");
+}
