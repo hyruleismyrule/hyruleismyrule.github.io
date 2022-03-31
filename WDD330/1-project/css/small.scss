@@ -945,19 +945,152 @@ footer {
 }
 
 // New Set
+// main {
+//     margin: 0;
+// }
+// form {
+//     padding: 0;
+//     margin: 0;
+// }
+
+#new-set-name   {
+    // width:  15rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-right: 1rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: $color1;
+    // border-color: $color4
+    border: 2px solid $color1;
+    border-radius: 1rem;
+    // placeholder-color: $color4;
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $color1;
+        opacity: 0.5; /* Firefox */
+    }
+    // margin: 0 auto;
+}
+
 .new-set-pokemon {
     h3 {
         text-align: center;
-        // font-size: 2rem;
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 1rem;
     }
     img {
         width: 100%;
     }
-    
+
 }
-.in-set-checkbox {
-    width: 3rem;
-    height: 3rem;
-    color: red;
-    // background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png");
+
+.new-set-pokemon-container input[type="checkbox"]:checked {
+    display: none;
 }
+
+.input-checked-container {
+    position: relative;
+    top: 5rem;
+    right: -72%;
+    // top: 5rem;
+    // right: -12rem;
+    svg {
+        width: 4rem;
+        fill: $color4;
+    }
+}
+
+#saveLocal {
+    // margin: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+    width: 100%;
+    // margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid $color1;
+    border-radius: 1rem;
+    background-color: $color1;
+    color: white;
+    &:hover {
+        color: white;
+        border: 2px solid $color3;
+        background-color: $color3;
+    }
+    &:active {
+        color: $color1;
+        border: 2px solid $color1;
+        background-color: white;
+    }
+    // box-sizing: content-box;
+    // margin: 0 auto;
+}
+
+.new-set-pokemon {
+    border: 2px solid red;
+}
+
+#resultsNavigator {
+    background-color: #a27bef;
+}
+
+// X Scrolling
+// This works
+.scroll-outer {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .new-set-pokemon-container {
+      display: inline-block;
+    }
+  }
+
+
+
+
+// .scroll-outer {
+//     // width: 500px; 
+//     // height: 100px;
+//     width: 100%;
+//     // height: 10rem;
+//     white-space: nowrap;
+//     position: relative;
+//     overflow-x: scroll;
+//     overflow-y: hidden;
+//     -webkit-overflow-scrolling: touch;
+//     display: flex;
+//     box-sizing: content-box;
+
+// }
+// div.new-set-pokemon-container {
+//     // box-sizing: content-box;
+//     // label {
+//     //     padding: 2rem;
+//     // }
+//     .new-set-pokemon {
+//         padding: 1rem;
+//         width: 100%;
+//         // box-sizing: content-box;
+//     }
+//     padding: 2rem;
+//     // height: 100%;
+//     margin-left: 2rem;
+//     margin-right: 2rem;
+// }
+// // .outer .new-set-pokemon-container {
+//     // width: 24.5%;
+//     // background-color: #eee;
+//     // float: none;
+//     // height: 90%;
+//     // margin: 0 0.25%;
+//     // display: inline-block;
+//     // zoom: 1;
+//     // margin: 10rem;
+//     // padding: 10rem;
+// }
+// .new-set-pokemon-container {
+//     margin: 10rem;
+// }
