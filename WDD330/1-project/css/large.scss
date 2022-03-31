@@ -77,17 +77,68 @@
     // width: $max-width;
     margin: 0 auto;
   }
-  #essentialTitle h1, .title-container {
+  #essentialTitle h1, .title-container, #essentialTitle {
     width: $max-width;
     // color: green;
     margin: 0 auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #viewSets {
+    width: $max-width;
+    // color: green;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
   }
 
   .scroll-outer {
     margin: 0 auto;
+    margin-top: 1rem;
+    width: 90rem;
+    margin-bottom: 1rem;
+    // .new-set-pokemon {
+    //   width: 4rem;
+    //   background-color: red;
+    // }
+  
+  }
+  .save-container {
+    width: $max-width;
+    margin: 0 auto;
+    // margin-top: 1rem;
+    // margin-bottom: 1rem;
+  }
+  .search-bar form {
+    width: $max-width;
+    margin: 0 auto;
   }
 
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .filter-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    // display: flex;
+    // justify-content: space-between;
+    // button {
+    //   // width: 90%;
+    //   .filter-button {
+    //     margin-right: 1rem;
+    //   }
+    //   .random-button {
+    //     margin-left: 1rem;
+    //   }
+    //   // margin: 1rem;
+    // }
+  }
+    
+  
   #viewSets {
 
     // display: grid;

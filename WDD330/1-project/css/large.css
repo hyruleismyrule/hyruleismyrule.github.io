@@ -32,13 +32,46 @@
   main {
     margin: 0 auto;
   }
-  #essentialTitle h1, .title-container {
+  #essentialTitle h1, .title-container, #essentialTitle {
     width: 60rem;
     margin: 0 auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #viewSets {
+    width: 60rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .scroll-outer {
     margin: 0 auto;
+    margin-top: 1rem;
+    width: 90rem;
+    margin-bottom: 1rem;
+  }
+  .save-container {
+    width: 60rem;
+    margin: 0 auto;
+  }
+  .search-bar form {
+    width: 60rem;
+    margin: 0 auto;
+  }
+  .filter-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .filter-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
   #viewSets .thumbnail-container h3 {
     font-size: 35pt;

@@ -132,23 +132,30 @@
                 <!-- Searh bar -->
                 <div class="search-bar">
                     <form action="">
-                        <div class="input-container">
-                            <input type="text" placeholder="Search by Pokemon Name">
+                        <div class="filter-container">
+                            <div class="input-container">
+                                <input type="text" placeholder="Search by Name">
+                            </div>
+                            <label class="search-label" for="game">Search by Generation</label>
+
+
+                            <select id="game" name="game">
+                                <option value="game1">gen 1</option>
+                                <option value="game2">gen 2</option>
+                                <option value="game3">gen 3</option>
+                            </select>
+                            <label class="search-label" for="game">Search by Type</label>
+                            <select id="type" name="type">
+                                <option value="type1">type 1</option>
+                                <option value="type2">type 2</option>
+                                <option value="type3">type 3</option>
+                            </select>
                         </div>
-                        <label class="search-label" for="game">Search by Generation</label>
-                        <select id="game" name="game">
-                            <option value="game1">gen 1</option>
-                            <option value="game2">gen 2</option>
-                            <option value="game3">gen 3</option>
-                        </select>
-                        <label class="search-label" for="game">Search by Type</label>
-                        <select id="type" name="type">
-                            <option value="type1">type 1</option>
-                            <option value="type2">type 2</option>
-                            <option value="type3">type 3</option>
-                        </select>
-                        <button class="filter-button" type="submit">Search</button>
-                        <button class="random-button">Random</button>
+                        <div class="filter-buttons">
+                            <button class="filter-button" type="submit">Search</button>
+                            <button class="random-button">Random</button>
+                        </div>
+                        
                     </form>
                 </div>
                 <!-- <p>Scroll right to see results</p> -->
