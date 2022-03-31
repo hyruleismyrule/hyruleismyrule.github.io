@@ -1,13 +1,16 @@
 @media only screen and (min-width: 1200px) {
-  .header-wrapper header, .footer-wrapper header {
+  .header-wrapper header,
+  .footer-wrapper header {
     width: 60rem;
     margin: 0 auto;
   }
-  .header-wrapper footer, .footer-wrapper footer {
+  .header-wrapper footer,
+  .footer-wrapper footer {
     width: 60rem;
     margin: 0 auto;
   }
-  .header-wrapper img, .footer-wrapper img {
+  .header-wrapper img,
+  .footer-wrapper img {
     margin-left: 0rem;
   }
   nav {
@@ -27,7 +30,14 @@
     margin-right: 0;
   }
   main {
+    margin: 0 auto;
+  }
+  #essentialTitle h1, .title-container {
     width: 60rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .scroll-outer {
     margin: 0 auto;
   }
   #viewSets .thumbnail-container h3 {

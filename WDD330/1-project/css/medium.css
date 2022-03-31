@@ -1,14 +1,17 @@
 @media only screen and (min-width: 600px) {
-  .header-wrapper header, .footer-wrapper header {
+  .header-wrapper header,
+  .footer-wrapper header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .header-wrapper footer, .footer-wrapper footer {
+  .header-wrapper footer,
+  .footer-wrapper footer {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .header-wrapper .logotype, .footer-wrapper .logotype {
+  .header-wrapper .logotype,
+  .footer-wrapper .logotype {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16,20 +19,18 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .header-wrapper img, .footer-wrapper img {
+  .header-wrapper img,
+  .footer-wrapper img {
     max-width: 10%;
     display: block;
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  .header-wrapper h1, .footer-wrapper h1 {
+  .header-wrapper h1,
+  .footer-wrapper h1 {
     padding: 0;
   }
   nav.open ul button {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  main {
     margin-left: 2rem;
     margin-right: 2rem;
   }
@@ -63,13 +64,13 @@
   }
 }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 600px) and (min-width: 740px) {
   .thumbnail-container h3 {
     font-size: 40pt;
   }
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 600px) and (min-width: 860px) {
   #viewSets {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -79,7 +80,7 @@
   }
 }
 
-@media only screen and (min-width: 860px) and (min-width: 1000px) {
+@media only screen and (min-width: 600px) and (min-width: 860px) and (min-width: 1000px) {
   #viewSets .thumbnail-container h3 {
     font-size: 40pt;
   }
