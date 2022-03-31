@@ -1049,10 +1049,6 @@ footer a {
   border: 2px solid #F23005;
 }
 
-#resultsNavigator {
-  background-color: #a27bef;
-}
-
 .scroll-outer {
   overflow-x: scroll;
   overflow-y: hidden;
@@ -1070,5 +1066,128 @@ footer a {
 .search-bar {
   background-color: #F23005;
   padding: 1rem;
+}
+
+.search-bar .input-container {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  color: #F23005;
+}
+
+.search-bar input::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F23005;
+  opacity: 0.8;
+  /* Firefox */
+}
+
+.search-bar input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F23005;
+  opacity: 0.8;
+  /* Firefox */
+}
+
+.search-bar input::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F23005;
+  opacity: 0.8;
+  /* Firefox */
+}
+
+.search-bar input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F23005;
+  opacity: 0.8;
+  /* Firefox */
+}
+
+.search-bar .search-label {
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.search-bar select {
+  font-size: 1.2rem;
+  color: #F23005;
+  padding: 0.2rem;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.search-bar button {
+  display: block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.search-bar button:hover {
+  background-color: white;
+  color: #021E73;
+  border: 2px solid #021E73;
+}
+
+.search-bar button:active {
+  background-color: #F2B705;
+  color: white;
+  border: 2px solid white;
+}
+
+.search-bar .filter-button {
+  background-color: white;
+  color: #F23005;
+  border: 2px solid #F23005;
+}
+
+.search-bar .random-button {
+  background-color: #F23005;
+  border: 2px solid white;
+  color: white;
+}
+
+#resultsNavigator {
+  background-color: #F2B705;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#resultsNavigator button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+  border: 2px solid #F23005;
+  background-color: white;
+  border-radius: 10rem;
+  color: #F23005;
+}
+
+#resultsNavigator #resultsNumber {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=small.css.map */

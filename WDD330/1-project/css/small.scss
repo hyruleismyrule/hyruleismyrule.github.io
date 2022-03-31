@@ -1063,9 +1063,7 @@ footer {
     border: 2px solid $color4;
 }
 
-#resultsNavigator {
-    background-color: #a27bef;
-}
+
 
 // X Scrolling
 // Whitespace meathod // This works
@@ -1095,5 +1093,99 @@ footer {
 .search-bar {
     background-color: $color4;
     padding: 1rem;
+    .input-container {
+        // margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 1rem;
+        color: $color4;
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $color4;
+            opacity: 0.8; /* Firefox */
+        }
+    }
+    .search-label {
+        // padding: 1rem;
+        // margin: 1rem;
+        font-size: 1.2rem;
+        line-height: 3rem;
+        // color: white;
+    }
+    select {
+        font-size: 1.2rem;
+        color: $color4;
+        padding: 0.2rem;
+        background-color: white;
+        border: none;  
+        border-radius: 10px;
+    }
+    button {
+        display: block;
+        padding: 1rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        border-radius: 1rem;
+        // background-color: white;
+        &:hover {
+            background-color: white;
+            color: $color1;
+            border: 2px solid $color1;
+        }
+        &:active {
+            background-color: $color3;
+            color: white;
+            border: 2px solid white;
+        }
+    }
+    .filter-button {
+        background-color: white;
+        color: $color4;
+        border: 2px solid $color4;
+    }
+    .random-button {
+        background-color: $color4;
+        border: 2px solid white;
+        color: white;
+    }
 }
-
+// #resultsNavigator {
+//     display: flex;
+// }
+#resultsNavigator {
+    background-color: $color3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // .arrow {
+    //     margin-top: 1rem;
+    //     margin-bottom: 1rem;
+    //     // padding: 1rem;
+    // }
+    // padding: 1rem;
+    button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        
+        padding: 1.5rem;
+        border: 2px solid $color4;
+        background-color: white;
+        border-radius: 10rem;
+        color: $color4;
+        // width: 500%;
+    }
+    #resultsNumber {
+        font-size: 2rem;
+        // color: $color4;
+    }
+}
