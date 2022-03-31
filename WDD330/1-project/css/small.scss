@@ -983,7 +983,7 @@ footer {
     img {
         width: 100%;
     }
-
+    // width: 80%;
 }
 
 .new-set-pokemon-container input[type="checkbox"]:checked {
@@ -992,13 +992,18 @@ footer {
 
 .input-checked-container {
     position: relative;
-    top: 5rem;
-    right: -72%;
     // top: 5rem;
-    // right: -12rem;
+    // right: -72%;
+    // position: absolute;
+    float: right;
+    margin: 1rem;
+    
+    // bottom: 1rem;
+    // right: 2.5rem;
     svg {
         width: 4rem;
         fill: $color4;
+        z-index: -1;
     }
 }
 
@@ -1026,10 +1031,11 @@ footer {
     }
     // box-sizing: content-box;
     // margin: 0 auto;
+   
 }
 
 .new-set-pokemon {
-    border: 2px solid red;
+    border: 2px solid $color4;
 }
 
 #resultsNavigator {
@@ -1037,20 +1043,28 @@ footer {
 }
 
 // X Scrolling
-// This works
+// Whitespace meathod // This works
 .scroll-outer {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    margin-top: 1rem;
+    // background-color: $color5;
   
     .new-set-pokemon-container {
       display: inline-block;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
+    // scrollLeft: 300;
+    // scroll
+//   scrollTo(0, 0)
+    -webkit-overflow-scrolling: touch;
+    // Removes scrollbar
+        // &::-webkit-scrollbar {
+        //   display: none;
+        // }
   }
-
-
-
-
 // .scroll-outer {
 //     // width: 500px; 
 //     // height: 100px;

@@ -994,13 +994,14 @@ footer a {
 
 .input-checked-container {
   position: relative;
-  top: 5rem;
-  right: -72%;
+  float: right;
+  margin: 1rem;
 }
 
 .input-checked-container svg {
   width: 4rem;
   fill: #F23005;
+  z-index: -1;
 }
 
 #saveLocal {
@@ -1028,7 +1029,7 @@ footer a {
 }
 
 .new-set-pokemon {
-  border: 2px solid red;
+  border: 2px solid #F23005;
 }
 
 #resultsNavigator {
@@ -1039,9 +1040,13 @@ footer a {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  margin-top: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scroll-outer .new-set-pokemon-container {
   display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=small.css.map */
