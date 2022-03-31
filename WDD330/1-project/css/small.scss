@@ -38,9 +38,12 @@ body {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-div.thumbmail-container {
+div.thumbnail-container, #review {
     margin-left: 1rem;
     margin-right: 1rem;
+}
+.back-container {
+    margin-left: 1rem;
 }
 // Header and Footers
 .header-wrapper, .footer-wrapper {

@@ -3,9 +3,18 @@ body {
   font-size: 16px;
 }
 
-#essentialDivContainer {
+#essentialTitle h1 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+div.thumbnail-container, #review {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.back-container {
+  margin-left: 1rem;
 }
 
 .header-wrapper, .footer-wrapper {
