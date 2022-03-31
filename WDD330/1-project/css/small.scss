@@ -30,6 +30,18 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
+// #essentialDivContainer {
+//     margin-left: 1rem;
+//     margin-right: 1rem;
+// }
+#essentialTitle h1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+div.thumbmail-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 // Header and Footers
 .header-wrapper, .footer-wrapper {
     background-color: $color1;
@@ -128,8 +140,8 @@ nav {
 }
 // Main
 main {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    // margin-left: 1rem;
+    // margin-right: 1rem;
     h1, h2, h3, h4, h5, h6 {
         color: $color4;
     }
@@ -446,6 +458,8 @@ footer {
 
 // View Set Thumbnails
 .thumbnail-container {
+    // margin-left: 1rem;
+    // margin-right: 1rem;
     // max-width: 17rem;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
@@ -1065,46 +1079,9 @@ footer {
         //   display: none;
         // }
   }
-// .scroll-outer {
-//     // width: 500px; 
-//     // height: 100px;
-//     width: 100%;
-//     // height: 10rem;
-//     white-space: nowrap;
-//     position: relative;
-//     overflow-x: scroll;
-//     overflow-y: hidden;
-//     -webkit-overflow-scrolling: touch;
-//     display: flex;
-//     box-sizing: content-box;
 
-// }
-// div.new-set-pokemon-container {
-//     // box-sizing: content-box;
-//     // label {
-//     //     padding: 2rem;
-//     // }
-//     .new-set-pokemon {
-//         padding: 1rem;
-//         width: 100%;
-//         // box-sizing: content-box;
-//     }
-//     padding: 2rem;
-//     // height: 100%;
-//     margin-left: 2rem;
-//     margin-right: 2rem;
-// }
-// // .outer .new-set-pokemon-container {
-//     // width: 24.5%;
-//     // background-color: #eee;
-//     // float: none;
-//     // height: 90%;
-//     // margin: 0 0.25%;
-//     // display: inline-block;
-//     // zoom: 1;
-//     // margin: 10rem;
-//     // padding: 10rem;
-// }
-// .new-set-pokemon-container {
-//     margin: 10rem;
-// }
+//   Filter
+.search-bar {
+    background-color: $color4;
+    padding: 1rem;
+}

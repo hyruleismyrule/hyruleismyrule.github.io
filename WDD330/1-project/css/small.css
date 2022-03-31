@@ -3,6 +3,11 @@ body {
   font-size: 16px;
 }
 
+#essentialDivContainer {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .header-wrapper, .footer-wrapper {
   background-color: #021E73;
   color: white;
@@ -111,11 +116,6 @@ nav.open ul button.active:hover {
 
 nav.open ul button.active a {
   color: #021859;
-}
-
-main {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
@@ -1048,5 +1048,10 @@ footer a {
   display: inline-block;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.search-bar {
+  background-color: #F23005;
+  padding: 1rem;
 }
 /*# sourceMappingURL=small.css.map */
