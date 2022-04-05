@@ -287,30 +287,36 @@ function displayThumbnails() {
 // User can create a new set
 function createNewSet() {
     // Removes and Creates new title
-    // let changeTitle = document.getElementById("essentialTitle");
-    // changeTitle.removeChild(changeTitle.firstElementChild);
-    // changeTitle.setAttribute("class", "back-container");
+    let changeTitle = document.getElementById("essentialTitle");
+    changeTitle.removeChild(changeTitle.firstElementChild);
+    changeTitle.setAttribute("class", "back-container");
 
-    // let backArrowContainer = document.createElement("div");
-    // backArrowContainer.setAttribute("class", "arrow");
-    // backArrowContainer.setAttribute("onclick", "displayThumbnails()");
-    // let backSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM384 288H205.3l49.38 49.38c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0L105.4 278.6C97.4 270.7 96 260.9 96 256c0-4.883 1.391-14.66 9.398-22.65l103.1-103.1c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L205.3 224H384c17.69 0 32 14.33 32 32S401.7 288 384 288z" /></svg>'
-    // backArrowContainer.innerHTML = backSvgHTML;
-    // changeTitle.appendChild( backArrowContainer);
+    let backArrowContainer = document.createElement("div");
+    backArrowContainer.setAttribute("class", "arrow");
+    backArrowContainer.setAttribute("onclick", "displayThumbnails()");
+    let backSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM384 288H205.3l49.38 49.38c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0L105.4 278.6C97.4 270.7 96 260.9 96 256c0-4.883 1.391-14.66 9.398-22.65l103.1-103.1c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L205.3 224H384c17.69 0 32 14.33 32 32S401.7 288 384 288z" /></svg>'
+    backArrowContainer.innerHTML = backSvgHTML;
+    changeTitle.appendChild( backArrowContainer);
 
-    // let newTitle = document.createElement("h1")
-    // newTitle.textContent = "Back";
-    // newTitle.setAttribute("id", "new-title");
-    // changeTitle.appendChild(newTitle);
+    let newTitle = document.createElement("h1")
+    newTitle.textContent = "Back";
+    newTitle.setAttribute("id", "new-title");
+    changeTitle.appendChild(newTitle);
 
-    // // Removes and creates new essential div
-    // let changeDiv = document.getElementById("essentialDivContainer");
-    // changeDiv.removeChild(changeDiv.firstElementChild);
-    // let newDiv = document.createElement("div")
-    // newDiv.setAttribute("id", "newSet");
-    // changeDiv.appendChild(newDiv);
+    // Removes and creates new essential div
+    let changeDiv = document.getElementById("essentialDivContainer");
+    changeDiv.removeChild(changeDiv.firstElementChild);
+    let newDiv = document.createElement("div")
+    newDiv.setAttribute("id", "newSet");
+    changeDiv.appendChild(newDiv);
 
-    // 
+    // Add Search Bar
+    let setSearchDiv = document.createElement("div");
+    setSearchDiv.setAttribute("id", "search-bar");
+    setSearchDiv.setAttribute("class", "search-bar");
+    newDiv.appendChild(setSearchDiv);
+
+    createSearch();
 
 }
 
@@ -388,18 +394,6 @@ function createSearch() {
     let form = document.createElement("form");
     searchBar.appendChild(form);
 
-    let buttonContainer = document.createElement("div");
-    buttonContainer.setAttribute("class", "filter-buttons");
-    form.appendChild(buttonContainer);
-
-    let filterButton = document.createElement("button");
-    filterButton.setAttribute("class", "filter-button");
-    buttonContainer.appendChild(filterButton);
-
-    let randomButton = document.createElement("button");
-    randomButton.setAttribute("class", "random-button");
-    buttonContainer.appendChild(randomButton);
-
     let filterContainer = document.createElement("div");
     filterContainer.setAttribute("class", "filter-container");
     form.appendChild(filterContainer);
@@ -409,12 +403,15 @@ function createSearch() {
     filterContainer.appendChild(nameInputContainer);
 
     let nameInput = document.createElement("input");
+    nameInput.setAttribute("type", "text");
+    nameInput.setAttribute("placeholder", "Search by Name");
     nameInputContainer.appendChild(nameInput);
     
-    let searchLabel = document.createElement("label");
-    searchLabel.setAttribute("class", "search-label");
-    searchLabel.setAttribute("for", "gen");
-    filterContainer.appendChild(searchLabel);
+    let searchLabelGen = document.createElement("label");
+    searchLabelGen.setAttribute("class", "search-label");
+    searchLabelGen.setAttribute("for", "gen");
+    searchLabelGen.textContent = "Search by Generation";
+    filterContainer.appendChild(searchLabelGen);
 
     let selectContainerGen = document.createElement("select");
     selectContainerGen.setAttribute("id", "gen");
@@ -423,13 +420,19 @@ function createSearch() {
 
     // Call api to get current generation info
     getGen();
-    
     for (i = 0; i < genNames.length; i++) {
         let genOption = document.createElement("option");
         genOption.setAttribute("value", genNames[i]);
+        genOption.textContent = genNames[i];
 
         selectContainerGen.appendChild(genOption);
     }
+
+    let searchLabelType = document.createElement("label");
+    searchLabelType.setAttribute("class", "search-label");
+    searchLabelType.setAttribute("for", "type");
+    searchLabelType.textContent = "Search by Type";
+    filterContainer.appendChild(searchLabelType);
 
     let selectContainerType = document.createElement("select");
     selectContainerType.setAttribute("id", "type");
@@ -441,7 +444,25 @@ function createSearch() {
     for (i = 0; i < typeNames.length; i++) {
         let typeOption = document.createElement("option");
         typeOption.setAttribute("value", typeNames[i]);
+        typeOption.textContent = typeNames[i];
 
         selectContainerType.appendChild(typeOption);
     }
+
+    // Buttons for searching
+    let buttonContainer = document.createElement("div");
+    buttonContainer.setAttribute("class", "filter-buttons");
+    form.appendChild(buttonContainer);
+
+    let filterButton = document.createElement("button");
+    filterButton.setAttribute("class", "filter-button");
+    filterButton.setAttribute("onclick", "applyFilters()");
+    filterButton.textContent = "Search";
+    buttonContainer.appendChild(filterButton);
+
+    let randomButton = document.createElement("button");
+    randomButton.setAttribute("class", "random-button");
+    filterButton.setAttribute("onclick", "random()");
+    randomButton.textContent = "Random";
+    buttonContainer.appendChild(randomButton);
 }
