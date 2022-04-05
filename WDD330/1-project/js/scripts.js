@@ -310,6 +310,33 @@ function createNewSet() {
     newDiv.setAttribute("id", "newSet");
     changeDiv.appendChild(newDiv);
 
+    // Set Title Form
+    let form = document.createElement("form");
+    let titleContainer = document.createElement("div");
+    titleContainer.setAttribute("class", "title-container");
+    let titleInput = document.createElement("input");
+    titleInput.setAttribute("id", "new-set-name");
+    titleInput.setAttribute("type", "text");
+    titleInput.setAttribute("placeholder", "Name your Set");
+    titleInput.setAttribute("required", "");
+
+    newDiv.appendChild(form);
+    form.appendChild(titleContainer);
+    titleContainer.appendChild(titleInput);
+
+    // Save Set
+    let saveContainer = document.createElement("div");
+    saveContainer.setAttribute("class", "save-container");
+    let saveButton = document.createElement("button");
+    saveButton.setAttribute("id", "saveLocal");
+    saveButton.setAttribute("type", "submit");
+    saveButton.setAttribute("onclick", "beginSave()");
+    saveButton.textContent = "Save Set";
+
+    saveContainer.appendChild(saveButton);
+    form.appendChild(saveContainer);
+
+
     // Add Search Bar
     let setSearchDiv = document.createElement("div");
     setSearchDiv.setAttribute("id", "search-bar");
