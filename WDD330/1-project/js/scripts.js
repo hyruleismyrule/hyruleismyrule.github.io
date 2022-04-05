@@ -316,13 +316,132 @@ function createNewSet() {
 
 // https://pokeapi.co/api/v2/generation/{id or name}/
 
-test() 
-async function test() {
-    const pokemonAPIurl = "//pokeapi.co/api/v2/generation";
-    await fetch(pokemonAPIurl)
+// test() 
+// async function test() {
+//     const pokemonAPIurl = "//pokeapi.co/api/v2/generation/1/";
+//     await fetch(pokemonAPIurl)
+//         .then((response) => response.json())
+//         .then((info) => {
+//             console.log(info);
+//             // for (i = 0; i < info.results.length; i++) {
+//             //     results[i].name;
+//             // }
+//         });
+// }
+
+// Get the current number of pokemon generations
+let genNames = [];
+let genURLs = [];
+async function getGen() {
+    const genAPIurl = "//pokeapi.co/api/v2/generation";
+    await fetch(genAPIurl)
         .then((response) => response.json())
         .then((info) => {
-            console.log(info);
+            // console.log(info);
+            for (i = 0; i < info.results.length; i++) {
+                genNames.push(info.results[i].name);
+                genURLs.push(info.results[i].url);
+            }
+            // console.log(genNames);
+            // console.log(genURLs);
         });
+}
 
+// Get the current types of pokemon
+let typeNames = [];
+let typeURLs = [];
+async function getType() {
+    const genAPIurl = "//pokeapi.co/api/v2/type";
+    await fetch(genAPIurl)
+        .then((response) => response.json())
+        .then((info) => {
+            // console.log(info);
+            for (i = 0; i < info.results.length; i++) {
+                typeNames.push(info.results[i].name);
+                typeURLs.push(info.results[i].url);
+            }
+            // console.log(genNames);
+            // console.log(genURLs);
+        });
+}
+
+// console.log(genNames);
+// console.log(genURLs);
+
+// test() 
+// async function test() {
+//     const pokemonAPIurl = "//pokeapi.co/api/v2/type/1";
+//     await fetch(pokemonAPIurl)
+//         .then((response) => response.json())
+//         .then((info) => {
+//             console.log(info);
+//             // for (i = 0; i < info.results.length; i++) {
+//             //     results[i].name;
+//             // }
+//         });
+// }
+
+// Create Search Filter Bar
+function createSearch() {
+    let searchBar = document.getElementById("search-bar");
+
+    let form = document.createElement("form");
+    searchBar.appendChild(form);
+
+    let buttonContainer = document.createElement("div");
+    buttonContainer.setAttribute("class", "filter-buttons");
+    form.appendChild(buttonContainer);
+
+    let filterButton = document.createElement("button");
+    filterButton.setAttribute("class", "filter-button");
+    buttonContainer.appendChild(filterButton);
+
+    let randomButton = document.createElement("button");
+    randomButton.setAttribute("class", "random-button");
+    buttonContainer.appendChild(randomButton);
+
+    let filterContainer = document.createElement("div");
+    filterContainer.setAttribute("class", "filter-container");
+    form.appendChild(filterContainer);
+
+    let nameInputContainer = document.createElement("div");
+    nameInputContainer.setAttribute("class", "input-container");
+    filterContainer.appendChild(nameInputContainer);
+
+    let nameInput = document.createElement("input");
+    nameInputContainer.appendChild(nameInput);
+    
+    let searchLabel = document.createElement("label");
+    searchLabel.setAttribute("class", "search-label");
+    searchLabel.setAttribute("for", "gen");
+    filterContainer.appendChild(searchLabel);
+
+    let selectContainerGen = document.createElement("select");
+    selectContainerGen.setAttribute("id", "gen");
+    selectContainerGen.setAttribute("name", "gen");
+    filterContainer.appendChild(selectContainerGen);
+
+    // Call api to get current generation info
+    getGen();
+    
+    for (i = 0; i < genNames.length; i++) {
+        let genOption = document.createElement("option");
+        genOption.setAttribute("value", genNames[i]);
+
+        selectContainerGen.appendChild(genOption);
+    }
+
+    let selectContainerType = document.createElement("select");
+    selectContainerType.setAttribute("id", "type");
+    selectContainerType.setAttribute("name", "type");
+    filterContainer.appendChild(selectContainerType);
+
+    // Call api to get current type info
+    getType();
+    for (i = 0; i < typeNames.length; i++) {
+        let typeOption = document.createElement("option");
+        typeOption.setAttribute("value", typeNames[i]);
+
+        selectContainerType.appendChild(typeOption);
+    }
 }
