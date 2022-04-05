@@ -388,7 +388,7 @@ async function getType() {
 // }
 
 // Create Search Filter Bar
-function createSearch() {
+async function createSearch() {
     let searchBar = document.getElementById("search-bar");
 
     let form = document.createElement("form");
@@ -419,14 +419,22 @@ function createSearch() {
     filterContainer.appendChild(selectContainerGen);
 
     // Call api to get current generation info
-    getGen();
+    await getGen(); 
+    // console.log(genNames);
     for (i = 0; i < genNames.length; i++) {
         let genOption = document.createElement("option");
         genOption.setAttribute("value", genNames[i]);
         genOption.textContent = genNames[i];
 
         selectContainerGen.appendChild(genOption);
+        console.log("loop done");
+        // console.log(genNames[i]);
+        // console.log(selectContainerGen);
+        // console.log(genOption);
     }
+
+    let spacerDiv = document.createElement("div");
+    filterContainer.appendChild(spacerDiv);
 
     let searchLabelType = document.createElement("label");
     searchLabelType.setAttribute("class", "search-label");
@@ -440,7 +448,7 @@ function createSearch() {
     filterContainer.appendChild(selectContainerType);
 
     // Call api to get current type info
-    getType();
+    await getType();
     for (i = 0; i < typeNames.length; i++) {
         let typeOption = document.createElement("option");
         typeOption.setAttribute("value", typeNames[i]);

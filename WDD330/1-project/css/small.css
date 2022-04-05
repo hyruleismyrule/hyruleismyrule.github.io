@@ -1229,4 +1229,9 @@ footer a {
 #resultsNavigator #resultsNumber {
   font-size: 2rem;
 }
+
+select {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 /*# sourceMappingURL=small.css.map */
