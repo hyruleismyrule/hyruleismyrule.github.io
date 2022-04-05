@@ -283,9 +283,54 @@ function displayThumbnails() {
 
     getThumbnail(localStorage);
 }
+let customSetName = "Bulbasaur";
+let customSetPokemon = ["bulbasaur", "ivysaur", "venusaur"];
+let customSetURL = []
+let customSetType = []
+
+async function getCustomInfo() {
+    // Get the image and type for the pokemon
+    const customPokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
+    for (let i = 0, len = customSetPokemon.length; i < len; i++) {
+        let tempURL = customPokemonAPIurlBase + customSetPokemon[i];
+        await fetch(tempURL)
+            .then((response) => response.json())
+            .then((imageInfo) => {
+                let artURL = imageInfo.sprites.other["official-artwork"].front_default;
+                let type = imageInfo.types[0].type.name;
+                customSetURL.push(artURL);
+                customSetType.push(type);
+            });
+    }
+}
+
+// 
+
+
+// let newSetTitle = ""
+// let newSetPokemon = [];
+
+// let customSetName = "Bulbasaur";
+// let customSetPokemon = ["bulbasaur", "ivysaur", "venusaur"];
+// let customSetURL = []
+// let customSetType = []
+
+// // Get the image and type for the pokemon
+// const customPokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
+// for (let i = 0, len = customSetPokemon.length; i < len; i++) {
+//     let tempURL = customPokemonAPIurlBase + customSetPokemon[i];
+//     await fetch(tempURL)
+//         .then((response) => response.json())
+//         .then((imageInfo) => {
+//             let artURL = imageInfo.sprites.other["official-artwork"].front_default;
+//             let type = imageInfo.types[0].type.name;
+//             customSetURL.push(artURL);
+//             customSetType.push(type);
+//         });
+// }
 
 // User can create a new set
-function createNewSet() {
+async function createNewSet() {
     // Removes and Creates new title
     let changeTitle = document.getElementById("essentialTitle");
     changeTitle.removeChild(changeTitle.firstElementChild);
@@ -296,7 +341,7 @@ function createNewSet() {
     backArrowContainer.setAttribute("onclick", "displayThumbnails()");
     let backSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM384 288H205.3l49.38 49.38c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0L105.4 278.6C97.4 270.7 96 260.9 96 256c0-4.883 1.391-14.66 9.398-22.65l103.1-103.1c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L205.3 224H384c17.69 0 32 14.33 32 32S401.7 288 384 288z" /></svg>'
     backArrowContainer.innerHTML = backSvgHTML;
-    changeTitle.appendChild( backArrowContainer);
+    changeTitle.appendChild(backArrowContainer);
 
     let newTitle = document.createElement("h1")
     newTitle.textContent = "Back";
@@ -324,6 +369,60 @@ function createNewSet() {
     form.appendChild(titleContainer);
     titleContainer.appendChild(titleInput);
 
+    // In Set Pokemon
+    let scrollOuter = document.createElement("div");
+    scrollOuter.setAttribute("id", "pokemonInList");
+    scrollOuter.setAttribute("class", "scroll-outer");
+    // newDiv.appendChild(scrollOuter);
+    form.appendChild(scrollOuter);
+
+    // let newSetPokemonContainer = document.createElement("div");
+    // newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
+    // // scrollOuter.appendChild(newSetPokemonContainer);
+
+    // Loop to create the pokemon added to the set list
+    await getCustomInfo();
+    for (i = 0; i < customSetPokemon.length; i++) {
+        let newSetPokemonContainer = document.createElement("div");
+        newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
+        scrollOuter.appendChild(newSetPokemonContainer);
+
+        let pokemonLabel = document.createElement("label");
+        pokemonLabel.setAttribute("for", "pokemon" + i);
+        newSetPokemonContainer.appendChild(pokemonLabel);
+
+        let checkbox = document.createElement("input");
+        checkbox.setAttribute("class", "in-set-checkbox");
+        checkbox.setAttribute("type", "checkbox");
+        checkbox.setAttribute("id", "pokemon" + i);
+        checkbox.setAttribute("checked", "");
+        pokemonLabel.appendChild(checkbox);
+
+        // setTitle.setAttribute('data-code', setName);
+
+        let checkedContainer = document.createElement("div");
+        checkedContainer.setAttribute("class", "input-checked-container add");
+        checkedContainer.setAttribute('data-code', customSetPokemon[i]);
+        checkedContainer.setAttribute("onclick", "remove()");
+        checkedContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" /></svg>'
+        pokemonLabel.appendChild(checkedContainer);
+
+        let newSetPokemon = document.createElement("div");
+        newSetPokemon.setAttribute("class", "new-set-pokemon");
+        newSetPokemonContainer.appendChild(newSetPokemon);
+
+        let img = document.createElement("img");
+        img.setAttribute("src", customSetURL[i]);
+        img.setAttribute("alt", customSetPokemon[i]);
+        newSetPokemon.appendChild(img)
+
+        let name = document.createElement("h3");
+        name.textContent = customSetPokemon[i].charAt().toUpperCase() + customSetPokemon[i].substring(1);
+        newSetPokemon.appendChild(name);
+
+        // scrollOuter.appendChild(newSetPokemonContainer);
+    }
+
     // Save Set
     let saveContainer = document.createElement("div");
     saveContainer.setAttribute("class", "save-container");
@@ -336,7 +435,6 @@ function createNewSet() {
     saveContainer.appendChild(saveButton);
     form.appendChild(saveContainer);
 
-
     // Add Search Bar
     let setSearchDiv = document.createElement("div");
     setSearchDiv.setAttribute("id", "search-bar");
@@ -344,6 +442,9 @@ function createNewSet() {
     newDiv.appendChild(setSearchDiv);
 
     createSearch();
+
+    // Add results
+
 
 }
 
@@ -433,7 +534,7 @@ async function createSearch() {
     nameInput.setAttribute("type", "text");
     nameInput.setAttribute("placeholder", "Search by Name");
     nameInputContainer.appendChild(nameInput);
-    
+
     let searchLabelGen = document.createElement("label");
     searchLabelGen.setAttribute("class", "search-label");
     searchLabelGen.setAttribute("for", "gen");
@@ -446,7 +547,7 @@ async function createSearch() {
     filterContainer.appendChild(selectContainerGen);
 
     // Call api to get current generation info
-    await getGen(); 
+    await getGen();
     // console.log(genNames);
     for (i = 0; i < genNames.length; i++) {
         let genOption = document.createElement("option");
@@ -454,7 +555,7 @@ async function createSearch() {
         genOption.textContent = genNames[i];
 
         selectContainerGen.appendChild(genOption);
-        console.log("loop done");
+        // console.log("loop done");
         // console.log(genNames[i]);
         // console.log(selectContainerGen);
         // console.log(genOption);
