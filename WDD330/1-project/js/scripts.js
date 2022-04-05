@@ -304,7 +304,10 @@ async function getCustomInfo() {
     }
 }
 
-// 
+// results
+let resultsPokemon = ["charmander", "charmeleon", "charizard"];
+let resultsURL = []
+let resultsType = []
 
 
 // let newSetTitle = ""
@@ -442,8 +445,11 @@ async function createNewSet() {
     newDiv.appendChild(setSearchDiv);
 
     createSearch();
+    let resultsDiv = document.createElement("div");
+    resultsDiv.setAttribute("id", "searchResults")
+    newDiv.appendChild(resultsDiv);
 
-    // Add results
+   
 
 
 }
