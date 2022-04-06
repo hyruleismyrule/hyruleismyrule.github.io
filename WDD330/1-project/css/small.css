@@ -559,6 +559,9 @@ main h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
@@ -1406,5 +1409,26 @@ select {
 #loading, #pokemonInListPlaceholder {
   margin: 1rem;
   font-size: 1.5rem;
+}
+
+.editButton {
+  border: 2px solid #F23005;
+  background: transparent;
+  color: #F23005;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+.editButton:hover {
+  border: 2px solid #F23005;
+  background-color: #F23005;
+  color: white;
+}
+
+.editButton:active {
+  border: 2px solid #F2B705;
+  background: transparent;
+  color: #F2B705;
 }
 /*# sourceMappingURL=small.css.map */

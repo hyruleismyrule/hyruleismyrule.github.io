@@ -620,6 +620,7 @@ main {
     max-width: 20rem;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
@@ -1620,4 +1621,28 @@ select {
 #loading, #pokemonInListPlaceholder {
     margin: 1rem;
     font-size: 1.5rem;
+}
+
+// .editContainer {
+
+// }
+
+.editButton {
+    border: 2px solid $color4;
+    background: transparent;
+    color: $color4;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    // width: 5rem;
+    &:hover {
+        border: 2px solid $color4;
+        background-color: $color4;
+        color: white;
+    }
+    &:active {
+        border: 2px solid $color3;
+        background: transparent;
+        color: $color3;
+    }
 }
