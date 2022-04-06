@@ -358,6 +358,10 @@ async function applyFilters() {
     else if (genSelectedOption != "All" && typeSelectOption == "All") {
         resultsPokemon =  await genFilterAPI(genSelectedOption);
     }
+    // Only type was selected
+    else if (typeSelectOption != "All" && genSelectedOption == "All") {
+        resultsPokemon =  await typeFilterAPI(typeSelectOption);
+    }
     // var select = document.getElementById('language');
     // var value = select.options[select.selectedIndex].value;
     // console.log(value); // en
@@ -390,9 +394,10 @@ async function genFilterAPI(genSelectedOption) {
 }
 
 // Call api for type filter 
-async function genFilterAPI(typeSelectOption) {
+async function typeFilterAPI(typeSelectOption) {
     const filterPokemonAPIurlBase = "//pokeapi.co/api/v2/";
     // type
+    let typeFilteredPokemon = [];
     let typeAPI = filterPokemonAPIurlBase + "type/" + typeSelectOption;
     await fetch(typeAPI)
         .then((response) => response.json())
@@ -410,7 +415,7 @@ async function genFilterAPI(typeSelectOption) {
 // Calls api for both filters
 async function doubbleFilterAPI(genSelectedOption, typeSelectOption) {
     let genFilteredPokemon = await genFilterAPI(genSelectedOption);
-    let typeFilteredPokemon = await genFilterAPI(typeSelectOption);
+    let typeFilteredPokemon = await typeFilterAPI(typeSelectOption);
     let totalFiteredPokemon = arrayMatch(genFilteredPokemon, typeFilteredPokemon);
     return totalFiteredPokemon;
     // const filterPokemonAPIurlBase = "//pokeapi.co/api/v2/";
