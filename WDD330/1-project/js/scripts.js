@@ -306,9 +306,25 @@ async function getCustomInfo() {
 
 // results
 let resultsPokemon = ["charmander", "charmeleon", "charizard"];
-let resultsURL = []
-let resultsType = []
+let resultsURL = [];
+let resultsType = [];
 
+async function getResultsInfo() {
+    // Get the image and type for the pokemon
+    const customPokemonAPIurlBase = "//pokeapi.co/api/v2/pokemon/";
+    for (let i = 0, len = resultsPokemon.length; i < len; i++) {
+        let tempURL = customPokemonAPIurlBase + resultsPokemon[i];
+        await fetch(tempURL)
+            .then((response) => response.json())
+            .then((imageInfo) => {
+                let artURL = imageInfo.sprites.other["official-artwork"].front_default;
+                let type = imageInfo.types[0].type.name;
+                resultsURL.push(artURL);
+                resultsType.push(type);
+                // console.log(resultsURL);
+            });
+    }
+}
 
 // let newSetTitle = ""
 // let newSetPokemon = [];
@@ -360,6 +376,7 @@ async function createNewSet() {
 
     // Set Title Form
     let form = document.createElement("form");
+    form.setAttribute("onsubmit", "return beginSave(customSetName, customSetPokemon)")
     let titleContainer = document.createElement("div");
     titleContainer.setAttribute("class", "title-container");
     let titleInput = document.createElement("input");
@@ -406,7 +423,8 @@ async function createNewSet() {
         let checkedContainer = document.createElement("div");
         checkedContainer.setAttribute("class", "input-checked-container add");
         checkedContainer.setAttribute('data-code', customSetPokemon[i]);
-        checkedContainer.setAttribute("onclick", "remove()");
+        checkedContainer.setAttribute("onclick", "remove(data-code)");
+        checkedContainer.setAttribute('data-code', customSetPokemon[i]);
         checkedContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" /></svg>'
         pokemonLabel.appendChild(checkedContainer);
 
@@ -432,7 +450,7 @@ async function createNewSet() {
     let saveButton = document.createElement("button");
     saveButton.setAttribute("id", "saveLocal");
     saveButton.setAttribute("type", "submit");
-    saveButton.setAttribute("onclick", "beginSave()");
+    // saveButton.setAttribute("onclick", "beginSave(customSetName, customSetPokemon)");
     saveButton.textContent = "Save Set";
 
     saveContainer.appendChild(saveButton);
@@ -449,8 +467,40 @@ async function createNewSet() {
     resultsDiv.setAttribute("id", "searchResults")
     newDiv.appendChild(resultsDiv);
 
-   
+    // Results
+    let resultsScrollOuter = document.createElement("div");
+    resultsScrollOuter.setAttribute("class", "scroll-outer");
+    resultsScrollOuter.setAttribute("id", "pokemonInResults");
+    resultsDiv.appendChild(resultsScrollOuter);
 
+    await getResultsInfo();
+    for (i = 0; i < resultsPokemon.length; i++) {
+        let newSetPokemonContainer = document.createElement("div");
+        newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
+
+        let svgContainer = document.createElement("div");
+        svgContainer.setAttribute("class", "input-checked-container add");
+        svgContainer.setAttribute("onclick", "addToCustom(data-code)");
+        svgContainer.setAttribute('data-code', resultsPokemon[i]);
+        svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" /></svg>'
+        newSetPokemonContainer.appendChild(svgContainer);
+
+        let newSetPokemon = document.createElement("div");
+        newSetPokemon.setAttribute("class", "new-set-pokemon");
+        newSetPokemonContainer.appendChild(newSetPokemon);
+
+        let img = document.createElement("img");
+        img.setAttribute("src", resultsURL[i]);
+        img.setAttribute("alt", resultsPokemon[i]);
+        newSetPokemon.appendChild(img);
+
+        let name = document.createElement("h3");
+        // name.textContent = resultsPokemon[i]
+        name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
+        newSetPokemon.appendChild(name);
+
+        resultsScrollOuter.appendChild(newSetPokemonContainer);
+    }
 
 }
 
@@ -526,6 +576,7 @@ async function createSearch() {
     let searchBar = document.getElementById("search-bar");
 
     let form = document.createElement("form");
+    form.setAttribute("onsubmit", "return search()")
     searchBar.appendChild(form);
 
     let filterContainer = document.createElement("div");
@@ -552,13 +603,31 @@ async function createSearch() {
     selectContainerGen.setAttribute("name", "gen");
     filterContainer.appendChild(selectContainerGen);
 
+    let genOptionAll = document.createElement("option");
+    genOptionAll.setAttribute("value", "");
+    genOptionAll.textContent = "All";
+    selectContainerGen.appendChild(genOptionAll);
+
     // Call api to get current generation info
     await getGen();
     // console.log(genNames);
     for (i = 0; i < genNames.length; i++) {
         let genOption = document.createElement("option");
+        // let split = genNames[i].split("-");
+        // console.log(split);
+        // let capName = genNames[i].charAt().toUpperCase() + genNames[i].substring(1);
+        // console.log(capName);
+        let number = genNames[i].slice(11);
+        number = number.toUpperCase()
+        // console.log(number);
+        let genName = "Generation" + " " + number;
+        // let genName = capName + " " + genNames[i].substring(11).charAt().toUpperCase();
+        // genName = genName.substring(0, 10);
+
+
+
         genOption.setAttribute("value", genNames[i]);
-        genOption.textContent = genNames[i];
+        genOption.textContent = genName;
 
         selectContainerGen.appendChild(genOption);
         // console.log("loop done");
@@ -581,12 +650,20 @@ async function createSearch() {
     selectContainerType.setAttribute("name", "type");
     filterContainer.appendChild(selectContainerType);
 
+    let typeOptionAll = document.createElement("option");
+    typeOptionAll.setAttribute("value", "");
+    typeOptionAll.textContent = "All";
+    selectContainerType.appendChild(typeOptionAll);
+
     // Call api to get current type info
     await getType();
     for (i = 0; i < typeNames.length; i++) {
         let typeOption = document.createElement("option");
+        let typeName = typeNames[i].charAt().toUpperCase() + typeNames[i].substring(1);
+        // let capName = genNames[i].charAt().toUpperCase() + genNames[i].substring(1);
+
         typeOption.setAttribute("value", typeNames[i]);
-        typeOption.textContent = typeNames[i];
+        typeOption.textContent = typeName;
 
         selectContainerType.appendChild(typeOption);
     }
@@ -598,13 +675,27 @@ async function createSearch() {
 
     let filterButton = document.createElement("button");
     filterButton.setAttribute("class", "filter-button");
-    filterButton.setAttribute("onclick", "applyFilters()");
+    // filterButton.setAttribute("onclick", "applyFilters()");
     filterButton.textContent = "Search";
     buttonContainer.appendChild(filterButton);
 
     let randomButton = document.createElement("button");
     randomButton.setAttribute("class", "random-button");
-    filterButton.setAttribute("onclick", "random()");
+    // filterButton.setAttribute("onclick", "random()");
     randomButton.textContent = "Random";
     buttonContainer.appendChild(randomButton);
+}
+
+// Save custom list to local storage
+function beginSave(customSetName, customSetPokemon) {
+    setName = customSetName;
+    setPokemon = customSetPokemon;
+
+    console.log(setName);
+    console.log(setPokemon);
+
+    localStorage.setItem(setName, setPokemon);
+    userSets.push(setName);
+    localStorage.setItem("setTitles", userSets);
+
 }
