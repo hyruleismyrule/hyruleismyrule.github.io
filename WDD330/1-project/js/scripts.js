@@ -331,6 +331,8 @@ async function getResultsInfo() {
 
 // Searches for filtered results
 async function applyFilters() {
+    let loading = document.getElementById("loading");
+    loading.textContent = "Loading, please wait...";
     resultsPokemon = [];
     // console.log(event.target.parentNode);
     let searchInput = document.getElementById("searchInput");
@@ -557,7 +559,7 @@ async function createNewSet() {
     let scrollOuter = document.createElement("div");
     scrollOuter.setAttribute("id", "pokemonInList");
     scrollOuter.setAttribute("class", "scroll-outer");
-    // newDiv.appendChild(scrollOuter);
+    
     form.appendChild(scrollOuter);
 
     // let newSetPokemonContainer = document.createElement("div");
@@ -630,6 +632,11 @@ async function createNewSet() {
     createSearch();
     let resultsDiv = document.createElement("div");
     resultsDiv.setAttribute("id", "searchResults")
+    
+    let loading = document.createElement("div");
+    loading.setAttribute("id", "loading");
+    resultsDiv.appendChild(loading);
+
     newDiv.appendChild(resultsDiv);
 
     // Results
@@ -947,7 +954,13 @@ async function refreshCustom() {
         scrollOuter.removeChild(scrollOuter.firstChild);
     }
     // }
-
+    if (customSetPokemon.length < 1) {
+        let placeholder = document.createElement("div");
+        placeholder.setAttribute("id", "pokemonInListPlaceholder");
+        placeholder.textContent = "Pokemon in your set will apear here.";
+        scrollOuter.appendChild(placeholder);
+    }
+    
     for (i = 0; i < customSetPokemon.length; i++) {
         let newSetPokemonContainer = document.createElement("div");
         newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
@@ -1064,6 +1077,8 @@ function remove() {
 
 // This function hard refreshes the results because a new filter was applied
 async function refreshResults() {
+    // let loading = document.getElementById("loading");
+    // loading.textContent = "Loading, please wait...";
     // let resultsContainer = document.getElementById("pokemonInResults");
     let resultsContainer = document.getElementById("searchResults");
     while (resultsContainer.firstChild) {
@@ -1138,6 +1153,8 @@ async function loadMore() {
 }
 
 async function random() {
+    let loading = document.getElementById("loading");
+    loading.textContent = "Loading, please wait...";
     let min = 1;
     let max = 898;
     let resultsPokemonID = [];
