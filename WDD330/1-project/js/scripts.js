@@ -732,13 +732,27 @@ function addToCustom() {
     let setCode = ""
     if (!event.target.parentNode.dataset.code) {
         setCode = event.target.parentNode.parentNode.dataset.code;
+        // event.target.parentNode.parentNode.parentNode.remove()
+        let addedPokemon = event.target.parentNode.parentNode.parentNode;
+        addedPokemon.remove();
+        // console.log(event.target.parentNode.parentNode.parentNode);
     }
     else {
         setCode = event.target.parentNode.dataset.code;
+        let addedPokemon = event.target.parentNode.parentNode;
+        addedPokemon.remove();
+        // event.target.parentNode.parentNode.remove;
+        // console.log(event.target.parentNode.parentNode);
     }
-    console.log(setCode);
-    customSetPokemon.push(setCode);
-    console.log(customSetPokemon);
+    // console.log(setCode);
+
+    if (!customSetPokemon.includes(setCode)) {
+        customSetPokemon.push(setCode);
+    }
+    else {
+        alert("That pokemon is already in the set!");
+    }
+    // console.log(customSetPokemon);
 
     refreshCustom();
 }
