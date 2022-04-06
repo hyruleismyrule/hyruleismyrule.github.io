@@ -363,6 +363,9 @@ async function applyFilters() {
     else if (typeSelectOption != "All" && genSelectedOption == "All") {
         resultsPokemon =  await typeFilterAPI(typeSelectOption);
     }
+    else {
+        random();
+    }
     // var select = document.getElementById('language');
     // var value = select.options[select.selectedIndex].value;
     // console.log(value); // en
@@ -1119,18 +1122,19 @@ async function loadMore() {
     loadButton.setAttribute("id", buttonContainerID);
     loadButton.textContent = "Load More";
     resultsContainer.appendChild(loadButton);
-
-    nowLoadingLow = nowLoadingHigh;
-    nowLoadingHigh = nowLoadingHigh + 10;
+    
     let removeID = buttonContainerID - 1;
     let removeButton = document.getElementById(removeID);
     if (removeButton) {
         removeButton.remove();
     }
-    if (nowLoadingLow > resultsPokemon.length) {
-        removeID = removeButton;
-        removeButton.remove();
+    if (nowLoadingHigh >= resultsPokemon.length) {
+        let removeLastButton = document.getElementById(buttonContainerID);
+        removeLastButton.remove();
     }
+
+    nowLoadingLow = nowLoadingHigh;
+    nowLoadingHigh = nowLoadingHigh + 10;
 }
 
 async function random() {
