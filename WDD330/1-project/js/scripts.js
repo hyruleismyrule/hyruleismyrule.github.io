@@ -863,7 +863,7 @@ async function createSearch() {
 
     let randomButton = document.createElement("button");
     randomButton.setAttribute("class", "random-button");
-    // filterButton.setAttribute("onclick", "random()");
+    randomButton.setAttribute("onclick", "random()");
     randomButton.textContent = "Random";
     buttonContainer.appendChild(randomButton);
 }
@@ -1129,3 +1129,53 @@ async function loadMore() {
     // }
 }
 
+async function random() {
+    let min = 1;
+    let max = 898;
+    let resultsPokemonID = [];
+    for (i = 0; i < 50; i++) {
+        resultsPokemonID.push(getRndInteger(min, max));
+    }
+    resultsPokemon = await idToName(resultsPokemonID);
+    // refreshResults(resultsPokemon);
+    await getResultsInfo();
+    refreshResults();
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+async function idToName(resultsPokemonID) {
+    let resultsPokemonNames = [];
+    const pokemonAPIurl = "//pokeapi.co/api/v2/pokemon/";
+    for (i = 0; i < resultsPokemonID.length; i++) {
+        let tempURL = pokemonAPIurl + resultsPokemonID[i];
+        await fetch(tempURL)
+            .then((response) => response.json())
+            .then((info) => {
+                // console.log(info);
+                resultsPokemonNames.push(info.name);
+                // for (i = 0; i < info.results.length; i++) {
+                //     results[i].name;
+                // }
+            });
+    }
+    // console.log(resultsPokemonNames);
+    return resultsPokemonNames;
+}
+
+// https://pokeapi.co/api/v2/generation/{id or name}/
+
+// test() 
+// async function test() {
+//     const pokemonAPIurl = "//pokeapi.co/api/v2/generation/1/";
+//     await fetch(pokemonAPIurl)
+//         .then((response) => response.json())
+//         .then((info) => {
+//             console.log(info);
+//             // for (i = 0; i < info.results.length; i++) {
+//             //     results[i].name;
+//             // }
+//         });
+// }
