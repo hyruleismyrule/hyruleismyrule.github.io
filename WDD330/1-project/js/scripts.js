@@ -331,6 +331,7 @@ async function getResultsInfo() {
 
 // Searches for filtered results
 async function applyFilters() {
+    resultsPokemon = [];
     // console.log(event.target.parentNode);
     let searchInput = document.getElementById("searchInput");
     let genSelect = document.getElementById("gen");
