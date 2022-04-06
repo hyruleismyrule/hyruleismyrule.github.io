@@ -1124,9 +1124,13 @@ async function loadMore() {
     nowLoadingHigh = nowLoadingHigh + 10;
     let removeID = buttonContainerID - 1;
     let removeButton = document.getElementById(removeID);
-    // if (removeButton) {
+    if (removeButton) {
         removeButton.remove();
-    // }
+    }
+    if (nowLoadingLow > resultsPokemon.length) {
+        removeID = removeButton;
+        removeButton.remove();
+    }
 }
 
 async function random() {
