@@ -54,17 +54,9 @@
     width: 60rem;
     margin: 0 auto;
   }
-  .search-bar form {
+  .search-bar div {
     width: 60rem;
     margin: 0 auto;
-  }
-  .filter-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .filter-buttons {
     display: -ms-grid;

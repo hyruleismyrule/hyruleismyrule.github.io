@@ -111,15 +111,16 @@
     // margin-top: 1rem;
     // margin-bottom: 1rem;
   }
-  .search-bar form {
+  .search-bar div {
     width: $max-width;
     margin: 0 auto;
   }
 
-  .filter-container {
-    display: flex;
-    justify-content: space-between;
-  }
+  // .filter-container {
+  //   // display: flex;
+  //   // justify-content: space-between;
+  //   // display: grid;
+  // }
   .filter-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;

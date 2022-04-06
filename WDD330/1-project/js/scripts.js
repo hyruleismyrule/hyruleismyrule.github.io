@@ -334,7 +334,10 @@ async function applyFilters() {
     // console.log(event.target.parentNode);
     let searchInput = document.getElementById("searchInput");
     let genSelect = document.getElementById("gen");
+    let genSelectedOption = genSelect.options[genSelect.selectedIndex].value;
     let typeSelect = document.getElementById("type");
+    let typeSelectOption = typeSelect.options[typeSelect.selectedIndex].value;
+
     if (searchInput.value) {
         // resultsPokemon = searchInput.value.toLowerCase();
         resultsPokemon = [];
@@ -344,14 +347,87 @@ async function applyFilters() {
         // console.log(resultsPokemon);
     }
     // event.target
-    else if (genSelect.options[select.selectedIndex].value != "All") {
-        
+    // If both type and gen are filtered
+    else if (genSelectedOption != "All" && typeSelectOption != "All") {
+        // console.log(genSelectedOption);
+        // console.log(typeSelectOption);
+
+        await doubbleFilterAPI(genSelectedOption, typeSelectOption);
     }
     // var select = document.getElementById('language');
     // var value = select.options[select.selectedIndex].value;
     // console.log(value); // en
     await getResultsInfo();
     await refreshResults();
+}
+
+// Calls api for both filters
+async function doubbleFilterAPI(genSelectedOption, typeSelectOption) {
+    const filterPokemonAPIurlBase = "//pokeapi.co/api/v2/";
+    // Gen
+    let genAPI = filterPokemonAPIurlBase + "generation/" + genSelectedOption;
+    // let totalFiteredPokemon = [];
+    let genFilteredPokemon = [];
+    let typeFilteredPokemon = [];
+    // let longerList = [];
+    await fetch(genAPI)
+        .then((response) => response.json())
+        .then((info) => {
+            // console.log(info);
+            // let genPokemon = info.pokemon_species[0].name;
+            for (let i = 0, len = info.pokemon_species.length; i < len; i++) {
+                let genPokemon = info.pokemon_species[i].name;
+                genFilteredPokemon.push(genPokemon);
+            }
+            // console.log(genFilteredPokemon);
+        });
+    // Type
+    let typeAPI = filterPokemonAPIurlBase + "type/" + typeSelectOption;
+    await fetch(typeAPI)
+        .then((response) => response.json())
+        .then((info) => {
+            // console.log(info);
+            for (let i = 0, len = info.pokemon.length; i < len; i++) {
+                let typePokemon = info.pokemon[i].pokemon.name;
+                typeFilteredPokemon.push(typePokemon);
+            }
+            // console.log(typeFilteredPokemon);
+        });
+    // Combining filters
+    let totalFiteredPokemon = arrayMatch(genFilteredPokemon, typeFilteredPokemon);
+    return totalFiteredPokemon;
+    // console.log(totalFiteredPokemon);
+    // if (genFilteredPokemon >= typeFilteredPokemon) {
+    //     longerList = genFilteredPokemon;
+    // }
+    // else {
+    //     longerList = typeFilteredPokemon;
+    // }
+
+    // for (let i = 0, len = longerList.length; i < len; i++) {
+    //     if ()
+    // }
+
+    // let arr1 = [1, 10, 11, 12, 15, 100, 5, 6, 7, 5];
+    // let arr2 = [1, 10, 11, 12, 15, 100, 50, 60, 70, 50];
+
+    
+
+    //  // [1, 10, 11, 12, 15, 100]
+}
+
+function arrayMatch(genFilteredPokemon, typeFilteredPokemon) {
+    let totalFiteredPokemon = [];
+    // var arr = [];  // Array to contain match elements
+    for (var i = 0; i < genFilteredPokemon.length; ++i) {
+        for (var j = 0; j < typeFilteredPokemon.length; ++j) {
+            if (genFilteredPokemon[i] == typeFilteredPokemon[j]) {    // If element is in both the arrays
+                totalFiteredPokemon.push(genFilteredPokemon[i]);        // Push to arr array
+            }
+        }
+    }
+
+    return totalFiteredPokemon;  // Return the arr elements
 }
 
 // let newSetTitle = ""
