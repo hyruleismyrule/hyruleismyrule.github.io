@@ -282,7 +282,13 @@ main {
 
 //   Types
 .normal {
-    .card-front {
+    .new-set-pokemon {
+        border: 2px solid $normal;
+        h3 {
+            color: $normal;
+        }
+    }
+    .card-front, .new-set-pokemon {
         // background-color: $color5;
         border: 2px solid $normal;
     }
@@ -294,6 +300,12 @@ main {
 }
 
 .fire {
+    .new-set-pokemon {
+        border: 2px solid $fire;
+        h3 {
+            color: $fire;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $fire;
@@ -306,6 +318,12 @@ main {
 }
 
 .water {
+    .new-set-pokemon {
+        border: 2px solid $water;
+        h3 {
+            color: $water;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $water;
@@ -318,6 +336,12 @@ main {
 }
 
 .grass {
+    .new-set-pokemon {
+        border: 2px solid $grass;
+        h3 {
+            color: $grass;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $grass;
@@ -330,6 +354,12 @@ main {
 }
 
 .electric {
+    .new-set-pokemon {
+        border: 2px solid $electric;
+        h3 {
+            color: $electric;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $electric;
@@ -342,6 +372,12 @@ main {
 }
 
 .ice {
+    .new-set-pokemon {
+        border: 2px solid $ice;
+        h3 {
+            color: $ice;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $ice;
@@ -354,6 +390,12 @@ main {
 }
 
 .fighting {
+    .new-set-pokemon {
+        border: 2px solid $fighting;
+        h3 {
+            color: $fighting;
+        }
+    }
     .card-front {
         // background-color: white;
         border: 2px solid $fighting;
@@ -366,6 +408,12 @@ main {
 }
 
 .poison {
+    .new-set-pokemon {
+        border: 2px solid $poison;
+        h3 {
+            color: $poison;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $poison;
@@ -378,6 +426,12 @@ main {
 }
 
 .ground {
+    .new-set-pokemon {
+        border: 2px solid $ground;
+        h3 {
+            color: $ground;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $ground;
@@ -390,6 +444,12 @@ main {
 }
 
 .flying {
+    .new-set-pokemon {
+        border: 2px solid $flying;
+        h3 {
+            color: $flying;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $flying;
@@ -402,6 +462,12 @@ main {
 }
 
 .psychic {
+    .new-set-pokemon {
+        border: 2px solid $psychic;
+        h3 {
+            color: $psychic;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $psychic;
@@ -414,6 +480,12 @@ main {
 }
 
 .bug {
+    .new-set-pokemon {
+        border: 2px solid $bug;
+        h3 {
+            color: $bug;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $bug;
@@ -426,6 +498,12 @@ main {
 }
 
 .rock {
+    .new-set-pokemon {
+        border: 2px solid $rock;
+        h3 {
+            color: $rock;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $rock;
@@ -438,6 +516,12 @@ main {
 }
 
 .ghost {
+    .new-set-pokemon {
+        border: 2px solid $ghost;
+        h3 {
+            color: $ghost;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $ghost;
@@ -450,6 +534,12 @@ main {
 }
 
 .dark {
+    .new-set-pokemon {
+        border: 2px solid $dark;
+        h3 {
+            color: $dark;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $dark;
@@ -462,6 +552,12 @@ main {
 }
 
 .dragon {
+    .new-set-pokemon {
+        border: 2px solid $dragon;
+        h3 {
+            color: $dragon;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $dragon;
@@ -474,6 +570,12 @@ main {
 }
 
 .steel {
+    .new-set-pokemon {
+        border: 2px solid $steel;
+        h3 {
+            color: $steel;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $steel;
@@ -486,6 +588,12 @@ main {
 }
 
 .fairy {
+    .new-set-pokemon {
+        border: 2px solid $fairy;
+        h3 {
+            color: $fairy;
+        }
+    }
     .card-front {
         // background-color: $color5;
         border: 2px solid $fairy;
@@ -1484,3 +1592,27 @@ select {
 // .search-label {
 //     display: block;
 // }
+
+.loadMore {
+    box-sizing: border-box;
+    width: 90%;
+    background: transparent;
+    border: 2px solid $color1;
+    color: $color1;
+    padding: 1rem;
+    margin: 1rem;
+    // margin: 0 auto;
+    // margin-top: 1rem;
+    // margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    &:hover {
+        background-color: $color1;
+        color: white;
+    }
+    &:active {
+        background-color: $color3;
+        border-color: $color3;
+        color: white;
+    }
+}

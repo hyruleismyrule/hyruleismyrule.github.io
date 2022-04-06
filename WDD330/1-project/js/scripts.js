@@ -636,7 +636,10 @@ async function createNewSet() {
     resultsDiv.appendChild(resultsScrollOuter);
 
     await getResultsInfo();
-    await refreshResults();
+    
+    // await refreshResults();
+
+
     // for (i = 0; i < resultsPokemon.length; i++) {
     //     let newSetPokemonContainer = document.createElement("div");
     //     newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
@@ -1082,7 +1085,8 @@ async function loadMore() {
 
     for (i = nowLoadingLow; i < nowLoadingHigh; i++) {
         let newSetPokemonContainer = document.createElement("div");
-        newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
+        // newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
+        newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container " + resultsType[i]);
 
         let svgContainer = document.createElement("div");
         svgContainer.setAttribute("class", "input-checked-container add");
@@ -1099,9 +1103,11 @@ async function loadMore() {
         img.setAttribute("src", resultsURL[i]);
         img.setAttribute("alt", resultsPokemon[i]);
         newSetPokemon.appendChild(img);
-
+        
         let name = document.createElement("h3");
-        name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
+        // if (resultsPokemon[i]) {
+            name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
+        // }
         newSetPokemon.appendChild(name);
 
         subResultsContainer.appendChild(newSetPokemonContainer);
@@ -1118,6 +1124,8 @@ async function loadMore() {
     nowLoadingHigh = nowLoadingHigh + 10;
     let removeID = buttonContainerID - 1;
     let removeButton = document.getElementById(removeID);
-    removeButton.remove();
+    // if (removeButton) {
+        removeButton.remove();
+    // }
 }
 
