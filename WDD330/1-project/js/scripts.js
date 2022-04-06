@@ -215,14 +215,23 @@ function buildCards(displayNames, displayImages, displayTypes, displayTitle) {
     prevContainer.setAttribute("onclick", "plusSlides(-1)");
     let prevSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM384 288H205.3l49.38 49.38c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0L105.4 278.6C97.4 270.7 96 260.9 96 256c0-4.883 1.391-14.66 9.398-22.65l103.1-103.1c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L205.3 224H384c17.69 0 32 14.33 32 32S401.7 288 384 288z" /></svg>'
     prevContainer.innerHTML = prevSvgHTML;
+    bottomNav.appendChild(prevContainer);
+
+    let editContainer = document.createElement("div");
+    editContainer.setAttribute("class", "editContainer");
+    let editButton = document.createElement("button");
+    editButton.setAttribute("class", "editButton");
+    editButton.setAttribute("onclick", "editSet()")
+    editButton.setAttribute("data-code", displayTitle)
+    editButton.textContent = "Edit Set";
+    editContainer.appendChild(editButton);
+    bottomNav.appendChild(editContainer);
 
     let nextContainer = document.createElement("div");
     nextContainer.setAttribute("class", "arrow next");
     nextContainer.setAttribute("onclick", "plusSlides(1)");
     let nextSvgHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM406.6 278.6l-103.1 103.1c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L306.8 288H128C110.3 288 96 273.7 96 256s14.31-32 32-32h178.8l-49.38-49.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l103.1 103.1C414.6 241.3 416 251.1 416 256C416 260.9 414.6 270.7 406.6 278.6z" /></svg>'
     nextContainer.innerHTML = nextSvgHTML;
-
-    bottomNav.appendChild(prevContainer);
     bottomNav.appendChild(nextContainer);
 
     document.getElementById("review").appendChild(bottomNav);
@@ -562,54 +571,8 @@ async function createNewSet() {
     
     form.appendChild(scrollOuter);
 
-    // let newSetPokemonContainer = document.createElement("div");
-    // newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
-    // // scrollOuter.appendChild(newSetPokemonContainer);
-
-    // Loop to create the pokemon added to the set list
     await getCustomInfo();
     await refreshCustom(scrollOuter);
-    // for (i = 0; i < customSetPokemon.length; i++) {
-    //     let newSetPokemonContainer = document.createElement("div");
-    //     newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
-    //     scrollOuter.appendChild(newSetPokemonContainer);
-
-    //     let pokemonLabel = document.createElement("label");
-    //     pokemonLabel.setAttribute("for", "pokemon" + i);
-    //     newSetPokemonContainer.appendChild(pokemonLabel);
-
-    //     let checkbox = document.createElement("input");
-    //     checkbox.setAttribute("class", "in-set-checkbox");
-    //     checkbox.setAttribute("type", "checkbox");
-    //     checkbox.setAttribute("id", "pokemon" + i);
-    //     checkbox.setAttribute("checked", "");
-    //     pokemonLabel.appendChild(checkbox);
-
-    //     // setTitle.setAttribute('data-code', setName);
-
-    //     let checkedContainer = document.createElement("div");
-    //     checkedContainer.setAttribute("class", "input-checked-container add");
-    //     // checkedContainer.setAttribute('data-code', customSetPokemon[i]);
-    //     checkedContainer.setAttribute("onclick", "remove()");
-    //     checkedContainer.setAttribute('data-code', customSetPokemon[i]);
-    //     checkedContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" /></svg>'
-    //     pokemonLabel.appendChild(checkedContainer);
-
-    //     let newSetPokemon = document.createElement("div");
-    //     newSetPokemon.setAttribute("class", "new-set-pokemon");
-    //     newSetPokemonContainer.appendChild(newSetPokemon);
-
-    //     let img = document.createElement("img");
-    //     img.setAttribute("src", customSetURL[i]);
-    //     img.setAttribute("alt", customSetPokemon[i]);
-    //     newSetPokemon.appendChild(img)
-
-    //     let name = document.createElement("h3");
-    //     name.textContent = customSetPokemon[i].charAt().toUpperCase() + customSetPokemon[i].substring(1);
-    //     newSetPokemon.appendChild(name);
-
-    //     // scrollOuter.appendChild(newSetPokemonContainer);
-    // }
 
     // Save Set
     let saveContainer = document.createElement("div");
@@ -646,52 +609,6 @@ async function createNewSet() {
     resultsDiv.appendChild(resultsScrollOuter);
 
     await getResultsInfo();
-    
-    // await refreshResults();
-
-
-    // for (i = 0; i < resultsPokemon.length; i++) {
-    //     let newSetPokemonContainer = document.createElement("div");
-    //     newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
-
-    //     let svgContainer = document.createElement("div");
-    //     svgContainer.setAttribute("class", "input-checked-container add");
-    //     svgContainer.setAttribute("onclick", "addToCustom()");
-    //     svgContainer.setAttribute('data-code', resultsPokemon[i]);
-
-    //     // let svg = document.createElement("svg");
-    //     // svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    //     // svg.setAttribute("viewBox", "0 0 512 512");
-    //     // svg.setAttribute('data-code', resultsokemon[i]);
-    //     // let path = document.createElement("path");
-    //     // path.setAttribute("d", "M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z")
-    //     // svg.appendChild(path);
-    //     // svgContainer.appendChild(svg);
-
-    //     svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" /></svg>'
-    //     // svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"' + 'data-code=' + '"' + resultsokemon[i] + '"' + '"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" /></svg>'
-
-
-    //     newSetPokemonContainer.appendChild(svgContainer);
-
-
-    //     let newSetPokemon = document.createElement("div");
-    //     newSetPokemon.setAttribute("class", "new-set-pokemon");
-    //     newSetPokemonContainer.appendChild(newSetPokemon);
-
-    //     let img = document.createElement("img");
-    //     img.setAttribute("src", resultsURL[i]);
-    //     img.setAttribute("alt", resultsPokemon[i]);
-    //     newSetPokemon.appendChild(img);
-
-    //     let name = document.createElement("h3");
-    //     // name.textContent = resultsPokemon[i]
-    //     name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
-    //     newSetPokemon.appendChild(name);
-
-    //     resultsScrollOuter.appendChild(newSetPokemonContainer);
-    // }
-
 }
 
 // https://pokeapi.co/api/v2/generation/{id or name}/
@@ -1024,57 +941,6 @@ function remove() {
     }
 }
 
-// // Refreshes Results after filters
-// async function refreshResults() {
-//     // await getResultsInfo();
-//     let resultsContainer = document.getElementById("pokemonInResults");
-//     while (resultsContainer.firstChild) {
-//         resultsContainer.removeChild(resultsContainer.firstChild);
-//     }
-//     // resultsPokemon = [];
-//     for (i = 0; i < resultsPokemon.length; i++) {
-//         let newSetPokemonContainer = document.createElement("div");
-//         newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
-
-//         let svgContainer = document.createElement("div");
-//         svgContainer.setAttribute("class", "input-checked-container add");
-//         svgContainer.setAttribute("onclick", "addToCustom()");
-//         svgContainer.setAttribute('data-code', resultsPokemon[i]);
-
-//         // let svg = document.createElement("svg");
-//         // svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-//         // svg.setAttribute("viewBox", "0 0 512 512");
-//         // svg.setAttribute('data-code', resultsokemon[i]);
-//         // let path = document.createElement("path");
-//         // path.setAttribute("d", "M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z")
-//         // svg.appendChild(path);
-//         // svgContainer.appendChild(svg);
-
-//         svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" /></svg>'
-//         // svgContainer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"' + 'data-code=' + '"' + resultsokemon[i] + '"' + '"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" /></svg>'
-
-
-//         newSetPokemonContainer.appendChild(svgContainer);
-
-
-//         let newSetPokemon = document.createElement("div");
-//         newSetPokemon.setAttribute("class", "new-set-pokemon");
-//         newSetPokemonContainer.appendChild(newSetPokemon);
-
-//         let img = document.createElement("img");
-//         img.setAttribute("src", resultsURL[i]);
-//         img.setAttribute("alt", resultsPokemon[i]);
-//         newSetPokemon.appendChild(img);
-
-//         let name = document.createElement("h3");
-//         // name.textContent = resultsPokemon[i]
-//         name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
-//         newSetPokemon.appendChild(name);
-
-//         resultsContainer.appendChild(newSetPokemonContainer);
-//     }
-// }
-
 // This function hard refreshes the results because a new filter was applied
 async function refreshResults() {
     // let loading = document.getElementById("loading");
@@ -1204,3 +1070,9 @@ async function idToName(resultsPokemonID) {
 //             // }
 //         });
 // }
+
+async function editSet() {
+    setCode = event.target.dataset.code;
+    
+    createNewSet()
+}
