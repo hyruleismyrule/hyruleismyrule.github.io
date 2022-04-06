@@ -378,7 +378,7 @@ async function createNewSet() {
 
     // Set Title Form
     let form = document.createElement("form");
-    form.setAttribute("onsubmit", "return beginSave(customSetName, customSetPokemon)")
+    form.setAttribute("onsubmit", "return beginSave(customSetPokemon)")
     // form.setAttribute("id", "customPokemonForm")
     let titleContainer = document.createElement("div");
     titleContainer.setAttribute("class", "title-container");
@@ -705,8 +705,9 @@ async function createSearch() {
 }
 
 // Save custom list to local storage
-function beginSave(customSetName, customSetPokemon) {
-    setName = customSetName;
+function beginSave(customSetPokemon) {
+    // setName = customSetName;
+    setName = document.getElementById("new-set-name").value;
     setPokemon = customSetPokemon;
 
     console.log(setName);
