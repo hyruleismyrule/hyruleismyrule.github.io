@@ -1,6 +1,11 @@
+// Variables Declared Globally
+let maxLoad = resultsPokemon.length;
+let nowLoadingLow = 0;
+let nowLoadingHigh = 10;
+let buttonContainerID = 0;
+
 // This function hard refreshes the results because a new filter was applied
 async function refreshResults() {
-    // let resultsContainer = document.getElementById("pokemonInResults");
     let resultsContainer = document.getElementById("searchResults");
     while (resultsContainer.firstChild) {
         resultsContainer.removeChild(resultsContainer.firstChild);
@@ -8,17 +13,11 @@ async function refreshResults() {
     await loadMore();
 }
 
-let maxLoad = resultsPokemon.length;
-let nowLoadingLow = 0;
-let nowLoadingHigh = 10;
-let buttonContainerID = 0;
-
 // Only show some of the results
 async function loadMore() {
     let resultsContainer = document.getElementById("searchResults");
     let subResultsContainer = document.createElement("div");
     subResultsContainer.setAttribute("class", "scroll-outer");
-    // subResultsContainer.setAttribute("id", buttonContainerID);
     resultsContainer.appendChild(subResultsContainer);
     buttonContainerID = buttonContainerID + 1;
 
@@ -62,4 +61,3 @@ async function loadMore() {
     let removeButton = document.getElementById(removeID);
     removeButton.remove();
 }
-
