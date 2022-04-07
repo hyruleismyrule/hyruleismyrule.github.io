@@ -593,19 +593,19 @@ async function createNewSet(editSetTitle, editSetPokemon) {
     saveContainer.appendChild(saveButton);
     form.appendChild(saveContainer);
 
-    // Delete Set
-    if (editSetTitle) {
-        let deleteContainer = document.createElement("div");
-        deleteContainer.setAttribute("class", "save-container");
-        let deleteButton = document.createElement("button");
-        deleteButton.setAttribute("id", "deleteLocal");
-        deleteButton.setAttribute("onclick", "deleteSet()");
-        // saveButton.setAttribute("onclick", "beginSave(customSetName, customSetPokemon)");
-        deleteButton.textContent = "Delete Set";
+    // // Delete Set
+    // if (editSetTitle) {
+    //     let deleteContainer = document.createElement("div");
+    //     deleteContainer.setAttribute("class", "save-container");
+    //     let deleteButton = document.createElement("button");
+    //     deleteButton.setAttribute("id", "deleteLocal");
+    //     deleteButton.setAttribute("onclick", "deleteSet()");
+    //     // saveButton.setAttribute("onclick", "beginSave(customSetName, customSetPokemon)");
+    //     deleteButton.textContent = "Delete Set";
 
-        deleteContainer.appendChild(deleteButton);
-        form.appendChild(deleteContainer);
-    }
+    //     deleteContainer.appendChild(deleteButton);
+    //     form.appendChild(deleteContainer);
+    // }
 
     // Add Search Bar
     let setSearchDiv = document.createElement("div");
@@ -827,11 +827,12 @@ function beginSave(customSetPokemon) {
         userSets = userSets.split(",");
 
         if (userSets.includes(setName)) {
-            userSets.remove(setName);
+            userSets = userSets.filter(item => item != setName);
+            // console.log(userSets);
 
-            // localStorage.setItem(setName, setPokemon);
-            // userSets.push(setName);
-            // localStorage.setItem("setTitles", userSets);
+            localStorage.setItem(setName, setPokemon);
+            userSets.push(setName);
+            localStorage.setItem("setTitles", userSets);
             // localStorage.clear();
             // localStorage.removeItem(userSets);
             // userSets.push(setName);
