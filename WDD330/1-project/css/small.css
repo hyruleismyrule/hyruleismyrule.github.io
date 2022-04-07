@@ -1186,27 +1186,51 @@ footer a {
   margin-right: 1rem;
 }
 
-#saveLocal {
+#saveLocal, #deleteLocal {
   padding: 1rem;
   font-size: 2rem;
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 2px solid #021E73;
   border-radius: 1rem;
   background-color: #021E73;
   color: white;
 }
 
-#saveLocal:hover {
+#saveLocal:hover, #deleteLocal:hover {
   color: white;
   border: 2px solid #F2B705;
   background-color: #F2B705;
 }
 
-#saveLocal:active {
+#saveLocal:active, #deleteLocal:active {
   color: #021E73;
   border: 2px solid #021E73;
+  background-color: white;
+}
+
+#deleteLocal {
+  padding: 1rem;
+  font-size: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #F2B705;
+  border-radius: 1rem;
+  background-color: #F2B705;
+  color: white;
+}
+
+#deleteLocal:hover {
+  color: white;
+  border: 2px solid #F23005;
+  background-color: #F23005;
+}
+
+#deleteLocal:active {
+  color: #F23005;
+  border: 2px solid #F23005;
   background-color: white;
 }
 

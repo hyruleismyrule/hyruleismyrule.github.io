@@ -37,6 +37,11 @@ function checkDefaults(localStorage) {
     }
 }
 
+let customSetName = "";
+let customSetPokemon = [];
+let customSetURL = []
+let customSetType = []
+
 
 // async function getThumbnail(setName, setPokemon) {
 async function getThumbnail(localStorage) {
@@ -294,10 +299,6 @@ function displayThumbnails() {
 }
 // let customSetName = "Bulbasaur";
 // let customSetPokemon = ["bulbasaur", "ivysaur", "venusaur"];
-let customSetName = "";
-let customSetPokemon = [];
-let customSetURL = []
-let customSetType = []
 
 async function getCustomInfo() {
     // Get the image and type for the pokemon
@@ -363,16 +364,16 @@ async function applyFilters() {
     else if (genSelectedOption != "All" && typeSelectOption != "All") {
         // console.log(genSelectedOption);
         // console.log(typeSelectOption);
-        resultsPokemon =  await doubbleFilterAPI(genSelectedOption, typeSelectOption);
+        resultsPokemon = await doubbleFilterAPI(genSelectedOption, typeSelectOption);
         // await doubbleFilterAPI(genSelectedOption, typeSelectOption);
     }
     // Only Gen was selected
     else if (genSelectedOption != "All" && typeSelectOption == "All") {
-        resultsPokemon =  await genFilterAPI(genSelectedOption);
+        resultsPokemon = await genFilterAPI(genSelectedOption);
     }
     // Only type was selected
     else if (typeSelectOption != "All" && genSelectedOption == "All") {
-        resultsPokemon =  await typeFilterAPI(typeSelectOption);
+        resultsPokemon = await typeFilterAPI(typeSelectOption);
     }
     else {
         random();
@@ -481,7 +482,7 @@ async function doubbleFilterAPI(genSelectedOption, typeSelectOption) {
     // let arr1 = [1, 10, 11, 12, 15, 100, 5, 6, 7, 5];
     // let arr2 = [1, 10, 11, 12, 15, 100, 50, 60, 70, 50];
 
-    
+
 
     //  // [1, 10, 11, 12, 15, 100]
 }
@@ -523,7 +524,9 @@ function arrayMatch(genFilteredPokemon, typeFilteredPokemon) {
 // }
 
 // User can create a new set
-async function createNewSet() {
+async function createNewSet(editSetTitle, editSetPokemon) {
+    // let editSetTitle = "";
+    // let editSetPokemon = [];
     // Removes and Creates new title
     let changeTitle = document.getElementById("essentialTitle");
     changeTitle.removeChild(changeTitle.firstElementChild);
@@ -559,6 +562,10 @@ async function createNewSet() {
     titleInput.setAttribute("type", "text");
     titleInput.setAttribute("placeholder", "Name your Set");
     titleInput.setAttribute("required", "");
+    if (editSetTitle) {
+        titleInput.value = editSetTitle;
+        customSetPokemon = editSetPokemon;
+    }
 
     newDiv.appendChild(form);
     form.appendChild(titleContainer);
@@ -568,7 +575,7 @@ async function createNewSet() {
     let scrollOuter = document.createElement("div");
     scrollOuter.setAttribute("id", "pokemonInList");
     scrollOuter.setAttribute("class", "scroll-outer");
-    
+
     form.appendChild(scrollOuter);
 
     await getCustomInfo();
@@ -586,6 +593,20 @@ async function createNewSet() {
     saveContainer.appendChild(saveButton);
     form.appendChild(saveContainer);
 
+    // Delete Set
+    if (editSetTitle) {
+        let deleteContainer = document.createElement("div");
+        deleteContainer.setAttribute("class", "save-container");
+        let deleteButton = document.createElement("button");
+        deleteButton.setAttribute("id", "deleteLocal");
+        deleteButton.setAttribute("onclick", "deleteSet()");
+        // saveButton.setAttribute("onclick", "beginSave(customSetName, customSetPokemon)");
+        deleteButton.textContent = "Delete Set";
+
+        deleteContainer.appendChild(deleteButton);
+        form.appendChild(deleteContainer);
+    }
+
     // Add Search Bar
     let setSearchDiv = document.createElement("div");
     setSearchDiv.setAttribute("id", "search-bar");
@@ -595,7 +616,7 @@ async function createNewSet() {
     createSearch();
     let resultsDiv = document.createElement("div");
     resultsDiv.setAttribute("id", "searchResults")
-    
+
     let loading = document.createElement("div");
     loading.setAttribute("id", "loading");
     resultsDiv.appendChild(loading);
@@ -801,19 +822,40 @@ function beginSave(customSetPokemon) {
     if (customSetPokemon.length > 0) {
         setName = document.getElementById("new-set-name").value;
         setPokemon = customSetPokemon;
+
+        let userSets = localStorage.getItem("setTitles");
+        userSets = userSets.split(",");
+
+        if (userSets.includes(setName)) {
+            userSets.remove(setName);
+
+            // localStorage.setItem(setName, setPokemon);
+            // userSets.push(setName);
+            // localStorage.setItem("setTitles", userSets);
+            // localStorage.clear();
+            // localStorage.removeItem(userSets);
+            // userSets.push(setName);
+            // localStorage.setItem(setName, setPokemon);
+            // // userSets.push(setName);
+            // localStorage.setItem("setTitles", userSets);
+        }
+        else {
+            localStorage.setItem(setName, setPokemon);
+            userSets.push(setName);
+            localStorage.setItem("setTitles", userSets);
+        }
+
+
         // userSets = localStorage.getItem("setTitles");
         // let setTitles = localStorage.getItem("setTitles");
         // setTitles = setTitles.split(",");
-        let userSets = localStorage.getItem("setTitles");
-        userSets = userSets.split(",");
         // setTitles.push(setName);
         // let setTitles = localStorage.getItem("setTitles");
         // console.log(setName);
         // console.log(setPokemon);
+        // localStorage.removeItem(key);
 
-        localStorage.setItem(setName, setPokemon);
-        userSets.push(setName);
-        localStorage.setItem("setTitles", userSets);
+
     }
     else {
         alert("Your set is empty!");
@@ -877,7 +919,7 @@ async function refreshCustom() {
         placeholder.textContent = "Pokemon in your set will apear here.";
         scrollOuter.appendChild(placeholder);
     }
-    
+
     for (i = 0; i < customSetPokemon.length; i++) {
         let newSetPokemonContainer = document.createElement("div");
         newSetPokemonContainer.setAttribute("class", "new-set-pokemon-container");
@@ -987,15 +1029,15 @@ async function loadMore() {
         img.setAttribute("src", resultsURL[i]);
         img.setAttribute("alt", resultsPokemon[i]);
         newSetPokemon.appendChild(img);
-        
+
         let name = document.createElement("h3");
         // if (resultsPokemon[i]) {
-            name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
+        name.textContent = resultsPokemon[i].charAt().toUpperCase() + resultsPokemon[i].substring(1);
         // }
         newSetPokemon.appendChild(name);
 
         subResultsContainer.appendChild(newSetPokemonContainer);
-        
+
     }
     let loadButton = document.createElement("button");
     loadButton.setAttribute("class", "loadMore");
@@ -1003,7 +1045,7 @@ async function loadMore() {
     loadButton.setAttribute("id", buttonContainerID);
     loadButton.textContent = "Load More";
     resultsContainer.appendChild(loadButton);
-    
+
     let removeID = buttonContainerID - 1;
     let removeButton = document.getElementById(removeID);
     if (removeButton) {
@@ -1034,7 +1076,7 @@ async function random() {
 }
 
 function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 async function idToName(resultsPokemonID) {
@@ -1073,6 +1115,14 @@ async function idToName(resultsPokemonID) {
 
 async function editSet() {
     setCode = event.target.dataset.code;
-    
-    createNewSet()
+    let editSetTitle = setCode;
+    // let editSetPokemon = ;
+
+    // displayTitle = setCode;
+    let editSetPokemon = localStorage.getItem(setCode);
+    editSetPokemon = editSetPokemon.split(",");
+
+    document.getElementById("review-title").remove();
+
+    createNewSet(editSetTitle, editSetPokemon);
 }
