@@ -1,0 +1,25 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+}
+
+header, footer {
+  background-color: pink;
+  color: black;
+  padding: 1rem;
+}
+
+header h1, footer h1 {
+  margin: 0;
+  color: black;
+}
+
+h1 {
+  margin: 1rem;
+}
+
+li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+/*# sourceMappingURL=small.css.map */
