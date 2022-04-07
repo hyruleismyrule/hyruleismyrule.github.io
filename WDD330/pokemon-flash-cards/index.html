@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="#">
+    <meta name="author" content="Cynthia Rawlings">
+    <title>Pokemon Flash Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/7d69b1e6ff.js" crossorigin="anonymous"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon_package_v0.16/safari-pinned-tab.svg" color="#f23005">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header>
+            <div class="logotype">
+                <img src="images/pokeballfavicon.png" alt="pokeball">
+                <h1>Pokemon Flash Cards</h1>
+            </div>
+            <!-- I want when the menu is open, the dots transition to vertical -->
+            <button id="primary-menu-toggle"><i class="fas fa-ellipsis-h"></i></button>
+            <!-- <button id="primary-menu"><i class="fas fa-ellipsis-h-alt"></i></button> -->
+        </header>
+    </div>
+    <div class="nav-wrapper">
+        <nav id="primary-nav">
+            <ul>
+                <li><button class="active"><a href="index.html">View Sets</a></button></li>
+                <li><button><a href="review.html">Review</a></button></li>
+                <li><button><a href="#">Create New Set</a></button></li>
+                <!-- <li><button>Create New Set</button></li>
+                <li><button>Edit Sets</button></li>
+                <li><button>Browse Sets</button></li>
+                <li><button>Change Difficulty</button></li>
+                <li><button>Delete Set</button></li> -->
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div id="essentialTitle">
+            <h1 id="view-sets-title">My Sets</h1>
+        </div>
+        <!-- I'm going to make a default set here so that I can get a feel of how it looks, but I'm likely going to have to redo everying in JS -->
+        <div id="essentialDivContainer">
+            <div id="viewSets"></div>
+        </div>
+        <!-- <div class="thumbnail-container new" onclick="chooseNewSet()">
+            <div class="new-set-icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> -->
+                    <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <!-- <path
+                        d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z" />
+                </svg>
+            </div>
+        </div> -->
+    </main>
+    <div class="footer-wrapper">
+        <footer>
+            <p>Cynthia Rawlings - WDD 330 Web Frontend Development II • <a href="https://pokeapi.co/">Pokemon Api</a>
+                • <a href="https://fontawesome.com/">Fontawesome Icons</a></p>
+        </footer>
+    </div>
+
+    <!-- javaScript -->
+    <!-- <script src="js/main.js" type="module"></script> -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
