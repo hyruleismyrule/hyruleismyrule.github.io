@@ -66,9 +66,14 @@ function guarenteedSRPlus() {
 
 function buy10() {
     karmas = [];
-    karmas.push(guarenteedSRPlus());
-    for (let i = 0; i < 9; i++) {
-        karmas.push(pull1());
+    let gIndex = getRandomInt(0, 11);
+    for (let i = 0; i < 10; i++) {
+        if (i == gIndex) {
+            karmas.push(guarenteedSRPlus());
+        }
+        else {
+            karmas.push(pull1());
+        }
     }
     console.log(karmas);
 }
