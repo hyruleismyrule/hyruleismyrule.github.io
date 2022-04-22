@@ -1,1 +1,102 @@
-/* No CSS *//*# sourceMappingURL=small.css.map */
+.app-case img {
+  max-width: 100%;
+}
+
+button {
+  font-family: 'EB Garamond', serif;
+}
+
+.pull-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.pull1 {
+  background-color: #93b4c6;
+  border: 2px solid #aecada;
+}
+
+.pull10 {
+  background-color: #e99ab9;
+  border: 2px solid #edb8cc;
+}
+
+.redeem-btn {
+  background-color: #b5a5cc;
+  border: 2px solid #c9b8d8;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.redeem-btn img {
+  width: 35px;
+}
+
+.redeem-btn div {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.drop-btn {
+  background-color: #90bee4;
+  border: 2px solid #add3f3;
+  color: white;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.preview-btn {
+  background-color: #d5b48f;
+  border: 2px solid #e7c9a7;
+  border-radius: 100%;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  color: white;
+}
+
+.add-btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(lightgrey));
+  background-image: linear-gradient(to right, white, lightgrey);
+  border-radius: 100%;
+  border: none;
+  -webkit-box-shadow: 1px 1px 3px grey;
+          box-shadow: 1px 1px 3px grey;
+}
+
+.add-btn svg {
+  margin-top: 0.2rem;
+  width: 1rem;
+}
+
+#rect1 {
+  fill: url(#Gradient1);
+}
+
+.stop1 {
+  stop-color: #dbbe9f;
+}
+
+.stop3 {
+  stop-color: #a78c70;
+}
+
+.app-container {
+  background-image: url("assets/standard-tree.PNG");
+  background-color: #90bee4;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 52rem;
+}
+/*# sourceMappingURL=small.css.map */

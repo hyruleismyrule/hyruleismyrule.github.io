@@ -42,6 +42,8 @@ function buy1() {
     }
     karmas.push(karma);
     console.log(karmas);
+    timesWished = timesWished + 1;
+    // document.getElementById("redeemNum").textContent = timesWished;
 }
 
 function pull1() {
@@ -76,6 +78,8 @@ function buy10() {
         }
     }
     console.log(karmas);
+    timesWished = timesWished + 10;
+    // document.getElementById("redeemNum").textContent = timesWished;
 }
 
 function getKarmaName(rarity, king) {
