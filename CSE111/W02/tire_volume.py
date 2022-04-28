@@ -2,7 +2,6 @@ import math
 from datetime import datetime
 current_date_and_time = datetime.now()
 print()
-# print(f"{current_date_and_time:%Y-%m-%d}")
 
 width = float(input("Enter the width of the tire in mm (ex 205): "))
 aspect_ratio = float(input("Enter the aspect ratio of the tire (ex 60): "))
