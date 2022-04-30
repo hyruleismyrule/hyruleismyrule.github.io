@@ -168,6 +168,7 @@ button {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: -1.3rem;
+  z-index: 2;
 }
 
 .redeem-btn {
@@ -179,6 +180,7 @@ button {
   display: flex;
   padding: 0.2rem;
   height: 2.5rem;
+  z-index: 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -188,9 +190,11 @@ button {
   width: 50px;
   -webkit-transform: rotateZ(20deg);
           transform: rotateZ(20deg);
+  z-index: 2;
 }
 
 .redeem-btn div {
+  z-index: 2;
   margin-right: 0.2rem;
 }
 
@@ -203,6 +207,17 @@ button {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: -0.6rem;
+  z-index: 2;
+}
+
+.banner-image-container {
+  padding: 3rem;
+  margin-top: -6.2rem;
+}
+
+.banner-image-container img {
+  width: 100%;
+  z-index: 1;
 }
 
 .preview-btn {
