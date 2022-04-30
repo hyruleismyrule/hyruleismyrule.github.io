@@ -1,3 +1,43 @@
+body {
+  background-color: #add3f3;
+}
+
+header {
+  background-color: #ef87a3;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding: 1rem;
+}
+
+header .title-wrapper {
+  max-width: 32rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .menu-container svg {
+  fill: white;
+  width: 2rem;
+}
+
+.app-container {
+  background-image: url("assets/standard-banner.png");
+  background-color: #90bee4;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 51.5rem;
+  margin: 0 auto;
+}
+
 .app-case img {
   max-width: 100%;
 }
@@ -166,13 +206,5 @@ button {
 
 .stop3 {
   stop-color: #a78c70;
-}
-
-.app-container {
-  background-image: url("assets/standard-banner.png");
-  background-color: #90bee4;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 51.5rem;
 }
 /*# sourceMappingURL=small.css.map */
