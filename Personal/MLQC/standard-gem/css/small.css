@@ -1,9 +1,11 @@
 body {
-  background-color: #add3f3;
+  background: #eeaeca;
+  background: linear-gradient(35deg, #eeaeca 0%, #94bbe9 100%);
 }
 
 header {
-  background-color: #ef87a3;
+  background: #eeaeca;
+  background: linear-gradient(135deg, #eeaeca 0%, #ef87a3 100%);
   color: white;
   font-family: 'Open Sans', sans-serif;
   padding: 1rem;
