@@ -1,0 +1,39 @@
+@media only screen and (min-width: 62rem) {
+  .all-content-wrapper {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  .top-button {
+    display: block;
+  }
+  .bottom-button {
+    display: none;
+  }
+  .hero-car-img {
+    position: relative;
+  }
+  .hero-car-info {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .car-upgrades-reviews-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .upgrade-container {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .reviews {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+}
+/*# sourceMappingURL=large.css.map */
