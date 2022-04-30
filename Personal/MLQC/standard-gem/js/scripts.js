@@ -167,3 +167,33 @@ function spCheck() {
         return "SSR"
     }
 }
+
+responsiveAppSize()
+
+function responsiveAppSize() {
+    let appDiv = document.getElementById("app-container");
+    let appWidth = window.innerWidth;
+    let appHeight = Math.round((1.7) * appWidth);
+    
+    let webHeader = document.getElementById("web-header");
+    let webHeaderHeight = webHeader.offsetHeight;
+    let maxAppHeight = window.innerHeight - webHeaderHeight;
+
+    let maxAppWidth = Math.round(maxAppHeight / 1.8);
+
+    if (appHeight <= maxAppHeight) {
+        appDiv.style.height = appHeight + "px";
+        appWidth = window.innerWidth;
+        appDiv.style.width = appWidth + "px"
+    }
+    else {
+        appHeight = maxAppHeight;
+        appWidth = maxAppWidth;
+
+        appDiv.style.height = appHeight + "px";
+        appDiv.style.width = appWidth + "px";
+    }
+}
+
+window.addEventListener('resize', responsiveAppSize);
+
