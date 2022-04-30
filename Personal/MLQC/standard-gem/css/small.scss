@@ -9,8 +9,8 @@ body {
 
 header {
     // background-color: #ef87a3;
-    background: rgb(238,174,202);
-background: linear-gradient(135deg, rgba(238,174,202,1) 0%, rgba(239,135,163,1) 100%);
+    background: rgb(238, 174, 202);
+    background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(239, 135, 163, 1) 100%);
     color: white;
     font-family: 'Open Sans', sans-serif;
     padding: 1rem;
@@ -44,7 +44,7 @@ background: linear-gradient(135deg, rgba(238,174,202,1) 0%, rgba(239,135,163,1) 
     background-repeat: no-repeat;
     background-size: 100%;
     // When width is 463
-    height: 51.5rem;
+    // height: 51.5rem;
     margin: 0 auto;
     // min-width: 10rem;
     // box-shadow: blueviolet 1rem 1rem 3rem;
@@ -101,21 +101,32 @@ button {
 
 .items-header-container {
     display: grid;
-    grid-template-columns: 1fr 8rem 8rem 8rem;
+    // grid-template-columns: 1fr 8rem 8rem 8rem;
+    grid-template-columns: 7rem 1fr;
     grid-gap: 0.5rem;
+}
+
+.items-bar-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .items-bar {
     font-family: 'Open Sans', sans-serif;
     background-color: gray;
-    opacity: 0.6;
+    // opacity: 0.6;
+    // opacity: 0.3;
     transform: skew(-30deg);
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem;
+    height: 1.5rem;
+    margin-top: 0.2rem;
+    // margin-right: 0.8rem;
 
     // padding: 0.1rem;
     div {
@@ -128,12 +139,22 @@ button {
         margin-top: 0.1rem;
         // transform: skew(30deg);
     }
-
+    
     .add-btn {
         // width: 2rem;
+        margin-top: 0.1rem;
         margin-right: 0.5rem;
         margin-bottom: 0.2rem;
         transform: skew(30deg);
+        background-image: linear-gradient(to right, white, lightgrey);
+        border-radius: 100%;
+        border: none;
+        box-shadow: 1px 1px 3px grey;
+    
+        svg {
+            margin-top: 0.2rem;
+            width: 0.6rem;
+        }
     }
 }
 
@@ -198,18 +219,6 @@ button {
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
     color: white;
-}
-
-.add-btn {
-    background-image: linear-gradient(to right, white, lightgrey);
-    border-radius: 100%;
-    border: none;
-    box-shadow: 1px 1px 3px grey;
-
-    svg {
-        margin-top: 0.2rem;
-        width: 0.8rem;
-    }
 }
 
 #rect1 {
