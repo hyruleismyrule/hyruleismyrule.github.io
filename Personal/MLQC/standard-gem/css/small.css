@@ -47,15 +47,6 @@ button {
   font-family: 'EB Garamond', serif;
 }
 
-.top-action-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .drop-container {
   margin-top: 1rem;
   display: -webkit-box;
@@ -169,6 +160,16 @@ button {
   border: 2px solid #edb8cc;
 }
 
+.top-action-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -1.3rem;
+}
+
 .redeem-btn {
   background-color: #b5a5cc;
   border: 2px solid #c9b8d8;
@@ -197,10 +198,11 @@ button {
   background-color: #90bee4;
   border: 2px solid #add3f3;
   color: white;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: -0.6rem;
 }
 
 .preview-btn {
