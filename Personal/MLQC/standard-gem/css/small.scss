@@ -77,11 +77,14 @@ button {
 //     grid-template-rows: 
 // }
 .back-button {
+    // opacity: 0.5;
     background-color: #ef87a3;
     border: 2px solid #f2a7bc;
     border-radius: 100%;
-    width: 5rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
 
     // margin-right: 2.2rem;
     // padding: 2rem;
@@ -90,9 +93,9 @@ button {
     // }
     svg {
         fill: white;
-        width: 3rem;
-        margin-left: 1rem;
-        margin-top: 0.6rem;
+        width: 2.2rem;
+        margin-left: 0.7rem;
+        margin-top: 0.5rem;
     }
 }
 
@@ -104,10 +107,11 @@ button {
 
 .items-bar {
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
+    background-color: gray;
     opacity: 0.6;
-    border-top-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+    transform: skew(-30deg);
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,17 +120,20 @@ button {
     // padding: 0.1rem;
     div {
         color: white;
+        transform: skew(30deg);
     }
 
     img {
         width: 2rem;
         margin-top: 0.1rem;
+        // transform: skew(30deg);
     }
 
     .add-btn {
         // width: 2rem;
         margin-right: 0.5rem;
         margin-bottom: 0.2rem;
+        transform: skew(30deg);
     }
 }
 
