@@ -72,8 +72,7 @@ function buy10() {
     for (let i = 0; i < 10; i++) {
         if (i == gIndex) {
             karmas.push(guarenteedSRPlus());
-        }
-        else {
+        } else {
             karmas.push(pull1());
         }
     }
@@ -88,26 +87,20 @@ function getKarmaName(rarity, king) {
     let maxArray = 0;
     if (rarity == "SP") {
         karmaArray = standardSP;
-    }
-    else if (king == true) {
+    } else if (king == true) {
         if (rarity == "SSR") {
             karmaArray = standardKingSSR;
-        }
-        else if (rarity == "SR") {
+        } else if (rarity == "SR") {
             karmaArray = standardKingSR;
-        }
-        else {
+        } else {
             karmaArray = standardKingR;
         }
-    }
-    else {
+    } else {
         if (rarity == "SSR") {
             karmaArray = standardSSR;
-        }
-        else if (rarity == "SR") {
+        } else if (rarity == "SR") {
             karmaArray = standardSR;
-        }
-        else {
+        } else {
             karmaArray = standardR;
         }
     }
@@ -128,12 +121,10 @@ function checkRarity() {
     if (check == 100) {
         // if (check >= 90) {
         return spCheck();
-    }
-    else if (check >= 90) {
+    } else if (check >= 90) {
         // else if (check >= 80) {
         return "SR";
-    }
-    else {
+    } else {
         return "R";
     }
 }
@@ -143,8 +134,7 @@ function checkRarityGuarenteed() {
     if (check == 100) {
         // if (check >= 90) {
         return spCheck();
-    }
-    else {
+    } else {
         return "SR";
     }
 }
@@ -162,38 +152,120 @@ function spCheck() {
     let check = getRandomInt(0, 21);
     if (check >= 16) {
         return "SP"
-    }
-    else {
+    } else {
         return "SSR"
     }
 }
 
 responsiveAppSize()
+window.addEventListener('resize', responsiveAppSize);
 
 function responsiveAppSize() {
     let appDiv = document.getElementById("app-container");
-    let appWidth = window.innerWidth;
-    let appHeight = Math.round((1.7) * appWidth);
-    
-    let webHeader = document.getElementById("web-header");
-    let webHeaderHeight = webHeader.offsetHeight;
-    let maxAppHeight = window.innerHeight - webHeaderHeight;
+    let header = document.getElementById("header");
 
-    let maxAppWidth = Math.round(maxAppHeight / 1.8);
+    let windowHeight = window.innerHeight;
+    let windowWidth = window.innerWidth;
 
-    if (appHeight <= maxAppHeight) {
-        appDiv.style.height = appHeight + "px";
-        appWidth = window.innerWidth;
-        appDiv.style.width = appWidth + "px"
-    }
-    else {
-        appHeight = maxAppHeight;
-        appWidth = maxAppWidth;
+    if (windowHeight > windowWidth) {
+        // Caclculate by width (mobile)
+        let appWidth = windowWidth;
+        let appHeight = Math.round((1.7) * appWidth);
+        // let headerHeight = windowHeight - appHeight;
+        let headerHeight = 48;
 
-        appDiv.style.height = appHeight + "px";
         appDiv.style.width = appWidth + "px";
+        appDiv.style.height = appHeight + "px";
+        header.style.height = headerHeight + "px";
+
+        if (appHeight + headerHeight > windowHeight) {
+            // calculate by height
+            let headerHeight = 48;
+            let appHeight = windowHeight - headerHeight;
+            let appWidth = Math.round(appHeight / 1.8);
+
+            appDiv.style.width = appWidth + "px";
+            appDiv.style.height = appHeight + "px";
+            header.style.height = headerHeight + "px";
+        }
+    } else {
+        // Calculate by height (desktop)
+        let headerHeight = 48;
+        let appHeight = windowHeight - headerHeight;
+        let appWidth = Math.round(appHeight / 1.8);
+
+        appDiv.style.width = appWidth + "px";
+        appDiv.style.height = appHeight + "px";
+        header.style.height = headerHeight + "px";
+
     }
+
+    // let appWidth = window.innerWidth;
+    // let appHeight = Math.round((1.7) * appWidth);
+
+    // let webHeader = document.getElementById("web-header");
+    // let webHeaderHeight = webHeader.offsetHeight;
+    // let maxAppHeight = window.innerHeight - webHeaderHeight;
+
+    // let maxAppWidth = Math.round(maxAppHeight / 1.8);
+
+    // if (appHeight <= maxAppHeight) {
+    //     appDiv.style.height = appHeight + "px";
+    //     appWidth = window.innerWidth;
+    //     appDiv.style.width = appWidth + "px"
+    // }
+    // else {
+    //     appHeight = maxAppHeight;
+    //     appWidth = maxAppWidth;
+
+    //     appDiv.style.height = appHeight + "px";
+    //     appDiv.style.width = appWidth + "px";
+    // }
 }
 
-window.addEventListener('resize', responsiveAppSize);
+function calculateAppByHeight() {
+    let headerHeight = 32;
+    let appHeight = windowHeight - headerHeight;
+    let appWidth = Math.round(appHeight / 1.8);
 
+    appDiv.style.width = appWidth + "px";
+    appDiv.style.height = appHeight + "px";
+    header.style.height = headerHeight + "px";
+}
+
+function calculateAppByWidth() {
+    let appWidth = windowWidth;
+    let appHeight = Math.round((1.7) * appWidth);
+    // let headerHeight = windowHeight - appHeight;
+    let headerHeight = 32;
+
+    appDiv.style.width = appWidth + "px";
+    appDiv.style.height = appHeight + "px";
+    header.style.height = headerHeight + "px";
+}
+
+// If header
+// function responsiveAppSize() {
+//     let appDiv = document.getElementById("app-container");
+//     let appWidth = window.innerWidth;
+//     let appHeight = Math.round((1.7) * appWidth);
+
+//     let webHeader = document.getElementById("web-header");
+//     let webHeaderHeight = webHeader.offsetHeight;
+//     let maxAppHeight = window.innerHeight - webHeaderHeight;
+
+//     let maxAppWidth = Math.round(maxAppHeight / 1.8);
+
+//     if (appHeight <= maxAppHeight) {
+//         appDiv.style.height = appHeight + "px";
+//         appWidth = window.innerWidth;
+//         appDiv.style.width = appWidth + "px"
+//     }
+//     else {
+//         appHeight = maxAppHeight;
+//         appWidth = maxAppWidth;
+
+//         appDiv.style.height = appHeight + "px";
+//         appDiv.style.width = appWidth + "px";
+//     }
+// }

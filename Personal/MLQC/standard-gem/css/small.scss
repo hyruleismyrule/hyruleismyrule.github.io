@@ -7,34 +7,54 @@ body {
     background: linear-gradient(35deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
+// header, footer {
+//     // background-color: #ef87a3;
+//     background: rgb(238, 174, 202);
+//     background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(239, 135, 163, 1) 100%);
+//     color: white;
+//     font-family: 'Open Sans', sans-serif;
+//     padding: 1rem;
+
+//     .title-wrapper {
+//         max-width: 32rem;
+//         margin: 0 auto;
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     h1 {
+//         margin: 0;
+//     }
+
+//     .menu-container {
+
+//         // width: 100%;
+//         svg {
+//             fill: white;
+//             width: 2rem;
+//             // width: 100%;
+//         }
+//     }
+// }
+
 header {
-    // background-color: #ef87a3;
     background: rgb(238, 174, 202);
     background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(239, 135, 163, 1) 100%);
     color: white;
     font-family: 'Open Sans', sans-serif;
-    padding: 1rem;
 
     .title-wrapper {
-        max-width: 32rem;
-        margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        max-width: 35rem;
     }
+}
 
-    h1 {
-        margin: 0;
-    }
-
-    .menu-container {
-
-        // width: 100%;
-        svg {
-            fill: white;
-            width: 2rem;
-            // width: 100%;
-        }
-    }
+h1 {
+    margin: 0;
+    margin-left: 1rem;
 }
 
 .app-container {
@@ -136,7 +156,7 @@ button {
         margin-top: 0.1rem;
         // transform: skew(30deg);
     }
-    
+
     .add-btn {
         // width: 2rem;
         margin-top: 0.1rem;
@@ -147,7 +167,7 @@ button {
         border-radius: 100%;
         border: none;
         box-shadow: 1px 1px 3px grey;
-    
+
         svg {
             margin-top: 0.2rem;
             width: 0.6rem;
@@ -191,6 +211,7 @@ button {
     padding: 0.2rem;
     height: 2.5rem;
     z-index: 2;
+
     // justify-content: center;
     img {
         width: 50px;
@@ -223,6 +244,7 @@ button {
 .banner-image-container {
     padding: 3rem;
     margin-top: -6.2rem;
+
     img {
         width: 100%;
         z-index: 1;

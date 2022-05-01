@@ -8,27 +8,23 @@ header {
   background: linear-gradient(135deg, #eeaeca 0%, #ef87a3 100%);
   color: white;
   font-family: 'Open Sans', sans-serif;
-  padding: 1rem;
 }
 
 header .title-wrapper {
-  max-width: 32rem;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 35rem;
 }
 
-header h1 {
+h1 {
   margin: 0;
-}
-
-header .menu-container svg {
-  fill: white;
-  width: 2rem;
+  margin-left: 1rem;
 }
 
 .app-container {
