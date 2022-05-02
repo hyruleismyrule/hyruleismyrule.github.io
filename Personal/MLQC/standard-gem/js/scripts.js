@@ -171,7 +171,7 @@ function responsiveAppSize() {
         // Caclculate by width (mobile)
         let appWidth = windowWidth;
         let appHeight = Math.round((1.7) * appWidth);
-        let headerHeight = 48;
+        let headerHeight = 40;
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
@@ -198,24 +198,4 @@ function responsiveAppSize() {
         header.style.height = headerHeight + "px";
 
     }
-}
-
-function calculateAppByHeight() {
-    let headerHeight = 32;
-    let appHeight = windowHeight - headerHeight;
-    let appWidth = Math.round(appHeight / 1.8);
-
-    appDiv.style.width = appWidth + "px";
-    appDiv.style.height = appHeight + "px";
-    header.style.height = headerHeight + "px";
-}
-
-function calculateAppByWidth() {
-    let appWidth = windowWidth;
-    let appHeight = Math.round((1.7) * appWidth);
-    let headerHeight = 32;
-
-    appDiv.style.width = appWidth + "px";
-    appDiv.style.height = appHeight + "px";
-    header.style.height = headerHeight + "px";
 }
