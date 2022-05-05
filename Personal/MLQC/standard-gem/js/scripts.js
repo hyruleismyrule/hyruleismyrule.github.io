@@ -204,4 +204,13 @@ function placeGrids(appWidth) {
     let TRC = Math.round(appWidth / 8);
     TRC = "repeat(auto-fill, " + TRC + "px)";
     topRow.style.gridTemplateColumns = TRC;
+
+    let backButton = document.getElementById("backButton");
+    backButton.style.width = Math.round(appWidth / 8) + "px";
+    backButton.style.height = Math.round(appWidth / 8) + "px";
+
+    let backSVG = document.getElementById("backSVG");
+    backSVG.style.width = Math.round(appWidth / 13) + "px";
+    backSVG.style.marginLeft = Math.round(appWidth / 45) + "px";
+    backSVG.style.marginTop = Math.round(appWidth / 60) + "px";
 }

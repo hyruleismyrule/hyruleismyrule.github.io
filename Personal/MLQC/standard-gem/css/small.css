@@ -22,14 +22,9 @@ body {
   background-color: #ef87a3;
   border: 2px solid #f2a7bc;
   border-radius: 100%;
-  width: 3.5rem;
-  height: 3.5rem;
 }
 
 .back-button svg {
   fill: white;
-  width: 2.2rem;
-  margin-left: 0.7rem;
-  margin-top: 0.5rem;
 }
 /*# sourceMappingURL=small.css.map */
