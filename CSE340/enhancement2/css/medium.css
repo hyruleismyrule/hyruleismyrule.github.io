@@ -1,0 +1,19 @@
+@media only screen and (min-width: 36rem) {
+  body {
+    background-image: url(small_check.jpg);
+    background-color: #4c96d7;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  nav li {
+    padding: 1rem;
+  }
+  .all-content-wrapper {
+    background-color: #ffffff;
+    border: 5px solid #4c96d7;
+    border-radius: 10px;
+  }
+}
+/*# sourceMappingURL=medium.css.map */
