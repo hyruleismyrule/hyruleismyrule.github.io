@@ -200,11 +200,13 @@ function responsiveAppSize() {
 
 // // Grid-placement
 function placeGrids(appWidth) {
+    // Top Row
     let topRow = document.getElementById("topRow");
     let TRC = Math.round(appWidth / 8);
     TRC = "repeat(auto-fill, " + TRC + "px)";
     topRow.style.gridTemplateColumns = TRC;
 
+    // Back Button
     let backButton = document.getElementById("backButton");
     backButton.style.width = Math.round(appWidth / 10) + "px";
     backButton.style.height = Math.round(appWidth / 10) + "px";
@@ -215,4 +217,9 @@ function placeGrids(appWidth) {
     backSVG.style.width = Math.round(appWidth / 15) + "px";
     backSVG.style.marginLeft = Math.round(appWidth / 55) + "px";
     backSVG.style.marginTop = Math.round(appWidth / 80) + "px";
+
+    // Add Button
+    let addBtn = document.getElementsByClassName("add-btn");
+    let addBTNsvg = document.getElementsByClassName("addBTNsvg");
+
 }

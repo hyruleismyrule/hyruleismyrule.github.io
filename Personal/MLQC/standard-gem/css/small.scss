@@ -32,3 +32,58 @@ body {
         fill: white;
     }
 }
+
+.items-header-container {
+    // display: grid;
+    // grid-template-columns: 1fr 8rem 8rem 8rem;
+    // grid-template-columns: 7rem 1fr;
+    // grid-gap: 0.5rem;
+}
+
+.items-bar-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-gap: 0.5rem;
+    // margin-right: 0.5rem;
+}
+
+.items-bar {
+    font-family: 'Open Sans', sans-serif;
+    background-color: gray;
+    // opacity: 0.6;
+    // opacity: 0.3;
+    transform: skew(-30deg);
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 1.5rem;
+    // margin-top: 0.2rem;
+
+    div {
+        color: white;
+        transform: skew(30deg);
+    }
+
+    img {
+        width: 2rem;
+        margin-top: 0.1rem;
+    }
+}
+
+.add-btn {
+    // margin-top: 0.1rem;
+    // margin-right: 0.5rem;
+    // margin-bottom: 0.2rem;
+    transform: skew(30deg);
+    background-image: linear-gradient(to right, white, lightgrey);
+    border-radius: 100%;
+    border: none;
+    box-shadow: 1px 1px 3px grey;
+
+    svg {
+        // margin-top: 0.2rem;
+        // width: 0.6rem;
+    }
+}
