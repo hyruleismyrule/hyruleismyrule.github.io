@@ -21,11 +21,13 @@ def main():
     bmr = basal_metabolic_rate(gender, weight, height, age)
 
     # Print the results for the user to see.
+    print()
     print(f"Age: {age}")
     print(f"Weight (kg): {weight:.2f}")
     print(f"Height (cm): {height:.2f}")
     print(f"Body mass index: {bmi:.2f}")
     print(f"Basal metabolic rate (kcal/day): {bmr:.2f}")
+    print()
     pass
 
 
