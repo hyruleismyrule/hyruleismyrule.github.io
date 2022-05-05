@@ -157,12 +157,13 @@ function spCheck() {
     }
 }
 
+// Window sizes
+
 responsiveAppSize()
 window.addEventListener('resize', responsiveAppSize);
 
 function responsiveAppSize() {
     let appDiv = document.getElementById("app-container");
-    let header = document.getElementById("header");
 
     let windowHeight = window.innerHeight;
     let windowWidth = window.innerWidth;
@@ -171,31 +172,24 @@ function responsiveAppSize() {
         // Caclculate by width (mobile)
         let appWidth = windowWidth;
         let appHeight = Math.round((1.7) * appWidth);
-        let headerHeight = 40;
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
-        header.style.height = headerHeight + "px";
 
-        if (appHeight + headerHeight > windowHeight) {
+        if (appHeight > windowHeight) {
             // calculate by height
-            let headerHeight = 48;
-            let appHeight = windowHeight - headerHeight;
+            let appHeight = windowHeight;
             let appWidth = Math.round(appHeight / 1.8);
 
             appDiv.style.width = appWidth + "px";
             appDiv.style.height = appHeight + "px";
-            header.style.height = headerHeight + "px";
         }
     } else {
         // Calculate by height (desktop)
-        let headerHeight = 48;
-        let appHeight = windowHeight - headerHeight;
+        let appHeight = windowHeight;
         let appWidth = Math.round(appHeight / 1.8);
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
-        header.style.height = headerHeight + "px";
-
     }
 }
