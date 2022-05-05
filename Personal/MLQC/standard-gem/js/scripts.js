@@ -168,28 +168,40 @@ function responsiveAppSize() {
     let windowHeight = window.innerHeight;
     let windowWidth = window.innerWidth;
 
+    let appHeight = windowHeight;
+    let appWidth = windowWidth;
+
     if (windowHeight > windowWidth) {
         // Caclculate by width (mobile)
-        let appWidth = windowWidth;
-        let appHeight = Math.round((1.7) * appWidth);
+        appWidth = windowWidth;
+        appHeight = Math.round((1.7) * appWidth);
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
 
         if (appHeight > windowHeight) {
             // calculate by height
-            let appHeight = windowHeight;
-            let appWidth = Math.round(appHeight / 1.8);
+            appHeight = windowHeight;
+            appWidth = Math.round(appHeight / 1.8);
 
             appDiv.style.width = appWidth + "px";
             appDiv.style.height = appHeight + "px";
         }
     } else {
         // Calculate by height (desktop)
-        let appHeight = windowHeight;
-        let appWidth = Math.round(appHeight / 1.8);
+        appHeight = windowHeight;
+        appWidth = Math.round(appHeight / 1.8);
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
     }
+    placeGrids(appWidth)
+}
+
+// // Grid-placement
+function placeGrids(appWidth) {
+    let topRow = document.getElementById("topRow");
+    let TRC = Math.round(appWidth / 8);
+    TRC = "repeat(auto-fill, " + TRC + "px)";
+    topRow.style.gridTemplateColumns = TRC;
 }
