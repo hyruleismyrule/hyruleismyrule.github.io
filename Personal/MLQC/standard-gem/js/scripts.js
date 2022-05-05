@@ -206,11 +206,13 @@ function placeGrids(appWidth) {
     topRow.style.gridTemplateColumns = TRC;
 
     let backButton = document.getElementById("backButton");
-    backButton.style.width = Math.round(appWidth / 8) + "px";
-    backButton.style.height = Math.round(appWidth / 8) + "px";
+    backButton.style.width = Math.round(appWidth / 10) + "px";
+    backButton.style.height = Math.round(appWidth / 10) + "px";
+    backButton.style.marginTop = Math.round(appWidth / 75) + "px";
+    backButton.style.marginLeft = Math.round(appWidth / 75) + "px";
 
     let backSVG = document.getElementById("backSVG");
-    backSVG.style.width = Math.round(appWidth / 13) + "px";
-    backSVG.style.marginLeft = Math.round(appWidth / 45) + "px";
-    backSVG.style.marginTop = Math.round(appWidth / 60) + "px";
+    backSVG.style.width = Math.round(appWidth / 15) + "px";
+    backSVG.style.marginLeft = Math.round(appWidth / 55) + "px";
+    backSVG.style.marginTop = Math.round(appWidth / 80) + "px";
 }

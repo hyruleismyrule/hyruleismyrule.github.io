@@ -20,8 +20,6 @@ body {
 // Back and items
 .items-header-container {
     display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    // grid-template-columns: 7rem 1fr;
     // grid-gap: 0.5rem;
 }
 
@@ -30,14 +28,7 @@ body {
     background-color: #ef87a3;
     border: 2px solid #f2a7bc;
     border-radius: 100%;
-    // width: 3.5rem;
-    // height: 3.5rem;
-    // margin-top: 0.3rem;
-    // margin-left: 0.3rem;
     svg {
         fill: white;
-        // width: 2.2rem;
-        // margin-left: 0.7rem;
-        // margin-top: 0.5rem;
     }
 }
