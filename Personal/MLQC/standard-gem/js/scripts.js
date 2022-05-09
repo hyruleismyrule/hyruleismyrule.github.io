@@ -218,8 +218,11 @@ function placeGrids(appWidth) {
     backSVG.style.marginLeft = Math.round(appWidth / 55) + "px";
     backSVG.style.marginTop = Math.round(appWidth / 80) + "px";
 
-    // Add Button
-    let addBtn = document.getElementsByClassName("add-btn");
-    let addBTNsvg = document.getElementsByClassName("addBTNsvg");
+    // // Add stamina Button
+    // let staminaBar = document.getElementsByClassName("staminaBar");
+    // let staminaBtn = document.getElementsByClassName("staminaBtn");
+    // let staminaBTNsvg = document.getElementsByClassName("staminaBTNsvg");
+
+    // staminaBar.style.gridColumnStart = "3";
 
 }
