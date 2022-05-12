@@ -68,9 +68,13 @@ body {
   margin-top: 0.1rem;
 }
 
+.img-icon-container {
+  -webkit-transform: skew(0deg);
+          transform: skew(0deg);
+}
+
 .add-btn {
   margin-top: 0.1rem;
-  margin-right: 0.5rem;
   margin-bottom: 0.2rem;
   -webkit-transform: skew(30deg);
           transform: skew(30deg);
@@ -82,8 +86,23 @@ body {
           box-shadow: 1px 1px 3px grey;
 }
 
-.add-btn svg {
-  margin-top: 0.2rem;
-  width: 0.6rem;
+.items-bar-container {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 9;
+}
+
+.item {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=small.css.map */

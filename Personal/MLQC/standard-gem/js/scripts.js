@@ -218,11 +218,57 @@ function placeGrids(appWidth) {
     backSVG.style.marginLeft = Math.round(appWidth / 55) + "px";
     backSVG.style.marginTop = Math.round(appWidth / 80) + "px";
 
-    // // Add stamina Button
-    // let staminaBar = document.getElementsByClassName("staminaBar");
-    // let staminaBtn = document.getElementsByClassName("staminaBtn");
-    // let staminaBTNsvg = document.getElementsByClassName("staminaBTNsvg");
+    // Stamina
+    let stamina = document.getElementById("stamina");
+    stamina.style.marginTop = Math.round(appWidth / 150) + "px";
+    stamina.style.height = Math.round(appWidth / 25) + "px";
+    stamina.style.fontSize = Math.round(appWidth / 35) + "px";
 
-    // staminaBar.style.gridColumnStart = "3";
+    let staminaIMG = document.getElementById("stamina-img");
+    staminaIMG.style.width = Math.round(appWidth / 16) + "px";
 
+    let staminaButton = document.getElementById("stamina-button");
+    staminaButton.style.height = Math.round(appWidth / 28) + "px";
+    staminaButton.style.width = Math.round(appWidth / 28) + "px";
+    staminaButton.style.marginRight = Math.round(appWidth / 110) + "px";
+
+    let staminaSVG = document.getElementById("staminaSVG");
+    staminaSVG.style.width = Math.round(appWidth / 36) + "px";
+    staminaSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Gold
+    let gold = document.getElementById("gold");
+    gold.style.marginTop = Math.round(appWidth / 150) + "px";
+    gold.style.height = Math.round(appWidth / 25) + "px";
+    gold.style.fontSize = Math.round(appWidth / 35) + "px";
+
+    let goldIMG = document.getElementById("gold-img");
+    goldIMG.style.width = Math.round(appWidth / 16) + "px";
+
+    let goldButton = document.getElementById("gold-button");
+    goldButton.style.height = Math.round(appWidth / 28) + "px";
+    goldButton.style.width = Math.round(appWidth / 28) + "px";
+    goldButton.style.marginRight = Math.round(appWidth / 110) + "px";
+
+    let goldSVG = document.getElementById("goldSVG");
+    goldSVG.style.width = Math.round(appWidth / 36) + "px";
+    goldSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Gems
+    let gems = document.getElementById("gems");
+    gems.style.marginTop = Math.round(appWidth / 150) + "px";
+    gems.style.height = Math.round(appWidth / 25) + "px";
+    gems.style.fontSize = Math.round(appWidth / 35) + "px";
+
+    let gemsIMG = document.getElementById("gems-img");
+    gemsIMG.style.width = Math.round(appWidth / 16) + "px";
+
+    let gemsButton = document.getElementById("gems-button");
+    gemsButton.style.height = Math.round(appWidth / 28) + "px";
+    gemsButton.style.width = Math.round(appWidth / 28) + "px";
+    gemsButton.style.marginRight = Math.round(appWidth / 110) + "px";
+
+    let gemsSVG = document.getElementById("gemsSVG");
+    gemsSVG.style.width = Math.round(appWidth / 36) + "px";
+    gemsSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
 }
