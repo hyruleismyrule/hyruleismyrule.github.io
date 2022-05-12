@@ -1,0 +1,55 @@
+// Colors
+$light-gray: #bababa;
+$med-gray: #8d8d8d;
+$light-blue: #a6cbeb;
+$blue: #4c96d7;
+$dark-blue: #205A8D;
+$dark-gray: #3a3a3a;
+$white: #ffffff;
+
+// Template Styles
+@media only screen and (min-width: 62rem) {
+    .all-content-wrapper {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    // End of Template Styles
+
+    // Home Styles
+    .top-button {
+        display: block;
+    }
+
+    .bottom-button {
+        display: none;
+    }
+
+    .hero-car-img {
+        position: relative;
+    }
+
+    .hero-car-info {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .car-upgrades-reviews-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .upgrade-container {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .reviews {
+        grid-column-start: 2;
+    }
+
+    // End of Home Styles
+}
