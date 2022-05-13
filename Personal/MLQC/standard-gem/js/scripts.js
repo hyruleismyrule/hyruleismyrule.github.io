@@ -271,4 +271,21 @@ function placeGrids(appWidth) {
     let gemsSVG = document.getElementById("gemsSVG");
     gemsSVG.style.width = Math.round(appWidth / 36) + "px";
     gemsSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // 2nd row
+    let secondRow = document.getElementById("2ndRow");
+    secondRow.style.marginTop = "-" + Math.round(appWidth / 30) + "px";
+
+    // Redeem
+    let redeemButton = document.getElementById("redeem-button");
+    redeemButton.style.fontSize = Math.round(appWidth / 25) + "px";
+    redeemButton.style.width = Math.round(appWidth / 4.5) + "px";
+    redeemButton.style.height = Math.round(appWidth / 15) + "px";
+    
+    let redeemIMG = document.getElementById("redeem-img");
+    redeemIMG.style.width = Math.round(appWidth / 10) + "px";
+    redeemIMG.style.marginLeft = "-" + Math.round(appWidth / 40) + "px";
+    redeemIMG.style.marginRight = "-" + Math.round(appWidth / 100) + "px";
+
+    // Drop Rate
 }

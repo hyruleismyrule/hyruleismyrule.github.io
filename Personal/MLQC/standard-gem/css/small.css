@@ -105,4 +105,52 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.top-action-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  opacity: 0.5;
+}
+
+.redeem-btn {
+  background-color: #b5a5cc;
+  border: 2px solid #c9b8d8;
+  font-family: 'EB Garamond', serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.redeem-btn img {
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+  z-index: 2;
+}
+
+.redeem-btn div {
+  z-index: 2;
+}
+
+.drop-btn {
+  background-color: #90bee4;
+  border: 2px solid #add3f3;
+  color: white;
+  font-family: 'EB Garamond', serif;
+  z-index: 2;
+}
 /*# sourceMappingURL=small.css.map */

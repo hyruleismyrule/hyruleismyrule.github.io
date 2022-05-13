@@ -107,3 +107,60 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+.top-action-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    opacity: 0.5;
+    // width: 100%;
+}
+
+
+.redeem-btn {
+    background-color: #b5a5cc;
+    border: 2px solid #c9b8d8;
+    font-family: 'EB Garamond', serif;
+    color: white;
+    display: flex;
+    // padding: 0.2rem;
+    // height: 2.5rem;
+    // z-index: 2;
+
+    // justify-content: center;
+    img {
+        // width: 50px;
+        // transform: rotate(10);
+        transform: rotateZ(20deg);
+        z-index: 2;
+        // margin: 0;
+    }
+
+    div {
+        // margin-left: 0.2rem;
+        z-index: 2;
+        // margin-right: 0.2rem;
+    }
+
+    align-items: center;
+}
+
+.drop-btn {
+    background-color: #90bee4;
+    border: 2px solid #add3f3;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    // padding-left: 0.8rem;
+    // padding-right: 0.8rem;
+    // padding-top: 0.5rem;
+    // padding-bottom: 0.5rem;
+    // margin-top: -0.6rem;
+    z-index: 2;
+    // justify-self: end;
+}
+
+.drop-container {
+    // display: flex;
+    // justify-content: flex-end;
+}
