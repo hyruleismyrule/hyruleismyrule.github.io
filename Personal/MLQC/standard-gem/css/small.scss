@@ -20,11 +20,9 @@ body {
 // Back and items
 .items-header-container {
     display: grid;
-    // grid-gap: 0.5rem;
 }
 
 .back-button {
-    // opacity: 0.5;
     background-color: #ef87a3;
     border: 2px solid #f2a7bc;
     border-radius: 100%;
@@ -44,8 +42,7 @@ body {
 .items-bar {
     font-family: 'Open Sans', sans-serif;
     background-color: gray;
-    // opacity: 0.6;
-    // opacity: 0.3;
+    opacity: 0.6;
     transform: skew(-30deg);
     border-top-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -54,9 +51,6 @@ body {
     align-items: center;
     height: 1.5rem;
     margin-top: 0.2rem;
-    // margin-right: 0.8rem;
-
-    // padding: 0.1rem;
     div {
         color: white;
         transform: skew(30deg);
@@ -65,7 +59,6 @@ body {
     img {
         width: 2rem;
         margin-top: 0.1rem;
-        // transform: skew(30deg);
     }
 }
 
@@ -74,20 +67,13 @@ body {
 }
 
 .add-btn {
-    // width: 2rem;
     margin-top: 0.1rem;
-    // margin-right: 0.5rem;
     margin-bottom: 0.2rem;
     transform: skew(30deg);
     background-image: linear-gradient(to right, white, lightgrey);
     border-radius: 100%;
     border: none;
     box-shadow: 1px 1px 3px grey;
-
-    // svg {
-    //     // margin-top: 0.2rem;
-    //     // width: 0.6rem;
-    // }
 }
 
 .items-bar-container {
@@ -96,13 +82,8 @@ body {
 }
 
 .item {
-    // background-color: green;
-    // opacity: 0.5;
     font-family: 'Open Sans', sans-serif;
-    // font-weight: bold;
-    // width: 1rem;
     width: 100%;
-    // height: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -113,10 +94,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    opacity: 0.5;
-    // width: 100%;
 }
-
 
 .redeem-btn {
     background-color: #b5a5cc;
@@ -124,25 +102,9 @@ body {
     font-family: 'EB Garamond', serif;
     color: white;
     display: flex;
-    // padding: 0.2rem;
-    // height: 2.5rem;
-    // z-index: 2;
-
-    // justify-content: center;
     img {
-        // width: 50px;
-        // transform: rotate(10);
         transform: rotateZ(20deg);
-        z-index: 2;
-        // margin: 0;
     }
-
-    div {
-        // margin-left: 0.2rem;
-        z-index: 2;
-        // margin-right: 0.2rem;
-    }
-
     align-items: center;
 }
 
@@ -151,16 +113,4 @@ body {
     border: 2px solid #add3f3;
     color: white;
     font-family: 'EB Garamond', serif;
-    // padding-left: 0.8rem;
-    // padding-right: 0.8rem;
-    // padding-top: 0.5rem;
-    // padding-bottom: 0.5rem;
-    // margin-top: -0.6rem;
-    z-index: 2;
-    // justify-self: end;
-}
-
-.drop-container {
-    // display: flex;
-    // justify-content: flex-end;
 }

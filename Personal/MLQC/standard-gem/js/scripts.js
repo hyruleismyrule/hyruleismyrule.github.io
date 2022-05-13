@@ -289,9 +289,13 @@ function placeGrids(appWidth) {
 
     // Drop Rate
     let dropButton = document.getElementById("drop-button");
-    dropButton.style.paddingTop = Math.round(appWidth / 90) + "px";
-    dropButton.style.paddingBottom = Math.round(appWidth / 90) + "px";
-    dropButton.style.paddingLeft = Math.round(appWidth / 50) + "px";
-    dropButton.style.paddingRight = Math.round(appWidth / 50) + "px";
+    dropButton.style.fontSize = Math.round(appWidth / 25) + "px";
+    dropButton.style.padding = Math.round(appWidth / 90) + "px";
     dropButton.style.marginTop = Math.round(appWidth / 50) + "px";
+
+    // Banner placeholder
+    let bannerPlaceholder = document.getElementById("banner-placeholder");
+    // bannerPlaceholder.style.backgroundColor = "black";
+    bannerPlaceholder.style.width = Math.round(appWidth) + "px";
+    bannerPlaceholder.style.height = Math.round(appWidth) + "px";
 }
