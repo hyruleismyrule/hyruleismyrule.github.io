@@ -202,7 +202,7 @@ function responsiveAppSize() {
 function placeGrids(appWidth) {
     // Top Row
     let topRow = document.getElementById("topRow");
-    let TRC = Math.round(appWidth / 8);
+    let TRC = appWidth / 8;
     TRC = "repeat(auto-fill, " + TRC + "px)";
     topRow.style.gridTemplateColumns = TRC;
 
@@ -298,4 +298,29 @@ function placeGrids(appWidth) {
     // bannerPlaceholder.style.backgroundColor = "black";
     bannerPlaceholder.style.width = Math.round(appWidth) + "px";
     bannerPlaceholder.style.height = Math.round(appWidth) + "px";
+
+    // Third Row
+    let thirdRow = document.getElementById("third-row");
+    let ThirdRC = appWidth / 16;
+    ThirdRC = "repeat(auto-fill, " + ThirdRC + "px)";
+    thirdRow.style.gridTemplateColumns = ThirdRC;
+    // thirdRow.style.gridTemplateRows = + Math.round(appWidth / 50) + "px" + Math.round(appWidth / 50) + "px";
+
+    // Preview
+    let previewBTN = document.getElementById("previewBTN");
+    previewBTN.style.fontSize = Math.round(appWidth / 30) + "px";
+    previewBTN.style.height = Math.round(appWidth / 9) + "px";
+    previewBTN.style.width = Math.round(appWidth / 9) + "px";
+    previewBTN.style.marginLeft = "-" + Math.round(appWidth / 100) + "px";
+
+    // Own Limited
+    let limitedContainer = document.getElementById("limitedContainer");
+    limitedContainer.style.fontSize = Math.round(appWidth / 35) + "px";
+    limitedContainer.style.height = Math.round(appWidth / 23) + "px";
+    limitedContainer.style.marginTop = Math.round(appWidth / 18) + "px";
+    limitedContainer.style.marginLeft = "-" + Math.round(appWidth / 20) + "px";
+
+    let ownP = document.getElementById("ownP");
+    ownP.style.marginTop = Math.round(appWidth / 200) + "px";
+    ownP.style.marginLeft = Math.round(appWidth / 40) + "px";
 }

@@ -1,5 +1,16 @@
 // font-family: 'EB Garamond', serif;
 // font-family: 'Open Sans', sans-serif;
+#rect1 {
+    fill: url(#Gradient1);
+}
+
+.stop1 {
+    stop-color: #dbbe9f;
+}
+
+.stop3 {
+    stop-color: #a78c70;
+}
 
 body {
     background: rgb(238, 174, 202);
@@ -26,6 +37,7 @@ body {
     background-color: #ef87a3;
     border: 2px solid #f2a7bc;
     border-radius: 100%;
+
     svg {
         fill: white;
     }
@@ -51,6 +63,7 @@ body {
     align-items: center;
     height: 1.5rem;
     margin-top: 0.2rem;
+
     div {
         color: white;
         transform: skew(30deg);
@@ -102,9 +115,11 @@ body {
     font-family: 'EB Garamond', serif;
     color: white;
     display: flex;
+
     img {
         transform: rotateZ(20deg);
     }
+
     align-items: center;
 }
 
@@ -113,4 +128,41 @@ body {
     border: 2px solid #add3f3;
     color: white;
     font-family: 'EB Garamond', serif;
+}
+
+.third-row {
+    display: grid;
+    // grid-template-rows: 1fr 1fr;
+}
+
+.preview-btn {
+    background-color: #d5b48f;
+    border: 2px solid #e7c9a7;
+    border-radius: 100%;
+    font-family: 'EB Garamond', serif;
+    padding: 0;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    color: white;
+    z-index: 1;
+}
+
+.limited-container {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    color: white;
+    background-color: gray;
+    // width: 10rem;
+    // padding: 0.2rem;
+    font-family: 'Open Sans', sans-serif;
+    // filter:blur(4px);
+    // box-shadow: 5px 0 2px gray;
+    opacity: 0.5;
+    p {
+        margin: 0;
+    }
+
+    // padding: 0.01rem;
+    // padding-top: 0.1rem;
+    // padding: 0.1rem;
 }

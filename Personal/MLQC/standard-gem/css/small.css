@@ -1,3 +1,15 @@
+#rect1 {
+  fill: url(#Gradient1);
+}
+
+.stop1 {
+  stop-color: #dbbe9f;
+}
+
+.stop3 {
+  stop-color: #a78c70;
+}
+
 body {
   background: #eeaeca;
   background: linear-gradient(35deg, #eeaeca 0%, #94bbe9 100%);
@@ -146,5 +158,37 @@ body {
   border: 2px solid #add3f3;
   color: white;
   font-family: 'EB Garamond', serif;
+}
+
+.third-row {
+  display: -ms-grid;
+  display: grid;
+}
+
+.preview-btn {
+  background-color: #d5b48f;
+  border: 2px solid #e7c9a7;
+  border-radius: 100%;
+  font-family: 'EB Garamond', serif;
+  padding: 0;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  color: white;
+  z-index: 1;
+}
+
+.limited-container {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 9;
+  color: white;
+  background-color: gray;
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0.5;
+}
+
+.limited-container p {
+  margin: 0;
 }
 /*# sourceMappingURL=small.css.map */
