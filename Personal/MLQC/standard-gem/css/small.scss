@@ -152,8 +152,6 @@ body {
     grid-column-end: 9;
     color: white;
     background-color: gray;
-    // width: 10rem;
-    // padding: 0.2rem;
     font-family: 'Open Sans', sans-serif;
     // filter:blur(4px);
     // box-shadow: 5px 0 2px gray;
@@ -161,8 +159,37 @@ body {
     p {
         margin: 0;
     }
+}
 
-    // padding: 0.01rem;
-    // padding-top: 0.1rem;
-    // padding: 0.1rem;
+#gwc-button {
+    transform: skew(0deg);
+}
+
+.forth-row {
+    display: grid;
+}
+
+.wish-container {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    // display: flex;
+    color: white;
+    background-color: gray;
+    font-family: 'Open Sans', sans-serif;
+    // filter:blur(4px);
+    // box-shadow: 5px 0 2px gray;
+    opacity: 0.5;
+    p {
+        margin: 0;
+    }
+}
+
+.free-container {
+    display: grid;
+}
+
+.free-text-container {
+    font-family: 'Open Sans', sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 5;
 }

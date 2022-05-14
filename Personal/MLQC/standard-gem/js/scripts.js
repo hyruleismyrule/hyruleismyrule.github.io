@@ -323,4 +323,44 @@ function placeGrids(appWidth) {
     let ownP = document.getElementById("ownP");
     ownP.style.marginTop = Math.round(appWidth / 200) + "px";
     ownP.style.marginLeft = Math.round(appWidth / 40) + "px";
+
+    // Fouth Row
+    let fourthRow = document.getElementById("fourthRow");
+    let fourthRC = appWidth / 16;
+    fourthRC = "repeat(auto-fill, " + fourthRC + "px)";
+    fourthRow.style.gridTemplateColumns = fourthRC;
+
+    // Galaxy Wish Coupon
+    let gwcContainer = document.getElementById("gwcContainer");
+    gwcContainer.style.fontSize = fontSize = Math.round(appWidth / 49) + "px";
+    gwcContainer.style.height = Math.round(appWidth / 23) + "px";
+    gwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
+
+    let gwctext = document.getElementById("gwctext");
+    gwctext.style.marginTop = Math.round(appWidth / 100) + "px";
+
+    let gwcIMG = document.getElementById("gwcIMG");
+    gwcIMG.style.width = Math.round(appWidth / 8) + "px";
+    gwcIMG.style.marginLeft = "-" + Math.round(appWidth / 28) + "px";
+
+    let gwcButton = document.getElementById("gwc-button");
+    gwcButton.style.height = Math.round(appWidth / 28) + "px";
+    gwcButton.style.width = Math.round(appWidth / 28) + "px";
+    gwcButton.style.marginRight = Math.round(appWidth / 110) + "px";
+    gwcButton.style.marginTop = Math.round(appWidth / 30) + "px";
+
+    let gwcSVG = document.getElementById("gwcSVG");
+    gwcSVG.style.width = Math.round(appWidth / 36) + "px";
+    gwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Row 5
+    let fifthRow = document.getElementById("row5");
+    let fifthRC = appWidth / 8;
+    fifthRC = "repeat(auto-fill, " + fifthRC + "px)";
+    fifthRow.style.gridTemplateColumns = fifthRC;
+
+    // Free
+    let freeTxt = document.getElementById("freeTxt");
+    freeTxt.style.marginTop = "-" + Math.round(appWidth / 16) + "px";
+
 }
