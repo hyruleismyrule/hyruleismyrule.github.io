@@ -1,5 +1,8 @@
 // font-family: 'EB Garamond', serif;
 // font-family: 'Open Sans', sans-serif;
+
+$opgray: rgba(128,128,128, 0.4);
+$opgray2: rgba(128,128,128, 0.8);
 #rect1 {
     fill: url(#Gradient1);
 }
@@ -18,9 +21,9 @@ body {
 }
 
 .app-container {
-    // background-image: url("assets/standard-no-info.png");
-    background-image: url("assets/standard-banner.png");
-    background-image: url("assets/gem-lines.png");
+    background-image: url("assets/standard-no-info.png");
+    // background-image: url("assets/standard-banner.png");
+    // background-image: url("assets/gem-lines.png");
     overflow: hidden;
     background-color: #90bee4;
     background-repeat: no-repeat;
@@ -53,8 +56,8 @@ body {
 
 .items-bar {
     font-family: 'Open Sans', sans-serif;
-    background-color: gray;
-    opacity: 0.6;
+    background-color: $opgray2;
+    // opacity: 0.6;
     transform: skew(-30deg);
     border-top-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -151,11 +154,11 @@ body {
     grid-column-start: 5;
     grid-column-end: 9;
     color: white;
-    background-color: gray;
+    background-color: $opgray;
     font-family: 'Open Sans', sans-serif;
     // filter:blur(4px);
     // box-shadow: 5px 0 2px gray;
-    opacity: 0.5;
+    // opacity: 0.5;
     p {
         margin: 0;
     }
@@ -174,11 +177,11 @@ body {
     grid-column-end: 7;
     // display: flex;
     color: white;
-    background-color: gray;
+    background-color: $opgray;
     font-family: 'Open Sans', sans-serif;
     // filter:blur(4px);
     // box-shadow: 5px 0 2px gray;
-    opacity: 0.5;
+    // opacity: 0.5;
     p {
         margin: 0;
     }
@@ -237,8 +240,8 @@ body {
     justify-content: space-between;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    background-color: gray;
-    opacity: 0.5;
+    background-color: $opgray;
+    // opacity: 0.5;
 }
 
 .purchase-limit-container {

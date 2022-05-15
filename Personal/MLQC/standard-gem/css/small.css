@@ -16,8 +16,7 @@ body {
 }
 
 .app-container {
-  background-image: url("assets/standard-banner.png");
-  background-image: url("assets/gem-lines.png");
+  background-image: url("assets/standard-no-info.png");
   overflow: hidden;
   background-color: #90bee4;
   background-repeat: no-repeat;
@@ -51,8 +50,7 @@ body {
 
 .items-bar {
   font-family: 'Open Sans', sans-serif;
-  background-color: gray;
-  opacity: 0.6;
+  background-color: rgba(128, 128, 128, 0.8);
   -webkit-transform: skew(-30deg);
           transform: skew(-30deg);
   border-top-left-radius: 0.5rem;
@@ -183,9 +181,8 @@ body {
       grid-column-start: 5;
   grid-column-end: 9;
   color: white;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.4);
   font-family: 'Open Sans', sans-serif;
-  opacity: 0.5;
 }
 
 .limited-container p {
@@ -207,9 +204,8 @@ body {
       grid-column-start: 3;
   grid-column-end: 7;
   color: white;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.4);
   font-family: 'Open Sans', sans-serif;
-  opacity: 0.5;
 }
 
 .wish-container p {
@@ -279,8 +275,7 @@ body {
           justify-content: space-between;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  background-color: gray;
-  opacity: 0.5;
+  background-color: rgba(128, 128, 128, 0.4);
 }
 
 .purchase-limit-container {
