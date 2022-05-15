@@ -282,4 +282,23 @@ body {
   background-color: gray;
   opacity: 0.5;
 }
+
+.purchase-limit-container {
+  font-family: 'Open Sans', sans-serif;
+  display: -ms-grid;
+  display: grid;
+}
+
+.text-container {
+  background-color: white;
+  opacity: 0.5;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 9;
+  text-align: right;
+}
+
+.text-container p {
+  margin: 0;
+}
 /*# sourceMappingURL=small.css.map */

@@ -418,4 +418,17 @@ function placeGrids(appWidth) {
     let cost10p = document.getElementById("cost10p");
     cost10p.style.marginLeft = appWidth / 50 + "px";
 
+    // Last Row
+    let lastRow = document.getElementById("purchase-limit-container");
+    let lastRC = appWidth / 8;
+    lastRC = "repeat(auto-fill, " + lastRC + "px)";
+    lastRow.style.gridTemplateColumns = lastRC;
+
+    // Purchase Limit
+    let limitText = document.getElementById("limitText");
+    limitText.style.fontSize = appWidth / 30 + "px";
+    limitText.style.height = appWidth / 28 + "px";
+    limitText.style.marginRight = appWidth / 70 + "px";
+    limitText.style.marginTop = appWidth / 50 + "px";
+
 }

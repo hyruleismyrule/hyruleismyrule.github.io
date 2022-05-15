@@ -241,3 +241,18 @@ body {
     opacity: 0.5;
 }
 
+.purchase-limit-container {
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+}
+
+.text-container {
+    background-color: white;
+    opacity: 0.5;
+    grid-column-start: 4;
+    grid-column-end: 9;
+    text-align: right;
+    p {
+        margin: 0;
+    }
+}
