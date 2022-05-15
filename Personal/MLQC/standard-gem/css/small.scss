@@ -210,12 +210,7 @@ body {
 
 //  .pull1
 .pull-button {
-    // padding-left: 2rem;
-    // padding-right: 2rem;
-    // padding-top: 0.5rem;
-    // padding-bottom: 0.5rem;
     color: white;
-    // font-size: 1.5rem;
     // opacity: 0.9;
 }
 
@@ -223,12 +218,14 @@ body {
     background-color: #93b4c6;
     border: 2px solid #aecada;
     font-family: 'EB Garamond', serif;
-    // opacity: 0.5;
 }
 
 .pull10 {
     background-color: #e99ab9;
     border: 2px solid #edb8cc;
     font-family: 'EB Garamond', serif;
-    // opacity: 0.5;
+}
+
+.sr-ensured {
+    position: relative;
 }

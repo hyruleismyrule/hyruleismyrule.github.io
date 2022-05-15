@@ -260,4 +260,8 @@ body {
   border: 2px solid #edb8cc;
   font-family: 'EB Garamond', serif;
 }
+
+.sr-ensured {
+  position: relative;
+}
 /*# sourceMappingURL=small.css.map */

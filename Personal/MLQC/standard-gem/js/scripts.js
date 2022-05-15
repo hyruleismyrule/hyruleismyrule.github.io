@@ -388,4 +388,10 @@ function placeGrids(appWidth) {
     pull10.style.paddingBottom = Math.round(appWidth / 50) + "px";
     pull10.style.marginTop = "-" + Math.round(appWidth / 50) + "px";
 
+    // SR Endured
+    let SRendured = document.getElementById("SRendured");
+    SRendured.style.width = appWidth / 5 + "px";
+    SRendured.style.right = appWidth / 10 + "px";
+    SRendured.style.bottom = appWidth / 10 + "px";
+
 }
