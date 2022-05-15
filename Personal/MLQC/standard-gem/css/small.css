@@ -227,4 +227,39 @@ body {
       grid-column-start: 2;
   grid-column-end: 5;
 }
+
+.buy-containers {
+  display: -ms-grid;
+  display: grid;
+}
+
+.pull-1-container {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 8;
+}
+
+.pull-10-container {
+  -ms-grid-column: 10;
+      grid-column-start: 10;
+  grid-column-end: 15;
+}
+
+.pull-button {
+  color: white;
+}
+
+.pull1 {
+  background-color: #93b4c6;
+  border: 2px solid #aecada;
+  font-family: 'EB Garamond', serif;
+  opacity: 0.5;
+}
+
+.pull10 {
+  background-color: #e99ab9;
+  border: 2px solid #edb8cc;
+  font-family: 'EB Garamond', serif;
+  opacity: 0.5;
+}
 /*# sourceMappingURL=small.css.map */

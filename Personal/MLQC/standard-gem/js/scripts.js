@@ -174,7 +174,7 @@ function responsiveAppSize() {
     if (windowHeight > windowWidth) {
         // Caclculate by width (mobile)
         appWidth = windowWidth;
-        appHeight = Math.round((1.7) * appWidth);
+        appHeight = 1.8 * appWidth;
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
@@ -182,7 +182,7 @@ function responsiveAppSize() {
         if (appHeight > windowHeight) {
             // calculate by height
             appHeight = windowHeight;
-            appWidth = Math.round(appHeight / 1.8);
+            appWidth =appHeight / 1.8;
 
             appDiv.style.width = appWidth + "px";
             appDiv.style.height = appHeight + "px";
@@ -190,7 +190,7 @@ function responsiveAppSize() {
     } else {
         // Calculate by height (desktop)
         appHeight = windowHeight;
-        appWidth = Math.round(appHeight / 1.8);
+        appWidth = appHeight / 1.8;
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
@@ -362,5 +362,17 @@ function placeGrids(appWidth) {
     // Free
     let freeTxt = document.getElementById("freeTxt");
     freeTxt.style.marginTop = "-" + Math.round(appWidth / 16) + "px";
+    freeTxt.style.fontSize = Math.round(appWidth / 30) + "px";
+
+    // Row 6
+    let SixthRow = document.getElementById("SixthRow");
+    let SixthRC = appWidth / 16;
+    SixthRC = "repeat(auto-fill, " + SixthRC + "px)";
+    SixthRow.style.gridTemplateColumns = SixthRC;
+
+    // Pull 1
+    let pull1 = document.getElementById("pull1");
+    pull1.style.fontSize = Math.round(appWidth / 20) + "px";
+
 
 }

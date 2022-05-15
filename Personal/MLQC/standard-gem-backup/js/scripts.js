@@ -157,45 +157,222 @@ function spCheck() {
     }
 }
 
+// Window sizes
+
 responsiveAppSize()
 window.addEventListener('resize', responsiveAppSize);
 
 function responsiveAppSize() {
     let appDiv = document.getElementById("app-container");
-    let header = document.getElementById("header");
 
     let windowHeight = window.innerHeight;
     let windowWidth = window.innerWidth;
 
+    let appHeight = windowHeight;
+    let appWidth = windowWidth;
+
     if (windowHeight > windowWidth) {
         // Caclculate by width (mobile)
-        let appWidth = windowWidth;
-        let appHeight = Math.round((1.7) * appWidth);
-        let headerHeight = 40;
+        appWidth = windowWidth;
+        appHeight = Math.round((1.7) * appWidth);
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
-        header.style.height = headerHeight + "px";
 
-        if (appHeight + headerHeight > windowHeight) {
+        if (appHeight > windowHeight) {
             // calculate by height
-            let headerHeight = 48;
-            let appHeight = windowHeight - headerHeight;
-            let appWidth = Math.round(appHeight / 1.8);
+            appHeight = windowHeight;
+            appWidth = Math.round(appHeight / 1.8);
 
             appDiv.style.width = appWidth + "px";
             appDiv.style.height = appHeight + "px";
-            header.style.height = headerHeight + "px";
         }
     } else {
         // Calculate by height (desktop)
-        let headerHeight = 48;
-        let appHeight = windowHeight - headerHeight;
-        let appWidth = Math.round(appHeight / 1.8);
+        appHeight = windowHeight;
+        appWidth = Math.round(appHeight / 1.8);
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
-        header.style.height = headerHeight + "px";
-
     }
+    placeGrids(appWidth)
+}
+
+// // Grid-placement
+function placeGrids(appWidth) {
+    // Top Row
+    let topRow = document.getElementById("topRow");
+    let TRC = appWidth / 8;
+    TRC = "repeat(auto-fill, " + TRC + "px)";
+    topRow.style.gridTemplateColumns = TRC;
+
+    // Back Button
+    let backButton = document.getElementById("backButton");
+    backButton.style.width = Math.round(appWidth / 10) + "px";
+    backButton.style.height = Math.round(appWidth / 10) + "px";
+    backButton.style.marginTop = Math.round(appWidth / 75) + "px";
+    backButton.style.marginLeft = Math.round(appWidth / 75) + "px";
+
+    let backSVG = document.getElementById("backSVG");
+    backSVG.style.width = Math.round(appWidth / 15) + "px";
+    backSVG.style.marginLeft = Math.round(appWidth / 55) + "px";
+    backSVG.style.marginTop = Math.round(appWidth / 80) + "px";
+
+    // Stamina
+    let stamina = document.getElementById("stamina");
+    stamina.style.marginTop = Math.round(appWidth / 150) + "px";
+    stamina.style.height = Math.round(appWidth / 25) + "px";
+    stamina.style.fontSize = Math.round(appWidth / 35) + "px";
+
+    let staminaIMG = document.getElementById("stamina-img");
+    staminaIMG.style.width = Math.round(appWidth / 16) + "px";
+
+    let staminaButton = document.getElementById("stamina-button");
+    staminaButton.style.height = Math.round(appWidth / 28) + "px";
+    staminaButton.style.width = Math.round(appWidth / 28) + "px";
+    staminaButton.style.marginRight = Math.round(appWidth / 110) + "px";
+
+    let staminaSVG = document.getElementById("staminaSVG");
+    staminaSVG.style.width = Math.round(appWidth / 36) + "px";
+    staminaSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Gold
+    let gold = document.getElementById("gold");
+    gold.style.marginTop = Math.round(appWidth / 150) + "px";
+    gold.style.height = Math.round(appWidth / 25) + "px";
+    gold.style.fontSize = Math.round(appWidth / 35) + "px";
+
+    let goldIMG = document.getElementById("gold-img");
+    goldIMG.style.width = Math.round(appWidth / 16) + "px";
+
+    let goldButton = document.getElementById("gold-button");
+    goldButton.style.height = Math.round(appWidth / 28) + "px";
+    goldButton.style.width = Math.round(appWidth / 28) + "px";
+    goldButton.style.marginRight = Math.round(appWidth / 110) + "px";
+
+    let goldSVG = document.getElementById("goldSVG");
+    goldSVG.style.width = Math.round(appWidth / 36) + "px";
+    goldSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Gems
+    let gems = document.getElementById("gems");
+    gems.style.marginTop = Math.round(appWidth / 150) + "px";
+    gems.style.height = Math.round(appWidth / 25) + "px";
+    gems.style.fontSize = Math.round(appWidth / 35) + "px";
+
+    let gemsIMG = document.getElementById("gems-img");
+    gemsIMG.style.width = Math.round(appWidth / 16) + "px";
+
+    let gemsButton = document.getElementById("gems-button");
+    gemsButton.style.height = Math.round(appWidth / 28) + "px";
+    gemsButton.style.width = Math.round(appWidth / 28) + "px";
+    gemsButton.style.marginRight = Math.round(appWidth / 110) + "px";
+
+    let gemsSVG = document.getElementById("gemsSVG");
+    gemsSVG.style.width = Math.round(appWidth / 36) + "px";
+    gemsSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // 2nd row
+    let secondRow = document.getElementById("2ndRow");
+    secondRow.style.marginTop = "-" + Math.round(appWidth / 30) + "px";
+
+    // Redeem
+    let redeemButton = document.getElementById("redeem-button");
+    redeemButton.style.fontSize = Math.round(appWidth / 25) + "px";
+    redeemButton.style.width = Math.round(appWidth / 4.5) + "px";
+    redeemButton.style.height = Math.round(appWidth / 15) + "px";
+    
+    let redeemIMG = document.getElementById("redeem-img");
+    redeemIMG.style.width = Math.round(appWidth / 10) + "px";
+    redeemIMG.style.marginLeft = "-" + Math.round(appWidth / 40) + "px";
+    redeemIMG.style.marginRight = "-" + Math.round(appWidth / 100) + "px";
+
+    // Drop Rate
+    let dropButton = document.getElementById("drop-button");
+    dropButton.style.fontSize = Math.round(appWidth / 25) + "px";
+    dropButton.style.padding = Math.round(appWidth / 90) + "px";
+    dropButton.style.marginTop = Math.round(appWidth / 50) + "px";
+
+    // Banner placeholder
+    let bannerPlaceholder = document.getElementById("banner-placeholder");
+    // bannerPlaceholder.style.backgroundColor = "black";
+    bannerPlaceholder.style.width = Math.round(appWidth) + "px";
+    bannerPlaceholder.style.height = Math.round(appWidth) + "px";
+
+    // Third Row
+    let thirdRow = document.getElementById("third-row");
+    let ThirdRC = appWidth / 16;
+    ThirdRC = "repeat(auto-fill, " + ThirdRC + "px)";
+    thirdRow.style.gridTemplateColumns = ThirdRC;
+    // thirdRow.style.gridTemplateRows = + Math.round(appWidth / 50) + "px" + Math.round(appWidth / 50) + "px";
+
+    // Preview
+    let previewBTN = document.getElementById("previewBTN");
+    previewBTN.style.fontSize = Math.round(appWidth / 30) + "px";
+    previewBTN.style.height = Math.round(appWidth / 9) + "px";
+    previewBTN.style.width = Math.round(appWidth / 9) + "px";
+    previewBTN.style.marginLeft = "-" + Math.round(appWidth / 100) + "px";
+
+    // Own Limited
+    let limitedContainer = document.getElementById("limitedContainer");
+    limitedContainer.style.fontSize = Math.round(appWidth / 35) + "px";
+    limitedContainer.style.height = Math.round(appWidth / 23) + "px";
+    limitedContainer.style.marginTop = Math.round(appWidth / 18) + "px";
+    limitedContainer.style.marginLeft = "-" + Math.round(appWidth / 20) + "px";
+
+    let ownP = document.getElementById("ownP");
+    ownP.style.marginTop = Math.round(appWidth / 200) + "px";
+    ownP.style.marginLeft = Math.round(appWidth / 40) + "px";
+
+    // Fouth Row
+    let fourthRow = document.getElementById("fourthRow");
+    let fourthRC = appWidth / 16;
+    fourthRC = "repeat(auto-fill, " + fourthRC + "px)";
+    fourthRow.style.gridTemplateColumns = fourthRC;
+
+    // Galaxy Wish Coupon
+    let gwcContainer = document.getElementById("gwcContainer");
+    gwcContainer.style.fontSize = fontSize = Math.round(appWidth / 49) + "px";
+    gwcContainer.style.height = Math.round(appWidth / 23) + "px";
+    gwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
+
+    let gwctext = document.getElementById("gwctext");
+    gwctext.style.marginTop = Math.round(appWidth / 100) + "px";
+
+    let gwcIMG = document.getElementById("gwcIMG");
+    gwcIMG.style.width = Math.round(appWidth / 8) + "px";
+    gwcIMG.style.marginLeft = "-" + Math.round(appWidth / 28) + "px";
+
+    let gwcButton = document.getElementById("gwc-button");
+    gwcButton.style.height = Math.round(appWidth / 28) + "px";
+    gwcButton.style.width = Math.round(appWidth / 28) + "px";
+    gwcButton.style.marginRight = Math.round(appWidth / 110) + "px";
+    gwcButton.style.marginTop = Math.round(appWidth / 30) + "px";
+
+    let gwcSVG = document.getElementById("gwcSVG");
+    gwcSVG.style.width = Math.round(appWidth / 36) + "px";
+    gwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Row 5
+    let fifthRow = document.getElementById("row5");
+    let fifthRC = appWidth / 8;
+    fifthRC = "repeat(auto-fill, " + fifthRC + "px)";
+    fifthRow.style.gridTemplateColumns = fifthRC;
+
+    // Free
+    let freeTxt = document.getElementById("freeTxt");
+    freeTxt.style.marginTop = "-" + Math.round(appWidth / 16) + "px";
+    freeTxt.style.fontSize = Math.round(appWidth / 30) + "px";
+
+    // Row 6
+    let SixthRow = document.getElementById("SixthRow");
+    let SixthRC = appWidth / 16;
+    SixthRC = "repeat(auto-fill, " + SixthRC + "px)";
+    SixthRow.style.gridTemplateColumns = SixthRC;
+
+    // Pull 1
+    let pull1 = document.getElementById("pull1");
+    pull1.style.fontSize = Math.round(appWidth / 20) + "px";
+
+
 }
