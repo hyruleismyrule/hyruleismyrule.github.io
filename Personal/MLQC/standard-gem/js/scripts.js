@@ -394,4 +394,28 @@ function placeGrids(appWidth) {
     SRendured.style.right = appWidth / 10 + "px";
     SRendured.style.bottom = appWidth / 10 + "px";
 
+    // Pull 1 cost
+    let cost1IMG = document.getElementById("cost1IMG");
+    cost1IMG.style.width = appWidth / 13 + "px";
+
+    let cost1Container = document.getElementById("cost1Container");
+    cost1Container.style.fontSize = appWidth / 30 + "px";
+    cost1Container.style.height = appWidth / 20 + "px";
+    cost1Container.style.marginTop = appWidth / 50 + "px";
+
+    let cost1p = document.getElementById("cost1p");
+    cost1p.style.marginLeft = appWidth / 50 + "px";
+
+    // Pull 10 cost
+    let cost10IMG = document.getElementById("cost10IMG");
+    cost10IMG.style.width = appWidth / 13 + "px";
+
+    let cost10Container = document.getElementById("cost10Container");
+    cost10Container.style.fontSize = appWidth / 30 + "px";
+    cost10Container.style.height = appWidth / 20 + "px";
+    cost10Container.style.marginTop = appWidth / 50 + "px";
+
+    let cost10p = document.getElementById("cost10p");
+    cost10p.style.marginLeft = appWidth / 50 + "px";
+
 }

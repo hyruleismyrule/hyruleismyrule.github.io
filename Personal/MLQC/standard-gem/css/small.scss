@@ -229,3 +229,15 @@ body {
 .sr-ensured {
     position: relative;
 }
+
+.cost {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    background-color: gray;
+    opacity: 0.5;
+}
+
