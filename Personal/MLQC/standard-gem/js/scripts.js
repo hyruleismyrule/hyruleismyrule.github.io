@@ -445,8 +445,11 @@ function wishAnimation(timesPulled, karmas) {
     videoElement.autoplay = true;
     videoElement.muted = true;
 
-    videoElement.setAttribute("height", appContainer.offsetHeight);
-    videoElement.setAttribute("width", appContainer.offsetWidth);
+    let height = appContainer.offsetHeight;
+    let width = appContainer.offsetWidth;
+
+    videoElement.setAttribute("height", height);
+    videoElement.setAttribute("width", width);
 
     videoContainer.appendChild(videoElement);
 
@@ -465,4 +468,18 @@ function wishAnimation(timesPulled, karmas) {
     videoElement.onended = function() {
         videoElement.remove();
     };
+    displayKarma(karmas, height, width);
+}
+
+function displayKarma(karmas, height, width) {
+    let resultsContainer = document.getElementById("resultsContainer");
+    resultsContainer.setAttribute("height", height + "px");
+    resultsContainer.setAttribute("width", width + "px");
+    resultsContainer.style.backgroundImage = 'url("assets/floral-background.png")';
+
+    resultsContainer.textContent = "Hello World!";
+    // resultsContainer.style.zIndex = '2';
+    // resultsContainer.style.position = "absolute";
+    // resultsContainer.style.bottom = "0";
+    // resultsContainer.style.left = "0";
 }
