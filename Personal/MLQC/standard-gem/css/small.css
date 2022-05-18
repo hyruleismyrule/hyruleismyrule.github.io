@@ -16,7 +16,7 @@ body {
 }
 
 .app-container {
-  background-image: url("assets/standard-gem-background.png ");
+  background-image: url("assets/hd-standard-banner.png");
   overflow: hidden;
   background-color: #90bee4;
   background-repeat: no-repeat;
@@ -295,5 +295,10 @@ body {
 
 .text-container p {
   margin: 0;
+}
+
+.resultsContainer {
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 /*# sourceMappingURL=small.css.map */

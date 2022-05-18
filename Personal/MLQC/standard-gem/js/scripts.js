@@ -15,7 +15,7 @@ function responsiveAppSize() {
     if (windowHeight > windowWidth) {
         // Caclculate by width (mobile)
         appWidth = windowWidth;
-        appHeight = 1.8 * appWidth;
+        appHeight = 1.77 * appWidth;
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
@@ -23,7 +23,7 @@ function responsiveAppSize() {
         if (appHeight > windowHeight) {
             // calculate by height
             appHeight = windowHeight;
-            appWidth =appHeight / 1.8;
+            appWidth =appHeight / 1.77;
 
             appDiv.style.width = appWidth + "px";
             appDiv.style.height = appHeight + "px";
@@ -31,7 +31,7 @@ function responsiveAppSize() {
     } else {
         // Calculate by height (desktop)
         appHeight = windowHeight;
-        appWidth = appHeight / 1.8;
+        appWidth = appHeight / 1.77;
 
         appDiv.style.width = appWidth + "px";
         appDiv.style.height = appHeight + "px";
@@ -474,12 +474,13 @@ function wishAnimation(timesPulled, karmas) {
 function displayKarma(karmas, height, width) {
     let resultsContainer = document.getElementById("resultsContainer");
     resultsContainer.setAttribute("height", height + "px");
+    // resultsContainer.setAttribute("100%");
     resultsContainer.setAttribute("width", width + "px");
-    resultsContainer.style.backgroundImage = 'url("assets/floral-background.png")';
+    resultsContainer.style.backgroundImage = 'url("assets/hd-floral-background.png")';
 
     resultsContainer.textContent = "Hello World!";
     // resultsContainer.style.zIndex = '2';
     // resultsContainer.style.position = "absolute";
-    // resultsContainer.style.bottom = "0";
+    // resultsContainer.style.top= "0";
     // resultsContainer.style.left = "0";
 }
