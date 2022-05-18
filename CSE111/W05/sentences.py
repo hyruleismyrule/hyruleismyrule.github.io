@@ -1,18 +1,5 @@
 import random
 
-# Create a list of strings and assign
-# the list to a variable named words.
-words = ["boy", "girl", "cat", "dog", "bird", "house"]
-
-# Call the random.choice function which will choose
-# one string from the words list. Store the chosen
-# string in a variable named word.
-word = random.choice(words)
-
-# Call the capitalize method which will
-# capitalize the first letter of the word.
-cap_word = word.capitalize()
-
 def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
     a word like "the", "a", "one", "two", "some", "many".
@@ -59,7 +46,7 @@ def get_noun(quantity):
     else:
         words = ["birds", "boys", "cars", "cats", "children","dogs", "girls", "men", "rabbits", "women"]
 
-    # Randomly choose and return a determiner.
+    # Randomly choose and return a quantity.
     word = random.choice(words)
     return word
 
@@ -89,3 +76,41 @@ def get_verb(quantity, tense):
             either "past", "present" or "future".
     Return: a randomly chosen verb.
     """
+
+    if tense == "past":
+        words = ["drank", "ate", "grew", "laughed", "thought", "ran", "slept", "talked", "walked", "wrote"]
+    elif tense == 'present' and quantity == 1:
+        words = ["drinks", "eats", "grows", "laughs", "thinks", "runs", "sleeps", "talks", "walks", "writes"]
+    elif tense == 'present' and quantity != 1:
+        words = ["drink", "eat", "grow", "laugh", "think", "run", "sleep", "talk", "walk", "write"]
+    else:
+        words = ["will drink", "will eat", "will grow", "will laugh", "will think", "will run", "will sleep", "will talk", "will walk", "will write"]
+    
+    # Randomly choose and return a verb.
+    word = random.choice(words)
+    return word
+
+def check_quantity(quantity):
+    if quantity == "single":
+        quantity = 1
+    else:
+        quantity = 2
+    return quantity
+
+def main(quantity, tense):
+    quantity = check_quantity(quantity)
+    determiner = get_determiner(quantity)
+    noun = get_noun(quantity)
+    verb = get_verb(quantity, tense)
+
+    print(f"{determiner.capitalize()} {noun} {verb}.")
+   
+
+print()
+main("single", "past")
+main("single", "present")
+main("single", "future")
+main("plural", "past")
+main("plural", "present")
+main("plural", "future")
+print()
