@@ -319,9 +319,33 @@ function buy1() {
     }
     karmas.push(karma);
     console.log(karmas);
+    let karmaImgURLS = getKarmaImgURL(karmas);
+    console.log(karmaImgURLS);
+    
     timesWished = timesWished + 1;
-    wishAnimation(timesPulled, karmas);
+    wishAnimation(timesPulled, karmas, karmaImgURLS);
     // document.getElementById("redeemNum").textContent = timesWished;
+}
+
+function getKarmaImgURL(karmas) {
+    // karmas.array.forEach(element => {
+        let karmaImgURLS = [];
+        for (let i = 0; i < karmas.length; i++) {
+            let nameAndTitle = karmas[i].split(":");
+            let characterName = nameAndTitle[0];
+            let karmaTitle = nameAndTitle[1];
+    
+            let stripedName = characterName.toLowerCase();
+            let stripedTitle = karmaTitle.replace(/\s+/g, '-').toLowerCase();
+            // console.log(characterName);
+            // console.log(karmaTitle);
+            // console.log(stripedName + stripedTitle);
+            
+            karmaImgURLS.push("assets/standard-gem-karma-cg/" + stripedName + stripedTitle + ".png");
+        }
+        return karmaImgURLS;
+        // if (karmaTitle.includes("'"))
+    // });
 }
 
 function pull1() {
@@ -332,6 +356,8 @@ function pull1() {
         karma = getKarmaName(rarity, king);
     }
     return karma;
+
+    // return [karma, rarity, king];
 }
 
 function guarenteedSRPlus() {
@@ -342,6 +368,7 @@ function guarenteedSRPlus() {
         karma = getKarmaName(rarity, king);
     }
     return karma;
+    // return [karma, rarity, king];
 }
 
 function buy10() {
@@ -357,7 +384,9 @@ function buy10() {
     }
     console.log(karmas);
     timesWished = timesWished + 10;
-    wishAnimation(timesPulled, karmas);
+    let karmaImgURLS = getKarmaImgURL(karmas);
+    console.log(karmaImgURLS);
+    wishAnimation(timesPulled, karmas, karmaImgURLS);
     // document.getElementById("redeemNum").textContent = timesWished;
 }
 
@@ -437,7 +466,7 @@ function spCheck() {
     }
 }
 
-function wishAnimation(timesPulled, karmas) {
+function wishAnimation(timesPulled, karmas, karmaImgURLS) {
     let appContainer = document.getElementById("app-container");
 
     let videoContainer = document.getElementById("videoContainer");
@@ -468,19 +497,52 @@ function wishAnimation(timesPulled, karmas) {
     videoElement.onended = function() {
         videoElement.remove();
     };
-    displayKarma(karmas, height, width);
+    displayKarma(karmas, height, width, karmaImgURLS);
 }
 
-function displayKarma(karmas, height, width) {
+function displayKarma(karmas, height, width, karmaImgURLS) {
     let resultsContainer = document.getElementById("resultsContainer");
     resultsContainer.setAttribute("height", height + "px");
     // resultsContainer.setAttribute("100%");
     resultsContainer.setAttribute("width", width + "px");
     resultsContainer.style.backgroundImage = 'url("assets/hd-floral-background.png")';
 
-    resultsContainer.textContent = "Hello World!";
+    // resultsContainer.textContent = "Hello World!";
     // resultsContainer.style.zIndex = '2';
     // resultsContainer.style.position = "absolute";
     // resultsContainer.style.top= "0";
     // resultsContainer.style.left = "0";
+
+    let karmaContainer = document.createElement("div");
+
+    for (let i = 0; i < karmas.length; i++) {
+        resultsContainer.appendChild(karmaContainer);
+
+        let karmaHeader = document.createElement("div");
+        karmaHeader.textContent = "You got";
+    
+        // Note images will need to be added here
+        let karmaRarity = document.createElement("img");
+        karmaRarity.setAttribute("src", "#");
+        karmaRarity.setAttribute("alt", "rarity");
+    
+        let karmaIMG = document.createElement("img");
+        karmaIMG.setAttribute("src", karmaImgURLS[i]);
+        karmaIMG.setAttribute("alt", karmas[i]);
+
+        // Name goes here
+        // stars go here
+        // Share goes here
+
+        let karmaTitle =  document.createElement("div");
+        karmaTitle.textContent = karmas[i];
+
+        // Skip goes here
+
+        karmaContainer.appendChild(karmaHeader);
+        karmaContainer.appendChild(karmaRarity);
+        karmaContainer.appendChild(karmaIMG);
+    }
+    
+
 }
