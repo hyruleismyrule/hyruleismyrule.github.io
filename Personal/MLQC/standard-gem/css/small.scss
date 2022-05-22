@@ -1,8 +1,9 @@
 // font-family: 'EB Garamond', serif;
 // font-family: 'Open Sans', sans-serif;
 
-$opgray: rgba(128,128,128, 0.4);
-$opgray2: rgba(128,128,128, 0.8);
+$opgray: rgba(128, 128, 128, 0.4);
+$opgray2: rgba(128, 128, 128, 0.8);
+
 #rect1 {
     fill: url(#Gradient1);
 }
@@ -157,6 +158,7 @@ body {
     color: white;
     background-color: $opgray;
     font-family: 'Open Sans', sans-serif;
+
     // filter:blur(4px);
     // box-shadow: 5px 0 2px gray;
     // opacity: 0.5;
@@ -180,6 +182,7 @@ body {
     color: white;
     background-color: $opgray;
     font-family: 'Open Sans', sans-serif;
+
     // filter:blur(4px);
     // box-shadow: 5px 0 2px gray;
     // opacity: 0.5;
@@ -257,6 +260,7 @@ body {
     grid-column-start: 4;
     grid-column-end: 9;
     text-align: right;
+
     p {
         margin: 0;
     }
@@ -265,5 +269,84 @@ body {
 .resultsContainer {
     background-repeat: no-repeat;
     background-size: 100%;
-    // height: 100%;
+}
+
+// Starting to style karmas pulled
+.karmaHeader {
+    text-align: center;
+    transform: rotateZ(-4deg);
+    background-color: pink;
+    color: white;
+}
+
+.karma-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.karmaImgContainer {
+    transform: rotateZ(-4deg);
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    overflow: hidden;
+}
+
+.karma-rarity {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    z-index: 2;
+}
+
+.karma-img {
+    width: 100%;
+}
+
+.star-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    z-index: 2;
+    color: white;
+    background-color: $opgray;
+    transform: rotateZ(-40deg);
+}
+
+.bottomRowKarma {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shareContainer {
+    color: white;
+    background-color: pink;
+    border-radius: 100%;
+    font-family: 'EB Garamond', serif;
+    border: none;
+    z-index: 2;
+}
+
+.skipContainer {
+    color: white;
+    background-color: pink;
+    font-family: 'EB Garamond', serif;
+    border: none;
+    display: flex;
+
+    svg {
+        fill: white;
+        min-width: 1rem;
+    }
+}
+
+// .star-img
+
+.karmaTitle {
+    color: white;
+    background-color: $opgray;
+    transform: rotateZ(-4deg);
+    font-family: 'Open Sans', sans-serif;
 }

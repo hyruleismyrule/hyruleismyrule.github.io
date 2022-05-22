@@ -301,4 +301,100 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+.karmaHeader {
+  text-align: center;
+  -webkit-transform: rotateZ(-4deg);
+          transform: rotateZ(-4deg);
+  background-color: pink;
+  color: white;
+}
+
+.karma-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.karmaImgContainer {
+  -webkit-transform: rotateZ(-4deg);
+          transform: rotateZ(-4deg);
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  overflow: hidden;
+}
+
+.karma-rarity {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  z-index: 2;
+}
+
+.karma-img {
+  width: 100%;
+}
+
+.star-container {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  z-index: 2;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.4);
+  -webkit-transform: rotateZ(-40deg);
+          transform: rotateZ(-40deg);
+}
+
+.bottomRowKarma {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shareContainer {
+  color: white;
+  background-color: pink;
+  border-radius: 100%;
+  font-family: 'EB Garamond', serif;
+  border: none;
+  z-index: 2;
+}
+
+.skipContainer {
+  color: white;
+  background-color: pink;
+  font-family: 'EB Garamond', serif;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skipContainer svg {
+  fill: white;
+  min-width: 1rem;
+}
+
+.karmaTitle {
+  color: white;
+  background-color: rgba(128, 128, 128, 0.4);
+  -webkit-transform: rotateZ(-4deg);
+          transform: rotateZ(-4deg);
+  font-family: 'Open Sans', sans-serif;
+}
 /*# sourceMappingURL=small.css.map */

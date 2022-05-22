@@ -514,35 +514,134 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
     // resultsContainer.style.left = "0";
 
     let karmaContainer = document.createElement("div");
+    karmaContainer.setAttribute("class", "karma-container");
 
     for (let i = 0; i < karmas.length; i++) {
-        resultsContainer.appendChild(karmaContainer);
-
         let karmaHeader = document.createElement("div");
+        karmaHeader.setAttribute("class", "karmaHeader");
         karmaHeader.textContent = "You got";
     
         // Note images will need to be added here
+        let karmaRarites = findKarmaRarity(karmas);
+        let baseRarityIMGSRC = "assets/rarity/"
+        let fullKarmaRaritySRC = baseRarityIMGSRC + karmaRarites[i] + "-icon.png";
+
         let karmaRarity = document.createElement("img");
-        karmaRarity.setAttribute("src", "#");
-        karmaRarity.setAttribute("alt", "rarity");
+        karmaRarity.setAttribute("src", fullKarmaRaritySRC);
+        karmaRarity.setAttribute("alt", karmaRarites[i]);
+        karmaRarity.setAttribute("class", "karma-rarity");
+
+        let karmaImgContainer = document.createElement("div");
+        karmaImgContainer.setAttribute("class", "karmaImgContainer");
     
         let karmaIMG = document.createElement("img");
         karmaIMG.setAttribute("src", karmaImgURLS[i]);
         karmaIMG.setAttribute("alt", karmas[i]);
+        karmaIMG.setAttribute("class", "karma-img");
+        karmaImgContainer.appendChild(karmaIMG);
+   
+        let karmaCharacters = findKarmaCharacter(karmas);
+        let nameContainer = document.createElement("div");
+        nameContainer.textContent = karmaCharacters[i];
+     
+        let starContainer = document.createElement("div");
+        starContainer.appendChild(nameContainer);
+        starContainer.setAttribute("class", "star-container");
 
-        // Name goes here
-        // stars go here
-        // Share goes here
+        let starIMG = document.createElement("img");
+        starIMG.setAttribute("src", "assets/stars.png");
+        starIMG.setAttribute("alt", "1star");
+        starContainer.appendChild(starIMG);
+        starIMG.setAttribute("class", "star-img");
 
         let karmaTitle =  document.createElement("div");
+        karmaTitle.setAttribute("class", "karmaTitle");
         karmaTitle.textContent = karmas[i];
 
-        // Skip goes here
+        let shareContainer = document.createElement("button");
+        shareContainer.setAttribute("class", "shareContainer");
+        let shareIMG = document.createElement("img");
+        shareIMG.setAttribute("src", "assets/share-stars.png");
+        shareIMG.setAttribute("alt", "stars");
+        shareContainer.appendChild(shareIMG);
 
-        karmaContainer.appendChild(karmaHeader);
-        karmaContainer.appendChild(karmaRarity);
-        karmaContainer.appendChild(karmaIMG);
-    }
+        let shareText = document.createElement("div");
+        shareText.textContent = "Share";
+        shareContainer.appendChild(shareText);
+
+        let skipContainer = document.createElement("button");
+        skipContainer.setAttribute("class", "skipContainer");
+
+        let skipText = document.createElement("div");
+        skipText.textContent = "Skip";
+
+        let skipSVGContainer = document.createElement("div");
+        // let skipSVG = document.createElement("svg");
+        let skipSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M52.51 440.6l171.5-142.9V214.3L52.51 71.41C31.88 54.28 0 68.66 0 96.03v319.9C0 443.3 31.88 457.7 52.51 440.6zM308.5 440.6l192-159.1c15.25-12.87 15.25-36.37 0-49.24l-192-159.1c-20.63-17.12-52.51-2.749-52.51 24.62v319.9C256 443.3 287.9 457.7 308.5 440.6z"/></svg>';
+        skipSVGContainer.innerHTML = skipSVG;
+        // skipSVGContainer.appendChild(skipSVG);
+
+        skipContainer.appendChild(skipText);
+        skipContainer.appendChild(skipSVGContainer);
+
+        let bottomRowKarma = document.createElement("div");
+        bottomRowKarma.setAttribute("class", "bottomRowKarma");
+        bottomRowKarma.appendChild(shareContainer);
+        bottomRowKarma.appendChild(karmaTitle);
+        bottomRowKarma.appendChild(skipContainer);
     
+        resultsContainer.appendChild(karmaHeader);
+        // resultsContainer.appendChild(karmaContainer);
+        // karmaContainer.appendChild(karmaHeader);
+        karmaContainer.appendChild(karmaRarity);
+        karmaContainer.appendChild(karmaImgContainer);
+        karmaContainer.appendChild(starContainer);
+        resultsContainer.appendChild(karmaContainer);
+        resultsContainer.appendChild(bottomRowKarma);
+        // resultsContainer.appendChild(shareContainer);
+        // resultsContainer.appendChild(karmaTitle);
+        // resultsContainer.appendChild(skipContainer);
+    }
+}
 
+function findKarmaRarity(karmas) {
+    let karmaRarites = [];
+    for (let i = 0; i < karmas.length; i++) {
+        if (standardSP.includes(karmas[i])) {
+            karmaRarites.push("SP");
+        }
+        else if (standardKingSSR.includes(karmas[i]) || standardSSR.includes(karmas[i])) {
+            karmaRarites.push("SSR");
+        }
+        else if (standardKingSR.includes(karmas[i]) || standardSR.includes(karmas[i])) {
+            karmaRarites.push("SR");
+        }
+        else {
+            karmaRarites.push("R");
+        }
+    }
+    return karmaRarites;
+}
+
+function findKarmaCharacter(karmas) {
+    let karmaCharacters = [];
+    for (let i = 0; i < karmas.length; i++) {
+        let firstLetter = karmas[i].charAt(0);
+        if (firstLetter == "K") {
+            karmaCharacters.push("Kiro");
+        }
+        else if (firstLetter == "G") {
+            karmaCharacters.push("Gavin");
+        }
+        else if (firstLetter == "V") {
+            karmaCharacters.push("Victor");
+        }
+        else if (firstLetter == "L") {
+            karmaCharacters.push("Lucien");
+        }
+        else {
+            karmaCharacters.push("Shaw");
+        }
+    }
+    return karmaCharacters;
 }
