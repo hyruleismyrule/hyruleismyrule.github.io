@@ -37,6 +37,10 @@ function responsiveAppSize() {
         appDiv.style.height = appHeight + "px";
     }
     placeGrids(appWidth);
+
+    if (document.getElementById("karmaHeader")) {
+        sizeResultsKarma(appWidth);
+    }
 }
 
 // // Grid-placement
@@ -274,6 +278,42 @@ function placeGrids(appWidth) {
 }
 
 
+// This is the results being displayed
+
+function sizeResultsKarma(appWidth) {
+    let karmaHeader = document.getElementById("karmaHeader");
+    let karmaHeaderText = document.getElementById("karmaHeaderText");
+
+    let karmaImgContainer = document.getElementById("karmaImgContainer");
+    let karmaIMG = document.getElementById("karmaIMG");
+    let karmaRarity = document.getElementById("karmaRarity");
+    let starContainer = document.getElementById("starContainer");
+    let shareContainer = document.getElementById("shareContainer");
+    let karmaTitle = document.getElementById("karmaTitle");
+    let skipContainer = document.getElementById("skipContainer");
+
+    karmaHeader.style.paddingTop = appWidth / 8 + "px";
+    karmaHeaderText.style.width = appWidth / 6 + "px";
+    karmaHeaderText.style.fontSize = appWidth / 20 + "px";
+    karmaHeaderText.style.padding = appWidth / 50 + "px";
+    karmaHeaderText.style.paddingLeft = appWidth / 8 + "px";
+    karmaHeaderText.style.paddingRight = appWidth / 8 + "px";
+    karmaHeader.style.paddingLeft = ((appWidth / 2) - karmaHeaderText.offsetWidth / 2) + "px";
+    karmaHeaderText.style.marginBottom = appWidth / 50 + "px";
+
+    karmaImgContainer.style.width = appWidth * 1.2 + "px";
+    karmaImgContainer.style.height = appWidth * 1.4 + "px";
+    karmaImgContainer.style.marginLeft = "-" + appWidth / 20 + "px";
+    karmaIMG.style.marginTop = "-" + appWidth / 30 + "px";
+    // karmaIMG.style.marginLeft = "-" + appWidth / 30 + "px";
+
+}
+
+
+
+
+
+
 // Standard Karma
 let standardSP = ["Gavin: Dream Traveler", "Kiro: Gorgeous Lights", "Lucien: Law of Gravity", "Victor: Only Tonight"];
 
@@ -503,15 +543,8 @@ function wishAnimation(timesPulled, karmas, karmaImgURLS) {
 function displayKarma(karmas, height, width, karmaImgURLS) {
     let resultsContainer = document.getElementById("resultsContainer");
     resultsContainer.setAttribute("height", height + "px");
-    // resultsContainer.setAttribute("100%");
     resultsContainer.setAttribute("width", width + "px");
     resultsContainer.style.backgroundImage = 'url("assets/hd-floral-background.png")';
-
-    // resultsContainer.textContent = "Hello World!";
-    // resultsContainer.style.zIndex = '2';
-    // resultsContainer.style.position = "absolute";
-    // resultsContainer.style.top= "0";
-    // resultsContainer.style.left = "0";
 
     let karmaContainer = document.createElement("div");
     karmaContainer.setAttribute("class", "karma-container");
@@ -519,25 +552,33 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
     for (let i = 0; i < karmas.length; i++) {
         let karmaHeader = document.createElement("div");
         karmaHeader.setAttribute("class", "karmaHeader");
-        karmaHeader.textContent = "You got";
+        karmaHeader.setAttribute("id", "karmaHeader");
+        // karmaHeader.textContent = "You got";
+
+        let karmaHeaderText = document.createElement("div");
+        karmaHeaderText.setAttribute("id", "karmaHeaderText");
+        karmaHeaderText.textContent = "You got";
+        karmaHeader.appendChild(karmaHeaderText);
     
-        // Note images will need to be added here
         let karmaRarites = findKarmaRarity(karmas);
         let baseRarityIMGSRC = "assets/rarity/"
         let fullKarmaRaritySRC = baseRarityIMGSRC + karmaRarites[i] + "-icon.png";
 
         let karmaRarity = document.createElement("img");
+        karmaRarity.setAttribute("id", "karmaRarity");
         karmaRarity.setAttribute("src", fullKarmaRaritySRC);
         karmaRarity.setAttribute("alt", karmaRarites[i]);
         karmaRarity.setAttribute("class", "karma-rarity");
 
         let karmaImgContainer = document.createElement("div");
+        karmaImgContainer.setAttribute("id", "karmaImgContainer");
         karmaImgContainer.setAttribute("class", "karmaImgContainer");
     
         let karmaIMG = document.createElement("img");
         karmaIMG.setAttribute("src", karmaImgURLS[i]);
         karmaIMG.setAttribute("alt", karmas[i]);
         karmaIMG.setAttribute("class", "karma-img");
+        karmaIMG.setAttribute("id", "karmaIMG");
         karmaImgContainer.appendChild(karmaIMG);
    
         let karmaCharacters = findKarmaCharacter(karmas);
@@ -547,6 +588,7 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         let starContainer = document.createElement("div");
         starContainer.appendChild(nameContainer);
         starContainer.setAttribute("class", "star-container");
+        starContainer.setAttribute("id", "starContainer");
 
         let starIMG = document.createElement("img");
         starIMG.setAttribute("src", "assets/stars.png");
@@ -556,10 +598,12 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
 
         let karmaTitle =  document.createElement("div");
         karmaTitle.setAttribute("class", "karmaTitle");
+        karmaTitle.setAttribute("id", "karmaTitle");
         karmaTitle.textContent = karmas[i];
 
         let shareContainer = document.createElement("button");
         shareContainer.setAttribute("class", "shareContainer");
+        shareContainer.setAttribute("id", "shareContainer");
         let shareIMG = document.createElement("img");
         shareIMG.setAttribute("src", "assets/share-stars.png");
         shareIMG.setAttribute("alt", "stars");
@@ -571,15 +615,14 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
 
         let skipContainer = document.createElement("button");
         skipContainer.setAttribute("class", "skipContainer");
+        skipContainer.setAttribute("id", "skipContainer");
 
         let skipText = document.createElement("div");
         skipText.textContent = "Skip";
 
         let skipSVGContainer = document.createElement("div");
-        // let skipSVG = document.createElement("svg");
         let skipSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M52.51 440.6l171.5-142.9V214.3L52.51 71.41C31.88 54.28 0 68.66 0 96.03v319.9C0 443.3 31.88 457.7 52.51 440.6zM308.5 440.6l192-159.1c15.25-12.87 15.25-36.37 0-49.24l-192-159.1c-20.63-17.12-52.51-2.749-52.51 24.62v319.9C256 443.3 287.9 457.7 308.5 440.6z"/></svg>';
         skipSVGContainer.innerHTML = skipSVG;
-        // skipSVGContainer.appendChild(skipSVG);
 
         skipContainer.appendChild(skipText);
         skipContainer.appendChild(skipSVGContainer);
@@ -591,17 +634,15 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         bottomRowKarma.appendChild(skipContainer);
     
         resultsContainer.appendChild(karmaHeader);
-        // resultsContainer.appendChild(karmaContainer);
-        // karmaContainer.appendChild(karmaHeader);
         karmaContainer.appendChild(karmaRarity);
         karmaContainer.appendChild(karmaImgContainer);
         karmaContainer.appendChild(starContainer);
         resultsContainer.appendChild(karmaContainer);
         resultsContainer.appendChild(bottomRowKarma);
-        // resultsContainer.appendChild(shareContainer);
-        // resultsContainer.appendChild(karmaTitle);
-        // resultsContainer.appendChild(skipContainer);
     }
+
+    let appwidth = document.getElementById("app-container").offsetWidth;
+    sizeResultsKarma(appwidth);
 }
 
 function findKarmaRarity(karmas) {

@@ -272,11 +272,19 @@ body {
 }
 
 // Starting to style karmas pulled
+// #videoContainer {
+//     z-index: 5;    
+// }
+
 .karmaHeader {
     text-align: center;
     transform: rotateZ(-4deg);
-    background-color: pink;
+    // background-color: pink;
     color: white;
+}
+
+#karmaHeaderText {
+    background-color: pink;
 }
 
 .karma-container {

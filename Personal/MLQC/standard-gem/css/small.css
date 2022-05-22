@@ -306,8 +306,11 @@ body {
   text-align: center;
   -webkit-transform: rotateZ(-4deg);
           transform: rotateZ(-4deg);
-  background-color: pink;
   color: white;
+}
+
+#karmaHeaderText {
+  background-color: pink;
 }
 
 .karma-container {
