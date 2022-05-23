@@ -287,7 +287,10 @@ function sizeResultsKarma(appWidth) {
     let karmaImgContainer = document.getElementById("karmaImgContainer");
     let karmaIMG = document.getElementById("karmaIMG");
     let karmaRarity = document.getElementById("karmaRarity");
+    let starOverflow = document.getElementById("starOverflow");
     let starContainer = document.getElementById("starContainer");
+    let nameContainer = document.getElementById("nameContainer");
+    let starIMG = document.getElementById("starIMG");
     let shareContainer = document.getElementById("shareContainer");
     let karmaTitle = document.getElementById("karmaTitle");
     let skipContainer = document.getElementById("skipContainer");
@@ -307,6 +310,29 @@ function sizeResultsKarma(appWidth) {
     karmaIMG.style.marginTop = "-" + appWidth / 30 + "px";
     
     karmaRarity.style.width = appWidth / 5 + "px";
+    karmaRarity.style.marginTop = appWidth / 20 + "px";
+    karmaRarity.style.marginLeft= appWidth / 50 + "px";
+
+    // starContainer.style.height = appWidth / 7 + "px";
+    // nameContainer.style.fontSize = appWidth / 15 + "px";
+    // starContainer.style.marginLeft = "-" + appWidth / 4 + "px";
+    // starContainer.style.marginTop = appWidth / 4 + "px";
+    // starIMG.style.width = appWidth / 5 + "px";
+    // starIMG.style.marginLeft = appWidth / 5 + "px";
+    // nameContainer.style.marginLeft = appWidth / 5 + "px";
+
+    nameContainer.style.fontSize = appWidth / 15 + "px";
+    starIMG.style.width = appWidth / 5 + "px";
+    // starIMG.style.marginLeft = appWidth / 5 + "px";
+    // nameContainer.style.marginLeft = appWidth / 5 + "px";
+    // starOverflow.style.height = ;
+    // starOverflow.style.marginLeft = "-" + appWidth / 7.5 + "px";
+    // starOverflow.style.paddingLeft = "-" + appWidth / 7.5 + "px";
+    // starContainer.style.marginTop = appWidth / 2.8 + "px";
+    starContainer.style.height = appWidth / 7 + "px";
+    starContainer.style.marginLeft = appWidth / 5 + "px";
+    starIMG.style.marginLeft = appWidth / 1.4 + "px";
+    nameContainer.style.marginLeft = appWidth / 1.4 + "px";
 
 }
 
@@ -584,7 +610,12 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
    
         let karmaCharacters = findKarmaCharacter(karmas);
         let nameContainer = document.createElement("div");
+        nameContainer.setAttribute("id", "nameContainer");
         nameContainer.textContent = karmaCharacters[i];
+
+        let starOverflow = document.createElement("div");
+        starOverflow.setAttribute("class", "starOverflow");
+        starOverflow.setAttribute("id", "starOverflow");
      
         let starContainer = document.createElement("div");
         starContainer.appendChild(nameContainer);
@@ -594,6 +625,7 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         let starIMG = document.createElement("img");
         starIMG.setAttribute("src", "assets/stars.png");
         starIMG.setAttribute("alt", "1star");
+        starIMG.setAttribute("id", "starIMG");
         starContainer.appendChild(starIMG);
         starIMG.setAttribute("class", "star-img");
 
@@ -637,7 +669,8 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         resultsContainer.appendChild(karmaHeader);
         karmaContainer.appendChild(karmaRarity);
         karmaContainer.appendChild(karmaImgContainer);
-        karmaContainer.appendChild(starContainer);
+        starOverflow.appendChild(starContainer);
+        karmaContainer.appendChild(starOverflow);
         resultsContainer.appendChild(karmaContainer);
         resultsContainer.appendChild(bottomRowKarma);
     }

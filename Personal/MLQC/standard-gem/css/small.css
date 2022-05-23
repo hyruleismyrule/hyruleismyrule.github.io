@@ -347,17 +347,8 @@ body {
 }
 
 .star-container {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 4;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  grid-row-end: 4;
-  z-index: 2;
   color: white;
   background-color: rgba(128, 128, 128, 0.4);
-  -webkit-transform: rotateZ(-40deg);
-          transform: rotateZ(-40deg);
 }
 
 .bottomRowKarma {
@@ -399,5 +390,23 @@ body {
   -webkit-transform: rotateZ(-4deg);
           transform: rotateZ(-4deg);
   font-family: 'Open Sans', sans-serif;
+}
+
+.starOverflow {
+  overflow: hidden;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  z-index: 2;
+  -webkit-transform: rotateZ(-4deg);
+          transform: rotateZ(-4deg);
+}
+
+#starContainer {
+  -webkit-transform: rotateZ(-36deg);
+          transform: rotateZ(-36deg);
 }
 /*# sourceMappingURL=small.css.map */

@@ -313,14 +313,14 @@ body {
 }
 
 .star-container {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    z-index: 2;
+    // grid-column-start: 3;
+    // grid-column-end: 4;
+    // grid-row-start: 3;
+    // grid-row-end: 4;
+    // z-index: 2;
     color: white;
     background-color: $opgray;
-    transform: rotateZ(-40deg);
+    // transform: rotateZ(-40deg);
 }
 
 .bottomRowKarma {
@@ -357,4 +357,19 @@ body {
     background-color: $opgray;
     transform: rotateZ(-4deg);
     font-family: 'Open Sans', sans-serif;
+}
+
+.starOverflow {
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    z-index: 2;
+    transform: rotateZ(-4deg);
+    // transform: rotateZ(-40deg);
+}
+
+#starContainer {
+    transform: rotateZ(-36deg);
 }
