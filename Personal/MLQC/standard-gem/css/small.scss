@@ -284,7 +284,11 @@ body {
 }
 
 #karmaHeaderText {
-    background-color: pink;
+    background: rgb(238,231,225);
+    background: linear-gradient(90deg, rgba(238,231,225,0.8) 0%, rgba(228,156,181,0.8) 100%);
+    // border-top: 1px solid white;
+    // border-bottom: 1px solid white;
+    // opacity: 0.7;
 }
 
 .karma-container {
@@ -330,23 +334,27 @@ body {
 
 .shareContainer {
     color: white;
-    background-color: pink;
+    background: rgb(236,117,156);
+    background: linear-gradient(180deg, rgba(236,117,156,1) 0%, rgba(232,172,172,1) 100%);
     border-radius: 100%;
     font-family: 'EB Garamond', serif;
     border: none;
     z-index: 2;
+    border: 1px solid #f2b6c6;
 }
 
 .skipContainer {
     color: white;
-    background-color: pink;
+    background: #ee8d9f;
+    border: 1px solid #f2b6c6;
     font-family: 'EB Garamond', serif;
     border: none;
     display: flex;
 
+    // align-items: center;
     svg {
         fill: white;
-        min-width: 1rem;
+        // min-width: 1rem;
     }
 }
 
@@ -357,6 +365,9 @@ body {
     background-color: $opgray;
     transform: rotateZ(-4deg);
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .starOverflow {
@@ -376,3 +387,4 @@ body {
 #starContainer {
     transform: rotateZ(-36deg);
 }
+

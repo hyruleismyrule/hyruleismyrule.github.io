@@ -310,7 +310,9 @@ body {
 }
 
 #karmaHeaderText {
-  background-color: pink;
+  background: #eee7e1;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 231, 225, 0.8)), to(rgba(228, 156, 181, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 231, 225, 0.8) 0%, rgba(228, 156, 181, 0.8) 100%);
 }
 
 .karma-container {
@@ -362,16 +364,20 @@ body {
 
 .shareContainer {
   color: white;
-  background-color: pink;
+  background: #ec759c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec759c), to(#e8acac));
+  background: linear-gradient(180deg, #ec759c 0%, #e8acac 100%);
   border-radius: 100%;
   font-family: 'EB Garamond', serif;
   border: none;
   z-index: 2;
+  border: 1px solid #f2b6c6;
 }
 
 .skipContainer {
   color: white;
-  background-color: pink;
+  background: #ee8d9f;
+  border: 1px solid #f2b6c6;
   font-family: 'EB Garamond', serif;
   border: none;
   display: -webkit-box;
@@ -381,7 +387,6 @@ body {
 
 .skipContainer svg {
   fill: white;
-  min-width: 1rem;
 }
 
 .karmaTitle {
@@ -390,6 +395,15 @@ body {
   -webkit-transform: rotateZ(-4deg);
           transform: rotateZ(-4deg);
   font-family: 'Open Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .starOverflow {

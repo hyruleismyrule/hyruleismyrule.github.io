@@ -292,10 +292,15 @@ function sizeResultsKarma(appWidth) {
     let nameContainer = document.getElementById("nameContainer");
     let starIMG = document.getElementById("starIMG");
     let shareContainer = document.getElementById("shareContainer");
+    let shareIMG = document.getElementById("shareIMG");
+    let shareText = document.getElementById("shareText");
     let karmaTitle = document.getElementById("karmaTitle");
     let skipContainer = document.getElementById("skipContainer");
+    let skipText = document.getElementById("skipText");
+    let skipSVGContainer = document.getElementById("skipSVGContainer");
 
     karmaHeader.style.paddingTop = appWidth / 8 + "px";
+    
     karmaHeaderText.style.width = appWidth / 6 + "px";
     karmaHeaderText.style.fontSize = appWidth / 20 + "px";
     karmaHeaderText.style.padding = appWidth / 50 + "px";
@@ -313,32 +318,44 @@ function sizeResultsKarma(appWidth) {
     karmaRarity.style.marginTop = appWidth / 20 + "px";
     karmaRarity.style.marginLeft= appWidth / 50 + "px";
 
-    // starContainer.style.height = appWidth / 7 + "px";
-    // nameContainer.style.fontSize = appWidth / 15 + "px";
-    // starContainer.style.marginLeft = "-" + appWidth / 4 + "px";
-    // starContainer.style.marginTop = appWidth / 4 + "px";
-    // starIMG.style.width = appWidth / 5 + "px";
-    // starIMG.style.marginLeft = appWidth / 5 + "px";
-    // nameContainer.style.marginLeft = appWidth / 5 + "px";
-
     nameContainer.style.fontSize = appWidth / 15 + "px";
     starIMG.style.width = appWidth / 5 + "px";
-    // starIMG.style.marginLeft = appWidth / 5 + "px";
-    // nameContainer.style.marginLeft = appWidth / 5 + "px";
-    // starOverflow.style.height = ;
-    // starOverflow.style.marginLeft = "-" + appWidth / 7.5 + "px";
-    // starOverflow.style.paddingLeft = "-" + appWidth / 7.5 + "px";
-    // starContainer.style.marginTop = appWidth / 2.8 + "px";
+
     starContainer.style.height = appWidth / 6.5 + "px";
     starContainer.style.marginLeft = appWidth / 5 + "px";
     starOverflow.style.marginTop = "-" + appWidth / 7 + "px";
 
     starContainer.style.marginTop = appWidth / 2.2 + "px";
     
-
     nameContainer.style.marginLeft = appWidth / 2 + "px";
     starIMG.style.marginLeft = appWidth / 2 + "px";
 
+    shareContainer.style.height = appWidth / 8 + "px";
+    shareContainer.style.width = appWidth / 8 + "px";
+    shareContainer.style.marginLeft = appWidth / 40 + "px";
+    shareContainer.style.marginTop = "-" + appWidth / 40 + "px";
+    shareContainer.style.marginBottom = appWidth / 40 + "px";
+
+    shareIMG.style.width = appWidth / 20 + "px";
+    shareIMG.style.marginLeft = "-" + appWidth / 50 + "px";
+    shareIMG.style.marginTop = "-" + appWidth / 15 + "px";
+
+    shareText.style.fontSize = appWidth / 25 + "px";
+ 
+    karmaTitle.style.fontSize = appWidth / 35 + "px";
+    karmaTitle.style.height = appWidth / 20 + "px";
+    karmaTitle.style.width = appWidth / 2 + "px";
+    karmaTitle.style.marginTop = appWidth / 50 + "px";
+
+    skipContainer.style.height = appWidth / 18 + "px";
+    skipContainer.style.marginRight = appWidth / 100 + "px";
+    skipContainer.style.marginTop = appWidth / 50 + "px";
+    skipText.style.fontSize = appWidth / 25 + "px";
+    skipText.style.marginRight = appWidth / 50 + "px";
+    skipText.style.marginLeft = appWidth / 50 + "px";
+
+    skipSVGContainer.style.width = appWidth / 35 + "px";
+    skipSVGContainer.style.marginTop = appWidth / 100 + "px";
 }
 
 
@@ -644,10 +661,12 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         shareContainer.setAttribute("id", "shareContainer");
         let shareIMG = document.createElement("img");
         shareIMG.setAttribute("src", "assets/share-stars.png");
+        shareIMG.setAttribute("id", "shareIMG");
         shareIMG.setAttribute("alt", "stars");
         shareContainer.appendChild(shareIMG);
 
         let shareText = document.createElement("div");
+        shareText.setAttribute("id", "shareText");
         shareText.textContent = "Share";
         shareContainer.appendChild(shareText);
 
@@ -656,9 +675,11 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         skipContainer.setAttribute("id", "skipContainer");
 
         let skipText = document.createElement("div");
+        skipText.setAttribute("id", "skipText");
         skipText.textContent = "Skip";
 
         let skipSVGContainer = document.createElement("div");
+        skipSVGContainer.setAttribute("id", "skipSVGContainer");
         let skipSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M52.51 440.6l171.5-142.9V214.3L52.51 71.41C31.88 54.28 0 68.66 0 96.03v319.9C0 443.3 31.88 457.7 52.51 440.6zM308.5 440.6l192-159.1c15.25-12.87 15.25-36.37 0-49.24l-192-159.1c-20.63-17.12-52.51-2.749-52.51 24.62v319.9C256 443.3 287.9 457.7 308.5 440.6z"/></svg>';
         skipSVGContainer.innerHTML = skipSVG;
 
