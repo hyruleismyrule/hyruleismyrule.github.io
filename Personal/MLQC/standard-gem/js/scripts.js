@@ -409,7 +409,7 @@ function buy1() {
     karmas.push(karma);
     console.log(karmas);
     let karmaImgURLS = getKarmaImgURL(karmas);
-    console.log(karmaImgURLS);
+    // console.log(karmaImgURLS);
     
     timesWished = timesWished + 1;
     wishAnimation(timesPulled, karmas, karmaImgURLS);
@@ -474,7 +474,7 @@ function buy10() {
     console.log(karmas);
     timesWished = timesWished + 10;
     let karmaImgURLS = getKarmaImgURL(karmas);
-    console.log(karmaImgURLS);
+    // console.log(karmaImgURLS);
     wishAnimation(timesPulled, karmas, karmaImgURLS);
     // document.getElementById("redeemNum").textContent = timesWished;
 }
@@ -602,6 +602,7 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         let karmaHeader = document.createElement("div");
         karmaHeader.setAttribute("class", "karmaHeader");
         karmaHeader.setAttribute("id", "karmaHeader");
+        karmaHeader.setAttribute("onclick", "removeDisplayKarma()");
         // karmaHeader.textContent = "You got";
 
         let karmaHeaderText = document.createElement("div");
@@ -618,10 +619,12 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         karmaRarity.setAttribute("src", fullKarmaRaritySRC);
         karmaRarity.setAttribute("alt", karmaRarites[i]);
         karmaRarity.setAttribute("class", "karma-rarity");
+        karmaRarity.setAttribute("onclick", "removeDisplayKarma()");
 
         let karmaImgContainer = document.createElement("div");
         karmaImgContainer.setAttribute("id", "karmaImgContainer");
         karmaImgContainer.setAttribute("class", "karmaImgContainer");
+        karmaImgContainer.setAttribute("onclick", "removeDisplayKarma()");
     
         let karmaIMG = document.createElement("img");
         karmaIMG.setAttribute("src", karmaImgURLS[i]);
@@ -634,10 +637,12 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         let nameContainer = document.createElement("div");
         nameContainer.setAttribute("id", "nameContainer");
         nameContainer.textContent = karmaCharacters[i];
+        nameContainer.setAttribute("onclick", "removeDisplayKarma()");
 
         let starOverflow = document.createElement("div");
         starOverflow.setAttribute("class", "starOverflow");
         starOverflow.setAttribute("id", "starOverflow");
+        starOverflow.setAttribute("onclick", "removeDisplayKarma()");
      
         let starContainer = document.createElement("div");
         starContainer.appendChild(nameContainer);
@@ -649,12 +654,14 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         starIMG.setAttribute("alt", "1star");
         starIMG.setAttribute("id", "starIMG");
         starContainer.appendChild(starIMG);
+        starContainer.setAttribute("onclick", "removeDisplayKarma()");
         starIMG.setAttribute("class", "star-img");
 
         let karmaTitle =  document.createElement("div");
         karmaTitle.setAttribute("class", "karmaTitle");
         karmaTitle.setAttribute("id", "karmaTitle");
         karmaTitle.textContent = karmas[i];
+        karmaTitle.setAttribute("onclick", "removeDisplayKarma()");
 
         let shareContainer = document.createElement("button");
         shareContainer.setAttribute("class", "shareContainer");
@@ -673,6 +680,7 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         let skipContainer = document.createElement("button");
         skipContainer.setAttribute("class", "skipContainer");
         skipContainer.setAttribute("id", "skipContainer");
+        skipContainer.setAttribute("onclick", "removeDisplayKarma()");
 
         let skipText = document.createElement("div");
         skipText.setAttribute("id", "skipText");
@@ -703,6 +711,22 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
 
     let appwidth = document.getElementById("app-container").offsetWidth;
     sizeResultsKarma(appwidth);
+}
+
+// document.getElementById("resultsContainer").addEventListener("click", removeDisplayKarma());
+// document.getElementById("karmaContainer").addEventListener("click", removeDisplayKarma());
+// if (document.getElementById("karmaImgContainer")) {
+//     document.getElementById("karmaImgContainer").addEventListener("click", console.log("Clicked"));
+// }
+// bottomRowKarma.setAttribute("onclick", "removeDisplayKarma()");
+// onclick="removeDisplayKarma()"
+
+function removeDisplayKarma() {
+    let resultsContainer = document.getElementById("resultsContainer");
+
+    while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
+    }
 }
 
 function findKarmaRarity(karmas) {
