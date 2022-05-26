@@ -329,10 +329,15 @@ function sizeResultsKarma(appWidth) {
     // starOverflow.style.marginLeft = "-" + appWidth / 7.5 + "px";
     // starOverflow.style.paddingLeft = "-" + appWidth / 7.5 + "px";
     // starContainer.style.marginTop = appWidth / 2.8 + "px";
-    starContainer.style.height = appWidth / 7 + "px";
+    starContainer.style.height = appWidth / 6.5 + "px";
     starContainer.style.marginLeft = appWidth / 5 + "px";
-    starIMG.style.marginLeft = appWidth / 1.4 + "px";
-    nameContainer.style.marginLeft = appWidth / 1.4 + "px";
+    starOverflow.style.marginTop = "-" + appWidth / 7 + "px";
+
+    starContainer.style.marginTop = appWidth / 2.2 + "px";
+    
+
+    nameContainer.style.marginLeft = appWidth / 2 + "px";
+    starIMG.style.marginLeft = appWidth / 2 + "px";
 
 }
 
