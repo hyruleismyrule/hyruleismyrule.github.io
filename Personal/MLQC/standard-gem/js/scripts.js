@@ -713,6 +713,11 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
     sizeResultsKarma(appwidth);
 }
 
+function skipVideo() {
+    let videoContainer = document.getElementById("videoContainer");
+    videoContainer.removeChild(videoContainer.firstChild);
+}
+
 // document.getElementById("resultsContainer").addEventListener("click", removeDisplayKarma());
 // document.getElementById("karmaContainer").addEventListener("click", removeDisplayKarma());
 // if (document.getElementById("karmaImgContainer")) {
