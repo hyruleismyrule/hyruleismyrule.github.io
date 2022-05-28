@@ -590,6 +590,11 @@ function wishAnimation(timesPulled, karmas, karmaImgURLS) {
 }
 
 function displayKarma(karmas, height, width, karmaImgURLS) {
+    // // Testing Karma
+    // karmas = ["Gavin: Dream Traveler"];
+    // karmaImgURLS = ["assets/standard-gem-karma-cg/gavin-dream-traveler.png"];
+
+
     let resultsContainer = document.getElementById("resultsContainer");
     resultsContainer.setAttribute("height", height + "px");
     resultsContainer.setAttribute("width", width + "px");
