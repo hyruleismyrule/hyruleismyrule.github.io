@@ -269,14 +269,44 @@ body {
 .resultsContainer {
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow: hidden;
+
+    // -webkit-animation:spin 0.5s linear;
+    // -moz-animation:spin 0.5s linear;
+    // animation:spin 0.5s linear;
 }
 
-// Starting to style karmas pulled
+#karmaContainer {
+    // rotate: 45deg;
+    transition-duration: 10s;
+}
+
+// @-moz-keyframes spin { 
+//     100% { -moz-transform: rotate(10deg); } 
+// }
+// @-webkit-keyframes spin { 
+//     100% { -webkit-transform: rotate(30deg); } 
+// }
+// @keyframes spin { 
+//     100% { 
+//         -webkit-transform: rotate(90deg); 
+//         transform:rotate(90deg); 
+//     } 
+// }
+
 .karmaHeader {
     text-align: center;
     transform: rotateZ(-4deg);
-    background-color: pink;
+    // background-color: pink;
     color: white;
+}
+
+#karmaHeaderText {
+    background: rgb(238,231,225);
+    background: linear-gradient(90deg, rgba(238,231,225,0.8) 0%, rgba(228,156,181,0.8) 100%);
+    // border-top: 1px solid white;
+    // border-bottom: 1px solid white;
+    // opacity: 0.7;
 }
 
 .karma-container {
@@ -305,14 +335,14 @@ body {
 }
 
 .star-container {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    z-index: 2;
+    // grid-column-start: 3;
+    // grid-column-end: 4;
+    // grid-row-start: 3;
+    // grid-row-end: 4;
+    // z-index: 2;
     color: white;
     background-color: $opgray;
-    transform: rotateZ(-40deg);
+    // transform: rotateZ(-40deg);
 }
 
 .bottomRowKarma {
@@ -322,23 +352,27 @@ body {
 
 .shareContainer {
     color: white;
-    background-color: pink;
+    background: rgb(236,117,156);
+    background: linear-gradient(180deg, rgba(236,117,156,1) 0%, rgba(232,172,172,1) 100%);
     border-radius: 100%;
     font-family: 'EB Garamond', serif;
     border: none;
     z-index: 2;
+    border: 1px solid #f2b6c6;
 }
 
 .skipContainer {
     color: white;
-    background-color: pink;
+    background: #ee8d9f;
+    border: 1px solid #f2b6c6;
     font-family: 'EB Garamond', serif;
     border: none;
     display: flex;
 
+    // align-items: center;
     svg {
         fill: white;
-        min-width: 1rem;
+        // min-width: 1rem;
     }
 }
 
@@ -349,4 +383,26 @@ body {
     background-color: $opgray;
     transform: rotateZ(-4deg);
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.starOverflow {
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    z-index: 2;
+    transform: rotateZ(-4deg);
+    
+    // background-color: rebeccapurple;
+    // opacity: 0.5;
+    // transform: rotateZ(-40deg);
+}
+
+#starContainer {
+    transform: rotateZ(-36deg);
+}
+

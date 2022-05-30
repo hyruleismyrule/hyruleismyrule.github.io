@@ -300,14 +300,25 @@ body {
 .resultsContainer {
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow: hidden;
+}
+
+#karmaContainer {
+  -webkit-transition-duration: 10s;
+          transition-duration: 10s;
 }
 
 .karmaHeader {
   text-align: center;
   -webkit-transform: rotateZ(-4deg);
           transform: rotateZ(-4deg);
-  background-color: pink;
   color: white;
+}
+
+#karmaHeaderText {
+  background: #eee7e1;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 231, 225, 0.8)), to(rgba(228, 156, 181, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 231, 225, 0.8) 0%, rgba(228, 156, 181, 0.8) 100%);
 }
 
 .karma-container {
@@ -344,17 +355,8 @@ body {
 }
 
 .star-container {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 4;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  grid-row-end: 4;
-  z-index: 2;
   color: white;
   background-color: rgba(128, 128, 128, 0.4);
-  -webkit-transform: rotateZ(-40deg);
-          transform: rotateZ(-40deg);
 }
 
 .bottomRowKarma {
@@ -368,16 +370,20 @@ body {
 
 .shareContainer {
   color: white;
-  background-color: pink;
+  background: #ec759c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec759c), to(#e8acac));
+  background: linear-gradient(180deg, #ec759c 0%, #e8acac 100%);
   border-radius: 100%;
   font-family: 'EB Garamond', serif;
   border: none;
   z-index: 2;
+  border: 1px solid #f2b6c6;
 }
 
 .skipContainer {
   color: white;
-  background-color: pink;
+  background: #ee8d9f;
+  border: 1px solid #f2b6c6;
   font-family: 'EB Garamond', serif;
   border: none;
   display: -webkit-box;
@@ -387,7 +393,6 @@ body {
 
 .skipContainer svg {
   fill: white;
-  min-width: 1rem;
 }
 
 .karmaTitle {
@@ -396,5 +401,32 @@ body {
   -webkit-transform: rotateZ(-4deg);
           transform: rotateZ(-4deg);
   font-family: 'Open Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.starOverflow {
+  overflow: hidden;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  z-index: 2;
+  -webkit-transform: rotateZ(-4deg);
+          transform: rotateZ(-4deg);
+}
+
+#starContainer {
+  -webkit-transform: rotateZ(-36deg);
+          transform: rotateZ(-36deg);
 }
 /*# sourceMappingURL=small.css.map */

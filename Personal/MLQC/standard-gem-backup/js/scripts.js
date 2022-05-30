@@ -37,6 +37,10 @@ function responsiveAppSize() {
         appDiv.style.height = appHeight + "px";
     }
     placeGrids(appWidth);
+
+    if (document.getElementById("karmaHeader")) {
+        sizeResultsKarma(appWidth);
+    }
 }
 
 // // Grid-placement
@@ -274,6 +278,91 @@ function placeGrids(appWidth) {
 }
 
 
+// This is the results being displayed
+
+function sizeResultsKarma(appWidth) {
+    let karmaHeader = document.getElementById("karmaHeader");
+    let karmaHeaderText = document.getElementById("karmaHeaderText");
+
+    let karmaImgContainer = document.getElementById("karmaImgContainer");
+    let karmaIMG = document.getElementById("karmaIMG");
+    let karmaRarity = document.getElementById("karmaRarity");
+    let starOverflow = document.getElementById("starOverflow");
+    let starContainer = document.getElementById("starContainer");
+    let nameContainer = document.getElementById("nameContainer");
+    let starIMG = document.getElementById("starIMG");
+    let shareContainer = document.getElementById("shareContainer");
+    let shareIMG = document.getElementById("shareIMG");
+    let shareText = document.getElementById("shareText");
+    let karmaTitle = document.getElementById("karmaTitle");
+    let skipContainer = document.getElementById("skipContainer");
+    let skipText = document.getElementById("skipText");
+    let skipSVGContainer = document.getElementById("skipSVGContainer");
+
+    karmaHeader.style.paddingTop = appWidth / 8 + "px";
+    
+    karmaHeaderText.style.width = appWidth / 6 + "px";
+    karmaHeaderText.style.fontSize = appWidth / 20 + "px";
+    karmaHeaderText.style.padding = appWidth / 50 + "px";
+    karmaHeaderText.style.paddingLeft = appWidth / 8 + "px";
+    karmaHeaderText.style.paddingRight = appWidth / 8 + "px";
+    karmaHeader.style.paddingLeft = ((appWidth / 2) - karmaHeaderText.offsetWidth / 2) + "px";
+    karmaHeaderText.style.marginBottom = appWidth / 50 + "px";
+
+    karmaImgContainer.style.width = appWidth * 1.2 + "px";
+    karmaImgContainer.style.height = appWidth * 1.4 + "px";
+    karmaImgContainer.style.marginLeft = "-" + appWidth / 20 + "px";
+    karmaIMG.style.marginTop = "-" + appWidth / 30 + "px";
+    
+    karmaRarity.style.width = appWidth / 5 + "px";
+    karmaRarity.style.marginTop = appWidth / 20 + "px";
+    karmaRarity.style.marginLeft= appWidth / 50 + "px";
+
+    nameContainer.style.fontSize = appWidth / 15 + "px";
+    starIMG.style.width = appWidth / 5 + "px";
+
+    starContainer.style.height = appWidth / 6.5 + "px";
+    starContainer.style.marginLeft = appWidth / 5 + "px";
+    starOverflow.style.marginTop = "-" + appWidth / 7 + "px";
+
+    starContainer.style.marginTop = appWidth / 2.2 + "px";
+    
+    nameContainer.style.marginLeft = appWidth / 2 + "px";
+    starIMG.style.marginLeft = appWidth / 2 + "px";
+
+    shareContainer.style.height = appWidth / 8 + "px";
+    shareContainer.style.width = appWidth / 8 + "px";
+    shareContainer.style.marginLeft = appWidth / 40 + "px";
+    shareContainer.style.marginTop = "-" + appWidth / 40 + "px";
+    shareContainer.style.marginBottom = appWidth / 40 + "px";
+
+    shareIMG.style.width = appWidth / 20 + "px";
+    shareIMG.style.marginLeft = "-" + appWidth / 50 + "px";
+    shareIMG.style.marginTop = "-" + appWidth / 15 + "px";
+
+    shareText.style.fontSize = appWidth / 25 + "px";
+ 
+    karmaTitle.style.fontSize = appWidth / 35 + "px";
+    karmaTitle.style.height = appWidth / 20 + "px";
+    karmaTitle.style.width = appWidth / 2 + "px";
+    karmaTitle.style.marginTop = appWidth / 50 + "px";
+
+    skipContainer.style.height = appWidth / 18 + "px";
+    skipContainer.style.marginRight = appWidth / 100 + "px";
+    skipContainer.style.marginTop = appWidth / 50 + "px";
+    skipText.style.fontSize = appWidth / 25 + "px";
+    skipText.style.marginRight = appWidth / 50 + "px";
+    skipText.style.marginLeft = appWidth / 50 + "px";
+
+    skipSVGContainer.style.width = appWidth / 35 + "px";
+    skipSVGContainer.style.marginTop = appWidth / 100 + "px";
+}
+
+
+
+
+
+
 // Standard Karma
 let standardSP = ["Gavin: Dream Traveler", "Kiro: Gorgeous Lights", "Lucien: Law of Gravity", "Victor: Only Tonight"];
 
@@ -320,7 +409,7 @@ function buy1() {
     karmas.push(karma);
     console.log(karmas);
     let karmaImgURLS = getKarmaImgURL(karmas);
-    console.log(karmaImgURLS);
+    // console.log(karmaImgURLS);
     
     timesWished = timesWished + 1;
     wishAnimation(timesPulled, karmas, karmaImgURLS);
@@ -385,7 +474,7 @@ function buy10() {
     console.log(karmas);
     timesWished = timesWished + 10;
     let karmaImgURLS = getKarmaImgURL(karmas);
-    console.log(karmaImgURLS);
+    // console.log(karmaImgURLS);
     wishAnimation(timesPulled, karmas, karmaImgURLS);
     // document.getElementById("redeemNum").textContent = timesWished;
 }
@@ -501,85 +590,118 @@ function wishAnimation(timesPulled, karmas, karmaImgURLS) {
 }
 
 function displayKarma(karmas, height, width, karmaImgURLS) {
+    // // Testing Karma
+    // karmas = ["Gavin: Dream Traveler"];
+    // karmaImgURLS = ["assets/standard-gem-karma-cg/gavin-dream-traveler.png"];
+
+
     let resultsContainer = document.getElementById("resultsContainer");
     resultsContainer.setAttribute("height", height + "px");
-    // resultsContainer.setAttribute("100%");
     resultsContainer.setAttribute("width", width + "px");
     resultsContainer.style.backgroundImage = 'url("assets/hd-floral-background.png")';
 
-    // resultsContainer.textContent = "Hello World!";
-    // resultsContainer.style.zIndex = '2';
-    // resultsContainer.style.position = "absolute";
-    // resultsContainer.style.top= "0";
-    // resultsContainer.style.left = "0";
-
     let karmaContainer = document.createElement("div");
     karmaContainer.setAttribute("class", "karma-container");
+    karmaContainer.setAttribute("id", "karmaContainer");
 
     for (let i = 0; i < karmas.length; i++) {
         let karmaHeader = document.createElement("div");
         karmaHeader.setAttribute("class", "karmaHeader");
-        karmaHeader.textContent = "You got";
+        karmaHeader.setAttribute("id", "karmaHeader");
+        karmaHeader.setAttribute("onclick", "removeDisplayKarma()");
+        // karmaHeader.textContent = "You got";
+
+        let karmaHeaderText = document.createElement("div");
+        karmaHeaderText.setAttribute("id", "karmaHeaderText");
+        karmaHeaderText.textContent = "You got";
+        karmaHeader.appendChild(karmaHeaderText);
     
-        // Note images will need to be added here
         let karmaRarites = findKarmaRarity(karmas);
         let baseRarityIMGSRC = "assets/rarity/"
         let fullKarmaRaritySRC = baseRarityIMGSRC + karmaRarites[i] + "-icon.png";
 
         let karmaRarity = document.createElement("img");
+        karmaRarity.setAttribute("id", "karmaRarity");
         karmaRarity.setAttribute("src", fullKarmaRaritySRC);
         karmaRarity.setAttribute("alt", karmaRarites[i]);
         karmaRarity.setAttribute("class", "karma-rarity");
+        // karmaRarity.setAttribute("onclick", "quickDisplayKarma()");
 
         let karmaImgContainer = document.createElement("div");
+        karmaImgContainer.setAttribute("id", "karmaImgContainer");
         karmaImgContainer.setAttribute("class", "karmaImgContainer");
+        // karmaImgContainer.setAttribute("onclick", "quickDisplayKarma()");
     
         let karmaIMG = document.createElement("img");
         karmaIMG.setAttribute("src", karmaImgURLS[i]);
         karmaIMG.setAttribute("alt", karmas[i]);
         karmaIMG.setAttribute("class", "karma-img");
+        karmaIMG.setAttribute("id", "karmaIMG");
         karmaImgContainer.appendChild(karmaIMG);
    
         let karmaCharacters = findKarmaCharacter(karmas);
         let nameContainer = document.createElement("div");
+        nameContainer.setAttribute("id", "nameContainer");
         nameContainer.textContent = karmaCharacters[i];
+        // nameContainer.setAttribute("onclick", "quickDisplayKarma()");
+
+        // rotateKarma();
+        karmaRarity.setAttribute("onclick", "removeDisplayKarma()");
+        karmaImgContainer.setAttribute("onclick", "removeDisplayKarma()");
+        nameContainer.setAttribute("onclick", "removeDisplayKarma()");
+
+
+        let starOverflow = document.createElement("div");
+        starOverflow.setAttribute("class", "starOverflow");
+        starOverflow.setAttribute("id", "starOverflow");
+        starOverflow.setAttribute("onclick", "removeDisplayKarma()");
      
         let starContainer = document.createElement("div");
         starContainer.appendChild(nameContainer);
         starContainer.setAttribute("class", "star-container");
+        starContainer.setAttribute("id", "starContainer");
 
         let starIMG = document.createElement("img");
         starIMG.setAttribute("src", "assets/stars.png");
         starIMG.setAttribute("alt", "1star");
+        starIMG.setAttribute("id", "starIMG");
         starContainer.appendChild(starIMG);
+        starContainer.setAttribute("onclick", "removeDisplayKarma()");
         starIMG.setAttribute("class", "star-img");
 
         let karmaTitle =  document.createElement("div");
         karmaTitle.setAttribute("class", "karmaTitle");
+        karmaTitle.setAttribute("id", "karmaTitle");
         karmaTitle.textContent = karmas[i];
+        karmaTitle.setAttribute("onclick", "removeDisplayKarma()");
 
         let shareContainer = document.createElement("button");
         shareContainer.setAttribute("class", "shareContainer");
+        shareContainer.setAttribute("id", "shareContainer");
         let shareIMG = document.createElement("img");
         shareIMG.setAttribute("src", "assets/share-stars.png");
+        shareIMG.setAttribute("id", "shareIMG");
         shareIMG.setAttribute("alt", "stars");
         shareContainer.appendChild(shareIMG);
 
         let shareText = document.createElement("div");
+        shareText.setAttribute("id", "shareText");
         shareText.textContent = "Share";
         shareContainer.appendChild(shareText);
 
         let skipContainer = document.createElement("button");
         skipContainer.setAttribute("class", "skipContainer");
+        skipContainer.setAttribute("id", "skipContainer");
+        skipContainer.setAttribute("onclick", "removeDisplayKarma()");
 
         let skipText = document.createElement("div");
+        skipText.setAttribute("id", "skipText");
         skipText.textContent = "Skip";
 
         let skipSVGContainer = document.createElement("div");
-        // let skipSVG = document.createElement("svg");
+        skipSVGContainer.setAttribute("id", "skipSVGContainer");
         let skipSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M52.51 440.6l171.5-142.9V214.3L52.51 71.41C31.88 54.28 0 68.66 0 96.03v319.9C0 443.3 31.88 457.7 52.51 440.6zM308.5 440.6l192-159.1c15.25-12.87 15.25-36.37 0-49.24l-192-159.1c-20.63-17.12-52.51-2.749-52.51 24.62v319.9C256 443.3 287.9 457.7 308.5 440.6z"/></svg>';
         skipSVGContainer.innerHTML = skipSVG;
-        // skipSVGContainer.appendChild(skipSVG);
 
         skipContainer.appendChild(skipText);
         skipContainer.appendChild(skipSVGContainer);
@@ -591,16 +713,43 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         bottomRowKarma.appendChild(skipContainer);
     
         resultsContainer.appendChild(karmaHeader);
-        // resultsContainer.appendChild(karmaContainer);
-        // karmaContainer.appendChild(karmaHeader);
         karmaContainer.appendChild(karmaRarity);
         karmaContainer.appendChild(karmaImgContainer);
-        karmaContainer.appendChild(starContainer);
+        starOverflow.appendChild(starContainer);
+        karmaContainer.appendChild(starOverflow);
         resultsContainer.appendChild(karmaContainer);
         resultsContainer.appendChild(bottomRowKarma);
-        // resultsContainer.appendChild(shareContainer);
-        // resultsContainer.appendChild(karmaTitle);
-        // resultsContainer.appendChild(skipContainer);
+
+        // resultsContainer.style.rotate(40);
+    }
+
+    let appwidth = document.getElementById("app-container").offsetWidth;
+    sizeResultsKarma(appwidth);
+}
+
+function skipVideo() {
+    let videoContainer = document.getElementById("videoContainer");
+    videoContainer.removeChild(videoContainer.firstChild);
+}
+
+// function rotateKarma() {
+//     let karmaContainer = document.getElementById("karmaContainer")
+//     karmaContainer.style.transform = 'rotate(90deg)';
+// }
+
+// document.getElementById("resultsContainer").addEventListener("click", removeDisplayKarma());
+// document.getElementById("karmaContainer").addEventListener("click", removeDisplayKarma());
+// if (document.getElementById("karmaImgContainer")) {
+//     document.getElementById("karmaImgContainer").addEventListener("click", console.log("Clicked"));
+// }
+// bottomRowKarma.setAttribute("onclick", "removeDisplayKarma()");
+// onclick="removeDisplayKarma()"
+
+function removeDisplayKarma() {
+    let resultsContainer = document.getElementById("resultsContainer");
+
+    while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
     }
 }
 

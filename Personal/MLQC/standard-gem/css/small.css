@@ -300,6 +300,12 @@ body {
 .resultsContainer {
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow: hidden;
+}
+
+#karmaContainer {
+  -webkit-transition-duration: 10s;
+          transition-duration: 10s;
 }
 
 .karmaHeader {

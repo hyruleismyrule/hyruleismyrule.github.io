@@ -602,6 +602,7 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
 
     let karmaContainer = document.createElement("div");
     karmaContainer.setAttribute("class", "karma-container");
+    karmaContainer.setAttribute("id", "karmaContainer");
 
     for (let i = 0; i < karmas.length; i++) {
         let karmaHeader = document.createElement("div");
@@ -624,12 +625,12 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         karmaRarity.setAttribute("src", fullKarmaRaritySRC);
         karmaRarity.setAttribute("alt", karmaRarites[i]);
         karmaRarity.setAttribute("class", "karma-rarity");
-        karmaRarity.setAttribute("onclick", "removeDisplayKarma()");
+        // karmaRarity.setAttribute("onclick", "quickDisplayKarma()");
 
         let karmaImgContainer = document.createElement("div");
         karmaImgContainer.setAttribute("id", "karmaImgContainer");
         karmaImgContainer.setAttribute("class", "karmaImgContainer");
-        karmaImgContainer.setAttribute("onclick", "removeDisplayKarma()");
+        // karmaImgContainer.setAttribute("onclick", "quickDisplayKarma()");
     
         let karmaIMG = document.createElement("img");
         karmaIMG.setAttribute("src", karmaImgURLS[i]);
@@ -642,7 +643,13 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         let nameContainer = document.createElement("div");
         nameContainer.setAttribute("id", "nameContainer");
         nameContainer.textContent = karmaCharacters[i];
+        // nameContainer.setAttribute("onclick", "quickDisplayKarma()");
+
+        // rotateKarma();
+        karmaRarity.setAttribute("onclick", "removeDisplayKarma()");
+        karmaImgContainer.setAttribute("onclick", "removeDisplayKarma()");
         nameContainer.setAttribute("onclick", "removeDisplayKarma()");
+
 
         let starOverflow = document.createElement("div");
         starOverflow.setAttribute("class", "starOverflow");
@@ -712,6 +719,8 @@ function displayKarma(karmas, height, width, karmaImgURLS) {
         karmaContainer.appendChild(starOverflow);
         resultsContainer.appendChild(karmaContainer);
         resultsContainer.appendChild(bottomRowKarma);
+
+        // resultsContainer.style.rotate(40);
     }
 
     let appwidth = document.getElementById("app-container").offsetWidth;
@@ -722,6 +731,11 @@ function skipVideo() {
     let videoContainer = document.getElementById("videoContainer");
     videoContainer.removeChild(videoContainer.firstChild);
 }
+
+// function rotateKarma() {
+//     let karmaContainer = document.getElementById("karmaContainer")
+//     karmaContainer.style.transform = 'rotate(90deg)';
+// }
 
 // document.getElementById("resultsContainer").addEventListener("click", removeDisplayKarma());
 // document.getElementById("karmaContainer").addEventListener("click", removeDisplayKarma());

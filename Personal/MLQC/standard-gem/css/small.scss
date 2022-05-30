@@ -269,11 +269,29 @@ body {
 .resultsContainer {
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow: hidden;
+
+    // -webkit-animation:spin 0.5s linear;
+    // -moz-animation:spin 0.5s linear;
+    // animation:spin 0.5s linear;
 }
 
-// Starting to style karmas pulled
-// #videoContainer {
-//     z-index: 5;    
+#karmaContainer {
+    // rotate: 45deg;
+    transition-duration: 10s;
+}
+
+// @-moz-keyframes spin { 
+//     100% { -moz-transform: rotate(10deg); } 
+// }
+// @-webkit-keyframes spin { 
+//     100% { -webkit-transform: rotate(30deg); } 
+// }
+// @keyframes spin { 
+//     100% { 
+//         -webkit-transform: rotate(90deg); 
+//         transform:rotate(90deg); 
+//     } 
 // }
 
 .karmaHeader {
