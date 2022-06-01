@@ -1,0 +1,33 @@
+{
+    "StandardSP": [
+        {
+            "rarity": "SP",
+            "character": "Gavin",
+            "title": "Dream Traveler",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SP",
+            "character": "Kiro",
+            "title": "Gorgeous Lights",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SP",
+            "character": "Lucien",
+            "title": "Law of Gravity",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SP",
+            "character": "Victor",
+            "title": "Only Tonight",
+            "stat": "Decision",
+            "king": "false"
+        }
+
+    ]
+}
