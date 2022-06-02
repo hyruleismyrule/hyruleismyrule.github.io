@@ -1,5 +1,5 @@
 {
-    "StandardSP": [
+    "standardSP": [
         {
             "rarity": "SP",
             "character": "Gavin",
@@ -28,6 +28,563 @@
             "stat": "Decision",
             "king": "false"
         }
-
+    ],
+    "standardKingSSR": [
+        {
+            "rarity": "SSR",
+            "character": "Kiro",
+            "title": "Visage",
+            "stat": "Decision",
+            "king": "true"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Gavin",
+            "title": "Hot-Blooded",
+            "stat": "Execution",
+            "king": "true"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Lucien",
+            "title": "Memory Lapse",
+            "stat": "Decision",
+            "king": "true"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Victor",
+            "title": "Loving Stare",
+            "stat": "Creativity",
+            "king": "true"
+        }
+    ],
+    "standardSSR": [
+        {
+            "rarity": "SSR",
+            "character": "Gavin",
+            "title": "Unforgettable Time",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Gavin",
+            "title": "Summer Loving",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Gavin",
+            "title": "Seize",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Gavin",
+            "title": "Starstruck",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Kiro",
+            "title": "No Man's Land",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Kiro",
+            "title": "Spring Sonata",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Kiro",
+            "title": "Whisk You Away",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Kiro",
+            "title": "Starry Sky",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Lucien",
+            "title": "Temptation",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Lucien",
+            "title": "Autumn Whisper",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Lucien",
+            "title": "Drowning in Love",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Lucien",
+            "title": "Sound of Silence",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Victor",
+            "title": "Music of the Night",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Victor",
+            "title": "Winter Infatuation",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Victor",
+            "title": "Sentimental Attachment",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Victor",
+            "title": "Marauder",
+            "stat": "Execution",
+            "king": "false"
+        }
+    ],
+    "standardKingSR": [
+        {
+            "rarity": "SR",
+            "character": "Kiro",
+            "title": "Found You",
+            "stat": "Affinity",
+            "king": "true"
+        },
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "Late Autumn",
+            "stat": "Creativity",
+            "king": "true"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Deeper Than Ocean",
+            "stat": "Decision",
+            "king": "true"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Deeper Than Ocean",
+            "stat": "Decision",
+            "king": "true"
+        },
+        {
+            "rarity": "SR",
+            "character": "Victor",
+            "title": "Tender Moment",
+            "stat": "Affinity",
+            "king": "true"
+        }
+    ],
+    "standardSR": [
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "You Are Mine",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "Sincere Instruction",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "Childlike",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "Fierce Battle",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "Fierce Battle",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Gavin",
+            "title": "Source of Strength",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Kiro",
+            "title": "Together with You",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Kiro",
+            "title": "Sweet Dreams",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Kiro",
+            "title": "Snowfall",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Kiro",
+            "title": "Lingering Glance",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Kiro",
+            "title": "Albatross",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Midnight Beacon",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Tender Mood",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Capture the Moment",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Arm-in-Arm",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Lucien",
+            "title": "Fireflies",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Victor",
+            "title": "Our Own World",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Victor",
+            "title": "Soft Encouragement",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Victor",
+            "title": "Making a Move",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Victor",
+            "title": "Late Night Thoughts",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "SR",
+            "character": "Victor",
+            "title": "Rainfall Rendezvous",
+            "stat": "Execution",
+            "king": "false"
+        }
+    ],
+    "standardKingR": [
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Flustered",
+            "stat": "Creativity",
+            "king": "true"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Cold Shower",
+            "stat": "Decision",
+            "king": "true"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Cherish the Memory",
+            "stat": "Creativity",
+            "king": "true"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "At Leisure",
+            "stat": "Execution",
+            "king": "true"
+        }
+    ],
+    "standardR": [
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Upwind",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Rock and a Hard Place",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Investigation",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Whetstone",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Deduction",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Bullseye",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Gavin",
+            "title": "Warming Up",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Your Existence",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Masterpiece",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Loving Mood",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Source of Joy",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Perfect Figure",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Custom Made",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Kiro",
+            "title": "Singing for You",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Detailed Narration",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Destined",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Support",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Archive",
+            "stat": "Creativity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Hard Choice",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Read You Like a Book",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Lucien",
+            "title": "Indelible Taste",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Self-Entertaining",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Unbridled Passion",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Taste",
+            "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Reluctance",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Time Control",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Special Assignment",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "R",
+            "character": "Victor",
+            "title": "Heartstring",
+            "stat": "Creativity",
+            "king": "false"
+        }
     ]
 }
