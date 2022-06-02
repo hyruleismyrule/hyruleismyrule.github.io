@@ -197,13 +197,6 @@
         },
         {
             "rarity": "SR",
-            "character": "Lucien",
-            "title": "Deeper Than Ocean",
-            "stat": "Decision",
-            "king": "true"
-        },
-        {
-            "rarity": "SR",
             "character": "Victor",
             "title": "Tender Moment",
             "stat": "Affinity",
