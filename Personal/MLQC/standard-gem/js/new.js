@@ -194,6 +194,35 @@ function wishAnimation(timesPulled, karmas) {
     displayResults(karmas);
 }
 
+function rarityAnimation(rarity, character) {
+    let appContainer = document.getElementById("app-container");
+
+    let videoContainer = document.getElementById("videoContainer");
+    let videoElement = document.createElement("video");
+    videoElement.autoplay = true;
+    videoElement.muted = true;
+
+    let height = appContainer.offsetHeight;
+    let width = appContainer.offsetWidth;
+
+    videoElement.setAttribute("height", height);
+    videoElement.setAttribute("width", width);
+
+    videoContainer.appendChild(videoElement);
+
+    let sourceElement = document.createElement("source");
+    sourceElement.setAttribute("type", "video/mp4");
+    videoElement.appendChild(sourceElement);
+
+    // ex. ssr-lucien
+    sourceElement.setAttribute("src", "assets/videos/" + rarity.toLowerCase() + "-" + character.toLowerCase() + ".mp4");
+
+    videoElement.onended = function () {
+        videoElement.remove();
+    };
+
+}
+
 function displayResults(karmas) {
     displayResultsContainer();
 
@@ -218,6 +247,12 @@ function displayKarma(karma, displayedKarma, karmas) {
         let rarity = karma.rarity;
         let character = karma.character;
         let title = karma.title;
+
+        // I currently don't have the sp 
+        // if (rarity == "SSR" || rarity == "SP") {
+        if (rarity == "SSR") {
+            rarityAnimation(rarity, character);
+        }
 
         let stringKarmas = JSON.stringify(karmas);
 
@@ -657,7 +692,7 @@ function sizeResultsKarma(appWidth) {
     if (document.getElementById("karmaHeader")) {
         let karmaHeader = document.getElementById("karmaHeader");
         let karmaHeaderText = document.getElementById("karmaHeaderText");
-    
+
         let karmaImgContainer = document.getElementById("karmaImgContainer");
         let karmaIMG = document.getElementById("karmaIMG");
         let karmaRarity = document.getElementById("karmaRarity");
@@ -672,9 +707,9 @@ function sizeResultsKarma(appWidth) {
         let skipContainer = document.getElementById("skipContainer");
         let skipText = document.getElementById("skipText");
         let skipSVGContainer = document.getElementById("skipSVGContainer");
-    
+
         karmaHeader.style.paddingTop = appWidth / 8 + "px";
-    
+
         karmaHeaderText.style.width = appWidth / 6 + "px";
         karmaHeaderText.style.fontSize = appWidth / 20 + "px";
         karmaHeaderText.style.padding = appWidth / 50 + "px";
@@ -682,52 +717,52 @@ function sizeResultsKarma(appWidth) {
         karmaHeaderText.style.paddingRight = appWidth / 8 + "px";
         karmaHeader.style.paddingLeft = ((appWidth / 2) - karmaHeaderText.offsetWidth / 2) + "px";
         karmaHeaderText.style.marginBottom = appWidth / 50 + "px";
-    
+
         karmaImgContainer.style.width = appWidth * 1.2 + "px";
         karmaImgContainer.style.height = appWidth * 1.4 + "px";
         karmaImgContainer.style.marginLeft = "-" + appWidth / 20 + "px";
         karmaIMG.style.marginTop = "-" + appWidth / 30 + "px";
-    
+
         karmaRarity.style.width = appWidth / 3.5 + "px";
         karmaRarity.style.marginTop = appWidth / 20 + "px";
         karmaRarity.style.marginLeft = appWidth / 50 + "px";
-    
+
         nameContainer.style.fontSize = appWidth / 15 + "px";
         starIMG.style.width = appWidth / 5 + "px";
-    
+
         starContainer.style.height = appWidth / 6.5 + "px";
         starContainer.style.marginLeft = appWidth / 5 + "px";
         starOverflow.style.marginTop = "-" + appWidth / 7 + "px";
-    
+
         starContainer.style.marginTop = appWidth / 2.2 + "px";
-    
+
         nameContainer.style.marginLeft = appWidth / 2 + "px";
         starIMG.style.marginLeft = appWidth / 2 + "px";
-    
+
         shareContainer.style.height = appWidth / 8 + "px";
         shareContainer.style.width = appWidth / 8 + "px";
         shareContainer.style.marginLeft = appWidth / 40 + "px";
         shareContainer.style.marginTop = "-" + appWidth / 40 + "px";
         shareContainer.style.marginBottom = appWidth / 40 + "px";
-    
+
         shareIMG.style.width = appWidth / 20 + "px";
         shareIMG.style.marginLeft = "-" + appWidth / 50 + "px";
         shareIMG.style.marginTop = "-" + appWidth / 15 + "px";
-    
+
         shareText.style.fontSize = appWidth / 25 + "px";
-    
+
         karmaTitle.style.fontSize = appWidth / 35 + "px";
         karmaTitle.style.height = appWidth / 20 + "px";
         karmaTitle.style.width = appWidth / 2 + "px";
         karmaTitle.style.marginTop = appWidth / 50 + "px";
-    
+
         skipContainer.style.height = appWidth / 18 + "px";
         skipContainer.style.marginRight = appWidth / 100 + "px";
         skipContainer.style.marginTop = appWidth / 50 + "px";
         skipText.style.fontSize = appWidth / 25 + "px";
         skipText.style.marginRight = appWidth / 50 + "px";
         skipText.style.marginLeft = appWidth / 50 + "px";
-    
+
         skipSVGContainer.style.width = appWidth / 35 + "px";
         skipSVGContainer.style.marginTop = appWidth / 100 + "px";
     }
