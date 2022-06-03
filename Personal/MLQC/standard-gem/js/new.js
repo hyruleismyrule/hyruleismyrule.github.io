@@ -33,6 +33,66 @@ fetch(standardURL)
 let karmas = [];
 let timesWished = 0;
 
+// resources
+let stamina = 150;
+let gold = 100000;
+let gems = 100000;
+let galaxyWishCoupon = 500;
+let purchasesLeftToday = 999999;
+let ownLimited = 0;
+let freeCountdown = 0;
+
+let cost10Container = document.getElementById("cost10");
+let cost10IMGContainer = document.getElementById("cost10IMG");
+
+let cost1Container = document.getElementById("cost1");
+let cost1IMGContainer = document.getElementById("cost1IMG");
+
+if (galaxyWishCoupon > 0) {
+    cost10Container.textContent = 10;
+    cost10IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
+
+    cost1Container.textContent = 1;
+    cost1IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
+}
+else {
+    cost10Container.textContent = 1800;
+    cost10IMGContainer.setAttribute("src", "assets/gem.png");
+    
+    cost1Container.textContent = 180;
+    cost1IMGContainer.setAttribute("src", "assets/gem.png");
+}
+
+let freeContainer = document.getElementById("free");
+
+if (freeCountdown == 0) {
+    cost1Container.textContent = "Free";
+    document.getElementById("freeAfter").innerHTML = "<br>";
+}
+else {
+    freeContainer.textContent = freeCountdown;
+}
+
+let ownLimitedContainer = document.getElementById("own-limited");
+ownLimitedContainer.textContent = ownLimited + "/80";
+
+let limitContainer = document.getElementById("limit");
+limitContainer.textContent = purchasesLeftToday;
+
+let staminaNumbContainer = document.getElementById("stamina-numb");
+staminaNumbContainer.textContent = stamina + "/150";
+
+let goldNumbContainer = document.getElementById("gold-numb");
+goldNumbContainer.textContent = gold;
+
+let gemNumbContainer = document.getElementById("gems-numb");
+gemNumbContainer.textContent = gems;
+
+let gwcNumbContainer = document.getElementById("gwcNumb");
+gwcNumbContainer.textContent = galaxyWishCoupon;
+
+
+
 // Random number generators
 
 // Random decimal from 0 to 1
