@@ -10,7 +10,9 @@ require_once '../model/accounts-model.php';
 // Get the functions library
 require_once '../library/functions.php';
 
-
+// Get the array of classifications
+$classifications = getClassifications();
+$navList = buildNavList($classifications);
 
 
 $action = filter_input(INPUT_GET, 'action');

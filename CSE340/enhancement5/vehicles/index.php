@@ -10,18 +10,11 @@ require_once '../model/vehicles-model.php';
 // Get the functions library
 require_once '../library/functions.php';
 
-// // Build vehicles classifications dropdown
-// $carclassificationSelect = '<select name="classificationId" id="classificationId">';
 
-// foreach ($classifications as $classification) {
-//     $carclassificationOption = '<option value=';
-//     $carclassificationOption .= '"' . $classification['classificationId'] . '">';
-//     $carclassificationOption .= $classification['classificationName'];
-//     $carclassificationOption .= '</option>'; 
-//     $carclassificationSelect .= $carclassificationOption;
-// }
+// Get the array of classifications
+$classifications = getClassifications();
+$navList = buildNavList($classifications);
 
-// $carclassificationSelect .= '</select>';
 
 $action = filter_input(INPUT_GET, 'action');
 if ($action == NULL) {
