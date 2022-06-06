@@ -40,7 +40,7 @@ let gems = 100000;
 let galaxyWishCoupon = 500;
 let purchasesLeftToday = 999999;
 let ownLimited = 0;
-let freeCountdown = 0;
+// let freeCountdown = 0;
 
 let cost10Container = document.getElementById("cost10");
 let cost10IMGContainer = document.getElementById("cost10IMG");
@@ -48,30 +48,65 @@ let cost10IMGContainer = document.getElementById("cost10IMG");
 let cost1Container = document.getElementById("cost1");
 let cost1IMGContainer = document.getElementById("cost1IMG");
 
-if (galaxyWishCoupon > 0) {
-    cost10Container.textContent = 10;
-    cost10IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
-
-    cost1Container.textContent = 1;
-    cost1IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
+function addGems() {
+    gems += 10000;
+    updateCosts();
+    updateResources();
 }
-else {
-    cost10Container.textContent = 1800;
-    cost10IMGContainer.setAttribute("src", "assets/gem.png");
+
+function updateCosts() {
+    if (galaxyWishCoupon > 0) {
+        cost10Container.textContent = 10;
+        cost10IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
     
-    cost1Container.textContent = 180;
-    cost1IMGContainer.setAttribute("src", "assets/gem.png");
+        cost1Container.textContent = 1;
+        cost1IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
+    }
+    else {
+        cost10Container.textContent = 1800;
+        cost10IMGContainer.setAttribute("src", "assets/gem.png");
+        
+        cost1Container.textContent = 200;
+        cost1IMGContainer.setAttribute("src", "assets/gem.png");
+    }
 }
 
-let freeContainer = document.getElementById("free");
+updateCosts();
 
-if (freeCountdown == 0) {
-    cost1Container.textContent = "Free";
-    document.getElementById("freeAfter").innerHTML = "<br>";
+function updatePurchaseLimit() {
+    limitContainer.textContent = purchasesLeftToday;
+    if (purchasesLeftToday == 0) {
+        alert("You are out of purchases today, let me fix that for you!");
+        purchasesLeftToday = 999999;
+    }
 }
-else {
-    freeContainer.textContent = freeCountdown;
+
+function addCoupons() {
+    if (gems >= 1800) {
+        galaxyWishCoupon += 10;
+        gems -= 1800;
+    }
+    else if (gems >= 200) {
+        galaxyWishCoupon += 1;
+        gems -= 200;
+    }
+    else {
+        alert("You don't have enough gems! Let me get you some more!");
+        gems += 10000;
+    }
+    updateCosts();
+    updateResources();
 }
+
+// let freeContainer = document.getElementById("free");
+
+// if (freeCountdown == 0) {
+//     cost1Container.textContent = "Free";
+//     document.getElementById("freeAfter").innerHTML = "<br>";
+// }
+// else {
+//     freeContainer.textContent = freeCountdown;
+// }
 
 let ownLimitedContainer = document.getElementById("own-limited");
 ownLimitedContainer.textContent = ownLimited + "/80";
@@ -142,7 +177,23 @@ function draw1() {
     return karma;
 }
 
+function updateResources() {
+    gwcNumbContainer.textContent = galaxyWishCoupon;
+    gemNumbContainer.textContent = gems;
+}
+
 function buy1() {
+    if (galaxyWishCoupon > 0) {
+        galaxyWishCoupon -= 1;
+    }
+    else if (gems < 200) {
+        alert("You don't have enough gems! Let me get you some more!");
+        gems += 10000;
+    }
+    else {
+        gems -= 200;
+    }
+    updateResources();
     let timesPulled = 1;
     karmas = [];
     let karma = draw1()
@@ -150,9 +201,28 @@ function buy1() {
     console.log(karmas);
     wishAnimation(timesPulled, karmas);
     timesWished = timesWished + 1;
+    updateCosts();
+    purchasesLeftToday -= 1;
+    updatePurchaseLimit();
 }
 
 function buy10() {
+    if (galaxyWishCoupon >= 10) {
+        galaxyWishCoupon -= 10;
+    }
+    else if ((10 - galaxyWishCoupon) * 180 <= gems) {
+        galaxyWishCoupon = 0;
+        gems -= (10 - galaxyWishCoupon) * 180;
+    }
+    // else if (gems < 1800) {
+    else {
+        alert("You don't have enough gems! Let me get you some more!");
+        gems += 10000;
+    }
+    // else {
+    //     gems -= 1800;
+    // }
+    updateResources()
     let timesPulled = 10;
     karmas = [];
     let gIndex = getRandomInt(0, 11);
@@ -166,6 +236,9 @@ function buy10() {
     console.log(karmas);
     wishAnimation(timesPulled, karmas);
     timesWished = timesWished + 10;
+    updateCosts();
+    purchasesLeftToday -= 10;
+    updatePurchaseLimit();
 }
 
 function guarenteedSRPlus() {
@@ -673,10 +746,12 @@ function placeGrids(appWidth) {
     fifthRC = "repeat(auto-fill, " + fifthRC + "px)";
     fifthRow.style.gridTemplateColumns = fifthRC;
 
+
     // Free
     let freeTxt = document.getElementById("freeTxt");
     freeTxt.style.marginTop = "-" + Math.round(appWidth / 16) + "px";
     freeTxt.style.fontSize = Math.round(appWidth / 30) + "px";
+    freeTxt.style.height = Math.round(appWidth / 9.6) + "px";
 
     // Row 6
     let SixthRow = document.getElementById("SixthRow");

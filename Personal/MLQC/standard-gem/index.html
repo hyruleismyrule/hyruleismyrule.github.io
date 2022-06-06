@@ -105,7 +105,7 @@
                         <img id="gems-img" src="assets/gem.png" alt="gems">
                     </div>
                     <div id="gems-numb"></div>
-                    <button class="add-btn" id="gems-button">
+                    <button class="add-btn" id="gems-button" onclick="addGems()">
                         <svg id="gemsSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <defs>
                                 <linearGradient id="Gradient1">
@@ -158,7 +158,7 @@
                 <p id="gwctext">Galaxy Wish Coupon: <span id="gwcNumb"></span></p>
             </div>
             <img id="gwcIMG" src="assets/galaxy-wish-coupon.png" alt="galaxy-wish-coupon">
-            <button class="add-btn" id="gwc-button">
+            <button class="add-btn" id="gwc-button" onclick="addCoupons()">
                 <svg id="gwcSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <defs>
                         <linearGradient id="Gradient1">
@@ -179,7 +179,7 @@
         <!-- Fifth Row -->
         <div class="free-container" id="row5">
             <div class="free-text-container" id="freeTxt">
-                <p id="freeAfter">Free after <span id="free"></span></p>
+                <p id="freeAfter"><span id="free"></span></p>
             </div>
         </div><!-- End Fifth Row -->
 
@@ -189,7 +189,7 @@
                 <button id="pull1" class="pull-button pull1" onclick="buy1()">Buy 1</button>
                 <div class="cost" id="cost1Container">
                     <p id="cost1p">Cost:</p>
-                    <span id="cost1">1</span>
+                    <span id="cost1"></span>
                     <div class="cost-img-container">
                         <img id="cost1IMG" src="assets/galaxy-wish-coupon.png" alt="gwc">
                     </div>
