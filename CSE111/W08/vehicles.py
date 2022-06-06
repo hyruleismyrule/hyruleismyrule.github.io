@@ -19,22 +19,33 @@ def main():
     COLOR_INDEX = 3
 
     # Ask the user for a vehicle identification number (VIN).
+    print()
     vin = input("Please enter a VIN: ")
 
     # Check if the vin is a key that is in the vehicles dictionary.
-    if pass:
+    if vin in vehicles_dict:
 
         # Find the data for the vehicle that the user wants.
-        pass
+        vehicle = vehicles_dict[vin]
 
         # Print the manufacturer, model, and color of the vehicle.
         # Don't print the year, engine design, or displacement.
-        pass
+        manufacturer = vehicle[MANUFACTURER_INDEX]
+        model = vehicle[MODEL_INDEX]
+        color = vehicle[COLOR_INDEX]
+
+        print()
+        print(f"Manufacturer: {manufacturer}")
+        print(f"Model: {model}")
+        print(f"Color: {color}")
+        print()
 
     else:
         # Print a message stating that the VIN entered
         # by the user is not in the dictionary.
+        print()
         print(f"{vin} is not in the dictionary.")
+        print()
 
 
 # If this file was executed like this:
