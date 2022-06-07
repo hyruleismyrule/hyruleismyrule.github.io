@@ -858,7 +858,7 @@ function sizeResultsKarma(appWidth) {
         karmaImgContainer.style.marginLeft = "-" + appWidth / 20 + "px";
         karmaIMG.style.marginTop = "-" + appWidth / 30 + "px";
 
-        karmaRarity.style.width = appWidth / 3.5 + "px";
+        karmaRarity.style.height = appWidth / 5 + "px";
         karmaRarity.style.marginTop = appWidth / 20 + "px";
         karmaRarity.style.marginLeft = appWidth / 50 + "px";
 
