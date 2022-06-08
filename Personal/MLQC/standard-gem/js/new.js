@@ -57,17 +57,17 @@ function addGems() {
 function updateCosts() {
     if (galaxyWishCoupon > 0) {
         cost10Container.textContent = 10;
-        cost10IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
+        cost10IMGContainer.setAttribute("src", "../assets/resources/galaxy-wish-coupon.png");
     
         cost1Container.textContent = 1;
-        cost1IMGContainer.setAttribute("src", "assets/galaxy-wish-coupon.png");
+        cost1IMGContainer.setAttribute("src", "../assets/resources/galaxy-wish-coupon.png");
     }
     else {
         cost10Container.textContent = 1800;
-        cost10IMGContainer.setAttribute("src", "assets/gem.png");
+        cost10IMGContainer.setAttribute("src", "../assets/resources/gem.png");
         
         cost1Container.textContent = 200;
-        cost1IMGContainer.setAttribute("src", "assets/gem.png");
+        cost1IMGContainer.setAttribute("src", "../assets/resources/gem.png");
     }
 }
 
@@ -314,10 +314,10 @@ function wishAnimation(timesPulled, karmas) {
     videoElement.appendChild(sourceElement);
 
     if (timesPulled == 1) {
-        sourceElement.setAttribute("src", "assets/videos/hf-pull1.mp4");
+        sourceElement.setAttribute("src", "../assets/videos/hf-pull1.mp4");
     }
     else {
-        sourceElement.setAttribute("src", "assets/videos/hf-pull10.mp4");
+        sourceElement.setAttribute("src", "../assets/videos/hf-pull10.mp4");
     }
 
     videoElement.onended = function () {
@@ -348,7 +348,7 @@ function rarityAnimation(rarity, character) {
     videoElement.appendChild(sourceElement);
 
     // ex. ssr-lucien
-    sourceElement.setAttribute("src", "assets/videos/" + rarity.toLowerCase() + "-" + character.toLowerCase() + ".mp4");
+    sourceElement.setAttribute("src", "../assets/videos/" + rarity.toLowerCase() + "-" + character.toLowerCase() + ".mp4");
 
     videoElement.onended = function () {
         videoElement.remove();
@@ -410,7 +410,7 @@ function displayKarma(karma, displayedKarma, karmas) {
         karmaHeader.appendChild(karmaHeaderText);
 
         // Rarity Icon
-        let rarityIconURL = "assets/rarity/" + rarity + "-icon.png";
+        let rarityIconURL = "../assets/rarity/" + rarity + "-icon.png";
 
         let karmaRarityIMG = document.createElement("img");
         karmaRarityIMG.setAttribute("id", "karmaRarity");
@@ -452,7 +452,7 @@ function displayKarma(karma, displayedKarma, karmas) {
         starContainer.setAttribute("id", "starContainer");
 
         let starIMG = document.createElement("img");
-        starIMG.setAttribute("src", "assets/stars.png");
+        starIMG.setAttribute("src", "../assets/resources/stars.png");
         starIMG.setAttribute("alt", "1star");
         starIMG.setAttribute("id", "starIMG");
         starContainer.appendChild(starIMG);
@@ -472,7 +472,7 @@ function displayKarma(karma, displayedKarma, karmas) {
         shareContainer.setAttribute("id", "shareContainer");
 
         let shareIMG = document.createElement("img");
-        shareIMG.setAttribute("src", "assets/share-stars.png");
+        shareIMG.setAttribute("src", "../assets/resources/share-stars.png");
         shareIMG.setAttribute("id", "shareIMG");
         shareIMG.setAttribute("alt", "stars");
         shareContainer.appendChild(shareIMG);
@@ -526,7 +526,7 @@ function getKarmaImgURL(karma) {
     title = karma.title;
     character = character.toLowerCase();
     title = title.replace(/\s+/g, '-').toLowerCase();
-    let karmaImgURL = "assets/standard-gem-karma-cg/" + character + "-" + title + ".png";
+    let karmaImgURL = "../assets/karma-cg/" + character + "-" + title + ".png";
     return karmaImgURL;
 }
 
