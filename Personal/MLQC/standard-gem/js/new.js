@@ -902,3 +902,19 @@ function sizeResultsKarma(appWidth) {
         skipSVGContainer.style.marginTop = appWidth / 100 + "px";
     }
 }
+
+
+// // Test! For test page!
+// function infoContainerSize() {
+//     let infoContainer = document.getElementById("infoContainer");
+//     let appContainer = document.getElementById("app-container");
+    
+    
+//     let height = appContainer.offsetHeight;
+//     let width = appContainer.offsetWidth;
+    
+//     // infoContainer.style.height = height;
+//     // infoContainer.style.width = width;
+// }
+
+// infoContainerSize();
