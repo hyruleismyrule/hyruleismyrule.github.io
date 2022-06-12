@@ -430,12 +430,6 @@ body {
           transform: rotateZ(-36deg);
 }
 
-.infoContainer {
-  background-color: #90bee4;
-  z-index: 2;
-  height: 100%;
-}
-
 .level {
   -webkit-transform: none;
           transform: none;
@@ -444,6 +438,11 @@ body {
 .summaryBox {
   background-color: rgba(255, 255, 255, 0.8);
   height: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
 }
 
 .summaryKarmaBox {
@@ -478,6 +477,7 @@ body {
 
 .summaryKarma {
   width: 5.3rem;
+  margin: 0 auto;
 }
 
 .summaryRarity {
@@ -530,5 +530,18 @@ body {
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
   margin-top: -2rem;
+  margin-left: 4.5rem;
+}
+
+.LV {
+  font-size: 6px;
+  margin-top: 1rem;
+  z-index: 5;
+}
+
+.num {
+  font-size: 12px;
+  z-index: 5;
+  margin-left: 0.1rem;
 }
 /*# sourceMappingURL=small.css.map */

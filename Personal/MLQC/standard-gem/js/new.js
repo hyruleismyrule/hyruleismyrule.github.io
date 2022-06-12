@@ -540,6 +540,91 @@ function removeDisplayedKarma(karmas, displayedKarma) {
         displayedKarma += 1;
         displayKarma(karmas[displayedKarma], displayedKarma, karmas);
     }
+    if (!karmas[displayedKarma]) {
+        displayThumbnails(karmas);
+    }
+}
+
+function displayThumbnails(karmas) {
+    while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
+    }
+
+    let karmaHeader = document.createElement("div");
+    karmaHeader.setAttribute("id", "karmaHeader");
+    karmaHeader.setAttribute("class", "karmaHeader level");
+    resultsContainer.appendChild(karmaHeader);
+
+    let karmaHeaderText = document.createElement("div");
+    karmaHeaderText.setAttribute("id", "karmaHeaderText");
+    karmaHeaderText.textContent = "You Got";
+    karmaHeader.appendChild(karmaHeaderText);
+
+    let summaryBox = document.createElement("div");
+    summaryBox.setAttribute("id", "summaryBox");
+    summaryBox.setAttribute("class", "summaryBox");
+    resultsContainer.appendChild(summaryBox);
+
+    for (let i = 0; i < karmas.length; i++) {
+        let rarity = karmas[i].rarity;
+        let character = karmas[i].character;
+        let title = karmas[i].title;
+
+        let summaryKarma = document.createElement("div");
+        summaryKarma.setAttribute("class", "summaryKarma");
+        summaryBox.appendChild(summaryKarma);
+
+        let summaryKarmaBox = document.createElement("div");
+        summaryKarmaBox.setAttribute("class", "summaryKarmaBox " + karmas[i].stat.toLowerCase());
+        // summaryKarmaBox.setAttribute("class", karmas[i].stat.toLowerCase());
+        summaryKarma.appendChild(summaryKarmaBox);
+
+        let summaryRarity = document.createElement("img");
+        summaryRarity.setAttribute("class", "summaryRarity");
+        let rarityURL = "../assets/rarity/" + rarity + "-icon.png";
+        summaryRarity.setAttribute("src", rarityURL);
+        summaryRarity.setAttribute("alt", rarity);
+        summaryKarmaBox.appendChild(summaryRarity);
+
+        let summaryKarmaImg = document.createElement("img");
+        summaryKarmaImg.setAttribute("class", "summaryKarmaImg");
+        let karmaURL = "../assets/karma-tb/" + character.toLowerCase() + "-" + title.replace(/\s+/g, '-').toLowerCase() + ".png";
+        summaryKarmaImg.setAttribute("src", karmaURL);
+        summaryKarmaImg.setAttribute("alt", character + "-" + title);
+        summaryKarmaBox.appendChild(summaryKarmaImg);
+
+        let starBox = document.createElement("div");
+        starBox.setAttribute("class", "starBox");
+        summaryKarmaBox.appendChild(starBox);
+
+        let summaryStars = document.createElement("img");
+        summaryStars.setAttribute("class", "summaryStars");
+        summaryStars.setAttribute("src", "../assets/resources/stars.png");
+        summaryStars.setAttribute("alt", "1star");
+        starBox.appendChild(summaryStars);
+
+        let LVtext = document.createElement("div");
+        LVtext.setAttribute("class", "LVtext");
+        starBox.appendChild(LVtext);
+
+        let LV = document.createElement("div");
+        LV.setAttribute("class", "LV");
+        LV.textContent = "LV";
+        LVtext.appendChild(LV);
+
+        let num = document.createElement("div");
+        num.setAttribute("class", "num");
+        num.textContent = "1";
+        LVtext.appendChild(num);
+
+        let summaryTitle = document.createElement("div");
+        summaryTitle.setAttribute("class", "summaryTitle");
+        summaryTitle.textContent = character + ": " + title;
+        summaryKarma.appendChild(summaryTitle);
+
+        summaryBox.appendChild(summaryKarma);
+    }
+
 }
 
 responsiveAppSize()
