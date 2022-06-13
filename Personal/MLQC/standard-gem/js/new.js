@@ -558,12 +558,15 @@ function displayThumbnails(karmas) {
     let karmaHeaderText = document.createElement("div");
     karmaHeaderText.setAttribute("id", "karmaHeaderText");
     karmaHeaderText.textContent = "You Got";
+    // karmaHeaderText.style.width = "100px";
     karmaHeader.appendChild(karmaHeaderText);
+    // karmaHeader.style.width = "50%";
 
     let summaryBox = document.createElement("div");
     summaryBox.setAttribute("id", "summaryBox");
     summaryBox.setAttribute("class", "summaryBox");
     resultsContainer.appendChild(summaryBox);
+    resultsContainer.style.height = "100%";
 
     for (let i = 0; i < karmas.length; i++) {
         let rarity = karmas[i].rarity;
@@ -625,6 +628,7 @@ function displayThumbnails(karmas) {
         summaryBox.appendChild(summaryKarma);
     }
 
+    responsiveAppSize();
 }
 
 responsiveAppSize()
