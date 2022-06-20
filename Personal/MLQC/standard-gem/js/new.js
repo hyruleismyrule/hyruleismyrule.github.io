@@ -552,13 +552,15 @@ function displayThumbnails(karmas) {
 
     let karmaHeader = document.createElement("div");
     karmaHeader.setAttribute("id", "karmaHeader");
-    karmaHeader.setAttribute("class", "karmaHeader level");
+    // karmaHeader.setAttribute("class", "karmaHeader level");
+    karmaHeader.setAttribute("class", "level");
     resultsContainer.appendChild(karmaHeader);
+    // karmaHeader.style.width = "200px";
 
     let karmaHeaderText = document.createElement("div");
     karmaHeaderText.setAttribute("id", "karmaHeaderText");
     karmaHeaderText.textContent = "You Got";
-    // karmaHeaderText.style.width = "100px";
+    karmaHeaderText.style.width = "150px";
     karmaHeader.appendChild(karmaHeaderText);
     // karmaHeader.style.width = "50%";
 
@@ -572,13 +574,14 @@ function displayThumbnails(karmas) {
         let rarity = karmas[i].rarity;
         let character = karmas[i].character;
         let title = karmas[i].title;
+        let stat = karmas[i].stat;
 
         let summaryKarma = document.createElement("div");
         summaryKarma.setAttribute("class", "summaryKarma");
         summaryBox.appendChild(summaryKarma);
 
         let summaryKarmaBox = document.createElement("div");
-        summaryKarmaBox.setAttribute("class", "summaryKarmaBox " + karmas[i].stat.toLowerCase());
+        summaryKarmaBox.setAttribute("class", "summaryKarmaBox " + stat.toLowerCase());
         // summaryKarmaBox.setAttribute("class", karmas[i].stat.toLowerCase());
         summaryKarma.appendChild(summaryKarmaBox);
 
@@ -598,6 +601,7 @@ function displayThumbnails(karmas) {
 
         let starBox = document.createElement("div");
         starBox.setAttribute("class", "starBox");
+        starBox.setAttribute("class", "starBox " + stat.toLowerCase());
         summaryKarmaBox.appendChild(starBox);
 
         let summaryStars = document.createElement("img");
@@ -629,9 +633,21 @@ function displayThumbnails(karmas) {
     }
 
     responsiveAppSize();
+
+    resultsContainer.setAttribute("onclick", "removeDisplayedKarma()");
 }
 
-responsiveAppSize()
+function removeSummaryResults() {
+    let resultsContainer = document.getElementById("resultsContainer");
+
+    while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
+    }
+    resultsContainer.removeAttribute("onclick");
+}
+
+
+responsiveAppSize();
 window.addEventListener('resize', responsiveAppSize);
 
 function responsiveAppSize() {
@@ -934,7 +950,7 @@ function sizeResultsKarma(appWidth) {
 
         karmaHeader.style.paddingTop = appWidth / 8 + "px";
 
-        karmaHeaderText.style.width = appWidth / 6 + "px";
+        karmaHeaderText.style.width = appWidth / 5.5 + "px";
         karmaHeaderText.style.fontSize = appWidth / 20 + "px";
         karmaHeaderText.style.padding = appWidth / 50 + "px";
         karmaHeaderText.style.paddingLeft = appWidth / 8 + "px";
@@ -989,6 +1005,11 @@ function sizeResultsKarma(appWidth) {
 
         skipSVGContainer.style.width = appWidth / 35 + "px";
         skipSVGContainer.style.marginTop = appWidth / 100 + "px";
+
+        // if (document.getElementsByClassName("summaryKarma")) {
+        //     let summaryKarma = document.getElementsByClassName("summaryKarma");
+        //     summaryKarma.style.width = appWidth / 6;
+        // }
     }
 }
 

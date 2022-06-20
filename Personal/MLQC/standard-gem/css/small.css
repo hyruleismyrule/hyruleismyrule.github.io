@@ -431,8 +431,8 @@ body {
 }
 
 .level {
-  -webkit-transform: none;
-          transform: none;
+  text-align: center;
+  color: white;
 }
 
 .summaryBox {
@@ -452,6 +452,22 @@ body {
 
 .creativity {
   border-color: #f8b290;
+  background-color: #f8b290;
+}
+
+.decision {
+  border-color: #9ab7d5;
+  background-color: #9ab7d5;
+}
+
+.affinity {
+  border-color: #fdabc1;
+  background-color: #fdabc1;
+}
+
+.execution {
+  border-color: #99bd99;
+  background-color: #99bd99;
 }
 
 .summaryKarmaBox {
@@ -476,8 +492,12 @@ body {
 }
 
 .summaryKarma {
-  width: 5.3rem;
+  width: 7rem;
   margin: 0 auto;
+}
+
+.summaryKarma .summaryKarmaImg {
+  width: 7rem;
 }
 
 .summaryRarity {
@@ -486,14 +506,16 @@ body {
   -ms-grid-row: 1;
       grid-row-start: 1;
   z-index: 2;
-  width: 1.5rem;
+  width: 2rem;
+  margin-left: 0.15rem;
+  margin-top: 0.15rem;
 }
 
 .summaryStars {
   width: 2.5rem;
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
-  margin-left: 2rem;
+  margin-left: 3.5rem;
 }
 
 .summaryKarmaImg {
@@ -506,14 +528,13 @@ body {
 }
 
 .summaryTitle {
-  font-size: 8px;
+  font-size: 10px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   margin-top: 0.1rem;
 }
 
 .starBox {
-  background-color: #f8b290;
   -ms-grid-row: 3;
       grid-row-start: 3;
   -ms-grid-column: 1;
@@ -530,7 +551,7 @@ body {
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
   margin-top: -2rem;
-  margin-left: 4.5rem;
+  margin-left: 6.15rem;
 }
 
 .LV {
