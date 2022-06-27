@@ -303,11 +303,6 @@ body {
   overflow: hidden;
 }
 
-#karmaContainer {
-  -webkit-transition-duration: 10s;
-          transition-duration: 10s;
-}
-
 .karmaHeader {
   text-align: center;
   -webkit-transform: rotateZ(-4deg);
@@ -442,7 +437,6 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 1rem;
 }
 
 .summaryKarmaBox {

@@ -282,10 +282,10 @@ body {
     // animation:spin 0.5s linear;
 }
 
-#karmaContainer {
-    // rotate: 45deg;
-    transition-duration: 10s;
-}
+// #karmaContainer {
+//     // rotate: 45deg;
+//     transition-duration: 10s;
+// }
 
 // @-moz-keyframes spin { 
 //     100% { -moz-transform: rotate(10deg); } 
@@ -412,36 +412,13 @@ body {
     transform: rotateZ(-36deg);
 }
 
-// For test page!
-// .infoContainer {
-//     background-color: #90bee4;
-//     z-index: 2;
-//     height: 100%;
-//     // width: 86.5%;
-//     // margin-top: 2rem;
-//     // position: absolute;
-// }
-
-// .resultsContainer {
-//     background-color: #90bee4;
-//     z-index: 2;
-//     height: 100%;
-//     // width: 86.5%;
-//     // margin-top: 2rem;
-//     // position: absolute;
-// }
 
 
+// Summary Styles
 
 .level {
-    // transform: none;
     text-align: center;
-    // transform: rotateZ(-4deg);
-    // background-color: pink;
     color: white;
-    // #karmaHeaderText {
-    //     width: 100px;
-    // }
 }
 
 .summaryBox {
@@ -449,8 +426,7 @@ body {
     height: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 1rem;
-    // grid-gap: 1rem;
+    // padding: 1rem;
 }
 
 .summaryKarmaBox {
@@ -476,12 +452,9 @@ body {
 }
 
 .summaryKarmaBox {
-    // margin: 0 auto;
     display: grid;
     grid-template-columns: 2rem 1fr;
     grid-template-rows: 1.5rem 1fr 2rem;
-    // height: 100%;
-    // font-size: 10px;
 }
 
 .LVtext {
@@ -497,13 +470,11 @@ body {
 }
 
 .summaryKarma {
-    // width: 5.3rem;
     .summaryKarmaImg {
         width: 7rem;
     }
     width: 7rem;
     margin: 0 auto;
-    // margin-top: 0.5rem;
 }
 
 .summaryRarity {
@@ -513,14 +484,12 @@ body {
     width: 2rem;
     margin-left: 0.15rem;
     margin-top: 0.15rem;
-    // overflow: hidden;
 }
 
 .summaryStars {
     width: 2.5rem;
     transform: rotateZ(10deg);
     margin-left: 3.5rem;
-    // margin-top: -4rem;
 }
 
 .summaryKarmaImg {
@@ -533,13 +502,11 @@ body {
 .summaryTitle {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
-    // margin: 0 auto;
     text-align: center;
     margin-top: 0.1rem;
 }
 
 .starBox {
-    // background-color: $creativity;
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -547,14 +514,11 @@ body {
     margin-bottom: -1rem;
     margin-top: 1.3em;
     margin-right: -1rem;
-    // margin-left: 2rem;
-    // display: flex;
 }
 
 .LVtext {
     transform: rotateZ(10deg);
     margin-top: -2rem;
-    // position: relative;
     margin-left: 6.15rem;
 }
 
@@ -566,7 +530,6 @@ body {
 
 .num {
     font-size: 12px;
-    // margin-top: 0.5rem;
     z-index: 5;
     margin-left: 0.1rem;
 }

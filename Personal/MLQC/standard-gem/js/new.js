@@ -487,7 +487,8 @@ function displayKarma(karma, displayedKarma, karmas) {
         let skipContainer = document.createElement("button");
         skipContainer.setAttribute("class", "skipContainer");
         skipContainer.setAttribute("id", "skipContainer");
-        skipContainer.setAttribute("onclick", "removeDisplayedKarma()");
+        // skipContainer.setAttribute("onclick", "removeDisplayedKarma()");
+        skipContainer.setAttribute("onclick", 'displayThumbnails(' + stringKarmas + ')');
 
         let skipText = document.createElement("div");
         skipText.setAttribute("id", "skipText");
@@ -1014,17 +1015,17 @@ function sizeResultsKarma(appWidth) {
 }
 
 
-// // Test! For test page!
-// function infoContainerSize() {
-//     let infoContainer = document.getElementById("infoContainer");
-//     let appContainer = document.getElementById("app-container");
-    
-    
-//     let height = appContainer.offsetHeight;
-//     let width = appContainer.offsetWidth;
-    
-//     // infoContainer.style.height = height;
-//     // infoContainer.style.width = width;
-// }
 
-// infoContainerSize();
+// Symmary Karma
+function summaryKarmaSizes() {
+    let appContainer = document.getElementById("app-container");
+    let width = appContainer.offsetWidth;
+
+    let elements = document.querySelectorAll('.summaryBox');
+
+    elements.forEach(element => {
+        element.style.padding = '1rem';
+        // element.style.backgroundColor = 'purple';
+        // element.style.width = '300px';
+    });
+}
