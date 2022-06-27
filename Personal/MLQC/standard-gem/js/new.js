@@ -534,15 +534,17 @@ function getKarmaImgURL(karma) {
 function removeDisplayedKarma(karmas, displayedKarma) {
     let resultsContainer = document.getElementById("resultsContainer");
 
-    while (resultsContainer.firstChild) {
-        resultsContainer.removeChild(resultsContainer.firstChild);
-    }
-    if (displayedKarma < 10) {
-        displayedKarma += 1;
-        displayKarma(karmas[displayedKarma], displayedKarma, karmas);
-    }
-    if (!karmas[displayedKarma]) {
-        displayThumbnails(karmas);
+    if (karmas) {
+        while (resultsContainer.firstChild) {
+            resultsContainer.removeChild(resultsContainer.firstChild);
+        }
+        if (displayedKarma < 10) {
+            displayedKarma += 1;
+            displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+        }
+        if (!karmas[displayedKarma]) {
+            displayThumbnails(karmas);
+        }
     }
 }
 
@@ -634,8 +636,8 @@ function displayThumbnails(karmas) {
     }
 
     responsiveAppSize();
-
-    resultsContainer.setAttribute("onclick", "removeDisplayedKarma()");
+    let stringKarmas = JSON.stringify(karmas);
+    resultsContainer.setAttribute("onclick", "removeDisplayedKarma(" + stringKarmas + ")");
 }
 
 function removeSummaryResults() {
@@ -688,6 +690,10 @@ function responsiveAppSize() {
 
     if (document.getElementById("karmaHeader")) {
         sizeResultsKarma(appWidth);
+    }
+
+    if (document.getElementById("summaryBox")) {
+        summaryKarmaSizes();
     }
 }
 
@@ -930,7 +936,7 @@ function placeGrids(appWidth) {
 
 // This is the results being displayed
 function sizeResultsKarma(appWidth) {
-    if (document.getElementById("karmaHeader")) {
+    if (document.getElementById("karmaImgContainer")) {
         let karmaHeader = document.getElementById("karmaHeader");
         let karmaHeaderText = document.getElementById("karmaHeaderText");
 
@@ -1021,10 +1027,23 @@ function summaryKarmaSizes() {
     let appContainer = document.getElementById("app-container");
     let width = appContainer.offsetWidth;
 
+    let karmaHeader = document.getElementById("karmaHeader");
+    karmaHeader.style.marginTop = width / 3 + "px";
+    karmaHeader.style.marginLeft = (width / 2 - ((width / 4.75))) + "px";
+    karmaHeader.style.marginBottom = width / 50 + "px";
+
+    let karmaHeaderText = document.getElementById("karmaHeaderText");
+    karmaHeaderText.style.width = width / 5.5 + "px";
+    karmaHeaderText.style.fontSize = width / 20 + "px";
+    karmaHeaderText.style.padding = width / 50 + "px";
+    karmaHeaderText.style.paddingLeft = width / 8 + "px";
+    karmaHeaderText.style.paddingRight = width / 8 + "px";
+
     let elements = document.querySelectorAll('.summaryBox');
 
     elements.forEach(element => {
-        element.style.padding = '1rem';
+        element.style.padding = width / 20 + "px";
+        console.log(element);
         // element.style.backgroundColor = 'purple';
         // element.style.width = '300px';
     });
