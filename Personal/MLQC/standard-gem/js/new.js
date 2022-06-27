@@ -533,8 +533,16 @@ function getKarmaImgURL(karma) {
 
 function removeDisplayedKarma(karmas, displayedKarma) {
     let resultsContainer = document.getElementById("resultsContainer");
-
-    if (karmas) {
+    if (karmas.length == 1) {
+        if (displayedKarma) {
+            if (displayedKarma.length == 1) {
+                displayThumbnails(karmas);
+                resultsContainer.setAttribute("onclick", "backHome()");
+            }
+        }
+           displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+    }
+    else {
         while (resultsContainer.firstChild) {
             resultsContainer.removeChild(resultsContainer.firstChild);
         }
@@ -542,16 +550,51 @@ function removeDisplayedKarma(karmas, displayedKarma) {
             displayedKarma += 1;
             displayKarma(karmas[displayedKarma], displayedKarma, karmas);
         }
-        if (!karmas[displayedKarma]) {
+        else {
             displayThumbnails(karmas);
+            resultsContainer.setAttribute("onclick", "backHome()");
         }
     }
+
+    // if (karmas) {
+    //     while (resultsContainer.firstChild) {
+    //         resultsContainer.removeChild(resultsContainer.firstChild);
+    //     }
+    //     if (displayedKarma < 10) {
+    //         displayedKarma += 1;
+    //         displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+    //     }
+    //     else {
+    //         displayThumbnails(karmas);
+    //         resultsContainer.setAttribute("onclick", "backHome()");
+    //     }
+    //     // if (!karmas[displayedKarma]) {
+    //     //     displayThumbnails(karmas);
+    //     //     resultsContainer.setAttribute("onclick", "backHome()");
+    //     // }
+    // }
 }
 
-function displayThumbnails(karmas) {
+function backHome() {
+    let resultsContainer = document.getElementById("resultsContainer");
     while (resultsContainer.firstChild) {
         resultsContainer.removeChild(resultsContainer.firstChild);
     }
+
+    resultsContainer.style.height = null;
+    resultsContainer.style.width = null;
+    resultsContainer.setAttribute("onclick", null);
+
+}
+
+function displayThumbnails(karmas) {
+    let resultsContainer = document.getElementById("resultsContainer");
+    while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
+    }
+
+    // resultsContainer.setAttribute("onclick", "backHome()");
+
 
     let karmaHeader = document.createElement("div");
     karmaHeader.setAttribute("id", "karmaHeader");
@@ -1040,11 +1083,75 @@ function summaryKarmaSizes() {
     karmaHeaderText.style.paddingRight = width / 8 + "px";
 
     let elements = document.querySelectorAll('.summaryBox');
-
     elements.forEach(element => {
-        element.style.padding = width / 20 + "px";
-        console.log(element);
-        // element.style.backgroundColor = 'purple';
-        // element.style.width = '300px';
+        element.style.padding = width / 40 + "px";
+        element.style.gridGap = width / 40 + "px";
+    });
+
+    elements = document.querySelectorAll('.summaryKarmaImg');
+    elements.forEach(element => {
+        element.style.width = width / 5 + "px";
+    });
+
+    elements = document.querySelectorAll('.summaryKarmaBox');
+    elements.forEach(element => {
+        element.style.gridTemplateColumns = width / 18 + "px" + " 1fr";
+        element.style.gridTemplateRows = width / 30 +"px" + " 1fr " + width / 15 + "px";
+    });
+
+    elements = document.querySelectorAll('.summaryKarma');
+    elements.forEach(element => {
+        element.style.width = width / 5 + "px";
+    });
+
+    elements = document.querySelectorAll('.summaryRarity');
+    elements.forEach(element => {
+        element.style.height = width / 18 + "px";
+        element.style.margin = "0px";
+        element.style.marginTop = width / 400 + "px";
+        element.style.marginLeft = width / 400 + "px";
+    });
+
+    elements = document.querySelectorAll('.summaryStars');
+    elements.forEach(element => {
+        element.style.width = width / 15 + "px";
+        element.style.marginLeft = width / 10 + "px";
+        element.style.marginBottom = width / 200 + "px";
+    });
+
+    elements = document.querySelectorAll('.summaryTitle');
+    elements.forEach(element => {
+        element.style.fontSize = width / 50 + "px";
+        element.style.marginTop = width / 100 + "px";
+    });
+
+    elements = document.querySelectorAll('.starBox');
+    elements.forEach(element => {
+        // element.style.margin = "0px";
+        element.style.marginBottom = "-" + width / 20 + "px";
+        element.style.marginTop = width / 21 + "px";
+        // element.style.marginTop = "0px";
+        element.style.marginRight = "-" + width / 20 + "px";
+    });
+
+    elements = document.querySelectorAll('.LVtext');
+    elements.forEach(element => {
+        // element.style.margin = "0px";
+        element.style.marginTop = "-" + width / 12 + "px";
+        element.style.marginLeft = width / 5.7 + "px";
+    });
+
+    elements = document.querySelectorAll('.LV');
+    elements.forEach(element => {
+        // element.style.margin = "0px";
+        element.style.fontSize = width / 70 + "px";
+        element.style.marginTop = width / 18.5 + "px";
+    });
+
+    elements = document.querySelectorAll('.num');
+    elements.forEach(element => {
+        // element.style.margin = "0px";
+        element.style.fontSize = width / 60 + "px";
+        element.style.marginLeft = width / 300 + "px";
     });
 }

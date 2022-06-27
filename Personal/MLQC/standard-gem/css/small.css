@@ -467,31 +467,14 @@ body {
 .summaryKarmaBox {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2rem 1fr;
-      grid-template-columns: 2rem 1fr;
-  -ms-grid-rows: 1.5rem 1fr 2rem;
-      grid-template-rows: 1.5rem 1fr 2rem;
 }
 
 .LVtext {
   color: white;
 }
 
-.LV {
-  font-size: 10px;
-}
-
-.num {
-  font-size: 15px;
-}
-
 .summaryKarma {
-  width: 7rem;
   margin: 0 auto;
-}
-
-.summaryKarma .summaryKarmaImg {
-  width: 7rem;
 }
 
 .summaryRarity {
@@ -500,16 +483,11 @@ body {
   -ms-grid-row: 1;
       grid-row-start: 1;
   z-index: 2;
-  width: 2rem;
-  margin-left: 0.15rem;
-  margin-top: 0.15rem;
 }
 
 .summaryStars {
-  width: 2.5rem;
-  -webkit-transform: rotateZ(10deg);
-          transform: rotateZ(10deg);
-  margin-left: 3.5rem;
+  -webkit-transform: rotateZ(190deg);
+          transform: rotateZ(190deg);
 }
 
 .summaryKarmaImg {
@@ -522,10 +500,8 @@ body {
 }
 
 .summaryTitle {
-  font-size: 10px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  margin-top: 0.1rem;
 }
 
 .starBox {
@@ -536,27 +512,18 @@ body {
   grid-column-end: 3;
   -webkit-transform: rotateZ(-10deg);
           transform: rotateZ(-10deg);
-  margin-bottom: -1rem;
-  margin-top: 1.3em;
-  margin-right: -1rem;
 }
 
 .LVtext {
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
-  margin-top: -2rem;
-  margin-left: 6.15rem;
 }
 
 .LV {
-  font-size: 6px;
-  margin-top: 1rem;
   z-index: 5;
 }
 
 .num {
-  font-size: 12px;
   z-index: 5;
-  margin-left: 0.1rem;
 }
 /*# sourceMappingURL=small.css.map */
