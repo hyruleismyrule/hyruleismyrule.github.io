@@ -1120,3 +1120,7 @@ function summaryKarmaSizes() {
 // Local storage and analytics need to be added.
 // Animation for karma drawn needs to be added.
 // A no-img img needs to be added.
+// Main img optimized size is
+// 684 X 1045
+// Thumbnail optamized size is
+// 114 X 114
