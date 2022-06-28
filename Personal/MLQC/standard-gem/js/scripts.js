@@ -1109,3 +1109,14 @@ function summaryKarmaSizes() {
         element.style.marginLeft = width / 300 + "px";
     });
 }
+
+
+// Note, Drawing 1 and 10 works, a video plays for SSR and
+// a summary box shows up. The images and video are really laggy
+// online and will need to be optamized.
+// Redeem, Preview, Back, and drop rates need to have
+// functionality added.
+// New icons need to be added for karma recieved for the first time
+// Local storage and analytics need to be added.
+// Animation for karma drawn needs to be added.
+// A no-img img needs to be added.
