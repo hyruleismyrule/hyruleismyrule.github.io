@@ -533,28 +533,78 @@ function getKarmaImgURL(karma) {
 
 function removeDisplayedKarma(karmas, displayedKarma) {
     let resultsContainer = document.getElementById("resultsContainer");
-    if (karmas.length == 1) {
-        if (displayedKarma) {
-            if (displayedKarma.length == 1) {
-                displayThumbnails(karmas);
-                resultsContainer.setAttribute("onclick", "backHome()");
-            }
-        }
-           displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+
+    if (displayKarma == 9) {
+        displayThumbnails(karmas);
+        // resultsContainer.setAttribute("onclick", "backHome()");
+    }
+    else if (karmas.length == 1) {
+        displayThumbnails(karmas);
+        // resultsContainer.setAttribute("onclick", "backHome()");
     }
     else {
         while (resultsContainer.firstChild) {
             resultsContainer.removeChild(resultsContainer.firstChild);
         }
-        if (displayedKarma < 10) {
+        if (displayedKarma < 9) {
             displayedKarma += 1;
             displayKarma(karmas[displayedKarma], displayedKarma, karmas);
         }
         else {
             displayThumbnails(karmas);
-            resultsContainer.setAttribute("onclick", "backHome()");
+            // resultsContainer.setAttribute("onclick", "backHome()");
         }
     }
+
+    // // console.log("Displayed Karma: " + displayedKarma);
+    // if (karmas.length == 1) {
+    //     // if (!displayKarma) {
+    //         console.log("Number of Karmas " + karmas.length);
+    //         console.log("Displayed Karmas " + displayedKarma);
+    //         displayThumbnails(karmas);
+    //         resultsContainer.setAttribute("onclick", "backHome()");
+    //     // }
+    // }
+    // else {
+    //     while (resultsContainer.firstChild) {
+    //         resultsContainer.removeChild(resultsContainer.firstChild);
+    //     }
+    //     if (displayedKarma < 9) {
+    //         displayedKarma += 1;
+    //         displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+    //     }
+    //     else {
+    //         displayThumbnails(karmas);
+    //         resultsContainer.setAttribute("onclick", "backHome()");
+    //     }
+    // }
+
+
+    // if (karmas.length == 1) {
+    //     if (displayedKarma) {
+    //         if (displayedKarma.length == 1) {
+    //             displayThumbnails(karmas);
+    //             // skipContainer.setAttribute("onclick", 'displayThumbnails(' + stringKarmas + ')');
+    //             resultsContainer.setAttribute("onclick", "backHome()");
+    //         }
+    //     }
+    //        displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+    // }
+    // else {
+    //     while (resultsContainer.firstChild) {
+    //         resultsContainer.removeChild(resultsContainer.firstChild);
+    //     }
+    //     if (displayedKarma < 10) {
+    //         displayedKarma += 1;
+    //         displayKarma(karmas[displayedKarma], displayedKarma, karmas);
+    //     }
+    //     else {
+    //         displayThumbnails(karmas);
+    //         resultsContainer.setAttribute("onclick", "backHome()");
+    //     }
+    // }
+
+    
 
     // if (karmas) {
     //     while (resultsContainer.firstChild) {
@@ -576,24 +626,41 @@ function removeDisplayedKarma(karmas, displayedKarma) {
 }
 
 function backHome() {
-    let resultsContainer = document.getElementById("resultsContainer");
-    while (resultsContainer.firstChild) {
-        resultsContainer.removeChild(resultsContainer.firstChild);
+    console.log("home");
+    if (document.getElementById("summaryBox")) {
+        let resultsContainer = document.getElementById("resultsContainer");
+        while (resultsContainer.firstChild) {
+            resultsContainer.removeChild(resultsContainer.firstChild);
+        }
+    
+        resultsContainer.style.height = null;
+        resultsContainer.style.width = null;
+        resultsContainer.setAttribute("onclick", null);
+        console.log("removed");
     }
+    
 
-    resultsContainer.style.height = null;
-    resultsContainer.style.width = null;
-    resultsContainer.setAttribute("onclick", null);
+    // document.getElementById("app-container").setAttribute("onclick", null);
+    // console.log("home: " + resultsContainer.onclick)
 
 }
 
 function displayThumbnails(karmas) {
+    // console.log("displayThumbnails Called")
+
     let resultsContainer = document.getElementById("resultsContainer");
     while (resultsContainer.firstChild) {
         resultsContainer.removeChild(resultsContainer.firstChild);
     }
 
+    // resultsContainer.setAttribute("onclick", null);
+    // console.log(resultsContainer.onclick);
+
+    // console.log(resultsContainer);
+    // resultsContainer.onclick = null;
+    // console.log(resultsContainer);
     // resultsContainer.setAttribute("onclick", "backHome()");
+    // console.log(resultsContainer);
 
 
     let karmaHeader = document.createElement("div");
@@ -676,12 +743,34 @@ function displayThumbnails(karmas) {
         summaryKarma.appendChild(summaryTitle);
 
         summaryBox.appendChild(summaryKarma);
+
+        summaryBox.setAttribute("onclick", "backHome()")
+
+        // changeclick(resultsContainer);
+        // resultsContainer.setAttribute("onclick", "backHome()");
+
+        // resultsContainer.setAttribute("onclick", "removeSummaryResults()");
+        // console.log(summaryBox);
+        // console.log(resultsContainer.onclick);
+        // document.getElementById("app-container").setAttribute("onclick", "backHome()");
     }
 
     responsiveAppSize();
-    let stringKarmas = JSON.stringify(karmas);
-    resultsContainer.setAttribute("onclick", "removeDisplayedKarma(" + stringKarmas + ")");
+
+    // if (document.getElementById("summaryBox")) {
+    //     resultsContainer.setAttribute("onclick", "backHome()");
+    // }
+
+    // let stringKarmas = JSON.stringify(karmas);
+    // resultsContainer.setAttribute("onclick", "removeDisplayedKarma(" + stringKarmas + ")");
+    // resultsContainer.setAttribute("onclick", null);
+    // resultsContainer.setAttribute("onclick", "backHome()");
+    // console.log(resultsContainer.onclick);
 }
+
+// function changeclick(resultsContainer) {
+//     resultsContainer.setAttribute("onclick", "backHome()");
+// }
 
 function removeSummaryResults() {
     let resultsContainer = document.getElementById("resultsContainer");
@@ -690,6 +779,8 @@ function removeSummaryResults() {
         resultsContainer.removeChild(resultsContainer.firstChild);
     }
     resultsContainer.removeAttribute("onclick");
+    console.log("remove results")
+    // backHome();
 }
 
 
