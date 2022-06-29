@@ -1127,3 +1127,42 @@ function summaryKarmaSizes() {
 // 684 X 1045
 // Thumbnail optamized size is
 // 114 X 114
+
+
+// drop-rate
+function dropRate() {
+    let infoContainer = document.getElementById("infoContainer");
+    infoContainer.style.height = document.getElementById("app-container").offsetHeight;
+    infoContainer.style.width = document.getElementById("app-container").offsetWidth;
+
+    let dropInfo = document.createElement("div");
+    dropInfo.setAttribute("id", "dropInfo");
+    dropInfo.innerHTML = 
+        '<div class="dropInfo">' + 
+            '<div class="back-button" id="backButton">' + 
+                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="backSVG">' + 
+                    '<path' + 
+                        'd="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" />' + 
+                '</svg>' + 
+            '</div>' + 
+            '<h2>Drop Rates in Wish Tree</h2>' + 
+            '<p>The normal drop rates (not during events) in Wish Tree are as follows.</p>' +
+            '<p>Drop rates in gem pool for buying 1 Heart Flower at a time:</p>' + 
+            '<table>' + 
+                '<tr>' + 
+                '<td>SP&SSR</td>' +
+                '<td>1.00%</td>' + 
+                '</tr>' + 
+                '<tr>' + 
+                    '<td>SR</td>' +
+                    '<td>10.00%</td>' +
+                '</tr>' + 
+                '<tr>' + 
+                    '<td>R</td>' +
+                    '<td>89.00%</td>' +
+                '</tr>' +
+            '</table>' +
+            '<p>*You can get a least 1 SR (and above) when buying 10 Heart Flowers at a time.</p>' +
+    '   </div>';
+    infoContainer.appendChild(dropInfo);
+}
