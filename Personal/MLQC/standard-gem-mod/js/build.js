@@ -4,7 +4,7 @@ function skipVideo() {
     videoContainer.removeChild(videoContainer.firstChild);
 }
 
-function wishAnimation(timesPulled, karmas) {
+export function wishAnimation(timesPulled, karmas) {
     let appContainer = document.getElementById("app-container");
 
     let videoContainer = document.getElementById("videoContainer");

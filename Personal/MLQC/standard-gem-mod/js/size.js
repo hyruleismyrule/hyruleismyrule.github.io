@@ -1,4 +1,4 @@
-function responsiveAppSize() {
+export function responsiveAppSize() {
     let appDiv = document.getElementById("app-container");
 
     let windowHeight = window.innerHeight;
@@ -341,7 +341,7 @@ function placeGrids(appWidth) {
 
     // Galaxy Wish Coupon
     let gwcContainer = document.getElementById("gwcContainer");
-    gwcContainer.style.fontSize = fontSize = Math.round(appWidth / 49) + "px";
+    gwcContainer.style.fontSize = Math.round(appWidth / 49) + "px";
     gwcContainer.style.height = Math.round(appWidth / 23) + "px";
     gwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
 
