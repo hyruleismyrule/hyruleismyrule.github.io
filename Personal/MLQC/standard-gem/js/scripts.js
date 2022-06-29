@@ -515,7 +515,7 @@ function getKarmaImgURL(karma) {
     title = karma.title;
     character = character.toLowerCase();
     title = title.replace(/\s+/g, '-').toLowerCase();
-    let karmaImgURL = "../assets/karma-cg/" + character + "-" + title + ".png";
+    let karmaImgURL = "../assets/karma-cg/" + character + "-" + title + ".jpg";
     return karmaImgURL;
 }
 
@@ -605,7 +605,7 @@ function displayThumbnails(karmas) {
 
         let summaryKarmaImg = document.createElement("img");
         summaryKarmaImg.setAttribute("class", "summaryKarmaImg");
-        let karmaURL = "../assets/karma-tb/" + character.toLowerCase() + "-" + title.replace(/\s+/g, '-').toLowerCase() + ".png";
+        let karmaURL = "../assets/karma-tb/" + character.toLowerCase() + "-" + title.replace(/\s+/g, '-').toLowerCase() + "-tb.jpg";
         summaryKarmaImg.setAttribute("src", karmaURL);
         summaryKarmaImg.setAttribute("alt", character + "-" + title);
         summaryKarmaBox.appendChild(summaryKarmaImg);
