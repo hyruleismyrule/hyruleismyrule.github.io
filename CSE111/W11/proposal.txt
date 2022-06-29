@@ -21,7 +21,7 @@ CSE 111 Proposal for a Student Chosen Program
     I will also learn how to change file names, and save/ create files with Python.
 
 4. What Python modules will your program use?
-    Pytest, equests, csv, os, random, and cv2.
+    Pytest, equests, csv, os, random, cv2, and tkinter.
 
 5. Will you separate your Python program into functions that each
 perform a single task?
