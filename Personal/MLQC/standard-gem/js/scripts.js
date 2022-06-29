@@ -122,7 +122,7 @@ gwcNumbContainer.textContent = galaxyWishCoupon;
 
 // Random decimal from 0 to 1
 function randomDeci() {
-    console.log(Math.random());
+    // console.log(Math.random());
 }
 
 // Random number from 1 to 100 if called with
@@ -188,7 +188,7 @@ function buy1() {
     karmas = [];
     let karma = draw1()
     karmas.push(karma);
-    console.log(karmas);
+    // console.log(karmas);
     wishAnimation(timesPulled, karmas);
     timesWished = timesWished + 1;
     updateCosts();
@@ -223,7 +223,7 @@ function buy10() {
             karmas.push(draw1());
         }
     }
-    console.log(karmas);
+    // console.log(karmas);
     wishAnimation(timesPulled, karmas);
     timesWished = timesWished + 10;
     updateCosts();
@@ -543,7 +543,6 @@ function removeDisplayedKarma(karmas, displayedKarma) {
 }
 
 function backHome() {
-    console.log("home");
     if (document.getElementById("summaryBox")) {
         let resultsContainer = document.getElementById("resultsContainer");
         while (resultsContainer.firstChild) {
@@ -552,8 +551,6 @@ function backHome() {
     
         resultsContainer.style.height = null;
         resultsContainer.style.width = null;
-        resultsContainer.setAttribute("onclick", null);
-        console.log("removed");
     }
 }
 
@@ -564,10 +561,21 @@ function displayThumbnails(karmas) {
         resultsContainer.removeChild(resultsContainer.firstChild);
     }
 
+    resultsContainer.style.height = "100%";
+
+    let clickContainer = document.createElement("div");
+    clickContainer.setAttribute("id", "clickContainer");
+    clickContainer.style.height = document.getElementById("app-container").offsetHeight;
+    clickContainer.style.width = document.getElementById("app-container").offsetWidth;
+    resultsContainer.appendChild(clickContainer);
+
+    
+    clickContainer.style.height = "100%";
+
     let karmaHeader = document.createElement("div");
     karmaHeader.setAttribute("id", "karmaHeader");
     karmaHeader.setAttribute("class", "level");
-    resultsContainer.appendChild(karmaHeader);
+    clickContainer.appendChild(karmaHeader);
 
     let karmaHeaderText = document.createElement("div");
     karmaHeaderText.setAttribute("id", "karmaHeaderText");
@@ -578,8 +586,8 @@ function displayThumbnails(karmas) {
     let summaryBox = document.createElement("div");
     summaryBox.setAttribute("id", "summaryBox");
     summaryBox.setAttribute("class", "summaryBox");
-    resultsContainer.appendChild(summaryBox);
-    resultsContainer.style.height = "100%";
+    clickContainer.appendChild(summaryBox);
+    
 
     for (let i = 0; i < karmas.length; i++) {
         let rarity = karmas[i].rarity;
@@ -642,22 +650,11 @@ function displayThumbnails(karmas) {
 
         summaryBox.appendChild(summaryKarma);
 
-        summaryBox.setAttribute("onclick", "backHome()")
+        clickContainer.setAttribute("onclick", "backHome()");
     }
 
     responsiveAppSize();
 }
-
-function removeSummaryResults() {
-    let resultsContainer = document.getElementById("resultsContainer");
-
-    while (resultsContainer.firstChild) {
-        resultsContainer.removeChild(resultsContainer.firstChild);
-    }
-    resultsContainer.removeAttribute("onclick");
-    console.log("remove results")
-}
-
 
 responsiveAppSize();
 window.addEventListener('resize', responsiveAppSize);
@@ -962,6 +959,7 @@ function sizeResultsKarma(appWidth) {
         let skipText = document.getElementById("skipText");
         let skipSVGContainer = document.getElementById("skipSVGContainer");
 
+
         karmaHeader.style.paddingTop = appWidth / 8 + "px";
 
         karmaHeaderText.style.width = appWidth / 5.5 + "px";
@@ -1022,7 +1020,11 @@ function sizeResultsKarma(appWidth) {
     }
 }
 
-
+// let missing = {
+//     addEventListener: function() {}
+// };  // a "null" element
+  
+// (document.querySelector('.summaryBox') || missing).addEventListener(...);
 
 // Summary Karma
 function summaryKarmaSizes() {
@@ -1030,7 +1032,8 @@ function summaryKarmaSizes() {
     let width = appContainer.offsetWidth;
 
     let karmaHeader = document.getElementById("karmaHeader");
-    karmaHeader.style.marginTop = width / 3 + "px";
+    // karmaHeader.style.marginTop = width / 3 + "px";
+    document.getElementById("clickContainer").style.paddingTop = width / 3 + "px";
     karmaHeader.style.marginLeft = (width / 2 - ((width / 4.75))) + "px";
     karmaHeader.style.marginBottom = width / 50 + "px";
 
