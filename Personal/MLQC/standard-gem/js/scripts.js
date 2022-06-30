@@ -1172,3 +1172,196 @@ function dropRate() {
     '   </div>';
     infoContainer.appendChild(dropInfo);
 }
+
+// Preview
+function previewKarma() {
+    let infoContainer = document.getElementById("infoContainer");
+    let previewInfoContainer = document.createElement("div");
+    previewInfoContainer.setAttribute("id", "previewInfoContainer");
+    previewInfoContainer.setAttribute("class", "previewInfoContainer");
+    infoContainer.appendChild(previewInfoContainer);
+
+    let previewBox = document.createElement("div");
+    previewBox.setAttribute("id", "previewBox");
+    previewBox.setAttribute("class", "previewBox");
+    previewInfoContainer.appendChild(previewBox);
+
+    let previewTitle = document.createElement("div");
+    previewTitle.setAttribute("id", "previewTitle");
+    previewTitle.setAttribute("class", "previewTitle");
+    previewBox.appendChild(previewTitle);
+
+    let previewTabs = document.createElement("div");
+    previewTabs.setAttribute("id", "previewTabs");
+    previewTabs.setAttribute("class", "previewTabs");
+    previewBox.appendChild(previewTabs);
+
+    let previewTabsUL = document.createElement("ul");
+    previewTabsUL.setAttribute("id", "previewTabs");
+    previewTabsUL.setAttribute("class", "previewTabs");
+    previewTabs.appendChild(previewTabsUL);
+    previewTabsUL.innerHTML = 
+        '<li onclick="showAllPreview()">ALL</li>' +
+        '<li onclick="showVictorPreview()">Victor</li>' +
+        '<li onclick="showLucienPreview()">Lucien</li>' +
+        '<li onclick="showKiroPreview()">Kiro</li>' +
+        '<li onclick="showGavinPreview()">Gavin</li>' +
+        '<li onclick="showOtherPreview()">Other</li>'
+    ;
+
+    let previewThumbnailContainer = document.createElement("div");
+    previewThumbnailContainer.setAttribute("id", "previewThumbnailContainer");
+    previewThumbnailContainer.setAttribute("class", "previewThumbnailContainer");
+    previewBox.appendChild(previewThumbnailContainer);
+
+    let array = standardSP;
+    array.forEach(element => {
+        let character = element.character;
+        let rarity = element.rarity;
+        let stat = element.stat;
+        let title = element.title;
+
+        let previewThumbnailBox = document.createElement("div");
+        previewThumbnailBox.setAttribute("class", "previewThumbnailBox SPpreview ") + stat.toLowerCase();
+        previewThumbnailContainer.appendChild(previewThumbnailBox);
+
+        let previewIconContainer = document.createElement("div");
+        previewIconContainer.setAttribute("class", "previewIconContainer");
+        previewThumbnailBox.appendChild(previewIconContainer);
+
+        let previewRarity = document.createElement("img");
+        previewRarity.setAttribute("class", "previewRarity");
+        previewRarity.setAttribute("alt", rarity);
+        let rarityURL = "../assets/rarity/" + rarity + "-icon.png";
+        previewRarity.setAttribute("src", rarityURL);
+        previewIconContainer.appendChild(previewRarity);
+
+        let previewKarmaImg = document.createElement("img");
+        previewKarmaImg.setAttribute("class", "reviewKarmaImg");
+        previewKarmaImg.setAttribute("alt", character + " " + title);
+        let previewKarmaImgURL = "../assets/karma-tb/" + character.toLowerCase() + "-" + title.replace(/\s+/g, '-').toLowerCase() + "-tb.jpg";
+        previewKarmaImg.setAttribute("src", previewKarmaImgURL);
+        previewIconContainer.appendChild(previewKarmaImg);
+
+        let previewStars = document.createElement("img");
+        previewStars.setAttribute("class", "reviewKarmaImg");
+        previewStars.setAttribute("alt", "1 star");
+        let previewStarsURL = "../assets/resources/stars.png";
+        previewStars.setAttribute("src", previewStarsURL);
+        previewIconContainer.appendChild(previewStars);
+
+        let previewLV = document.createElement("div");
+        previewLV.setAttribute("class", "previewLV");
+        previewIconContainer.appendChild(previewLV);
+
+        let previewLVText = document.createElement("div");
+        previewLVText.setAttribute("class", "previewLVText");
+        previewLVText.textContent = "LV";
+        previewLV.appendChild(previewLVText);
+
+        let previewNumText = document.createElement("div");
+        previewNumText.setAttribute("class", "previewNumText");
+        previewNumText.textContent = "1";
+        previewLV.appendChild(previewNumText);
+
+        let previewKarmaTitle = document.createElement("div");
+        previewKarmaTitle.setAttribute("class", "previewKarmaTitle");
+        previewThumbnailBox.appendChild(previewKarmaTitle);
+
+        let titleText = document.createElement("div");
+        titleText.setAttribute("class", "titleText");
+        titleText.textContent = character + ": " + title;
+        previewKarmaTitle.appendChild(titleText);
+    });
+
+    // array = standardSSR;
+    let gavinSSR = [];
+    let victorSSR = [];
+    let lucienSSR = [];
+    let kiroSSR = [];
+
+    standardSSR.forEach(element => {
+        let character = element.character;
+        if (character == "Gavin") {
+            gavinSSR.push(element);
+        }
+        else if (character == "Victor") {
+            victorSSR.push(element);
+        }
+        else if (character == "Lucien") {
+            lucienSSR.push(element);
+        }
+        else {
+            kiroSSR.push(element);
+        }
+    });
+
+    buildPreviewKarma(gavinSSR, previewBox);
+    buildPreviewKarma(victorSSR, previewBox);
+    buildPreviewKarma(lucienSSR, previewBox);
+    buildPreviewKarma(kiroSSR, previewBox);
+}
+
+function buildPreviewKarma(array, previewBox) {
+    array.forEach(element => {
+        let character = element.character;
+        let rarity = element.rarity;
+        let stat = element.stat;
+        let title = element.title;
+        
+        let summaryKarma = document.createElement("div");
+        summaryKarma.setAttribute("class", "summaryKarma");
+        previewBox.appendChild(summaryKarma);
+
+        let summaryKarmaBox = document.createElement("div");
+        summaryKarmaBox.setAttribute("class", "summaryKarmaBox " + stat.toLowerCase());
+        // summaryKarmaBox.setAttribute("class", karmas[i].stat.toLowerCase());
+        summaryKarma.appendChild(summaryKarmaBox);
+
+        let summaryRarity = document.createElement("img");
+        summaryRarity.setAttribute("class", "summaryRarity");
+        let rarityURL = "../assets/rarity/" + rarity + "-icon.png";
+        summaryRarity.setAttribute("src", rarityURL);
+        summaryRarity.setAttribute("alt", rarity);
+        summaryKarmaBox.appendChild(summaryRarity);
+
+        let summaryKarmaImg = document.createElement("img");
+        summaryKarmaImg.setAttribute("class", "summaryKarmaImg");
+        let karmaURL = "../assets/karma-tb/" + character.toLowerCase() + "-" + title.replace(/\s+/g, '-').toLowerCase() + "-tb.jpg";
+        summaryKarmaImg.setAttribute("src", karmaURL);
+        summaryKarmaImg.setAttribute("alt", character + "-" + title);
+        summaryKarmaBox.appendChild(summaryKarmaImg);
+
+        let starBox = document.createElement("div");
+        starBox.setAttribute("class", "starBox");
+        starBox.setAttribute("class", "starBox " + stat.toLowerCase());
+        summaryKarmaBox.appendChild(starBox);
+
+        let summaryStars = document.createElement("img");
+        summaryStars.setAttribute("class", "summaryStars");
+        summaryStars.setAttribute("src", "../assets/resources/stars.png");
+        summaryStars.setAttribute("alt", "1star");
+        starBox.appendChild(summaryStars);
+
+        let LVtext = document.createElement("div");
+        LVtext.setAttribute("class", "LVtext");
+        starBox.appendChild(LVtext);
+
+        let LV = document.createElement("div");
+        LV.setAttribute("class", "LV");
+        LV.textContent = "LV";
+        LVtext.appendChild(LV);
+
+        let num = document.createElement("div");
+        num.setAttribute("class", "num");
+        num.textContent = "1";
+        LVtext.appendChild(num);
+
+        let summaryTitle = document.createElement("div");
+        summaryTitle.setAttribute("class", "summaryTitle");
+        summaryTitle.textContent = character + ": " + title;
+        summaryKarma.appendChild(summaryTitle);
+
+        previewBox.appendChild(summaryKarma);
+    });
+}

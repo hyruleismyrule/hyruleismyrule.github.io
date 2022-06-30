@@ -42,19 +42,21 @@
         <!-- <div id="resultsContainerContainer"> -->
         <div class="resultsContainer" id="resultsContainer"></div>
         <!-- </div> -->
-        
+
         <!-- Info -->
         <div class="infoContainer" id="infoContainer"></div>
 
         <!-- Top Row -->
         <div id="topRow" class="items-header-container">
             <!-- Back Button -->
-            <div class="back-button" id="backButton">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="backSVG">
-                    <path
-                        d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" />
-                </svg>
-            </div> <!-- End Back Button -->
+            <a href="../index.html">
+                <div class="back-button" id="backButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="backSVG">
+                        <path
+                            d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z" />
+                    </svg>
+                </div>
+            </a><!-- End Back Button -->
 
             <!-- Item Bar Container -->
             <div class="items-bar-container stamina-bar" id="itemsBarContainer">
@@ -151,7 +153,7 @@
 
         <!-- Third Row -->
         <div class="third-row" id="third-row">
-            <button class="preview-btn" id="previewBTN">Preview</button>
+            <button class="preview-btn" id="previewBTN" onclick="previewKarma()">Preview</button>
             <div class="limited-container" id="limitedContainer">
                 <p id="ownP">Own Limited <span id="own-limited"></span></p>
             </div>
@@ -218,7 +220,7 @@
         <!-- Last Row -->
         <div class="purchase-limit-container" id="purchase-limit-container">
             <div class="text-container" id="limitText">
-                <p>Purchase Limit today: 
+                <p>Purchase Limit today:
                     <span id="limit"></span>
                     /999999
                 </p>
