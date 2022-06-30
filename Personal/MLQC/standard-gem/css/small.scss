@@ -538,3 +538,28 @@ body {
     z-index: 5;
     // margin-left: 0.1rem;
 }
+
+
+.dropInfo {
+    // height: 100%;
+    padding: 1rem;
+    background-color: white;
+    height: 100rem;
+    font-size: medium;
+    td {
+        border: 1px solid;
+        padding: 0.3rem;
+    }
+    .back-button {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        svg {
+            width: 2.5rem;
+            color: white;
+            margin: 0;
+            margin-top: -0.2rem;
+            // width: 2rem;
+        }
+    }
+}
