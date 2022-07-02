@@ -1,1 +1,5 @@
-/* No CSS *//*# sourceMappingURL=small.css.map */
+body {
+  background: #eeaeca;
+  background: linear-gradient(35deg, #eeaeca 0%, #94bbe9 100%);
+}
+/*# sourceMappingURL=small.css.map */

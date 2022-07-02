@@ -1,0 +1,17 @@
+// font-family: 'EB Garamond', serif;
+// font-family: 'Open Sans', sans-serif;
+
+$opgray: rgba(128, 128, 128, 0.4);
+$opgray2: rgba(128, 128, 128, 0.8);
+
+// Karma Attribute Colors
+$decision: #9ab7d5;
+$creativity: #f8b290;
+$affinity: #fdabc1;
+$execution: #99bd99;
+
+
+body {
+    background: rgb(238, 174, 202);
+    background: linear-gradient(35deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
