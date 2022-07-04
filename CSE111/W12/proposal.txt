@@ -1,0 +1,34 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    !!!*****************************************************!!!
+    I'm changing my project because it is very difficult to get 
+    the required URL for youtube videos, and after several
+    attempts I still can't get it, so I can't move on with that
+    project idea. I'm now going with my backup idea.
+
+1. What is the title of your program?
+
+    Hangman
+
+2. What real-world problem will your program address or help to solve?
+
+    This is a game that will help keep children entertained and can help
+    them increase thier vocabulary.
+
+3. What will you learn from developing this program?
+
+    I will learn how to 
+
+4. What Python modules will your program use?
+
+    math, draw2d (from earlier in the semester)
+
+5. Will you separate your Python program into functions that each
+perform a single task?
+
+    I will need to use several functions so that I can call them when the user makes a choice.
+
+6. Will you write test functions to test at least two of your program
+functions?
+
+    I will write a test function for generating the hangman character and checking the words.
