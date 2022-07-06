@@ -63,13 +63,26 @@ def displayLetters(word, guessed_letters, word_display):
                 word_display[character_index] = letter
             character_index += 1
         guessed_letters.sort()
-    print(word_display)
+    temp_display = ""
+    for letter in word_display:
+        temp_display += letter
+    # print(word_display)
+    print(temp_display)
+    if word_display == word_array(word):
+        print("Congrats!")
+        quit()
     begin_gessing(word, guessed_letters, word_display)
 
 def ask(word, guessed_letters, word_display):
     # Ask the user for a letter
     if len(guessed_letters) > 0:
-        print(f"You have guessed: {guessed_letters}")
+        temp_display = ""
+        for letter in guessed_letters:
+            temp_display += letter + ", "
+        # print(word_display)
+        # print(temp_display)
+        # print(f"You have guessed: {guessed_letters}")
+        print(f"You have guessed: {temp_display}")
     guess = input("Guess a letter: ")
     return guess
     
@@ -91,8 +104,6 @@ def begin_gessing(word, guessed_letters, word_display):
         print(f"You have already guessed {guess.lower()}")
         displayLetters(word, guessed_letters, word_display)
         ask(word, guessed_letters, word_display)
-    elif word_display == word:
-        quit()
     else:
         guessed_letters.append(guess)
         displayLetters(word, guessed_letters, word_display)
