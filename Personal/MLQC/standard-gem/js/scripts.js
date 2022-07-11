@@ -1365,3 +1365,6 @@ function buildPreviewKarma(array, previewBox) {
         previewBox.appendChild(summaryKarma);
     });
 }
+
+
+// Preview Sizes
