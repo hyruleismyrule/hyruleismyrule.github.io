@@ -56,8 +56,8 @@ def get_word(difficulty):
         word_list_file = "easy.csv"
 
     # For some reason on my computer I need to include this file path
-    word_list = read_list("CSE111/W13/" + word_list_file)
-    # word_list = read_list(word_list_file)
+    # word_list = read_list("CSE111/W13/" + word_list_file)
+    word_list = read_list(word_list_file)
     word = word_list[randint(0, len(word_list))]
 
     return word
