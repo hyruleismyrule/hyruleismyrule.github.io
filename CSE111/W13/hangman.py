@@ -16,7 +16,6 @@ def main():
 
     guessed_letters = []
     word_display = []
-    wrong_guesses = 0
 
     print()
     print("Welcome to Hangman!")
@@ -24,20 +23,20 @@ def main():
     print("The harder the difficulty, the more pieces there are starting out.")
 
     difficulty = input("Pick a difficulty, EASY, MEDIUM, HARD: ")
-    word = get_word(difficulty)
-    wrong_guesses += handicap(difficulty)
+    difficulty = difficulty.lower()
 
-    displayLetters(word, guessed_letters, word_display, wrong_guesses)
+    word = get_word(difficulty)
+    wrong_guesses = handicap(difficulty)
+
+    display_letters(word, guessed_letters, word_display, wrong_guesses)
    
 
 def handicap(difficulty):
     """Sets the handicap based on difficulty chosen."""
 
-    difficulty = difficulty.lower()
-
-    if difficulty == "hard" or difficulty == "h":
+    if difficulty == "hard" or difficulty == "h" or difficulty == "ha" or difficulty == "har":
         handicap = 2
-    elif difficulty == "medium" or difficulty == "m":
+    elif difficulty == "medium" or difficulty == "m" or difficulty == "me" or difficulty == "med" or difficulty == "medi" or difficulty == "mediu":
         handicap = 1
     else:
         handicap = 0
@@ -47,16 +46,17 @@ def handicap(difficulty):
 def get_word(difficulty):
     """Gets the word based on difficulty chosen."""
 
-    difficulty = difficulty.lower()
-
-    if difficulty == "hard" or difficulty == "h":
+    if difficulty == "hard" or difficulty == "h" or difficulty == "ha" or difficulty == "har":
         word_list_file = "hard.csv"
-    elif difficulty == "medium" or difficulty == "m":
+        print("You are starting out with the head and body.")
+    elif difficulty == "medium" or difficulty == "m" or difficulty == "me" or difficulty == "med" or difficulty == "medi" or difficulty == "mediu":
         word_list_file = "medium.csv"
+        print("You are starting out with the head.")
     else:
         word_list_file = "easy.csv"
 
-    word_list = read_list("CSE111/W12/" + word_list_file)
+    # For some reason I need to include this file path
+    word_list = read_list("CSE111/W13/" + word_list_file)
     word = word_list[randint(0, len(word_list))]
 
     return word
@@ -91,7 +91,7 @@ def word_array(word):
 
     return word_array
 
-def displayLetters(word, guessed_letters, word_display, wrong_guesses):
+def display_letters(word, guessed_letters, word_display, wrong_guesses):
     """Prints out the word blanks with correct letters filled in. Calls the begin_gessing function."""
 
     # If this is the first time displaying the word, it should
@@ -103,7 +103,7 @@ def displayLetters(word, guessed_letters, word_display, wrong_guesses):
                 word_display.append(" ")
             else:
                 word_display.append("_")
-            print()
+        print()
 
     else:
         # For the last letter guessed add it to the word_display
@@ -129,7 +129,7 @@ def displayLetters(word, guessed_letters, word_display, wrong_guesses):
 
     begin_gessing(word, guessed_letters, word_display, wrong_guesses)
 
-def ask(word, guessed_letters, word_display, wrong_guesses):
+def ask(guessed_letters):
     """Prints out a the list of guessed letters and asks the user to guess 
     another letter. Returns the guessed letter (or word)."""
 
@@ -152,9 +152,9 @@ def begin_gessing(word, guessed_letters, word_display, wrong_guesses):
     """Calles the ask function to get the user's guess. Checks the guess
     to see if it is the quit key or the correct word. Checks if the letter
     has already been guessed. If the guess is incorrect the draw_man
-    function will be called. The displayLetters function is called."""
+    function will be called. The display_letters function is called."""
 
-    guess = ask(word, guessed_letters, word_display, wrong_guesses)
+    guess = ask(guessed_letters)
 
     if guess.lower() == "!quit!":
         quit()
@@ -171,13 +171,13 @@ def begin_gessing(word, guessed_letters, word_display, wrong_guesses):
         print()
         draw_man(wrong_guesses)
         guessed_letters.append(guess)
-        displayLetters(word, guessed_letters, word_display, wrong_guesses)
-        ask(word, guessed_letters, word_display, wrong_guesses)
+        display_letters(word, guessed_letters, word_display, wrong_guesses)
+        ask(guessed_letters)
 
     elif guess.lower() in guessed_letters:
         print(f"You have already guessed {guess.lower()}")
-        displayLetters(word, guessed_letters, word_display, wrong_guesses)
-        ask(word, guessed_letters, word_display, wrong_guesses)
+        display_letters(word, guessed_letters, word_display, wrong_guesses)
+        ask(guessed_letters)
 
     else:
         if guess not in word:
@@ -195,9 +195,9 @@ def begin_gessing(word, guessed_letters, word_display, wrong_guesses):
 
         guessed_letters.append(guess)
 
-        displayLetters(word, guessed_letters, word_display, wrong_guesses)
+        display_letters(word, guessed_letters, word_display, wrong_guesses)
 
-        ask(word, guessed_letters, word_display, wrong_guesses)
+        ask(guessed_letters)
 
 def draw_man(wrong_guesses):
     """Draws the hangman. The more the incorrect guesses, the more pieces are drawn."""
@@ -261,4 +261,5 @@ def draw_man(wrong_guesses):
 
     finish_drawing(canvas)
 
-main()
+if __name__ == "__main__":
+    main()
