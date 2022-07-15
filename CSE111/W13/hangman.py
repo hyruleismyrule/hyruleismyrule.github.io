@@ -3,7 +3,7 @@
 # ***********************
 # created by Cynthia Rawlings
 # Using the Draw 2-D library provided by BYUI earlier in the semester
-# I commented out line 44 in that file so I could call the functions there more than once
+# I commented out line 44 in the draw2d file so I could call the functions there more than once.
 
 from draw2d import \
     start_drawing, draw_line, draw_oval, draw_arc, \
@@ -219,7 +219,7 @@ def draw_man(wrong_guesses):
         # Base
         draw_rectangle(canvas, 50, 150, 450, 200, fill="sienna4")
         # String
-        draw_line(canvas, 200, 600, 200, 700)
+        draw_line(canvas, 200, 600, 200, 700, width=4)
         # Top
         draw_rectangle(canvas, 150, 700, 450, 650, fill="sienna4")
 
@@ -227,19 +227,19 @@ def draw_man(wrong_guesses):
         draw_oval(canvas, 150, 500, 250, 600, width=1, outline="black", fill="white")
 
     def draw_body(canvas):
-        draw_line(canvas, 200, 400, 200, 600, fill="white")
+        draw_line(canvas, 200, 400, 200, 600, width=8, fill="white")
 
     def draw_left_arm(canvas):
-        draw_line(canvas, 150, 450, 200, 500, fill="white")
+        draw_line(canvas, 150, 450, 200, 500, width=8, fill="white")
 
     def draw_right_arm(canvas):
-        draw_line(canvas, 250, 450, 200, 500, fill="white")
+        draw_line(canvas, 250, 450, 200, 500, width=8, fill="white")
 
     def draw_left_leg(canvas):
-        draw_line(canvas, 150, 350, 200, 400, fill="white")
+        draw_line(canvas, 150, 350, 200, 400, width=8, fill="white")
 
     def draw_right_leg(canvas):
-        draw_line(canvas, 250, 350, 200, 400, fill="white")
+        draw_line(canvas, 250, 350, 200, 400, width=8, fill="white")
         
 
     draw_background(canvas, scene_width, scene_height)
