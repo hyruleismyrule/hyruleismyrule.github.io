@@ -1,0 +1,34 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+
+        When I was creating my hangman project I used functions that wouldn't return any data.
+    Instead, based on user input they called another function that called the first function again
+    until the user ented the correct word, chose to quit, or used up all thier attempts. These 
+    functions just passed the updated paramaters to eachother. It was very helpful to be able to 
+    have a function calling loop because the words weren't always the same length.
+
+
+2. In your judgment, what is the value of test functions?
+
+        Test functions are very helpful not only because they test functions and make sure that
+    they work, but when I write them I have to have a very good understanding of how my 
+    function works, so I often rewrite the functions so that they are more efficient. I also have
+    to be aware of all the unexpected user inputs and I often find problems that I need 
+    to go back and solve.
+
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+        When my program has a problem the first thing that I do is check the error to find the 
+    function and line that has the problem. I then use print statements to check what the values
+    are at the time of the issue and how far the program works. I usually solve the problem here,
+    but if I can't then I usually google the error or ask someone else for help.
+    The test functions usually help me to find problems that I didn't know that I had because I 
+    I am trying unexpected inputs or I didn't notice the wrong values. One thing I can do to improve
+    the process is to write test functions as I go so that I can make sure that each function is
+    full proof before moving on.
+
