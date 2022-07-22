@@ -1,5 +1,59 @@
 body {
+  margin: 0;
+  padding: 0;
   background: #eeaeca;
   background: linear-gradient(35deg, #eeaeca 0%, #94bbe9 100%);
+}
+
+header {
+  margin: 0;
+  background: #eeaeca;
+  padding: 1rem;
+}
+
+header h1, header h2 {
+  margin: 0;
+}
+
+header h2 {
+  margin-top: 0.5rem;
+}
+
+footer {
+  background: #eeaeca;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem p;
+  padding-bottom-margin: 0;
+}
+
+.wish-icon-grid {
+  height: 81vh;
+}
+
+.wish-tree-icon {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wish-tree-icon img {
+  margin: 0 auto;
+}
+
+.wish-tree-icon a {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.wish-tree-icon a p {
+  margin: 0;
 }
 /*# sourceMappingURL=small.css.map */
