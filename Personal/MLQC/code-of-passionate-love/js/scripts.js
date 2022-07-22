@@ -23,10 +23,23 @@ fetch(standardURL)
         standardR = jsonObject['standardR'];
     })
 
-// Standard Drop Rates
-// SP and SSR 1%
+// Get Karma List from code-of-passionate-love.json
+let eventSP = [];
+
+const eventURL = 'code-of-passionate-love.json';
+fetch(eventURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        eventSP = jsonObject['eventSP'];
+    })
+
+// Event Drop Rates
+// All SP and SSR 2.5%
+// (Event SP 1.5%)
 // SR 10%
-// R 89%
+// R 87.5%
 // Buying 10 ar a time guarentees 1 SR or above
 
 // Declares the karmas and timesWished variables to be used globaly
@@ -134,6 +147,8 @@ function getRandomInt(min, max) {
 
 function draw1() {
     let karmaRoll = getRandomInt(1, 101);
+    let karmaDeci = getRandomInt(1, 101);
+        
 
     let kingCheck = getRandomInt(1, 101);
     if (kingCheck > 99) {
@@ -151,11 +166,15 @@ function draw1() {
         }
     }
     else {
-        if (karmaRoll > 99) {
+        if (karmaRoll >= 99 || karmaRoll > 98 && karmaDeci >= 50) {
+            let karmaArray = "eventSP";
+            karma = pickKarma(karmaArray);
+        }
+        else if (karmaRoll >= 98 || karmaRoll > 97 && karmaDeci >= 50) {
             let karmaArray = "SP or SSR";
             karma = pickKarma(karmaArray);
         }
-        else if (karmaRoll > 89) {
+        else if (karmaRoll >= 88 || karmaRoll > 87 && karmaDeci >= 50) {
             let karmaArray = "SR";
             karma = pickKarma(karmaArray);
         }
@@ -233,7 +252,13 @@ function buy10() {
 
 function guarenteedSRPlus() {
     let karmaRoll = getRandomInt(1, 101);
-    if (karmaRoll > 99) {
+    let karmaDeci = getRandomInt(1, 101);
+
+    if (karmaRoll >= 99 || karmaRoll > 98 && karmaDeci >= 50) {
+        let karmaArray = "eventSP";
+        karma = pickKarma(karmaArray);
+    }
+    else if (karmaRoll >= 98 || karmaRoll > 97 && karmaDeci >= 50) {
         let karmaArray = "SP or SSR";
         karma = pickKarma(karmaArray);
     }
@@ -241,11 +266,17 @@ function guarenteedSRPlus() {
         let karmaArray = "SR";
         karma = pickKarma(karmaArray);
     }
+
     return karma;
 }
 
 function pickKarma(karmaArray) {
-    if (karmaArray == "KingSSR") {
+    if (karmaArray == "eventSP") {
+        let index = getRandomInt(0, eventSP.length);
+        let karma = eventSP[index];
+        return karma;
+    }
+    else if (karmaArray == "KingSSR") {
         let index = getRandomInt(0, standardKingSSR.length);
         let karma = standardKingSSR[index];
         return karma;
