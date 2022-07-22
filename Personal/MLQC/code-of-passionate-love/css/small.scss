@@ -228,15 +228,21 @@ body {
 }
 
 .pull1 {
-    background-color: #93b4c6;
+    // background-color: #93b4c6;
     // background-color: rgba(147, 180, 198, 0.7);
-    border: 2px solid #aecada;
+    background: rgb(140,141,219);
+    background: linear-gradient(45deg, rgba(140,141,219,1) 0%, rgba(118,156,199,1) 100%);
+    // border: 2px solid #aecada;
+    border: 2px solid #84a9d4;
     font-family: 'EB Garamond', serif;
 }
 
 .pull10 {
-    background-color: #e99ab9;
-    border: 2px solid #edb8cc;
+    // background-color: #e99ab9;
+    background: rgb(219,170,154);
+    background: linear-gradient(160deg, rgba(219,170,154,1) 0%, rgba(188,0,122,1) 100%);
+    // border: 2px solid #edb8cc;
+    border: 2px solid #d692a9;
     font-family: 'EB Garamond', serif;
 }
 

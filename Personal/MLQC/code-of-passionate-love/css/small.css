@@ -246,14 +246,16 @@ body {
 }
 
 .pull1 {
-  background-color: #93b4c6;
-  border: 2px solid #aecada;
+  background: #8c8ddb;
+  background: linear-gradient(45deg, #8c8ddb 0%, #769cc7 100%);
+  border: 2px solid #84a9d4;
   font-family: 'EB Garamond', serif;
 }
 
 .pull10 {
-  background-color: #e99ab9;
-  border: 2px solid #edb8cc;
+  background: #dbaa9a;
+  background: linear-gradient(160deg, #dbaa9a 0%, #bc007a 100%);
+  border: 2px solid #d692a9;
   font-family: 'EB Garamond', serif;
 }
 
