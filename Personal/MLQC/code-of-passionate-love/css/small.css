@@ -16,9 +16,9 @@ body {
 }
 
 .app-container {
-  background-image: url("assets/code-of-passionate-love-home.jpg");
   overflow: hidden;
   background-color: #90bee4;
+  background-image: url("assets/code-of-passionate-love-home.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto;
@@ -134,26 +134,58 @@ body {
 }
 
 .redeem-btn {
-  background-color: #b5a5cc;
-  border: 2px solid #c9b8d8;
+  background-color: #a02a45;
+  border: 2px solid #b25d60;
   font-family: 'EB Garamond', serif;
-  color: white;
+  color: #dfab92;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.redeem-btn .redeem-txt {
+  -webkit-transform: rotateZ(315deg);
+          transform: rotateZ(315deg);
 }
 
 .redeem-btn img {
-  -webkit-transform: rotateZ(20deg);
-          transform: rotateZ(20deg);
+  -webkit-transform: rotateZ(340deg);
+          transform: rotateZ(340deg);
 }
 
 .drop-btn {
-  background-color: #90bee4;
-  border: 2px solid #add3f3;
+  background-color: #f89e9b;
+  border: 2px solid #eeb6b0;
+  border-radius: 100%;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+
+.mission-btn {
+  background-color: #c44e7f;
+  border: 2px solid #d0638e;
+  border-radius: 100%;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+
+.feedback-btn {
+  background-color: #c9a467;
+  border: 2px solid #d2ae78;
+  border-radius: 100%;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+
+.record-btn {
+  background-color: #7575b6;
+  border: 2px solid #8280b9;
+  border-radius: 100%;
   color: white;
   font-family: 'EB Garamond', serif;
 }
@@ -552,5 +584,24 @@ body {
   color: white;
   margin: 0;
   margin-top: -0.2rem;
+}
+
+.record-svg svg {
+  width: 1.5rem;
+  color: white;
+  fill: white;
+  margin: 0;
+  margin-top: -0.2rem;
+}
+
+.redeem-number {
+  background-color: rgba(108, 56, 49, 0.8);
+}
+
+.redeem-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
 }
 /*# sourceMappingURL=small.css.map */

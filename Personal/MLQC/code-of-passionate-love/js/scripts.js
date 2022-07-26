@@ -129,7 +129,8 @@ gemNumbContainer.textContent = gems;
 let gwcNumbContainer = document.getElementById("gwcNumb");
 gwcNumbContainer.textContent = galaxyWishCoupon;
 
-
+let timesWishedContainer = document.getElementById("redeemNUM");
+timesWishedContainer.textContent = timesWished;
 
 // Random number generators
 
@@ -189,6 +190,7 @@ function draw1() {
 function updateResources() {
     gwcNumbContainer.textContent = galaxyWishCoupon;
     gemNumbContainer.textContent = gems;
+    timesWishedContainer.textContent = timesWished;
 }
 
 function buy1() {
@@ -820,20 +822,72 @@ function placeGrids(appWidth) {
 
     // Redeem
     let redeemButton = document.getElementById("redeem-button");
-    redeemButton.style.fontSize = Math.round(appWidth / 25) + "px";
-    redeemButton.style.width = Math.round(appWidth / 4.5) + "px";
-    redeemButton.style.height = Math.round(appWidth / 15) + "px";
+    redeemButton.style.fontSize = appWidth / 30 + "px";
+    // redeemButton.style.width = Math.round(appWidth / 4.5) + "px";
+    // redeemButton.style.height = Math.round(appWidth / 15) + "px";
+    redeemButton.style.width = appWidth / 10 + "px";
+    redeemButton.style.height = appWidth / 10 + "px";
+    redeemButton.style.marginLeft = "-" + appWidth / 7.5 + "px";
+    redeemButton.style.marginTop = appWidth / 50 + "px";
+
+    // let redeemContainer = document.getElementById("redeem-container");
+    // redeemContainer.style.marginLeft = "-" + appWidth / 10 + "px";
 
     let redeemIMG = document.getElementById("redeem-img");
-    redeemIMG.style.width = Math.round(appWidth / 10) + "px";
-    redeemIMG.style.marginLeft = "-" + Math.round(appWidth / 40) + "px";
-    redeemIMG.style.marginRight = "-" + Math.round(appWidth / 100) + "px";
+    redeemIMG.style.width = appWidth / 10 + "px";
+    redeemIMG.style.marginLeft = "-" + appWidth / 40 + "px";
+    redeemIMG.style.marginTop = "-" + appWidth / 30 + "px";
+    // redeemIMG.style.marginRight = "-" + appWidth / 100 + "px";
+
+    let redeemTxt = document.getElementById("redeem-txt");
+    redeemTxt.style.marginTop = appWidth / 30 + "px";
+    redeemTxt.style.marginLeft = "-" + appWidth / 14 + "px";
+
 
     // Drop Rate
     let dropButton = document.getElementById("drop-button");
-    dropButton.style.fontSize = Math.round(appWidth / 25) + "px";
-    dropButton.style.padding = Math.round(appWidth / 90) + "px";
-    dropButton.style.marginTop = Math.round(appWidth / 50) + "px";
+    dropButton.style.fontSize = appWidth / 32 + "px";
+    dropButton.style.width = appWidth / 10 + "px";
+    dropButton.style.height = appWidth / 10 + "px";
+    // dropButton.style.padding = appWidth / 90 + "px";
+    // dropButton.style.marginTop = appWidth / 50 + "px";
+
+    // mission
+    let missionButton = document.getElementById("mission-button");
+    missionButton.style.fontSize = appWidth / 52 + "px";
+    missionButton.style.width = appWidth / 10 + "px";
+    missionButton.style.height = appWidth / 10 + "px";
+
+    // feedback
+    let feedbackButton = document.getElementById("feedback-button");
+    feedbackButton.style.fontSize = appWidth / 50 + "px";
+    feedbackButton.style.width = appWidth / 10 + "px";
+    feedbackButton.style.height = appWidth / 10 + "px";
+
+    // record
+    let recordButton = document.getElementById("record-button");
+    recordButton.style.fontSize = appWidth / 50 + "px";
+    recordButton.style.width = appWidth / 10 + "px";
+    recordButton.style.height = appWidth / 10 + "px";
+
+    // record svg
+    let recordSVG = document.getElementById("recordSVG");
+    recordSVG.style.width = appWidth / 20 + "px";
+    // recordSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    let redeemBoxImg = document.getElementById("redeem-box-img");
+    redeemBoxImg.style.width = appWidth / 18 + "px";
+    
+    redeemBoxImg.style.marginTop = "-" + appWidth / 150 + "px";
+
+    let redeemImgBoxContainer = document.getElementById("redeem-number");
+    redeemImgBoxContainer.style.width = appWidth / 6 + "px";
+    redeemImgBoxContainer.style.height = appWidth / 25 + "px";
+
+    let redeemNUMContainer = document.getElementById("redeemNUM");
+    redeemNUMContainer.style.marginLeft = appWidth / 35 + "px";
+
+
 
     // Banner placeholder
     let bannerPlaceholder = document.getElementById("banner-placeholder");
