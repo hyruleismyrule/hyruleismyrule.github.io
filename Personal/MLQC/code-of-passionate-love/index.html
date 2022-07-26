@@ -195,26 +195,39 @@
 
         <!-- Fourth Row -->
         <div id="fourthRow" class="forth-row">
-            <div class="wish-container" id="gwcContainer">
-                <p id="gwctext">Galaxy Wish Coupon: <span id="gwcNumb"></span></p>
+            <div class="left4row" id="left4row">
+                <div class="event-info-row">
+                    <button class="event-info-button" id="event-info-button">i</button>
+                    <div class="event-time" id="event-time">2022/02/14 5:00 - 2022/3/2 23:59</div>
+                </div>
+                <div class="announce-container">
+                    <div class="name-box"></div>
+                    <div class="event-share-button">Share the Love</div>
+                </div>
             </div>
-            <img id="gwcIMG" src="../assets/resources/galaxy-wish-coupon.png" alt="galaxy-wish-coupon">
-            <button class="add-btn" id="gwc-button" onclick="addCoupons()">
-                <svg id="gwcSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <defs>
-                        <linearGradient id="Gradient1">
-                            <stop class="stop1" offset="0%" />
-                            <stop class="stop3" offset="100%" />
-                        </linearGradient>
-                        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0%" stop-color="red" />
-                            <stop offset="100%" stop-color="blue" />
-                        </linearGradient>
-                    </defs>
-                    <path id="rect1"
-                        d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
-                </svg>
-            </button>
+            <div class="right4row" id="right4row">
+                <div class="wish-container" id="gwcContainer">
+                    <p id="gwctext">Galaxy Wish Coupon: <span id="gwcNumb"></span></p>
+                </div>
+                <img id="gwcIMG" src="../assets/resources/galaxy-wish-coupon.png" alt="galaxy-wish-coupon">
+                <button class="add-btn" id="gwc-button" onclick="addCoupons()">
+                    <svg id="gwcSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <defs>
+                            <linearGradient id="Gradient1">
+                                <stop class="stop1" offset="0%" />
+                                <stop class="stop3" offset="100%" />
+                            </linearGradient>
+                            <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="red" />
+                                <stop offset="100%" stop-color="blue" />
+                            </linearGradient>
+                        </defs>
+                        <path id="rect1"
+                            d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
+                    </svg>
+                </button>
+            </div>
+            
         </div> <!-- End Fourth Row -->
 
         <div id="fourthRow2" class="fourthRow2">

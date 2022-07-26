@@ -645,4 +645,12 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+
+.event-info-button {
+  border-radius: 100%;
+  border: 1px solid #d78b84;
+  color: white;
+  font-family: 'EB Garamond', serif;
+  background-color: #9e3152;
+}
 /*# sourceMappingURL=small.css.map */

@@ -937,10 +937,18 @@ function placeGrids(appWidth) {
     // ownP.style.marginLeft = Math.round(appWidth / 40) + "px";
 
     // Fouth Row
-    let fourthRow = document.getElementById("fourthRow");
-    let fourthRC = appWidth / 16;
-    fourthRC = "repeat(auto-fill, " + fourthRC + "px)";
-    fourthRow.style.gridTemplateColumns = fourthRC;
+    // let fourthRow = document.getElementById("fourthRow");
+    // let fourthRC = appWidth / 2;
+    // fourthRC = "repeat(auto-fill, " + fourthRC + "px)";
+    // fourthRow.style.gridTemplateColumns = fourthRC;
+
+    // info
+    let eventInfo = document.getElementById("event-info-button");
+    eventInfo.style.width = appWidth / 20 + "px";
+    eventInfo.style.height = appWidth / 20 + "px";
+    eventInfo.style.fontSize = appWidth / 25 + "px";
+    // eventInfo.style.marginLeft = appWidth / 80 + "px";
+    // eventInfo.style.marginTop = "-" + appWidth / 20 + "px";
 
     // Galaxy Wish Coupon
     let gwcContainer = document.getElementById("gwcContainer");
