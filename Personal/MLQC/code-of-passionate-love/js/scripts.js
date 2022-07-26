@@ -111,8 +111,8 @@ function addCoupons() {
     updateResources();
 }
 
-let ownLimitedContainer = document.getElementById("own-limited");
-ownLimitedContainer.textContent = ownLimited + "/80";
+// let ownLimitedContainer = document.getElementById("own-limited");
+// ownLimitedContainer.textContent = ownLimited + "/80";
 
 let limitContainer = document.getElementById("limit");
 limitContainer.textContent = purchasesLeftToday;
@@ -883,16 +883,21 @@ function placeGrids(appWidth) {
     let redeemImgBoxContainer = document.getElementById("redeem-number");
     redeemImgBoxContainer.style.width = appWidth / 6 + "px";
     redeemImgBoxContainer.style.height = appWidth / 25 + "px";
+    // redeemImgBoxContainer.style.marginTop = appWidth / 150 + "px";
 
     let redeemNUMContainer = document.getElementById("redeemNUM");
     redeemNUMContainer.style.marginLeft = appWidth / 35 + "px";
 
+    let leftButtons = document.getElementById("left-buttons");
+    leftButtons.style.marginTop = "-" + appWidth / 20 + "px";
+    leftButtons.style.marginLeft = appWidth / 35 + "px";
+    leftButtons.style.height = appWidth / 2 + "px";
 
 
-    // Banner placeholder
+    // // Banner placeholder
     let bannerPlaceholder = document.getElementById("banner-placeholder");
-    bannerPlaceholder.style.width = Math.round(appWidth) + "px";
-    bannerPlaceholder.style.height = Math.round(appWidth) + "px";
+    bannerPlaceholder.style.width = appWidth + "px";
+    bannerPlaceholder.style.height = appWidth / 3.5 + "px";
 
     // Third Row
     let thirdRow = document.getElementById("third-row");
@@ -900,23 +905,36 @@ function placeGrids(appWidth) {
     ThirdRC = "repeat(auto-fill, " + ThirdRC + "px)";
     thirdRow.style.gridTemplateColumns = ThirdRC;
 
+    // Limited up
+    let limitedUp = document.getElementById("event-limited-button");
+    limitedUp.style.fontSize = appWidth / 30 + "px";
+    limitedUp.style.width = appWidth / 5 + "px";
+    limitedUp.style.height = appWidth / 10 + "px";
+
+    // event wish
+    let eventWish = document.getElementById("event-wish-button");
+    limitedUp.style.fontSize = appWidth / 30 + "px";
+    eventWish.style.width = appWidth / 5 + "px";
+    eventWish.style.height = appWidth / 10 + "px";
+    eventWish.style.marginTop = appWidth / 20 + "px";
+
     // Preview
-    let previewBTN = document.getElementById("previewBTN");
-    previewBTN.style.fontSize = Math.round(appWidth / 30) + "px";
-    previewBTN.style.height = Math.round(appWidth / 9) + "px";
-    previewBTN.style.width = Math.round(appWidth / 9) + "px";
-    previewBTN.style.marginLeft = "-" + Math.round(appWidth / 100) + "px";
+    // let previewBTN = document.getElementById("previewBTN");
+    // previewBTN.style.fontSize = Math.round(appWidth / 30) + "px";
+    // previewBTN.style.height = Math.round(appWidth / 9) + "px";
+    // previewBTN.style.width = Math.round(appWidth / 9) + "px";
+    // previewBTN.style.marginLeft = "-" + Math.round(appWidth / 100) + "px";
 
     // Own Limited
-    let limitedContainer = document.getElementById("limitedContainer");
-    limitedContainer.style.fontSize = Math.round(appWidth / 35) + "px";
-    limitedContainer.style.height = Math.round(appWidth / 23) + "px";
-    limitedContainer.style.marginTop = Math.round(appWidth / 18) + "px";
-    limitedContainer.style.marginLeft = "-" + Math.round(appWidth / 20) + "px";
+    // let limitedContainer = document.getElementById("limitedContainer");
+    // limitedContainer.style.fontSize = Math.round(appWidth / 35) + "px";
+    // limitedContainer.style.height = Math.round(appWidth / 23) + "px";
+    // limitedContainer.style.marginTop = Math.round(appWidth / 18) + "px";
+    // limitedContainer.style.marginLeft = "-" + Math.round(appWidth / 20) + "px";
 
-    let ownP = document.getElementById("ownP");
-    ownP.style.marginTop = Math.round(appWidth / 200) + "px";
-    ownP.style.marginLeft = Math.round(appWidth / 40) + "px";
+    // let ownP = document.getElementById("ownP");
+    // ownP.style.marginTop = Math.round(appWidth / 200) + "px";
+    // ownP.style.marginLeft = Math.round(appWidth / 40) + "px";
 
     // Fouth Row
     let fourthRow = document.getElementById("fourthRow");

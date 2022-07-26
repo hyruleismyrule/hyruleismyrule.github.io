@@ -617,10 +617,30 @@ body {
 .redeem-number {
     display: flex;
     color: white;
+    z-index: 2;
     // text-align: center;
     // flex-direction: ;
 }
 
+.left-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.event-limited-btn {
+    background-color: #780c38;
+    border: 2px solid #d78b84;
+    color: #d78b84;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.event-wish-btn {
+    background-color: #413b65;
+    border: 2px solid #d78b84;
+    color: #d78b84;
+    font-family: 'Open Sans', sans-serif;
+}
 
 // // Preview
 // .previewBox {
@@ -629,3 +649,9 @@ body {
 //     margin: 0 auto;
 //     height: 40rem;
 // }
+
+.right-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
