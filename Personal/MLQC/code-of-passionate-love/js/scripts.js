@@ -316,6 +316,39 @@ function skipVideo() {
     videoContainer.removeChild(videoContainer.firstChild);
 }
 
+function createBackgroundVideo() {
+    let appWidth = document.getElementById("app-container").offsetWidth;
+    let appHeight = document.getElementById("app-container").offsetHeight;
+
+    let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
+    backgroundVideoContainer.style.width = appWidth;
+    backgroundVideoContainer.style.height = appHeight;
+
+    let backgroundVideo = document.createElement("video");
+    backgroundVideo.setAttribute("id", "backgroundVideo");
+    backgroundVideo.autoplay = true;
+    backgroundVideo.muted = true;
+    backgroundVideo.loop = true;
+    // backgroundVideo.style.height = appHeight;
+    backgroundVideo.setAttribute("height", appHeight);
+    
+    let backgroundSource = document.createElement("source");
+    backgroundSource.setAttribute("id", "backgroundVideoSource");
+
+    backgroundSource.setAttribute("src", "./assets/code-of-love-bg.mp4");
+    backgroundSource.setAttribute("type", "video/mp4");
+
+    backgroundVideo.appendChild(backgroundSource);
+    backgroundVideoContainer.appendChild(backgroundVideo);
+}
+
+function removeBackgroundVideo() {
+    let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
+    backgroundVideoContainer.removeChild(backgroundVideoContainer.firstChild);
+}
+
+
+
 function wishAnimation(timesPulled, karmas) {
     let appContainer = document.getElementById("app-container");
 
@@ -698,6 +731,7 @@ function displayThumbnails(karmas) {
 responsiveAppSize();
 window.addEventListener('resize', responsiveAppSize);
 
+
 function responsiveAppSize() {
     let appDiv = document.getElementById("app-container");
 
@@ -739,6 +773,13 @@ function responsiveAppSize() {
 
     if (document.getElementById("summaryBox")) {
         summaryKarmaSizes();
+    }
+
+    if (document.getElementById("backgroundVideo")) {
+        removeBackgroundVideo();
+    }
+    else {
+        createBackgroundVideo();
     }
 }
 
@@ -1549,4 +1590,7 @@ function buildPreviewKarma(array, previewBox) {
 }
 
 
-// Preview Sizes
+// This needs to be built last so that the dimensions are correct
+if (!document.getElementById("backgroundVideo")) {
+    createBackgroundVideo();
+}

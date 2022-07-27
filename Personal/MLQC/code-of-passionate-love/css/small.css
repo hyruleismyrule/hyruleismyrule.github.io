@@ -17,9 +17,6 @@ body {
 
 .app-container {
   overflow: hidden;
-  background-color: #90bee4;
-  background-image: url("assets/code-of-passionate-love-home.jpg");
-  background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto;
 }
@@ -710,5 +707,12 @@ body {
 #Limitedgwc-button {
   -webkit-transform: skew(0deg);
           transform: skew(0deg);
+}
+
+.video-background-container {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 /*# sourceMappingURL=small.css.map */
