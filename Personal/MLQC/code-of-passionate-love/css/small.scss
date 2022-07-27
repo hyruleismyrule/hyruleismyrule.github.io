@@ -295,8 +295,9 @@ body {
 }
 
 .text-container {
-    background-color: white;
+    // background-color: white;
     opacity: 0.5;
+    color: white;
     grid-column-start: 4;
     grid-column-end: 9;
     text-align: right;

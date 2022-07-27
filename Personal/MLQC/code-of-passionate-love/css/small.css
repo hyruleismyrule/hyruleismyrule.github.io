@@ -319,8 +319,8 @@ body {
 }
 
 .text-container {
-  background-color: white;
   opacity: 0.5;
+  color: white;
   -ms-grid-column: 4;
       grid-column-start: 4;
   grid-column-end: 9;

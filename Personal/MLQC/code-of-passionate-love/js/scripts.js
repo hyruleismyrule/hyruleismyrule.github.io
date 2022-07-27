@@ -1066,26 +1066,26 @@ function placeGrids(appWidth) {
     // Pull 1
     let pull1 = document.getElementById("pull1");
     pull1.style.fontSize = appWidth / 21 + "px";
-    pull1.style.paddingLeft = appWidth / 10.5 + "px";
-    pull1.style.paddingRight = appWidth / 10.5 + "px";
-    pull1.style.paddingTop = Math.round(appWidth / 50) + "px";
-    pull1.style.paddingBottom = Math.round(appWidth / 50) + "px";
-    pull1.style.marginTop = "-" + Math.round(appWidth / 50) + "px";
+    pull1.style.paddingLeft = appWidth / 10.2 + "px";
+    pull1.style.paddingRight = appWidth / 10.2 + "px";
+    pull1.style.paddingTop = appWidth / 50 + "px";
+    pull1.style.paddingBottom = appWidth / 50 + "px";
+    pull1.style.marginTop = "-" + appWidth / 50 + "px";
 
     // Pull 10
     let pull10 = document.getElementById("pull10");
     pull10.style.fontSize = appWidth / 21 + "px";
-    pull10.style.paddingLeft = appWidth / 12 + "px";
-    pull10.style.paddingRight = appWidth / 12 + "px";
-    pull10.style.paddingTop = Math.round(appWidth / 50) + "px";
-    pull10.style.paddingBottom = Math.round(appWidth / 50) + "px";
-    pull10.style.marginTop = "-" + Math.round(appWidth / 50) + "px";
+    pull10.style.paddingLeft = appWidth / 11.5 + "px";
+    pull10.style.paddingRight = appWidth / 11.5 + "px";
+    pull10.style.paddingTop = appWidth / 50 + "px";
+    pull10.style.paddingBottom = appWidth / 50 + "px";
+    pull10.style.marginTop = "-" + appWidth / 50 + "px";
 
     // SR Endured
     let SRendured = document.getElementById("SRendured");
     SRendured.style.width = appWidth / 5 + "px";
-    SRendured.style.right = appWidth / 10 + "px";
-    SRendured.style.bottom = appWidth / 10 + "px";
+    SRendured.style.right = appWidth / 9 + "px";
+    SRendured.style.bottom = appWidth / 15 + "px";
 
     // Pull 1 cost
     let cost1IMG = document.getElementById("cost1IMG");
