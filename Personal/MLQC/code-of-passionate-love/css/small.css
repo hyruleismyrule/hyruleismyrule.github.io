@@ -662,7 +662,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -689,5 +689,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.right4row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.eventGwc, .eventLimitedgwc, .right4row2, .forth-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Limitedgwc-button {
+  -webkit-transform: skew(0deg);
+          transform: skew(0deg);
 }
 /*# sourceMappingURL=small.css.map */

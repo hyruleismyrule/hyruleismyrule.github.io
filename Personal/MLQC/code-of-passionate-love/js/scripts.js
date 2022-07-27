@@ -913,7 +913,7 @@ function placeGrids(appWidth) {
 
     // event wish
     let eventWish = document.getElementById("event-wish-button");
-    limitedUp.style.fontSize = appWidth / 30 + "px";
+    eventWish.style.fontSize = appWidth / 30 + "px";
     eventWish.style.width = appWidth / 5 + "px";
     eventWish.style.height = appWidth / 10 + "px";
     eventWish.style.marginTop = appWidth / 20 + "px";
@@ -979,18 +979,23 @@ function placeGrids(appWidth) {
     let announceContainer = document.getElementById("announce-container");
     announceContainer.style.width = appWidth / 1.5 + "px";
 
+    // Galaxy and Limited coupon container
+    let right4row = document.getElementById("right4row");
+    right4row.style.width = appWidth + "px";
+
     // Galaxy Wish Coupon
     let gwcContainer = document.getElementById("gwcContainer");
-    gwcContainer.style.fontSize = fontSize = Math.round(appWidth / 49) + "px";
+    gwcContainer.style.fontSize = fontSize = appWidth / 35 + "px";
     gwcContainer.style.height = Math.round(appWidth / 23) + "px";
     gwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
 
     let gwctext = document.getElementById("gwctext");
-    gwctext.style.marginTop = Math.round(appWidth / 100) + "px";
+    gwctext.style.marginTop = appWidth / 250 + "px";
+    gwctext.style.width = appWidth / 5.2 + "px";
 
     let gwcIMG = document.getElementById("gwcIMG");
-    gwcIMG.style.width = Math.round(appWidth / 8) + "px";
-    gwcIMG.style.marginLeft = "-" + Math.round(appWidth / 28) + "px";
+    gwcIMG.style.height = appWidth / 8 + "px";
+    gwcIMG.style.marginLeft = "-" + appWidth / 28 + "px";
 
     let gwcButton = document.getElementById("gwc-button");
     gwcButton.style.height = Math.round(appWidth / 28) + "px";
@@ -1001,6 +1006,43 @@ function placeGrids(appWidth) {
     let gwcSVG = document.getElementById("gwcSVG");
     gwcSVG.style.width = Math.round(appWidth / 36) + "px";
     gwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // Limited Coupon
+    let limitedGwcContainer = document.getElementById("LimitedgwcContainer");
+    limitedGwcContainer.style.fontSize = fontSize = appWidth / 35 + "px";
+    limitedGwcContainer.style.height = Math.round(appWidth / 23) + "px";
+    limitedGwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
+
+    let limitedGwctext = document.getElementById("Limitedgwctext");
+    limitedGwctext.style.marginTop = appWidth / 250 + "px";
+    limitedGwctext.style.width = appWidth / 5.2 + "px";
+
+    let limitedGwcIMG = document.getElementById("LimitedgwcIMG");
+    limitedGwcIMG.style.height = appWidth / 8 + "px";
+    limitedGwcIMG.style.marginLeft = "-" + appWidth / 28 + "px";
+
+    let limitedGwcButton = document.getElementById("Limitedgwc-button");
+    limitedGwcButton.style.height = Math.round(appWidth / 28) + "px";
+    limitedGwcButton.style.width = Math.round(appWidth / 28) + "px";
+    limitedGwcButton.style.marginRight = Math.round(appWidth / 110) + "px";
+    limitedGwcButton.style.marginTop = Math.round(appWidth / 30) + "px";
+
+    let limitedGwcSVG = document.getElementById("LimitedgwcSVG");
+    limitedGwcSVG.style.width = Math.round(appWidth / 36) + "px";
+    limitedGwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    // eventGwc
+    let eventGwc = document.getElementById("eventGwc");
+    eventGwc.style.marginTop = appWidth / 30 + "px";
+
+    // eventLimitedgwc
+    let eventLimitedgwc = document.getElementById("eventLimitedgwc");
+    eventLimitedgwc.style.marginTop = "-" + appWidth / 22 + "px";
+
+
+    // let right4row2 = document.getElementById("right4row2");
+    // right4row2.style.marginLeft = "-" + appWidth + "px";
+    // right4row2.style.width = appWidth / 3 + "px";
 
     // Row 5
     let fifthRow = document.getElementById("row5");

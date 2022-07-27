@@ -671,7 +671,7 @@ body {
 
 .event-info-row {
     display: flex;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     align-items: center;
 }
 
@@ -691,3 +691,17 @@ body {
     align-items: center;
 }
 
+.right4row {
+    // background-color: #413b65;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+}
+
+.eventGwc, .eventLimitedgwc, .right4row2, .forth-row {
+    display: flex;
+}
+
+#Limitedgwc-button {
+    transform: skew(0deg);
+}
