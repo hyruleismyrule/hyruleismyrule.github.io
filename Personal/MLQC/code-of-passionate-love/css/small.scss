@@ -663,3 +663,31 @@ body {
     font-family: 'EB Garamond', serif;
     background-color: #9e3152;
 }
+
+.event-time {
+    // background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.event-info-row {
+    display: flex;
+    background-color: white;
+    align-items: center;
+}
+
+.name-box {
+    background-color: white;
+}
+
+.announce-container {
+    display: flex;
+}
+
+.event-share-button {
+    background-color: #9e3152;
+    color: #dfab92;
+    transform: rotateZ(90deg);
+    display: flex;
+    align-items: center;
+}
+

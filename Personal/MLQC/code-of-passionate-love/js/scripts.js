@@ -947,8 +947,37 @@ function placeGrids(appWidth) {
     eventInfo.style.width = appWidth / 20 + "px";
     eventInfo.style.height = appWidth / 20 + "px";
     eventInfo.style.fontSize = appWidth / 25 + "px";
+    eventInfo.style.marginTop = "-" + appWidth / 40 + "px";
     // eventInfo.style.marginLeft = appWidth / 80 + "px";
     // eventInfo.style.marginTop = "-" + appWidth / 20 + "px";
+
+    // info time
+    let infoTime = document.getElementById("event-time");
+    infoTime.style.fontSize = appWidth / 38 + "px";
+    infoTime.style.width = appWidth / 2 + "px";
+
+    // name box
+    let nameBox = document.getElementById("name-box");
+    nameBox.style.width = appWidth / 2 + "px";
+    nameBox.style.height = appWidth / 7 + "px";
+
+    // event info row
+    let eventInfoRow = document.getElementById("event-info-row");
+    eventInfoRow.style.width = appWidth / 2 + "px";
+    eventInfoRow.style.marginBottom = appWidth / 50 + "px";
+    // eventInfoRow.style.marginTop= "-" + appWidth / 50 + "px";
+
+    // event share
+    let eventShare = document.getElementById("event-share-button");
+    eventShare.style.width = appWidth / 7 + "px";
+    eventShare.style.height = appWidth / 20 + "px";
+    eventShare.style.fontSize = appWidth / 45 + "px";
+    eventShare.style.marginLeft = "-" + appWidth / 22 + "px";
+    eventShare.style.marginTop = appWidth / 22 + "px";
+
+    // announce container
+    let announceContainer = document.getElementById("announce-container");
+    announceContainer.style.width = appWidth / 1.5 + "px";
 
     // Galaxy Wish Coupon
     let gwcContainer = document.getElementById("gwcContainer");

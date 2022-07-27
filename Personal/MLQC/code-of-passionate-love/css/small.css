@@ -653,4 +653,41 @@ body {
   font-family: 'EB Garamond', serif;
   background-color: #9e3152;
 }
+
+.event-time {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.event-info-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.name-box {
+  background-color: white;
+}
+
+.announce-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.event-share-button {
+  background-color: #9e3152;
+  color: #dfab92;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=small.css.map */
