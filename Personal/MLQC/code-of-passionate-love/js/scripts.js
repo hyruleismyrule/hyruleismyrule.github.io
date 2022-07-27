@@ -329,7 +329,6 @@ function createBackgroundVideo() {
     backgroundVideo.autoplay = true;
     backgroundVideo.muted = true;
     backgroundVideo.loop = true;
-    // backgroundVideo.style.height = appHeight;
     backgroundVideo.setAttribute("height", appHeight);
     
     let backgroundSource = document.createElement("source");
