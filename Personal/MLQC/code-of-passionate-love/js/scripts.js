@@ -349,6 +349,7 @@ function removeBackgroundVideo() {
 
 
 function wishAnimation(timesPulled, karmas) {
+    removeBackgroundVideo();
     let appContainer = document.getElementById("app-container");
 
     let videoContainer = document.getElementById("videoContainer");
@@ -369,10 +370,12 @@ function wishAnimation(timesPulled, karmas) {
     videoElement.appendChild(sourceElement);
 
     if (timesPulled == 1) {
-        sourceElement.setAttribute("src", "../assets/videos/hf-pull1.mp4");
+        // sourceElement.setAttribute("src", "../assets/videos/hf-pull1.mp4");
+        sourceElement.setAttribute("src", "assets/1-pull-copl.mp4");
     }
     else {
-        sourceElement.setAttribute("src", "../assets/videos/hf-pull10.mp4");
+        // sourceElement.setAttribute("src", "../assets/videos/hf-pull10.mp4");
+        sourceElement.setAttribute("src", "assets/10-pull-copl.mp4");
     }
 
     videoElement.onended = function () {
@@ -411,6 +414,73 @@ function rarityAnimation(rarity, character) {
 
 }
 
+function SPAnimation(title, character) {
+    let appContainer = document.getElementById("app-container");
+
+    let videoContainer = document.getElementById("videoContainer");
+    let videoElement = document.createElement("video");
+    videoElement.autoplay = true;
+    videoElement.muted = true;
+
+    let height = appContainer.offsetHeight;
+    let width = appContainer.offsetWidth;
+
+    videoElement.setAttribute("height", height);
+    videoElement.setAttribute("width", width);
+
+    videoContainer.appendChild(videoElement);
+
+    let sourceElement = document.createElement("source");
+    sourceElement.setAttribute("type", "video/mp4");
+    videoElement.appendChild(sourceElement);
+
+    // ex. gavin-obsession-1
+    if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
+        sourceElement.setAttribute("src", "assets/copl-sp/" + character.toLowerCase() + "-" + title.toLowerCase() + "-1.mp4");
+    }
+    else {
+        sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
+    }
+
+
+    videoElement.onended = function () {
+        videoElement.remove();
+    };
+}
+
+function finalSPAnimation(title, character) {
+    let appContainer = document.getElementById("app-container");
+
+    let videoContainer = document.getElementById("videoContainer");
+    let videoElement = document.createElement("video");
+    videoElement.autoplay = true;
+    videoElement.muted = true;
+
+    let height = appContainer.offsetHeight;
+    let width = appContainer.offsetWidth;
+
+    videoElement.setAttribute("height", height);
+    videoElement.setAttribute("width", width);
+
+    videoContainer.appendChild(videoElement);
+
+    let sourceElement = document.createElement("source");
+    sourceElement.setAttribute("type", "video/mp4");
+    videoElement.appendChild(sourceElement);
+
+    // ex. gavin-obsession-2
+    if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
+        sourceElement.setAttribute("src", "assets/copl-sp/" + character.toLowerCase() + "-" + title.toLowerCase() + "-2.mp4");
+    }
+    else {
+        sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
+    }
+
+    videoElement.onended = function () {
+        videoElement.remove();
+    };
+}
+
 function displayResults(karmas) {
     displayResultsContainer();
 
@@ -440,6 +510,9 @@ function displayKarma(karma, displayedKarma, karmas) {
         // if (rarity == "SSR" || rarity == "SP") {
         if (rarity == "SSR") {
             rarityAnimation(rarity, character);
+        }
+        else if (rarity == "SP") {
+            SPAnimation(title, character);
         }
 
         let stringKarmas = JSON.stringify(karmas);
@@ -587,6 +660,12 @@ function getKarmaImgURL(karma) {
 function removeDisplayedKarma(karmas, displayedKarma) {
     let resultsContainer = document.getElementById("resultsContainer");
 
+    // SP check
+    if (karmas[displayedKarma].rarity == "SP") {
+        finalSPAnimation(title, character);
+    }
+    
+
     if (displayKarma == 9) {
         displayThumbnails(karmas);
     }
@@ -623,6 +702,7 @@ function backHome() {
             infoContainer.removeChild(infoContainer.firstChild);
         }
     }
+    createBackgroundVideo();
 }
 
 function displayThumbnails(karmas) {
