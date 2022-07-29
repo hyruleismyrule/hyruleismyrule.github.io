@@ -317,40 +317,41 @@ function skipVideo() {
 }
 
 function createBackgroundVideo() {
-    let appWidth = document.getElementById("app-container").offsetWidth;
-    let appHeight = document.getElementById("app-container").offsetHeight;
+    // let appWidth = document.getElementById("app-container").offsetWidth;
+    // let appHeight = document.getElementById("app-container").offsetHeight;
 
-    let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
-    backgroundVideoContainer.style.width = appWidth;
-    backgroundVideoContainer.style.height = appHeight;
+    // let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
+    // backgroundVideoContainer.style.width = appWidth;
+    // backgroundVideoContainer.style.height = appHeight;
 
-    // Regular Video
-    let backgroundVideo = document.createElement("video");
-    backgroundVideo.setAttribute("id", "backgroundVideo");
-    backgroundVideo.autoplay = true;
-    backgroundVideo.muted = true;
-    backgroundVideo.loop = true;
-    backgroundVideo.setAttribute("height", appHeight);
-    
-    let backgroundSource = document.createElement("source");
-    backgroundSource.setAttribute("id", "backgroundVideoSource");
-
-    backgroundSource.setAttribute("src", "../assets/videos//code-of-love-bg.mp4");
-    backgroundSource.setAttribute("type", "video/mp4");
-
-    backgroundVideo.appendChild(backgroundSource);
-    backgroundVideoContainer.appendChild(backgroundVideo);
-
-    // // Youtube Video
-    // let backgroundVideo = document.createElement("iframe");
+    // // Regular Video
+    // Note that I can't upload a video of this size to github
+    // let backgroundVideo = document.createElement("video");
     // backgroundVideo.setAttribute("id", "backgroundVideo");
+    // backgroundVideo.autoplay = true;
+    // backgroundVideo.muted = true;
+    // backgroundVideo.loop = true;
     // backgroundVideo.setAttribute("height", appHeight);
-    // backgroundVideo.setAttribute("width", appWidth);
     
-    // backgroundVideo.setAttribute("frameborder", "0");
-    // backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
+    // let backgroundSource = document.createElement("source");
+    // backgroundSource.setAttribute("id", "backgroundVideoSource");
 
+    // backgroundSource.setAttribute("src", "../assets/videos//code-of-love-bg.mp4");
+    // backgroundSource.setAttribute("type", "video/mp4");
+
+    // backgroundVideo.appendChild(backgroundSource);
     // backgroundVideoContainer.appendChild(backgroundVideo);
+
+    // Youtube Video
+    let backgroundVideo = document.createElement("iframe");
+    backgroundVideo.setAttribute("id", "backgroundVideo");
+    backgroundVideo.setAttribute("height", appHeight);
+    backgroundVideo.setAttribute("width", appWidth);
+    
+    backgroundVideo.setAttribute("frameborder", "0");
+    backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
+
+    backgroundVideoContainer.appendChild(backgroundVideo);
 
 }
 
