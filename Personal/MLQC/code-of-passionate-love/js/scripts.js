@@ -317,12 +317,12 @@ function skipVideo() {
 }
 
 function createBackgroundVideo() {
-    // let appWidth = document.getElementById("app-container").offsetWidth;
-    // let appHeight = document.getElementById("app-container").offsetHeight;
+    let appWidth = document.getElementById("app-container").offsetWidth;
+    let appHeight = document.getElementById("app-container").offsetHeight;
 
-    // let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
-    // backgroundVideoContainer.style.width = appWidth;
-    // backgroundVideoContainer.style.height = appHeight;
+    let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
+    backgroundVideoContainer.style.width = appWidth;
+    backgroundVideoContainer.style.height = appHeight;
 
     // // Regular Video
     // Note that I can't upload a video of this size to github
