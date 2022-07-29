@@ -325,32 +325,32 @@ function createBackgroundVideo() {
     backgroundVideoContainer.style.height = appHeight;
 
     // Regular Video
-    // let backgroundVideo = document.createElement("video");
-    // backgroundVideo.setAttribute("id", "backgroundVideo");
-    // backgroundVideo.autoplay = true;
-    // backgroundVideo.muted = true;
-    // backgroundVideo.loop = true;
-    // backgroundVideo.setAttribute("height", appHeight);
-    
-    // let backgroundSource = document.createElement("source");
-    // backgroundSource.setAttribute("id", "backgroundVideoSource");
-
-    // backgroundSource.setAttribute("src", "./assets/code-of-love-bg.mp4");
-    // backgroundSource.setAttribute("type", "video/mp4");
-
-    // backgroundVideo.appendChild(backgroundSource);
-    // backgroundVideoContainer.appendChild(backgroundVideo);
-
-    // Youtube Video
-    let backgroundVideo = document.createElement("iframe");
+    let backgroundVideo = document.createElement("video");
     backgroundVideo.setAttribute("id", "backgroundVideo");
+    backgroundVideo.autoplay = true;
+    backgroundVideo.muted = true;
+    backgroundVideo.loop = true;
     backgroundVideo.setAttribute("height", appHeight);
-    backgroundVideo.setAttribute("width", appWidth);
     
-    backgroundVideo.setAttribute("frameborder", "0");
-    backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
+    let backgroundSource = document.createElement("source");
+    backgroundSource.setAttribute("id", "backgroundVideoSource");
 
+    backgroundSource.setAttribute("src", "../assets/videos//code-of-love-bg.mp4");
+    backgroundSource.setAttribute("type", "video/mp4");
+
+    backgroundVideo.appendChild(backgroundSource);
     backgroundVideoContainer.appendChild(backgroundVideo);
+
+    // // Youtube Video
+    // let backgroundVideo = document.createElement("iframe");
+    // backgroundVideo.setAttribute("id", "backgroundVideo");
+    // backgroundVideo.setAttribute("height", appHeight);
+    // backgroundVideo.setAttribute("width", appWidth);
+    
+    // backgroundVideo.setAttribute("frameborder", "0");
+    // backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
+
+    // backgroundVideoContainer.appendChild(backgroundVideo);
 
 }
 
@@ -384,11 +384,11 @@ function wishAnimation(timesPulled, karmas) {
 
     if (timesPulled == 1) {
         // sourceElement.setAttribute("src", "../assets/videos/hf-pull1.mp4");
-        sourceElement.setAttribute("src", "assets/1-pull-copl.mp4");
+        sourceElement.setAttribute("src", "../assets/videos//1-pull-copl.mp4");
     }
     else {
         // sourceElement.setAttribute("src", "../assets/videos/hf-pull10.mp4");
-        sourceElement.setAttribute("src", "assets/10-pull-copl.mp4");
+        sourceElement.setAttribute("src", "../assets/videos//10-pull-copl.mp4");
     }
 
     videoElement.onended = function () {
@@ -448,8 +448,8 @@ function SPAnimation(title, character) {
     videoElement.appendChild(sourceElement);
 
     // ex. gavin-obsession-1
-    if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
-        sourceElement.setAttribute("src", "assets/copl-sp/" + character.toLowerCase() + "-" + title.toLowerCase() + "-1.mp4");
+    if (title == "Obsession" || title == "Preferance" || title == "Clinging" || title == "Tenderness") {
+        sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-1.mp4");
     }
     else {
         sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
@@ -462,36 +462,34 @@ function SPAnimation(title, character) {
 }
 
 function finalSPAnimation(title, character) {
-    let appContainer = document.getElementById("app-container");
-
-    let videoContainer = document.getElementById("videoContainer");
-    let videoElement = document.createElement("video");
-    videoElement.autoplay = true;
-    videoElement.muted = true;
-
-    let height = appContainer.offsetHeight;
-    let width = appContainer.offsetWidth;
-
-    videoElement.setAttribute("height", height);
-    videoElement.setAttribute("width", width);
-
-    videoContainer.appendChild(videoElement);
-
-    let sourceElement = document.createElement("source");
-    sourceElement.setAttribute("type", "video/mp4");
-    videoElement.appendChild(sourceElement);
-
-    // ex. gavin-obsession-2
     if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
-        sourceElement.setAttribute("src", "assets/copl-sp/" + character.toLowerCase() + "-" + title.toLowerCase() + "-2.mp4");
-    }
-    else {
-        sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
-    }
+        let appContainer = document.getElementById("app-container");
 
-    videoElement.onended = function () {
-        videoElement.remove();
-    };
+        let videoContainer = document.getElementById("videoContainer");
+        let videoElement = document.createElement("video");
+        videoElement.autoplay = true;
+        videoElement.muted = true;
+    
+        let height = appContainer.offsetHeight;
+        let width = appContainer.offsetWidth;
+    
+        videoElement.setAttribute("height", height);
+        videoElement.setAttribute("width", width);
+    
+        videoContainer.appendChild(videoElement);
+    
+        let sourceElement = document.createElement("source");
+        sourceElement.setAttribute("type", "video/mp4");
+        videoElement.appendChild(sourceElement);
+    
+        // ex. gavin-obsession-2
+        sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-2.mp4");
+
+    
+        videoElement.onended = function () {
+            videoElement.remove();
+        };
+    }
 }
 
 function displayResults(karmas) {
