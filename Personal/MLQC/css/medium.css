@@ -12,5 +12,11 @@
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  .wish-icon-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 /*# sourceMappingURL=medium.css.map */

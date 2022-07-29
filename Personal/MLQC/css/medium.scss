@@ -7,6 +7,8 @@
 
   .wish-tree-icon {
     display: block;
+    // // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
     a {
       p {
         text-align: left;
@@ -16,5 +18,14 @@
       }
     }
   }
+
+  .wish-icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  // .copl {
+  //   grid-column-start: 2;
+  // }
 
 }
