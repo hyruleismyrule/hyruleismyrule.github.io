@@ -324,21 +324,34 @@ function createBackgroundVideo() {
     backgroundVideoContainer.style.width = appWidth;
     backgroundVideoContainer.style.height = appHeight;
 
-    let backgroundVideo = document.createElement("video");
-    backgroundVideo.setAttribute("id", "backgroundVideo");
-    backgroundVideo.autoplay = true;
-    backgroundVideo.muted = true;
-    backgroundVideo.loop = true;
-    backgroundVideo.setAttribute("height", appHeight);
+    // Regular Video
+    // let backgroundVideo = document.createElement("video");
+    // backgroundVideo.setAttribute("id", "backgroundVideo");
+    // backgroundVideo.autoplay = true;
+    // backgroundVideo.muted = true;
+    // backgroundVideo.loop = true;
+    // backgroundVideo.setAttribute("height", appHeight);
     
-    let backgroundSource = document.createElement("source");
-    backgroundSource.setAttribute("id", "backgroundVideoSource");
+    // let backgroundSource = document.createElement("source");
+    // backgroundSource.setAttribute("id", "backgroundVideoSource");
 
-    backgroundSource.setAttribute("src", "./assets/code-of-love-bg.mp4");
-    backgroundSource.setAttribute("type", "video/mp4");
+    // backgroundSource.setAttribute("src", "./assets/code-of-love-bg.mp4");
+    // backgroundSource.setAttribute("type", "video/mp4");
 
-    backgroundVideo.appendChild(backgroundSource);
+    // backgroundVideo.appendChild(backgroundSource);
+    // backgroundVideoContainer.appendChild(backgroundVideo);
+
+    // Youtube Video
+    let backgroundVideo = document.createElement("iframe");
+    backgroundVideo.setAttribute("id", "backgroundVideo");
+    backgroundVideo.setAttribute("height", appHeight);
+    backgroundVideo.setAttribute("width", appWidth);
+    
+    backgroundVideo.setAttribute("frameborder", "0");
+    backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
+
     backgroundVideoContainer.appendChild(backgroundVideo);
+
 }
 
 function removeBackgroundVideo() {
@@ -702,7 +715,10 @@ function backHome() {
             infoContainer.removeChild(infoContainer.firstChild);
         }
     }
-    createBackgroundVideo();
+    if (!document.getElementById("backgroundVideo")) {
+        createBackgroundVideo();
+    }
+    
 }
 
 function displayThumbnails(karmas) {
