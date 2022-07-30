@@ -386,11 +386,11 @@ function wishAnimation(timesPulled, karmas) {
 
     if (timesPulled == 1) {
         // sourceElement.setAttribute("src", "../assets/videos/hf-pull1.mp4");
-        sourceElement.setAttribute("src", "../assets/videos//1-pull-copl.mp4");
+        sourceElement.setAttribute("src", "../assets/videos/1-pull-copl.mp4");
     }
     else {
         // sourceElement.setAttribute("src", "../assets/videos/hf-pull10.mp4");
-        sourceElement.setAttribute("src", "../assets/videos//10-pull-copl.mp4");
+        sourceElement.setAttribute("src", "../assets/videos/10-pull-copl.mp4");
     }
 
     videoElement.onended = function () {
