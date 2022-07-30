@@ -1,0 +1,32 @@
+{
+    "eventSP": [
+        {
+            "rarity": "SP",
+            "character": "Gavin",
+            "title": "Obsession",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SP",
+            "character": "Kiro",
+            "title": "Tenderness",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SP",
+            "character": "Lucien",
+            "title": "Clinging",
+            "stat": "Decision",
+            "king": "false"
+        },
+        {
+            "rarity": "SP",
+            "character": "Victor",
+            "title": "Preference",
+            "stat": "Affinity",
+            "king": "false"
+        }
+    ]
+}
