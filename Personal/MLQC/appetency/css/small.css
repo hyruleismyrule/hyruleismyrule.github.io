@@ -17,6 +17,9 @@ body {
 
 .app-container {
   overflow: hidden;
+  background-color: #90bee4;
+  background-image: url("assets/appetency-menu-alt.png");
+  background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto;
 }
@@ -131,10 +134,10 @@ body {
 }
 
 .redeem-btn {
-  background-color: #a02a45;
-  border: 2px solid #b25d60;
+  background-color: #cc5660;
+  border: 2px solid white;
   font-family: 'EB Garamond', serif;
-  color: #dfab92;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,6 +154,31 @@ body {
 }
 
 .redeem-btn img {
+  -webkit-transform: rotateZ(340deg);
+          transform: rotateZ(340deg);
+}
+
+.share-btn {
+  background-color: #528899;
+  border: 2px solid #97ccdd;
+  font-family: 'EB Garamond', serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.share-btn .share-txt {
+  -webkit-transform: rotateZ(315deg);
+          transform: rotateZ(315deg);
+}
+
+.share-btn img {
   -webkit-transform: rotateZ(340deg);
           transform: rotateZ(340deg);
 }
@@ -283,8 +311,8 @@ body {
 
 .pull10 {
   background: #dbaa9a;
-  background: linear-gradient(160deg, #dbaa9a 0%, #bc007a 100%);
-  border: 2px solid #d692a9;
+  background: linear-gradient(68deg, #e89d87 0%, #a80942 100%);
+  border: 2px solid #ddbbbe;
   font-family: 'EB Garamond', serif;
 }
 
@@ -592,10 +620,9 @@ body {
 }
 
 .redeem-number {
-  background-color: rgba(108, 56, 49, 0.8);
-}
-
-.redeem-number {
+  background-color: rgba(71, 86, 115, 0.8);
+  border-top: 2px solid #9598a5;
+  border-bottom: 2px solid #9598a5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,16 +644,16 @@ body {
 }
 
 .event-limited-btn {
-  background-color: #780c38;
-  border: 2px solid #d78b84;
-  color: #d78b84;
+  background-color: #cc5660;
+  border: 2px solid white;
+  color: white;
   font-family: 'Open Sans', sans-serif;
 }
 
 .event-wish-btn {
-  background-color: #413b65;
-  border: 2px solid #d78b84;
-  color: #d78b84;
+  background-color: #528899;
+  border: 2px solid #97ccdd;
+  color: white;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -645,10 +672,10 @@ body {
 
 .event-info-button {
   border-radius: 100%;
-  border: 1px solid #d78b84;
+  border: 1px solid white;
   color: white;
   font-family: 'EB Garamond', serif;
-  background-color: #9e3152;
+  background-color: #cc5660;
 }
 
 .event-time {
@@ -659,14 +686,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .name-box {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .announce-container {
@@ -676,8 +703,8 @@ body {
 }
 
 .event-share-button {
-  background-color: #9e3152;
-  color: #dfab92;
+  background-color: #cc5660;
+  color: white;
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
   display: -webkit-box;

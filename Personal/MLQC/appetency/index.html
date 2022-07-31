@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="#">
     <meta name="author" content="Hyruleismyrule">
-    <title>Code of Passionate Love • MLQC Wish Tree Simulator</title>
+    <title>Appetency • MLQC Wish Tree Simulator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/small.css" rel="stylesheet">
@@ -20,13 +20,13 @@
     <script src="https://kit.fontawesome.com/7d69b1e6ff.js" crossorigin="anonymous"></script>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180"
-        href="/Personal/MLQC/assets/favicon_package_v0.16/apple-touch-icon.png">
+        href="../assets/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
-        href="/Personal/MLQC/assets/favicon_package_v0.16/favicon-32x32.png">
+        href="../assets/favicon_package_v0.16/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16"
-        href="/Personal/MLQC/assets/favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="/Personal/MLQC/assets/favicon_package_v0.16/site.webmanifest">
-    <link rel="mask-icon" href="/Personal/MLQC/assets/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+        href="../assets/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -39,7 +39,6 @@
         <div id="videoContainer" onclick="skipVideo()"></div>
 
         <!-- Results -->
-        <!-- <div id="resultsContainerContainer"> -->
         <div class="resultsContainer" id="resultsContainer"></div>
         <!-- </div> -->
 
@@ -144,16 +143,22 @@
             </div>
             <div class="redeem-number" id="redeem-number">
                 <div class="redeem-img-box" id="redeem-img-box">
-                    <img id="redeem-box-img" src="../assets/resources/gift-box-icon.png" alt="gift-box">
+                    <img id="redeem-box-img" src="../assets/resources/drop-icon.png" alt="drop">
                 </div>
                 <div class="redeem-NUM" id="redeemNUM"></div>
+            </div>
+            <div class="share-container">
+                <button class="share-btn" id="share-button">
+                    <!-- <img id="redeem-img" src="../assets/resources/heart-flower.png" alt="heart-flower"> -->
+                    <div id="share-txt" class="share-txt">Share</div>
+                </button>
             </div>
         </div> <!-- End 2nd row -->
 
         <!-- Banner Placeholder -->
         <!-- <div id="banner-placeholder"></div> -->
 
-        <div class="left-buttons" id="left-buttons">
+        <!-- <div class="left-buttons" id="left-buttons">
             <div class="drop-container">
                 <button id="drop-button" class="drop-btn">Drop Rate</button>
             </div>
@@ -168,14 +173,13 @@
                 <button id="record-button" class="record-btn">
                     <div class="record-svg">
                         <svg id="recordSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
                                 d="M384 112v288c0 26.51-21.49 48-48 48h-288c-26.51 0-48-21.49-48-48v-288c0-26.51 21.49-48 48-48h288C362.5 64 384 85.49 384 112zM576 127.5v256.9c0 25.5-29.17 40.39-50.39 25.79L416 334.7V177.3l109.6-75.56C546.9 87.13 576 102.1 576 127.5z" />
                         </svg>
                     </div>Record
                 </button>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- Banner Placeholder -->
@@ -192,11 +196,6 @@
 
         <!-- Third Row -->
         <div class="third-row" id="third-row">
-            <!-- <button class="preview-btn" id="previewBTN" onclick="previewKarma()">Preview</button> -->
-            <!-- <button class="preview-btn" id="previewBTN">Preview</button> -->
-            <!-- <div class="limited-container" id="limitedContainer">
-                <p id="ownP">Own Limited <span id="own-limited"></span></p>
-            </div> -->
         </div><!-- End Third Row -->
 
         <!-- Fourth Row -->
@@ -204,7 +203,7 @@
             <div class="left4row" id="left4row">
                 <div id="event-info-row" class="event-info-row">
                     <button class="event-info-button" id="event-info-button">i</button>
-                    <div class="event-time" id="event-time">2022/02/14 5:00 - 2022/3/2 23:59</div>
+                    <div class="event-time" id="event-time">2022/05/20 5:00 - 2022/5/29 23:59</div>
                 </div>
                 <div class="announce-container" id="announce-container">
                     <div id="name-box" class="name-box"></div>
@@ -239,7 +238,7 @@
                     </button>
                 </div>
 
-                <div class="eventLimitedgwc" id="eventLimitedgwc">
+                <!-- <div class="eventLimitedgwc" id="eventLimitedgwc">
                     <img id="LimitedgwcIMG" src="../assets/resources/rebate-coupon.png" alt="galaxy-wish-coupon">
                     <div class="wish-container" id="LimitedgwcContainer">
                         <p id="Limitedgwctext">Owned: <span>0</span></p>
@@ -261,57 +260,12 @@
                                 d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
                         </svg>
                     </button>
-                </div>
+                </div> -->
             </div>
-            <!-- 
-            <div class="right4row2" id="right4row2">
-                <img id="gwcIMG" src="../assets/resources/galaxy-wish-coupon.png" alt="galaxy-wish-coupon">
-                <div class="wish-container" id="gwcContainer">
-                    <p id="gwctext">Owned: <span id="gwcNumb"></span></p>
-                </div>
-                
-                <button class="add-btn" id="gwc-button">
-                    <svg id="gwcSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <defs>
-                            <linearGradient id="Gradient1">
-                                <stop class="stop1" offset="0%" />
-                                <stop class="stop3" offset="100%" />
-                            </linearGradient>
-                            <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-                                <stop offset="0%" stop-color="red" />
-                                <stop offset="100%" stop-color="blue" />
-                            </linearGradient>
-                        </defs>
-                        <path id="rect1"
-                            d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
-                    </svg>
-                </button>
-            </div> -->
-
+            
         </div> <!-- End Fourth Row -->
 
-        <!-- <div id="fourthRow2" class="fourthRow2">
-            <div class="wish-container" id="gwcContainer">
-                <p id="gwctext">Galaxy Wish Coupon: <span id="gwcNumb"></span></p>
-            </div>
-            <img id="gwcIMG" src="../assets/resources/galaxy-wish-coupon.png" alt="galaxy-wish-coupon">
-            <button class="add-btn" id="gwc-button" onclick="addCoupons()">
-                <svg id="gwcSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <defs>
-                        <linearGradient id="Gradient1">
-                            <stop class="stop1" offset="0%" />
-                            <stop class="stop3" offset="100%" />
-                        </linearGradient>
-                        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0%" stop-color="red" />
-                            <stop offset="100%" stop-color="blue" />
-                        </linearGradient>
-                    </defs>
-                    <path id="rect1"
-                        d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
-                </svg>
-            </button>
-        </div> -->
+        
 
         <!-- Fifth Row -->
         <div class="free-container" id="row5">
@@ -359,19 +313,12 @@
 
         <!-- Video background -->
         <div class="video-background-container" id="videoBackgroundContainer">
-            <!-- <video id="backgroundVideo" width="483" height="853" type="video/mp4" autoplay muted controls loop>
-                <source id="backgroundVideoSource" src="./assets/code-of-love-bg.mp4">
-            </video> -->
-            <!-- <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/wB2zL2P0gPA?feature=share&loop=1">
-            </iframe> -->
+         
         </div>
     </div> <!-- End App Container -->
 
     <!-- javaScript -->
-    <!-- <script src="js/sizes.js"></script> -->
     <script src="js/scripts.js"></script>
-    <!-- <script src="js/new.js"></script> -->
 </body>
 
 </html>

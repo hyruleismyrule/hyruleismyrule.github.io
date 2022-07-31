@@ -49,8 +49,8 @@ let timesWished = 0;
 // resources
 let stamina = 150;
 let gold = 100000;
-let gems = 100000;
-let galaxyWishCoupon = 500;
+let gems = 10000000;
+let galaxyWishCoupon = 5000;
 let purchasesLeftToday = 999999;
 let ownLimited = 0;
 // let freeCountdown = 0;
@@ -317,41 +317,41 @@ function skipVideo() {
 }
 
 function createBackgroundVideo() {
-    let appWidth = document.getElementById("app-container").offsetWidth;
-    let appHeight = document.getElementById("app-container").offsetHeight;
+    // let appWidth = document.getElementById("app-container").offsetWidth;
+    // let appHeight = document.getElementById("app-container").offsetHeight;
 
-    let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
-    backgroundVideoContainer.style.width = appWidth;
-    backgroundVideoContainer.style.height = appHeight;
+    // let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
+    // backgroundVideoContainer.style.width = appWidth;
+    // backgroundVideoContainer.style.height = appHeight;
 
-    // // Regular Video
-    // Note that I can't upload a video of this size to github
-    // let backgroundVideo = document.createElement("video");
+    // // // Regular Video
+    // // Note that I can't upload a video of this size to github
+    // // let backgroundVideo = document.createElement("video");
+    // // backgroundVideo.setAttribute("id", "backgroundVideo");
+    // // backgroundVideo.autoplay = true;
+    // // backgroundVideo.muted = true;
+    // // backgroundVideo.loop = true;
+    // // backgroundVideo.setAttribute("height", appHeight);
+    
+    // // let backgroundSource = document.createElement("source");
+    // // backgroundSource.setAttribute("id", "backgroundVideoSource");
+
+    // // backgroundSource.setAttribute("src", "../assets/videos//code-of-love-bg.mp4");
+    // // backgroundSource.setAttribute("type", "video/mp4");
+
+    // // backgroundVideo.appendChild(backgroundSource);
+    // // backgroundVideoContainer.appendChild(backgroundVideo);
+
+    // // Youtube Video
+    // let backgroundVideo = document.createElement("iframe");
     // backgroundVideo.setAttribute("id", "backgroundVideo");
-    // backgroundVideo.autoplay = true;
-    // backgroundVideo.muted = true;
-    // backgroundVideo.loop = true;
     // backgroundVideo.setAttribute("height", appHeight);
+    // backgroundVideo.setAttribute("width", appWidth);
     
-    // let backgroundSource = document.createElement("source");
-    // backgroundSource.setAttribute("id", "backgroundVideoSource");
+    // backgroundVideo.setAttribute("frameborder", "0");
+    // backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
 
-    // backgroundSource.setAttribute("src", "../assets/videos//code-of-love-bg.mp4");
-    // backgroundSource.setAttribute("type", "video/mp4");
-
-    // backgroundVideo.appendChild(backgroundSource);
     // backgroundVideoContainer.appendChild(backgroundVideo);
-
-    // Youtube Video
-    let backgroundVideo = document.createElement("iframe");
-    backgroundVideo.setAttribute("id", "backgroundVideo");
-    backgroundVideo.setAttribute("height", appHeight);
-    backgroundVideo.setAttribute("width", appWidth);
-    
-    backgroundVideo.setAttribute("frameborder", "0");
-    backgroundVideo.setAttribute("src", "https://youtube.com/embed/wB2zL2P0gPA?autoplay=1&mute=1&controls=0&playlist=wB2zL2P0gPA&loop=1&loop=1");
-
-    backgroundVideoContainer.appendChild(backgroundVideo);
 
 }
 
@@ -963,7 +963,7 @@ function placeGrids(appWidth) {
     redeemButton.style.width = appWidth / 10 + "px";
     redeemButton.style.height = appWidth / 10 + "px";
     redeemButton.style.marginLeft = "-" + appWidth / 7.5 + "px";
-    redeemButton.style.marginTop = appWidth / 50 + "px";
+    redeemButton.style.marginTop = appWidth / 20 + "px";
 
     // let redeemContainer = document.getElementById("redeem-container");
     // redeemContainer.style.marginLeft = "-" + appWidth / 10 + "px";
@@ -978,38 +978,6 @@ function placeGrids(appWidth) {
     redeemTxt.style.marginTop = appWidth / 30 + "px";
     redeemTxt.style.marginLeft = "-" + appWidth / 14 + "px";
 
-
-    // Drop Rate
-    let dropButton = document.getElementById("drop-button");
-    dropButton.style.fontSize = appWidth / 32 + "px";
-    dropButton.style.width = appWidth / 10 + "px";
-    dropButton.style.height = appWidth / 10 + "px";
-    // dropButton.style.padding = appWidth / 90 + "px";
-    // dropButton.style.marginTop = appWidth / 50 + "px";
-
-    // mission
-    let missionButton = document.getElementById("mission-button");
-    missionButton.style.fontSize = appWidth / 52 + "px";
-    missionButton.style.width = appWidth / 10 + "px";
-    missionButton.style.height = appWidth / 10 + "px";
-
-    // feedback
-    let feedbackButton = document.getElementById("feedback-button");
-    feedbackButton.style.fontSize = appWidth / 50 + "px";
-    feedbackButton.style.width = appWidth / 10 + "px";
-    feedbackButton.style.height = appWidth / 10 + "px";
-
-    // record
-    let recordButton = document.getElementById("record-button");
-    recordButton.style.fontSize = appWidth / 50 + "px";
-    recordButton.style.width = appWidth / 10 + "px";
-    recordButton.style.height = appWidth / 10 + "px";
-
-    // record svg
-    let recordSVG = document.getElementById("recordSVG");
-    recordSVG.style.width = appWidth / 20 + "px";
-    // recordSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
-
     let redeemBoxImg = document.getElementById("redeem-box-img");
     redeemBoxImg.style.width = appWidth / 18 + "px";
     
@@ -1023,16 +991,62 @@ function placeGrids(appWidth) {
     let redeemNUMContainer = document.getElementById("redeemNUM");
     redeemNUMContainer.style.marginLeft = appWidth / 35 + "px";
 
-    let leftButtons = document.getElementById("left-buttons");
-    leftButtons.style.marginTop = "-" + appWidth / 20 + "px";
-    leftButtons.style.marginLeft = appWidth / 35 + "px";
-    leftButtons.style.height = appWidth / 2 + "px";
+    // Share
+    let shareButton = document.getElementById("share-button");
+    shareButton.style.fontSize = appWidth / 30 + "px";
+    shareButton.style.width = appWidth / 10 + "px";
+    shareButton.style.height = appWidth / 10 + "px";
+    shareButton.style.marginLeft = "-" + appWidth / 7.5 + "px";
+    shareButton.style.marginTop = appWidth / 20 + "px";
+
+
+    
+
+
+
+    // Drop Rate
+    // let dropButton = document.getElementById("drop-button");
+    // dropButton.style.fontSize = appWidth / 32 + "px";
+    // dropButton.style.width = appWidth / 10 + "px";
+    // dropButton.style.height = appWidth / 10 + "px";
+    // dropButton.style.padding = appWidth / 90 + "px";
+    // dropButton.style.marginTop = appWidth / 50 + "px";
+
+    // mission
+    // let missionButton = document.getElementById("mission-button");
+    // missionButton.style.fontSize = appWidth / 52 + "px";
+    // missionButton.style.width = appWidth / 10 + "px";
+    // missionButton.style.height = appWidth / 10 + "px";
+
+    // // feedback
+    // let feedbackButton = document.getElementById("feedback-button");
+    // feedbackButton.style.fontSize = appWidth / 50 + "px";
+    // feedbackButton.style.width = appWidth / 10 + "px";
+    // feedbackButton.style.height = appWidth / 10 + "px";
+
+    // // record
+    // let recordButton = document.getElementById("record-button");
+    // recordButton.style.fontSize = appWidth / 50 + "px";
+    // recordButton.style.width = appWidth / 10 + "px";
+    // recordButton.style.height = appWidth / 10 + "px";
+
+    // // record svg
+    // let recordSVG = document.getElementById("recordSVG");
+    // recordSVG.style.width = appWidth / 20 + "px";
+    // // recordSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+
+    
+
+    // let leftButtons = document.getElementById("left-buttons");
+    // leftButtons.style.marginTop = "-" + appWidth / 20 + "px";
+    // leftButtons.style.marginLeft = appWidth / 35 + "px";
+    // leftButtons.style.height = appWidth / 2 + "px";
 
 
     // // Banner placeholder
     let bannerPlaceholder = document.getElementById("banner-placeholder");
     bannerPlaceholder.style.width = appWidth + "px";
-    bannerPlaceholder.style.height = appWidth / 3.5 + "px";
+    bannerPlaceholder.style.height = appWidth / 1.7 + "px";
 
     // Third Row
     let thirdRow = document.getElementById("third-row");
@@ -1044,14 +1058,14 @@ function placeGrids(appWidth) {
     let limitedUp = document.getElementById("event-limited-button");
     limitedUp.style.fontSize = appWidth / 30 + "px";
     limitedUp.style.width = appWidth / 5 + "px";
-    limitedUp.style.height = appWidth / 10 + "px";
+    limitedUp.style.height = appWidth / 15 + "px";
 
     // event wish
     let eventWish = document.getElementById("event-wish-button");
     eventWish.style.fontSize = appWidth / 30 + "px";
     eventWish.style.width = appWidth / 5 + "px";
-    eventWish.style.height = appWidth / 10 + "px";
-    eventWish.style.marginTop = appWidth / 20 + "px";
+    eventWish.style.height = appWidth / 15 + "px";
+    eventWish.style.marginTop = appWidth / 30 + "px";
 
     // Preview
     // let previewBTN = document.getElementById("previewBTN");
@@ -1082,7 +1096,8 @@ function placeGrids(appWidth) {
     eventInfo.style.width = appWidth / 20 + "px";
     eventInfo.style.height = appWidth / 20 + "px";
     eventInfo.style.fontSize = appWidth / 25 + "px";
-    eventInfo.style.marginTop = "-" + appWidth / 40 + "px";
+    // eventInfo.style.marginTop = appWidth / 100 + "px";
+    eventInfo.style.marginTop = "-" + appWidth / 100 + "px";
     // eventInfo.style.marginLeft = appWidth / 80 + "px";
     // eventInfo.style.marginTop = "-" + appWidth / 20 + "px";
 
@@ -1093,22 +1108,22 @@ function placeGrids(appWidth) {
 
     // name box
     let nameBox = document.getElementById("name-box");
-    nameBox.style.width = appWidth / 2 + "px";
-    nameBox.style.height = appWidth / 7 + "px";
+    nameBox.style.width = appWidth / 1.5 + "px";
+    nameBox.style.height = appWidth / 6 + "px";
 
     // event info row
     let eventInfoRow = document.getElementById("event-info-row");
-    eventInfoRow.style.width = appWidth / 2 + "px";
+    eventInfoRow.style.width = appWidth / 1.8 + "px";
     eventInfoRow.style.marginBottom = appWidth / 50 + "px";
-    // eventInfoRow.style.marginTop= "-" + appWidth / 50 + "px";
+    eventInfoRow.style.marginTop= appWidth / 50 + "px";
 
     // event share
     let eventShare = document.getElementById("event-share-button");
-    eventShare.style.width = appWidth / 7 + "px";
+    eventShare.style.width = appWidth / 5 + "px";
     eventShare.style.height = appWidth / 20 + "px";
     eventShare.style.fontSize = appWidth / 45 + "px";
-    eventShare.style.marginLeft = "-" + appWidth / 22 + "px";
-    eventShare.style.marginTop = appWidth / 22 + "px";
+    eventShare.style.marginLeft = "-" + appWidth / 18 + "px";
+    eventShare.style.marginTop = appWidth / 17 + "px";
 
     // announce container
     let announceContainer = document.getElementById("announce-container");
@@ -1122,7 +1137,7 @@ function placeGrids(appWidth) {
     let gwcContainer = document.getElementById("gwcContainer");
     gwcContainer.style.fontSize = fontSize = appWidth / 35 + "px";
     gwcContainer.style.height = Math.round(appWidth / 23) + "px";
-    gwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
+    gwcContainer.style.marginTop = appWidth / 30 + "px";
 
     let gwctext = document.getElementById("gwctext");
     gwctext.style.marginTop = appWidth / 250 + "px";
@@ -1142,37 +1157,37 @@ function placeGrids(appWidth) {
     gwcSVG.style.width = Math.round(appWidth / 36) + "px";
     gwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
 
-    // Limited Coupon
-    let limitedGwcContainer = document.getElementById("LimitedgwcContainer");
-    limitedGwcContainer.style.fontSize = fontSize = appWidth / 35 + "px";
-    limitedGwcContainer.style.height = Math.round(appWidth / 23) + "px";
-    limitedGwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
+    // // Limited Coupon
+    // let limitedGwcContainer = document.getElementById("LimitedgwcContainer");
+    // limitedGwcContainer.style.fontSize = fontSize = appWidth / 35 + "px";
+    // limitedGwcContainer.style.height = Math.round(appWidth / 23) + "px";
+    // limitedGwcContainer.style.marginTop = Math.round(appWidth / 30) + "px";
 
-    let limitedGwctext = document.getElementById("Limitedgwctext");
-    limitedGwctext.style.marginTop = appWidth / 250 + "px";
-    limitedGwctext.style.width = appWidth / 5.2 + "px";
+    // let limitedGwctext = document.getElementById("Limitedgwctext");
+    // limitedGwctext.style.marginTop = appWidth / 250 + "px";
+    // limitedGwctext.style.width = appWidth / 5.2 + "px";
 
-    let limitedGwcIMG = document.getElementById("LimitedgwcIMG");
-    limitedGwcIMG.style.height = appWidth / 8 + "px";
-    limitedGwcIMG.style.marginLeft = "-" + appWidth / 28 + "px";
+    // let limitedGwcIMG = document.getElementById("LimitedgwcIMG");
+    // limitedGwcIMG.style.height = appWidth / 8 + "px";
+    // limitedGwcIMG.style.marginLeft = "-" + appWidth / 28 + "px";
 
-    let limitedGwcButton = document.getElementById("Limitedgwc-button");
-    limitedGwcButton.style.height = Math.round(appWidth / 28) + "px";
-    limitedGwcButton.style.width = Math.round(appWidth / 28) + "px";
-    limitedGwcButton.style.marginRight = Math.round(appWidth / 110) + "px";
-    limitedGwcButton.style.marginTop = Math.round(appWidth / 30) + "px";
+    // let limitedGwcButton = document.getElementById("Limitedgwc-button");
+    // limitedGwcButton.style.height = Math.round(appWidth / 28) + "px";
+    // limitedGwcButton.style.width = Math.round(appWidth / 28) + "px";
+    // limitedGwcButton.style.marginRight = Math.round(appWidth / 110) + "px";
+    // limitedGwcButton.style.marginTop = Math.round(appWidth / 30) + "px";
 
-    let limitedGwcSVG = document.getElementById("LimitedgwcSVG");
-    limitedGwcSVG.style.width = Math.round(appWidth / 36) + "px";
-    limitedGwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
+    // let limitedGwcSVG = document.getElementById("LimitedgwcSVG");
+    // limitedGwcSVG.style.width = Math.round(appWidth / 36) + "px";
+    // limitedGwcSVG.style.marginLeft = "-" + Math.round(appWidth / 110) + "px";
 
     // eventGwc
     let eventGwc = document.getElementById("eventGwc");
-    eventGwc.style.marginTop = appWidth / 30 + "px";
+    eventGwc.style.marginTop = appWidth / 16 + "px";
 
-    // eventLimitedgwc
-    let eventLimitedgwc = document.getElementById("eventLimitedgwc");
-    eventLimitedgwc.style.marginTop = "-" + appWidth / 22 + "px";
+    // // eventLimitedgwc
+    // let eventLimitedgwc = document.getElementById("eventLimitedgwc");
+    // eventLimitedgwc.style.marginTop = "-" + appWidth / 22 + "px";
 
 
     // let right4row2 = document.getElementById("right4row2");
@@ -1205,7 +1220,7 @@ function placeGrids(appWidth) {
     pull1.style.paddingRight = appWidth / 10.2 + "px";
     pull1.style.paddingTop = appWidth / 50 + "px";
     pull1.style.paddingBottom = appWidth / 50 + "px";
-    pull1.style.marginTop = "-" + appWidth / 50 + "px";
+    // pull1.style.marginTop = "-" + appWidth / 50 + "px";
 
     // Pull 10
     let pull10 = document.getElementById("pull10");
@@ -1214,7 +1229,7 @@ function placeGrids(appWidth) {
     pull10.style.paddingRight = appWidth / 11.5 + "px";
     pull10.style.paddingTop = appWidth / 50 + "px";
     pull10.style.paddingBottom = appWidth / 50 + "px";
-    pull10.style.marginTop = "-" + appWidth / 50 + "px";
+    // pull10.style.marginTop = "-" + appWidth / 50 + "px";
 
     // SR Endured
     let SRendured = document.getElementById("SRendured");
