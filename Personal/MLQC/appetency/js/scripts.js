@@ -246,79 +246,79 @@ function buy10() {
     }
     // console.log(karmas);
 
-    // karmas =
-    //     [
-    //         {
-    //             "rarity": "R",
-    //             "character": "Gavin",
-    //             "title": "Rock and a Hard Place",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "R",
-    //             "character": "Lucien",
-    //             "title": "Archive",
-    //             "stat": "Creativity",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "SSR",
-    //             "character": "Gavin",
-    //             "title": "俘获",
-    //             "stat": "Affinity",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "R",
-    //             "character": "Gavin",
-    //             "title": "Upwind",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "R",
-    //             "character": "Gavin",
-    //             "title": "Warming Up",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "R",
-    //             "character": "Gavin",
-    //             "title": "Rock and a Hard Place",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "R",
-    //             "character": "Gavin",
-    //             "title": "Whetstone",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "SSR",
-    //             "character": "Lucien",
-    //             "title": "侵染",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "SR",
-    //             "character": "Gavin",
-    //             "title": "Fierce Battle",
-    //             "stat": "Execution",
-    //             "king": "false"
-    //         },
-    //         {
-    //             "rarity": "R",
-    //             "character": "Lucien",
-    //             "title": "Detailed Narration",
-    //             "stat": "Decision",
-    //             "king": "false"
-    //         }
-    //     ];
+    karmas =
+        [
+            {
+                "rarity": "SSR",
+                "character": "Lucien",
+                "title": "侵染",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Archive",
+                "stat": "Creativity",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Detailed Narration",
+                "stat": "Decision",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Upwind",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Warming Up",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Rock and a Hard Place",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Whetstone",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Detailed Narration",
+                "stat": "Decision",
+                "king": "false"
+            },
+            {
+                "rarity": "SR",
+                "character": "Gavin",
+                "title": "Fierce Battle",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Detailed Narration",
+                "stat": "Decision",
+                "king": "false"
+            }
+        ];
 
     wishAnimation(timesPulled, karmas);
     timesWished = timesWished + 10;
@@ -747,10 +747,14 @@ function checkForSpecial(karmas, displayedKarma) {
         // console.log(karmas[displayedKarma].rarity + " - " + displayedKarma);
 
         if (karmas[displayedKarma].rarity == "SP" || karmas[displayedKarma].rarity == "SSR") {
-            console.log(karmas[displayedKarma].rarity);
-            SSRorSP = true;
-            
-            break;
+            if (displayedKarma != 0) {
+                console.log(karmas[displayedKarma].rarity);
+                SSRorSP = true;
+                
+                break;
+            } else {
+                displayedKarma += 1;
+            }
         }
         else {
             displayedKarma += 1;
