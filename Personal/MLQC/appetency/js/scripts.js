@@ -23,21 +23,21 @@ fetch(standardURL)
         standardR = jsonObject['standardR'];
     })
 
-// Get Karma List from code-of-passionate-love.json
-let eventSP = [];
+// Get Karma List from appetency.json
+let eventSSR = [];
 
-const eventURL = 'code-of-passionate-love.json';
+const eventURL = 'appetency.json';
 fetch(eventURL)
     .then(function (response) {
         return response.json();
     })
     .then(function (jsonObject) {
-        eventSP = jsonObject['eventSP'];
+        eventSSR = jsonObject['eventSSR'];
     })
 
 // Event Drop Rates
 // All SP and SSR 2.5%
-// (Event SP 1.5%)
+// (Event SSR 1.5%)
 // SR 10%
 // R 87.5%
 // Buying 10 ar a time guarentees 1 SR or above
@@ -168,7 +168,7 @@ function draw1() {
     }
     else {
         if (karmaRoll >= 99 || karmaRoll > 98 && karmaDeci >= 50) {
-            let karmaArray = "eventSP";
+            let karmaArray = "eventSSR";
             karma = pickKarma(karmaArray);
         }
         else if (karmaRoll >= 98 || karmaRoll > 97 && karmaDeci >= 50) {
@@ -257,7 +257,7 @@ function guarenteedSRPlus() {
     let karmaDeci = getRandomInt(1, 101);
 
     if (karmaRoll >= 99 || karmaRoll > 98 && karmaDeci >= 50) {
-        let karmaArray = "eventSP";
+        let karmaArray = "eventSSR";
         karma = pickKarma(karmaArray);
     }
     else if (karmaRoll >= 98 || karmaRoll > 97 && karmaDeci >= 50) {
@@ -273,9 +273,9 @@ function guarenteedSRPlus() {
 }
 
 function pickKarma(karmaArray) {
-    if (karmaArray == "eventSP") {
-        let index = getRandomInt(0, eventSP.length);
-        let karma = eventSP[index];
+    if (karmaArray == "eventSSR") {
+        let index = getRandomInt(0, eventSSR.length);
+        let karma = eventSSR[index];
         return karma;
     }
     else if (karmaArray == "KingSSR") {
@@ -428,70 +428,70 @@ function rarityAnimation(rarity, character) {
 
 }
 
-function SPAnimation(title, character) {
-    let appContainer = document.getElementById("app-container");
+// function SPAnimation(title, character) {
+//     let appContainer = document.getElementById("app-container");
 
-    let videoContainer = document.getElementById("videoContainer");
-    let videoElement = document.createElement("video");
-    videoElement.autoplay = true;
-    videoElement.muted = true;
+//     let videoContainer = document.getElementById("videoContainer");
+//     let videoElement = document.createElement("video");
+//     videoElement.autoplay = true;
+//     videoElement.muted = true;
 
-    let height = appContainer.offsetHeight;
-    let width = appContainer.offsetWidth;
+//     let height = appContainer.offsetHeight;
+//     let width = appContainer.offsetWidth;
 
-    videoElement.setAttribute("height", height);
-    videoElement.setAttribute("width", width);
+//     videoElement.setAttribute("height", height);
+//     videoElement.setAttribute("width", width);
 
-    videoContainer.appendChild(videoElement);
+//     videoContainer.appendChild(videoElement);
 
-    let sourceElement = document.createElement("source");
-    sourceElement.setAttribute("type", "video/mp4");
-    videoElement.appendChild(sourceElement);
+//     let sourceElement = document.createElement("source");
+//     sourceElement.setAttribute("type", "video/mp4");
+//     videoElement.appendChild(sourceElement);
 
-    // ex. gavin-obsession-1
-    if (title == "Obsession" || title == "Preferance" || title == "Clinging" || title == "Tenderness") {
-        sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-1.mp4");
-    }
-    else {
-        sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
-    }
+//     // ex. gavin-obsession-1
+//     if (title == "Obsession" || title == "Preferance" || title == "Clinging" || title == "Tenderness") {
+//         sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-1.mp4");
+//     }
+//     else {
+//         sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
+//     }
 
 
-    videoElement.onended = function () {
-        videoElement.remove();
-    };
-}
+//     videoElement.onended = function () {
+//         videoElement.remove();
+//     };
+// }
 
-function finalSPAnimation(title, character) {
-    if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
-        let appContainer = document.getElementById("app-container");
+// function finalSPAnimation(title, character) {
+//     if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
+//         let appContainer = document.getElementById("app-container");
 
-        let videoContainer = document.getElementById("videoContainer");
-        let videoElement = document.createElement("video");
-        videoElement.autoplay = true;
-        videoElement.muted = true;
+//         let videoContainer = document.getElementById("videoContainer");
+//         let videoElement = document.createElement("video");
+//         videoElement.autoplay = true;
+//         videoElement.muted = true;
     
-        let height = appContainer.offsetHeight;
-        let width = appContainer.offsetWidth;
+//         let height = appContainer.offsetHeight;
+//         let width = appContainer.offsetWidth;
     
-        videoElement.setAttribute("height", height);
-        videoElement.setAttribute("width", width);
+//         videoElement.setAttribute("height", height);
+//         videoElement.setAttribute("width", width);
     
-        videoContainer.appendChild(videoElement);
+//         videoContainer.appendChild(videoElement);
     
-        let sourceElement = document.createElement("source");
-        sourceElement.setAttribute("type", "video/mp4");
-        videoElement.appendChild(sourceElement);
+//         let sourceElement = document.createElement("source");
+//         sourceElement.setAttribute("type", "video/mp4");
+//         videoElement.appendChild(sourceElement);
     
-        // ex. gavin-obsession-2
-        sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-2.mp4");
+//         // ex. gavin-obsession-2
+//         sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-2.mp4");
 
     
-        videoElement.onended = function () {
-            videoElement.remove();
-        };
-    }
-}
+//         videoElement.onended = function () {
+//             videoElement.remove();
+//         };
+//     }
+// }
 
 function displayResults(karmas) {
     displayResultsContainer();
@@ -524,7 +524,8 @@ function displayKarma(karma, displayedKarma, karmas) {
             rarityAnimation(rarity, character);
         }
         else if (rarity == "SP") {
-            SPAnimation(title, character);
+            rarityAnimation(rarity, character);
+            // SPAnimation(title, character);
         }
 
         let stringKarmas = JSON.stringify(karmas);
@@ -673,9 +674,9 @@ function removeDisplayedKarma(karmas, displayedKarma) {
     let resultsContainer = document.getElementById("resultsContainer");
 
     // SP check
-    if (karmas[displayedKarma].rarity == "SP") {
-        finalSPAnimation(title, character);
-    }
+    // if (karmas[displayedKarma].rarity == "SP") {
+    //     finalSPAnimation(title, character);
+    // }
     
 
     if (displayKarma == 9) {

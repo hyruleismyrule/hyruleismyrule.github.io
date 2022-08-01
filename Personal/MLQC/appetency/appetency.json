@@ -1,31 +1,31 @@
 {
-    "eventSP": [
+    "eventSSR": [
         {
-            "rarity": "SP",
+            "rarity": "SSR",
             "character": "Gavin",
-            "title": "Obsession",
-            "stat": "Execution",
-            "king": "false"
-        },
-        {
-            "rarity": "SP",
-            "character": "Kiro",
-            "title": "Tenderness",
-            "stat": "Execution",
-            "king": "false"
-        },
-        {
-            "rarity": "SP",
-            "character": "Lucien",
-            "title": "Clinging",
-            "stat": "Decision",
-            "king": "false"
-        },
-        {
-            "rarity": "SP",
-            "character": "Victor",
-            "title": "Preference",
+            "title": "俘获",
             "stat": "Affinity",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Kiro",
+            "title": "欲壑",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Lucien",
+            "title": "侵染",
+            "stat": "Execution",
+            "king": "false"
+        },
+        {
+            "rarity": "SSR",
+            "character": "Victor",
+            "title": "淋漓",
+            "stat": "Decision",
             "king": "false"
         }
     ]
