@@ -781,24 +781,48 @@ function checkForSpecial(karmas, displayedKarma) {
         displayThumbnails(karmas);
     }
     else {
-        let SSRLocation = 0;
+        let numSSR = 0;
+        let SSRLocation = [];
+
         for (let i = displayedKarma + 1; i < karmas.length; i++) {
-            // console.log(karmas);
-            // console.log(karmas[i]);
-            // console.log(karmas[i].rarity);
+           
             if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-                displayedKarma = i - 1;
-                // displayedKarma = i;
-                SSRLocation = i;
-                // displayKarma(karma, displayedKarma, karmas)
-                removeDisplayedKarma(karmas, displayedKarma);
-                displayKarma(karmas[i], displayedKarma, karmas);
+                numSSR += 1;
+                
+                SSRLocation.push(i);
             }
         }
-        if (SSRLocation == 0) {
+        if (numSSR == 0) {
             displayThumbnails(karmas);
         }
+        else {
+            removeDisplayedKarma(karmas, displayedKarma);
+
+            displayedKarma = SSRLocation[i] - 1;
+            displayKarma(karmas[i], displayedKarma, karmas);
+        }
     }
+
+
+    // else {
+    //     let SSRLocation = 0;
+    //     for (let i = displayedKarma + 1; i < karmas.length; i++) {
+    //         // console.log(karmas);
+    //         // console.log(karmas[i]);
+    //         // console.log(karmas[i].rarity);
+    //         if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
+    //             displayedKarma = i - 1;
+    //             // displayedKarma = i;
+    //             SSRLocation = i;
+    //             // displayKarma(karma, displayedKarma, karmas)
+    //             removeDisplayedKarma(karmas, displayedKarma);
+    //             displayKarma(karmas[i], displayedKarma, karmas);
+    //         }
+    //     }
+    //     if (SSRLocation == 0) {
+    //         displayThumbnails(karmas);
+    //     }
+    // }
 }
 
 function backHome() {
