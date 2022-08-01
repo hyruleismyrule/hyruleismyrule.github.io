@@ -29,10 +29,10 @@ body {
 
 .app-container {
     overflow: hidden;
-    background-color: #90bee4;
+    // background-color: #90bee4;
     // background-image: url("assets/appatency-menu.png");
     // background-image: url("assets/appetency-menu-alt.png");
-    background-image: url("assets/appetency-temp-background.jpg");
+    // background-image: url("assets/appetency-temp-background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 0 auto;
@@ -738,4 +738,8 @@ body {
     top: 0;
     z-index: -1;
     overflow: hidden;
+}
+
+iframe {
+    border: none;
 }
