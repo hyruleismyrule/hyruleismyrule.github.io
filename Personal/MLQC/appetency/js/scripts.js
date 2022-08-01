@@ -245,6 +245,81 @@ function buy10() {
         }
     }
     // console.log(karmas);
+
+    karmas =
+        [
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Rock and a Hard Place",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Archive",
+                "stat": "Creativity",
+                "king": "false"
+            },
+            {
+                "rarity": "SSR",
+                "character": "Gavin",
+                "title": "俘获",
+                "stat": "Affinity",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Upwind",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Warming Up",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Rock and a Hard Place",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Whetstone",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "SSR",
+                "character": "Lucien",
+                "title": "侵染",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "SR",
+                "character": "Gavin",
+                "title": "Fierce Battle",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Detailed Narration",
+                "stat": "Decision",
+                "king": "false"
+            }
+        ];
+
     wishAnimation(timesPulled, karmas);
     timesWished = timesWished + 10;
     updateCosts();
@@ -697,110 +772,143 @@ function removeDisplayedKarma(karmas, displayedKarma) {
 }
 
 function checkForSpecial(karmas, displayedKarma) {
-    karmas =
-        [
-            {
-                "rarity": "R",
-                "character": "Gavin",
-                "title": "Rock and a Hard Place",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "R",
-                "character": "Lucien",
-                "title": "Archive",
-                "stat": "Creativity",
-                "king": "false"
-            },
-            {
-                "rarity": "SSR",
-                "character": "Gavin",
-                "title": "俘获",
-                "stat": "Affinity",
-                "king": "false"
-            },
-            {
-                "rarity": "R",
-                "character": "Gavin",
-                "title": "Upwind",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "R",
-                "character": "Gavin",
-                "title": "Warming Up",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "R",
-                "character": "Gavin",
-                "title": "Rock and a Hard Place",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "R",
-                "character": "Gavin",
-                "title": "Whetstone",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "SSR",
-                "character": "Lucien",
-                "title": "侵染",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "SR",
-                "character": "Gavin",
-                "title": "Fierce Battle",
-                "stat": "Execution",
-                "king": "false"
-            },
-            {
-                "rarity": "R",
-                "character": "Lucien",
-                "title": "Detailed Narration",
-                "stat": "Decision",
-                "king": "false"
-            }
-        ];
+    
 
     // console.log(karmas);
+    removeDisplayedKarma(karmas, displayedKarma);
 
+    
+    let SSRorSP = false;
+       
+    while (SSRorSP == false || displayedKarma < 9) {
+          
+        if (karmas[displayedKarma].rarity == "SP" || karmas[displayedKarma].rarity == "SSR") {
+            SSRorSP = true;
+            
+            break;
+        }
+        else {
+            displayedKarma += 1;
+        }
 
-    if (displayKarma == 9) {
-        displayThumbnails(karmas);
     }
-    else if (karmas.length == 1) {
+
+    if (displayKarma == 10) {
         displayThumbnails(karmas);
     }
     else {
-        let numSSR = 0;
-        let SSRLocation = [];
 
-        for (let i = displayedKarma + 1; i < karmas.length; i++) {
-           
-            if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-                numSSR += 1;
+        displayKarma(karmas[displayedKarma], displayedKarma, karmas)
+    }
+
+
+
+
+
+        // let numSSR = 0;
+        // let SSRLocations = [];
+
+        // let karmaNum = 0;
+        // while (karmaNum < 10) {
+            
+        //     if (karmas[karmaNum].rarity == "SP" || karmas[karmaNum].rarity == "SSR") {
+        //         numSSR += 1;
+        //         SSRLocations.push(karmaNum);
+        //     }
+
+        //     karmaNum++;
+        // }
+
+        // if (numSSR == 0) {
+        //     displayThumbnails(karmas);
+        // }
+
+        // for (let i = 0; i < SSRLocations.length; i++) {
+        //     if (displayKarma < SSRLocations[i]) {
+        //         displayedKarma = i - 1;
+        //         removeDisplayedKarma(karmas, displayedKarma);
+        //         displayKarma(karmas[i], displayedKarma, karmas);
+        //     }
+        //     // else {
+
+        //     // }
+            
+        // }
+
+
+
+
+        
+
+
+
+        // // for in loop
+        // for (let i in karmas) {
+        //     if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
+        //         displayedKarma = i - 1;
+        //     }
+        // }
+
+
+        // let SSRLocation = 0;
+
+        // for (let i in karmas) {
+        //     // While loop
+        //     // console.log(karmas[i])
+        //     // console.log(i)
+        //     // console.log(karmas[i].rarity)
+
+        //     // while (karmas[i].rarity != "SP" || karmas[i].rarity != "SSR" || i == 9) {
+        //     if (karmas[i].rarity != "SP" || karmas[i].rarity != "SSR" || i == 9) {
+        //         displayedKarma += 1;
+
+        //         // i += 1;
+        //         // SSRLocation = i;
+        //     } 
+        //     else {
+        //         SSRLocation = i;
+        //         displayedKarma -= 1;
+        //     }
+        //     // }
+        // }
+        
+        // if (SSRLocation == 0) {
+        //     displayThumbnails(karmas);
+        // }
+        // else {
+        //     removeDisplayedKarma(karmas, displayedKarma);
+        //     displayKarma(karmas[SSRLocation], displayedKarma, karmas);
+        // }
+
+        
+
+
+        // let numSSR = 0;
+        // // let SSRLocation = [];
+        // removeDisplayedKarma(karmas, displayedKarma);
+        // // for (let i = displayedKarma + 1; i < karmas.length; i++) {
+        // for (let i = displayedKarma + 1; karmas[i].rarity != "SP" || karmas[i].rarity != "SSR"; i++) {
+
+        //     numSSR += 1
+
+        //     displayedKarma = i - 1;
+        //     displayKarma(karmas[i], displayedKarma, karmas);
+
+        //     // if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
+        //     //     numSSR += 1;
                 
-                SSRLocation.push(i);
-            }
-        }
-        if (numSSR == 0) {
-            displayThumbnails(karmas);
-        }
-        else {
-            removeDisplayedKarma(karmas, displayedKarma);
+        //     //     SSRLocation.push(i);
+        //     // }
+        // }
+        // if (numSSR == 0) {
+        //     displayThumbnails(karmas);
+        // }
+        // else {
+        //     removeDisplayedKarma(karmas, displayedKarma);
 
-            displayedKarma = SSRLocation[i] - 1;
-            displayKarma(karmas[i], displayedKarma, karmas);
-        }
+        //     displayedKarma = SSRLocation[i] - 1;
+        //     displayKarma(karmas[i], displayedKarma, karmas);
+        // }
     }
 
 
@@ -823,7 +931,7 @@ function checkForSpecial(karmas, displayedKarma) {
     //         displayThumbnails(karmas);
     //     }
     // }
-}
+
 
 function backHome() {
     if (document.getElementById("summaryBox")) {
