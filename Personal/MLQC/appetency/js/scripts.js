@@ -343,15 +343,15 @@ function createBackgroundVideo() {
 
 }
 
-function removeBackgroundVideo() {
-    let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
-    backgroundVideoContainer.removeChild(backgroundVideoContainer.firstChild);
-}
+// function removeBackgroundVideo() {
+//     let backgroundVideoContainer = document.getElementById("videoBackgroundContainer");
+//     backgroundVideoContainer.removeChild(backgroundVideoContainer.firstChild);
+// }
 
 
 
 function wishAnimation(timesPulled, karmas) {
-    removeBackgroundVideo();
+    // removeBackgroundVideo();
     let appContainer = document.getElementById("app-container");
 
     let videoContainer = document.getElementById("videoContainer");
@@ -386,31 +386,41 @@ function wishAnimation(timesPulled, karmas) {
 }
 
 function rarityAnimation(rarity, character) {
-    let appContainer = document.getElementById("app-container");
+    // let played = false;
+    // if (played == false) {
+        let appContainer = document.getElementById("app-container");
 
-    let videoContainer = document.getElementById("videoContainer");
-    let videoElement = document.createElement("video");
-    videoElement.autoplay = true;
-    videoElement.muted = true;
+        let videoContainer = document.getElementById("videoContainer");
+        let videoElement = document.createElement("video");
+        videoElement.setAttribute("id", "vidID");
+        // videoElement.autoplay = true;
+        videoElement.muted = true;
+    
+        let height = appContainer.offsetHeight;
+        let width = appContainer.offsetWidth;
+    
+        videoElement.setAttribute("height", height);
+        videoElement.setAttribute("width", width);
+    
+        videoContainer.appendChild(videoElement);
+    
+        let sourceElement = document.createElement("source");
+        sourceElement.setAttribute("type", "video/mp4");
+        videoElement.appendChild(sourceElement);
+    
+        // ex. ssr-lucien
+        sourceElement.setAttribute("src", "../assets/videos/" + rarity.toLowerCase() + "-" + character.toLowerCase() + ".mp4");
+    // }
 
-    let height = appContainer.offsetHeight;
-    let width = appContainer.offsetWidth;
+    videoElement.play();
+    videoElement.addEventListener('ended', function() { videoElement.remove(); });
+    
+    // videoElement = document.getElementById("vidID");
 
-    videoElement.setAttribute("height", height);
-    videoElement.setAttribute("width", width);
-
-    videoContainer.appendChild(videoElement);
-
-    let sourceElement = document.createElement("source");
-    sourceElement.setAttribute("type", "video/mp4");
-    videoElement.appendChild(sourceElement);
-
-    // ex. ssr-lucien
-    sourceElement.setAttribute("src", "../assets/videos/" + rarity.toLowerCase() + "-" + character.toLowerCase() + ".mp4");
-
-    videoElement.onended = function () {
-        videoElement.remove();
-    };
+    // videoElement.onended = function () {
+    //     videoElement.remove();
+    //     played = true;
+    // };
 
 }
 
@@ -613,7 +623,8 @@ function displayKarma(karma, displayedKarma, karmas) {
         let skipContainer = document.createElement("button");
         skipContainer.setAttribute("class", "skipContainer");
         skipContainer.setAttribute("id", "skipContainer");
-        skipContainer.setAttribute("onclick", 'displayThumbnails(' + stringKarmas + ')');
+        // skipContainer.setAttribute("onclick", 'displayThumbnails(' + stringKarmas + ')');
+        skipContainer.setAttribute("onclick", 'checkForSpecial(' + stringKarmas + ', ' + displayedKarma + ')');
 
         let skipText = document.createElement("div");
         skipText.setAttribute("id", "skipText");
@@ -685,6 +696,65 @@ function removeDisplayedKarma(karmas, displayedKarma) {
     }
 }
 
+function checkForSpecial(karmas, displayedKarma) {
+    if (displayKarma == 9 || displayKarma == 1) {
+        displayThumbnails(karmas);
+    }
+    else {
+        let numSSR = 0;
+        let SSRLocation = [];
+        for (let i = displayedKarma; i < karmas.length; i++) {
+            if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
+                numSSR += 1
+                displayedKarma = i - 1;
+                // displayedKarma = i;
+                SSRLocation = i;
+                // displayKarma(karma, displayedKarma, karmas)
+                removeDisplayedKarma(karmas, displayedKarma);
+                displayKarma(karmas[i], displayedKarma, karmas);
+            }
+        }
+        if (numSSR == 0) {
+            displayThumbnails(karmas);
+        }
+    }
+    
+    // if (displayKarma == 9 || karmas.length == 1) {
+    //     displayThumbnails(karmas);
+    // }
+    // else {
+    //     let numSSR = 0;
+    //     let SSRLocation = [];
+    //     for (let i = displayedKarma; i < karmas.length; i++) {
+    //         if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
+    //             numSSR += 1
+    //             SSRLocation.push(i);
+    //         }
+    //     }
+    //     if (numSSR == 0) {
+    //         displayThumbnails(karmas);
+    //     }
+    //     else {
+    //         for (let i = 0; i < SSRLocation.length; i++) {
+    //             if (displayedKarma == SSRLocation[i]) {
+    //                 displayKarma(karmas[SSRLocation[i]], displayedKarma, karmas)
+    //             }
+    //             else {
+    //                 // displayedKarma
+    //             }
+    //         }
+            
+
+    //         // displayedKarma = i - 1;
+    //         // // displayedKarma = i;
+    //         // SSRLocation = i;
+    //         // // displayKarma(karma, displayedKarma, karmas)
+    //         // removeDisplayedKarma(karmas, displayedKarma);
+    //         // displayKarma(karmas[i], displayedKarma, karmas);
+    //     }
+    // }
+}
+
 function backHome() {
     if (document.getElementById("summaryBox")) {
         let resultsContainer = document.getElementById("resultsContainer");
@@ -702,7 +772,7 @@ function backHome() {
         }
     }
     if (!document.getElementById("backgroundVideo")) {
-        createBackgroundVideo();
+        // createBackgroundVideo();
     }
     
 }
@@ -857,10 +927,10 @@ function responsiveAppSize() {
     }
 
     if (document.getElementById("backgroundVideo")) {
-        removeBackgroundVideo();
+        // removeBackgroundVideo();
     }
     else {
-        createBackgroundVideo();
+        // createBackgroundVideo();
     }
 }
 
@@ -1688,5 +1758,5 @@ function buildPreviewKarma(array, previewBox) {
 
 // This needs to be built last so that the dimensions are correct
 if (!document.getElementById("backgroundVideo")) {
-    createBackgroundVideo();
+    // createBackgroundVideo();
 }
