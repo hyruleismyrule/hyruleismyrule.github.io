@@ -709,12 +709,37 @@ function removeDisplayedKarma(karmas, displayedKarma) {
     }
 }
 
+function specialRemoveDisplayedKarma(karmas, displayedKarma) {
+    let resultsContainer = document.getElementById("resultsContainer");
+
+  
+    if (displayedKarma == 9) {
+        displayThumbnails(karmas);
+    }
+    else if (karmas.length == 1) {
+        displayThumbnails(karmas);
+    }
+    else {
+        while (resultsContainer.firstChild) {
+            resultsContainer.removeChild(resultsContainer.firstChild);
+        }
+        if (displayedKarma < 9) {
+            displayedKarma += 1;
+            if (displayedKarma == 9) {
+                displayThumbnails(karmas);
+            }
+        }
+        else {
+            displayThumbnails(karmas);
+        }
+    }
+}
+
 function checkForSpecial(karmas, displayedKarma) {
     
 
     // console.log(karmas);
-    removeDisplayedKarma(karmas, displayedKarma);
-
+    specialRemoveDisplayedKarma(karmas, displayedKarma)
     
     let SSRorSP = false;
        
