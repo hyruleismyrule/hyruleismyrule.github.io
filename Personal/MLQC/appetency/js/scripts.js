@@ -499,70 +499,7 @@ function rarityAnimation(rarity, character) {
 
 }
 
-// function SPAnimation(title, character) {
-//     let appContainer = document.getElementById("app-container");
 
-//     let videoContainer = document.getElementById("videoContainer");
-//     let videoElement = document.createElement("video");
-//     videoElement.autoplay = true;
-//     videoElement.muted = true;
-
-//     let height = appContainer.offsetHeight;
-//     let width = appContainer.offsetWidth;
-
-//     videoElement.setAttribute("height", height);
-//     videoElement.setAttribute("width", width);
-
-//     videoContainer.appendChild(videoElement);
-
-//     let sourceElement = document.createElement("source");
-//     sourceElement.setAttribute("type", "video/mp4");
-//     videoElement.appendChild(sourceElement);
-
-//     // ex. gavin-obsession-1
-//     if (title == "Obsession" || title == "Preferance" || title == "Clinging" || title == "Tenderness") {
-//         sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-1.mp4");
-//     }
-//     else {
-//         sourceElement.setAttribute("src", "../assets/videos/ssr" + "-" + character.toLowerCase() + ".mp4");
-//     }
-
-
-//     videoElement.onended = function () {
-//         videoElement.remove();
-//     };
-// }
-
-// function finalSPAnimation(title, character) {
-//     if (title.toLowerCase() == "obsession" || title.toLowerCase() == "preferance" || title.toLowerCase() == "clinging" || title.toLowerCase() == "tenderness") {
-//         let appContainer = document.getElementById("app-container");
-
-//         let videoContainer = document.getElementById("videoContainer");
-//         let videoElement = document.createElement("video");
-//         videoElement.autoplay = true;
-//         videoElement.muted = true;
-    
-//         let height = appContainer.offsetHeight;
-//         let width = appContainer.offsetWidth;
-    
-//         videoElement.setAttribute("height", height);
-//         videoElement.setAttribute("width", width);
-    
-//         videoContainer.appendChild(videoElement);
-    
-//         let sourceElement = document.createElement("source");
-//         sourceElement.setAttribute("type", "video/mp4");
-//         videoElement.appendChild(sourceElement);
-    
-//         // ex. gavin-obsession-2
-//         sourceElement.setAttribute("src", "../assets/videos/" + character.toLowerCase() + "-" + title.toLowerCase() + "-2.mp4");
-
-    
-//         videoElement.onended = function () {
-//             videoElement.remove();
-//         };
-//     }
-// }
 
 function displayResults(karmas) {
     displayResultsContainer();
@@ -584,6 +521,7 @@ function displayResultsContainer() {
 
 // displays 1 karma
 function displayKarma(karma, displayedKarma, karmas) {
+    console.log(karma);
     if (karma) {
         let rarity = karma.rarity;
         let character = karma.character;
@@ -797,140 +735,16 @@ function checkForSpecial(karmas, displayedKarma) {
         displayThumbnails(karmas);
     }
     else {
+        console.log(karmas[displayedKarma]);
 
-        displayKarma(karmas[displayedKarma], displayedKarma, karmas)
+        let karma = karmas[displayedKarma];
+        displayedKarma += 1;
+
+        displayKarma(karma, displayedKarma, karmas);
     }
 
+}
 
-
-
-
-        // let numSSR = 0;
-        // let SSRLocations = [];
-
-        // let karmaNum = 0;
-        // while (karmaNum < 10) {
-            
-        //     if (karmas[karmaNum].rarity == "SP" || karmas[karmaNum].rarity == "SSR") {
-        //         numSSR += 1;
-        //         SSRLocations.push(karmaNum);
-        //     }
-
-        //     karmaNum++;
-        // }
-
-        // if (numSSR == 0) {
-        //     displayThumbnails(karmas);
-        // }
-
-        // for (let i = 0; i < SSRLocations.length; i++) {
-        //     if (displayKarma < SSRLocations[i]) {
-        //         displayedKarma = i - 1;
-        //         removeDisplayedKarma(karmas, displayedKarma);
-        //         displayKarma(karmas[i], displayedKarma, karmas);
-        //     }
-        //     // else {
-
-        //     // }
-            
-        // }
-
-
-
-
-        
-
-
-
-        // // for in loop
-        // for (let i in karmas) {
-        //     if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-        //         displayedKarma = i - 1;
-        //     }
-        // }
-
-
-        // let SSRLocation = 0;
-
-        // for (let i in karmas) {
-        //     // While loop
-        //     // console.log(karmas[i])
-        //     // console.log(i)
-        //     // console.log(karmas[i].rarity)
-
-        //     // while (karmas[i].rarity != "SP" || karmas[i].rarity != "SSR" || i == 9) {
-        //     if (karmas[i].rarity != "SP" || karmas[i].rarity != "SSR" || i == 9) {
-        //         displayedKarma += 1;
-
-        //         // i += 1;
-        //         // SSRLocation = i;
-        //     } 
-        //     else {
-        //         SSRLocation = i;
-        //         displayedKarma -= 1;
-        //     }
-        //     // }
-        // }
-        
-        // if (SSRLocation == 0) {
-        //     displayThumbnails(karmas);
-        // }
-        // else {
-        //     removeDisplayedKarma(karmas, displayedKarma);
-        //     displayKarma(karmas[SSRLocation], displayedKarma, karmas);
-        // }
-
-        
-
-
-        // let numSSR = 0;
-        // // let SSRLocation = [];
-        // removeDisplayedKarma(karmas, displayedKarma);
-        // // for (let i = displayedKarma + 1; i < karmas.length; i++) {
-        // for (let i = displayedKarma + 1; karmas[i].rarity != "SP" || karmas[i].rarity != "SSR"; i++) {
-
-        //     numSSR += 1
-
-        //     displayedKarma = i - 1;
-        //     displayKarma(karmas[i], displayedKarma, karmas);
-
-        //     // if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-        //     //     numSSR += 1;
-                
-        //     //     SSRLocation.push(i);
-        //     // }
-        // }
-        // if (numSSR == 0) {
-        //     displayThumbnails(karmas);
-        // }
-        // else {
-        //     removeDisplayedKarma(karmas, displayedKarma);
-
-        //     displayedKarma = SSRLocation[i] - 1;
-        //     displayKarma(karmas[i], displayedKarma, karmas);
-        // }
-    }
-
-
-    // else {
-    //     let SSRLocation = 0;
-    //     for (let i = displayedKarma + 1; i < karmas.length; i++) {
-    //         // console.log(karmas);
-    //         // console.log(karmas[i]);
-    //         // console.log(karmas[i].rarity);
-    //         if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-    //             displayedKarma = i - 1;
-    //             // displayedKarma = i;
-    //             SSRLocation = i;
-    //             // displayKarma(karma, displayedKarma, karmas)
-    //             removeDisplayedKarma(karmas, displayedKarma);
-    //             displayKarma(karmas[i], displayedKarma, karmas);
-    //         }
-    //     }
-    //     if (SSRLocation == 0) {
-    //         displayThumbnails(karmas);
-    //     }
-    // }
 
 
 function backHome() {
