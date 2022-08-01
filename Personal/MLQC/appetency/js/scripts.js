@@ -697,15 +697,96 @@ function removeDisplayedKarma(karmas, displayedKarma) {
 }
 
 function checkForSpecial(karmas, displayedKarma) {
-    if (displayKarma == 9 || displayKarma == 1) {
+    karmas =
+        [
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Rock and a Hard Place",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Archive",
+                "stat": "Creativity",
+                "king": "false"
+            },
+            {
+                "rarity": "SSR",
+                "character": "Gavin",
+                "title": "俘获",
+                "stat": "Affinity",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Upwind",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Warming Up",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Rock and a Hard Place",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Gavin",
+                "title": "Whetstone",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "SSR",
+                "character": "Lucien",
+                "title": "侵染",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "SR",
+                "character": "Gavin",
+                "title": "Fierce Battle",
+                "stat": "Execution",
+                "king": "false"
+            },
+            {
+                "rarity": "R",
+                "character": "Lucien",
+                "title": "Detailed Narration",
+                "stat": "Decision",
+                "king": "false"
+            }
+        ];
+
+    // console.log(karmas);
+
+
+    if (displayKarma == 9) {
+        displayThumbnails(karmas);
+    }
+    else if (karmas.length == 1) {
         displayThumbnails(karmas);
     }
     else {
-        let numSSR = 0;
-        let SSRLocation = [];
-        for (let i = displayedKarma; i < karmas.length; i++) {
+        let SSRLocation = 0;
+        for (let i = displayedKarma + 1; i < karmas.length; i++) {
+            // console.log(karmas);
+            // console.log(karmas[i]);
+            // console.log(karmas[i].rarity);
             if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-                numSSR += 1
                 displayedKarma = i - 1;
                 // displayedKarma = i;
                 SSRLocation = i;
@@ -714,45 +795,10 @@ function checkForSpecial(karmas, displayedKarma) {
                 displayKarma(karmas[i], displayedKarma, karmas);
             }
         }
-        if (numSSR == 0) {
+        if (SSRLocation == 0) {
             displayThumbnails(karmas);
         }
     }
-    
-    // if (displayKarma == 9 || karmas.length == 1) {
-    //     displayThumbnails(karmas);
-    // }
-    // else {
-    //     let numSSR = 0;
-    //     let SSRLocation = [];
-    //     for (let i = displayedKarma; i < karmas.length; i++) {
-    //         if (karmas[i].rarity == "SP" || karmas[i].rarity == "SSR") {
-    //             numSSR += 1
-    //             SSRLocation.push(i);
-    //         }
-    //     }
-    //     if (numSSR == 0) {
-    //         displayThumbnails(karmas);
-    //     }
-    //     else {
-    //         for (let i = 0; i < SSRLocation.length; i++) {
-    //             if (displayedKarma == SSRLocation[i]) {
-    //                 displayKarma(karmas[SSRLocation[i]], displayedKarma, karmas)
-    //             }
-    //             else {
-    //                 // displayedKarma
-    //             }
-    //         }
-            
-
-    //         // displayedKarma = i - 1;
-    //         // // displayedKarma = i;
-    //         // SSRLocation = i;
-    //         // // displayKarma(karma, displayedKarma, karmas)
-    //         // removeDisplayedKarma(karmas, displayedKarma);
-    //         // displayKarma(karmas[i], displayedKarma, karmas);
-    //     }
-    // }
 }
 
 function backHome() {
